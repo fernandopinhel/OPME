@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Protótipo OPME - Unidade de Negócio</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box) -->
+        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+    </head>
+
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header text-center">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
+                    <h1>Gestão OPME</h1>                                          
+                </div>
+                <ul class="list-unstyled components">
+                    <li><!-- painel -->
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                            <li>
+                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-rendimento mr-4"></i>
+                                    <span class="item-menu">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-doc-papel mr-4"></i>
+                                    <span class="item-menu">Processos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-mensagem mr-4"></i>
+                                    <span class="item-menu">Mensagens</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-dados-grafico mr-4"></i>
+                                    <span class="item-menu">Análises</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatórios</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                                    <li>
+                                        <a href="#">Geral de Precificação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ranking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Economia por Negociação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Log de Auditoria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produtividade por Analista</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ordem Fornecedor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon referenciados mr-4"></i>
+                                    <span class="item-menu">Referenciados</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-produtos mr-4"></i>
+                                    <span class="item-menu">Marcas/Fabricantes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-compras mr-4"></i>
+                                    <span class="item-menu">Fornecedor</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-diversidade mr-4"></i>
+                                    <span class="item-menu">Itens</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><!-- fim painel -->
+                    <li><!-- configuracoes -->
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Configurações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon unidade-de-medida mr-4"></i>
+                                    <span class="item-menu">Unidade de Medida</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-pasta mr-4"></i>
+                                    <span class="item-menu">Unidade de Negócio</span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2" id="unidadeDeNegocio">
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon usuarios mr-4"></i>
+                                    <span class="item-menu">Usuários</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon telas mr-4"></i>
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-alerta-duvida mr-4"></i>
+                                    <span class="item-menu">Ajuda</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><!-- fim configuracoes -->
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+
+            <!-- conteudo pagina -->
+            <div class="content" id="cadastro">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                        <div class="float-left">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="user float-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">Renata Scott</p>
+                                    <img src="../img/user.png">
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Cadastro</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="unidade-de-negocio.html">Unidade de Negócio</a></li>                                  
+                                  <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+                                </ol>
+                            </nav>
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-close close-cadastro">
+                                                <img src="../img/close.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="codigo02" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="codigo02" class="label-name">
+                                                <span class="content-name">Código</span>
+                                            </label>
+                                        </div>
+                                    </div> 
+                                </div>                                
+                                <div class="col-lg-3">
+                                    <p class="p-select">Tipo</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione">Opções</option>
+                                        <option value="1">Origem</option>
+                                        <option value="2">Prestador</option>
+                                        <option value="3">Bradesco</option>
+                                        <option value="4">Mediservice</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="nome01" autocomplete="off" required>
+                                            <label for="nome01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                            <label for="cnpj01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                                        <div class="form">
+                                          <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
+                                          <label for="text" class="label-name">
+                                            <span class="content-name">
+                                                <span>Data término do contrato</span>
+                                            </span>
+                                          </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Status</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group"/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8 mt-3">
+                                    <label for="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                                    <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                </div>
+                            </div>                            
+                            <div class="row mt-4 mb-2">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4">
+                                        <h6>Endereço</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                            <label for="cep01" class="label-name">
+                                                <span class="content-name">CEP</span>
+                                            </label>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="logradouro01" autocomplete="off" required>
+                                            <label for="logradouro01" class="label-name">
+                                                <span class="content-name">Logradouro</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="numero01" class="label-name">
+                                                <span class="content-name">Nº</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="complemento01" autocomplete="off" required>
+                                            <label for="complemento01" class="label-name">
+                                                <span class="content-name">Complemento</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="bairro01" autocomplete="off" required>
+                                            <label for="bairro01" class="label-name">
+                                                <span class="content-name">Bairro</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="p-select">UF</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione">Opções</option>
+                                        <option value="1">RJ</option>
+                                        <option value="2">SP</option>
+                                        <option value="3">MG</option>
+                                        <option value="4">RS</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cidade01" autocomplete="off" required>
+                                            <label for="cidade01" class="label-name">
+                                                <span class="content-name">Cidade</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-4">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Este endereço é o mesmo para entrega?</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_yes" name="radio_group"/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_no" name="radio_group"/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="endereco-entrega" class="d-none">
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-lg-12">
+                                        <div class="sub-title mt-4">
+                                            <h6>Endereço de entrega</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                                <label for="cep01" class="label-name">
+                                                    <span class="content-name">CEP</span>
+                                                </label>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="logradouro01" autocomplete="off" required>
+                                                <label for="logradouro01" class="label-name">
+                                                    <span class="content-name">Logradouro</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                                <label for="numero01" class="label-name">
+                                                    <span class="content-name">Nº</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="complemento01" autocomplete="off" required>
+                                                <label for="complemento01" class="label-name">
+                                                    <span class="content-name">Complemento</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="bairro01" autocomplete="off" required>
+                                                <label for="bairro01" class="label-name">
+                                                    <span class="content-name">Bairro</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <p class="p-select">UF</p>
+                                        <select class="wide">
+                                            <option data-display="Selecione">Opções</option>
+                                            <option value="1">RJ</option>
+                                            <option value="2">SP</option>
+                                            <option value="3">MG</option>
+                                            <option value="4">RS</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="d-flex">
+                                            <div class="form">
+                                                <input type="text" name="cidade01" autocomplete="off" required>
+                                                <label for="cidade01" class="label-name">
+                                                    <span class="content-name">Cidade</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4" id="">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4">
+                                        <h6>Contato</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-5 col-lg-3">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                            <label for="cep01" class="label-name">
+                                                <span class="content-name">Telefone</span>
+                                            </label>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-sm-5 col-lg-3">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                            <label for="email01" class="label-name">
+                                                <span class="content-name">Email</span>
+                                            </label>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-sm-2 col-lg-2 mt-3">
+                                    <button type="button" name="button" id="btn-add" class="btn btn-adicionar" data-toggle="tooltip" data-original-title="Adicionar contato">
+                                        <img src="../img/add.svg" class="i-add">
+                                    </button>
+                                    <button type="button" name="button" id="btn-add" class="btn btn-adicionar-2 d-none" data-toggle="tooltip" data-original-title="Adicionar contato">
+                                        <img src="../img/add.svg" class="i-add">
+                                    </button>
+                                    <button type="button" name="button" id="btn-add" class="btn btn-adicionar-3 d-none" data-toggle="tooltip" data-original-title="Adicionar contato">
+                                        <img src="../img/add.svg" class="i-add">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-contato" class="row b-contato d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-contato">
+                                        <div class="table-responsive mt-5">
+                                            <table class="table t-contato">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                    <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator">
+                                                <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12 mt-5">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro'">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-version">
+                <p>V.1.0</p>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- jQuery -->
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="../js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="../js/bootstrap-datetimepicker.js"></script>
+        <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="../js/jquery.mask.min.js"></script>
+        <!-- script select(combo-box) -->
+        <script src="../js/jquery.nice-select.js"></script>
+        <!-- scripts -->
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>
