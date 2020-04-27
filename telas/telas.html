@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida</title>
+        <title>Protótipo OPME - Telas</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -114,7 +114,7 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
+                            <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
@@ -125,17 +125,6 @@
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2" id="unidadeDeNegocio">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -143,23 +132,11 @@
                                     <span class="item-menu">Usuários</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -208,7 +185,7 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Unidade de Medida</h1>
+                                        <h1>Telas</h1>
                                     </div>
                                 </div>
                             </div>
@@ -231,19 +208,19 @@
                                 <div class="col-lg-3">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="descricao01" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="descricao01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Descrição</span>
+                                            <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                            <label for="telas" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
                                             </label>
                                         </div>
-                                    </div>                                    
+                                    </div>                                  
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="complemento-01" autocomplete="off" required oninvalid="setCustomValidity('Preencha o Complemento')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="complemento-01" class="label-name">
-                                                <span class="content-name">Complemento</span>
+                                            <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                            <label for="telas" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
                                             </label>
                                         </div>
                                     </div>
@@ -267,7 +244,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='unidade-de-medida-busca.html'" class="btn btn-buscar">Buscar</button>
+                                    <button type="submit" name="button" onclick="window.location.href='telas-busca.html'" class="btn btn-buscar">Buscar</button>
                                     <button type="button" name="button" class="b-incluir btn btn-incluir">Incluir</button>
                                 </div>
                             </div>
@@ -288,10 +265,8 @@
                                     <tr>
                                     <th></th>
                                     <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
+                                    <th>Telas</th>
+                                    <th>Link</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
@@ -305,17 +280,15 @@
                                             <span class="circle"></span>
                                         </div>
                                         <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
+                                            <a href="telas-detalhes.html">
                                                 <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                             </a>
                                         </div>
                                         </div>
                                     </td>
                                     <td>001</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
                                     <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
@@ -330,17 +303,15 @@
                                             <span class="circle"></span>
                                         </div>
                                         <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
+                                            <a href="telas-detalhes.html">
                                                 <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                             </a>
                                         </div>
                                         </div>
                                     </td>
                                     <td>002</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
                                     <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
@@ -355,18 +326,16 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="telas-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
                                     <td>003</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
                                     <td colspan="5"></td>
@@ -380,17 +349,15 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="telas-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                         </div>
                                     </td>
                                     <td>004</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
                                     <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
@@ -405,18 +372,16 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="telas-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
                                     <td>005</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
                                 </tbody>
                                 </table>

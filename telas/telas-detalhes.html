@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida</title>
+        <title>Protótipo OPME - Telas</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -114,7 +114,7 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
+                            <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
@@ -125,17 +125,6 @@
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2" id="unidadeDeNegocio">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -143,23 +132,11 @@
                                     <span class="item-menu">Usuários</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -208,16 +185,22 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Unidade de Medida</h1>
+                                        <h1>Detalhes</h1>
                                     </div>
-                                </div>
+                                </div>                               
                             </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="telas.html">Telas</a></li>                                  
+                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                                </ol>
+                            </nav>   
                             <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-10">
                                             <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da inclusão: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
+                                            <p><span class="mr-2">Data da alteração: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
                                         </div>
                                         <div class="col-2">
                                             <button type="button" class="btn btn-close close-inclusao">
@@ -228,22 +211,35 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-lg-2">
+                                    <p class="disabled">Código</p>
+                                    <div class="d-flex">
+                                        <div class="form form-disabled">
+                                            <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                            <label for="codigo-01" class="label-name">
+                                                <span class="content-name"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-lg-3">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="descricao01" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="descricao01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Descrição</span>
+                                            <input type="text" name="telas" value="Cadastro de Usuário" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                            <label for="telas" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
                                             </label>
                                         </div>
-                                    </div>                                    
+                                    </div>                                  
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="complemento-01" autocomplete="off" required oninvalid="setCustomValidity('Preencha o Complemento')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="complemento-01" class="label-name">
-                                                <span class="content-name">Complemento</span>
+                                            <input type="text" name="telas" value="http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                            <label for="telas" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
                                             </label>
                                         </div>
                                     </div>
@@ -254,7 +250,7 @@
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio_one" name="radio_group"/>
+                                            <input type="radio" id="radio_one" name="radio_group" checked/>
                                             <label for="radio-estilo">Ativo</label>
                                         </div>
                                         <div class="ex-radio">
@@ -266,189 +262,11 @@
                             </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='unidade-de-medida-busca.html'" class="btn btn-buscar">Buscar</button>
-                                    <button type="button" name="button" class="b-incluir btn btn-incluir">Incluir</button>
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>                                    
+                                    <button type="button" name="button" class="b-incluir btn btn-incluir">Salvar</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="resultado-filtro-todos">
-                                    <h4 class="float-left">Itens:<span>126</span></h4>
-                                    <a href="#" class="float-right">
-                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="table-responsive mt-5">
-                                <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th></th>
-                                    <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
-                                    <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>001</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>002</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                    <td>003</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>004</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                        <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                    <td>005</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" class="prev">
-                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                            <a href="#" class="prev">
-                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                            </a>
-                            </li>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                            <a href="#" class="next">
-                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                            </a>
-                            </li>
-                            <li>
-                                <a href="#" class="next">
-                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </form>
             </div>
