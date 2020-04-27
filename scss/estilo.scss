@@ -277,6 +277,10 @@ span.current{
       width: 10px !important;
     }
 }
+
+.nice-select .option {
+    min-height: 6px !important;
+}
 // fim select(combo box) nice-select
 
 // fim globais
@@ -1399,6 +1403,12 @@ tr:hover td.actions .menu-invisible{
 // fim tabela sem hover
     
 // responsivo
+@media (min-width:767px) and (max-width: 1444px) {
+    table.t-contato{
+        overflow: hidden !important;
+    }
+}
+
 @media (max-width: 1444px) {
     .table-responsive{
         overflow-x: auto !important;

@@ -433,6 +433,10 @@ span.current {
   width: 10px !important;
 }
 
+.nice-select .option {
+  min-height: 6px !important;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1602,6 +1606,12 @@ tr:hover td.actions .menu-invisible {
 
 .no-hover .table > tbody > tr.separator > td {
   border: none;
+}
+
+@media (min-width: 767px) and (max-width: 1444px) {
+  table.t-contato {
+    overflow: hidden !important;
+  }
 }
 
 @media (max-width: 1444px) {
