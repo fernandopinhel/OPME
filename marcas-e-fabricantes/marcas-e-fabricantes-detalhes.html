@@ -6,13 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida / Detalhes</title>
+        <title>Protótipo OPME - Marcas/Fabricantes</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="../css/estilo.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box -->
+        <link rel="stylesheet" href="../css/nice-select.css">
     </head>
 
     <body>
@@ -26,11 +28,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -88,7 +90,7 @@
                                     <span class="item-menu">Referenciados</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
@@ -109,18 +111,18 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
@@ -186,17 +188,17 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Marcas e Fabricantes</h1>
                                     </div>
-                                </div>                               
+                                </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="unidade-de-medida.html">Unidade de Medida</a></li>                                  
+                                  <li class="breadcrumb-item"><a href="marcas-e-fabricantes.html">Marcas e Fabricantes</a></li>                                  
                                   <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
                                 </ol>
                             </nav>   
-                            <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
+                            <div class="alert alert-success d-none mb-3" id="msg-inclusao" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-10">
@@ -224,26 +226,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">                            
                                 <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="UND" name="descricao01" autocomplete="off">
-                                            <label for="descricao01" class="label-name">
-                                                <span class="content-name">Descrição</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
+                                    <p class="p-select">Procedência</p>
+                                    <select class="wide">
+                                        <option data-display="Nacional"></option>
+                                        <option value="1">Nacional</option>
+                                        <option value="2">Importado</option>                                        
+                                    </select>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="Unidade" name="complemento-01" autocomplete="off">
-                                            <label for="complemento-01" class="label-name">
-                                                <span class="content-name">Complemento</span>
+                                            <input type="text" value="Bradesco" name="nome01" autocomplete="off" required>
+                                            <label for="nome01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
                                             </label>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="radio-title">
@@ -261,9 +261,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-8 mt-3">
+                                    <label for="observacoes">Observações</label>
+                                    <textarea class="form-control" id="observacoes" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas placerat massa, ac pharetra risus maximus eu. Aenean sed velit eget lectus commodo efficitur. In hac habitasse platea dictumst. Suspendisse enim purus, condimentum id dolor in, commodo mattis mi. Proin dignissim, dui a pulvinar efficitur, sem purus malesuada lectus, vel iaculis erat libero quis dolor. Aliquam quis luctus nunc. Mauris vel est suscipit, aliquam sem ut, ultricies enim. Etiam vestibulum lectus nec erat pulvinar accumsan sed ac augue.</textarea>
+                                </div>
+                            </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>                                    
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" name="button" onclick="window.location.href='unidade-de-negocio-busca.html'" class="btn btn-buscar">Buscar</button>
                                     <button type="button" name="button" class="b-incluir btn btn-incluir">Salvar</button>
                                 </div>
                             </div>
@@ -286,7 +293,9 @@
         <script src="../js/bootstrap-datetimepicker.js"></script>
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="../js/jquery.mask.min.js"></script>   
+        <script src="../js/jquery.mask.min.js"></script>
+        <!-- script select(combo-box) -->
+        <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->
         <script src="../js/script.js"></script>
     </body>

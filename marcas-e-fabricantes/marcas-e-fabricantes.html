@@ -6,13 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida / Detalhes</title>
+        <title>Protótipo OPME - Marcas/Fabricantes</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="../css/estilo.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box -->
+        <link rel="stylesheet" href="../css/nice-select.css">
     </head>
 
     <body>
@@ -26,11 +28,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -88,7 +90,7 @@
                                     <span class="item-menu">Referenciados</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
@@ -109,22 +111,33 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2" id="unidadeDeNegocio">
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -138,6 +151,17 @@
                                     <span class="item-menu">Telas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -186,22 +210,16 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Marcas e Fabricantes</h1>
                                     </div>
-                                </div>                               
+                                </div>
                             </div>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="unidade-de-medida.html">Unidade de Medida</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
-                                </ol>
-                            </nav>   
                             <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-10">
                                             <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da alteração: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
+                                            <p><span class="mr-2">Data da inclusão: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
                                         </div>
                                         <div class="col-2">
                                             <button type="button" class="btn btn-close close-inclusao">
@@ -211,39 +229,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-2">
-                                    <p class="disabled">Código</p>
-                                    <div class="d-flex">
-                                        <div class="form form-disabled">
-                                            <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
-                                            <label for="codigo-01" class="label-name">
-                                                <span class="content-name"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
+                            <div class="row mt-5">                            
                                 <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="UND" name="descricao01" autocomplete="off">
-                                            <label for="descricao01" class="label-name">
-                                                <span class="content-name">Descrição</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
+                                    <p class="p-select">Procedência</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">Nacional</option>
+                                        <option value="2">Importado</option>                                        
+                                    </select>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="Unidade" name="complemento-01" autocomplete="off">
-                                            <label for="complemento-01" class="label-name">
-                                                <span class="content-name">Complemento</span>
+                                            <input type="text" name="nome01" autocomplete="off" required>
+                                            <label for="nome01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
                                             </label>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="radio-title">
@@ -251,7 +254,7 @@
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio_one" name="radio_group" checked/>
+                                            <input type="radio" id="radio_one" name="radio_group"/>
                                             <label for="radio-estilo">Ativo</label>
                                         </div>
                                         <div class="ex-radio">
@@ -261,13 +264,170 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-8 mt-3">
+                                    <label for="observacoes">Observações</label>
+                                    <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                </div>
+                            </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>                                    
-                                    <button type="button" name="button" class="b-incluir btn btn-incluir">Salvar</button>
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" name="button" onclick="window.location.href='marcas-e-fabricantes-busca.html'" class="btn btn-buscar">Buscar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-incluir">Incluir</button>
                                 </div>
                             </div>
                         </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid mb-5">
+                                <div class="resultado-filtro-todos">
+                                    <h4 class="float-left">Itens:<span>126</span></h4>
+                                    <a href="#" class="float-right">
+                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                    </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="table-responsive mt-5">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th></th>
+                                    <th>Código</th>
+                                    <th>Nome</th>
+                                    <th>Procedência</th>                                    
+                                    <th>Reponsável pela Alteração</th>
+                                    <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>001</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                        <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>002</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>003</td>
+                                        <td>Bradesco</td>
+                                        <td>Importado</td>
+                                        <td>Renata Scott</td>
+                                        <td>Intivo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>004</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
@@ -286,7 +446,9 @@
         <script src="../js/bootstrap-datetimepicker.js"></script>
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="../js/jquery.mask.min.js"></script>   
+        <script src="../js/jquery.mask.min.js"></script>
+        <!-- script select(combo-box) -->
+        <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->
         <script src="../js/script.js"></script>
     </body>
