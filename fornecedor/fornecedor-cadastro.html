@@ -30,11 +30,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -98,7 +98,7 @@
                                     <span class="item-menu">Marcas/Fabricantes</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-compras mr-4"></i>
                                     <span class="item-menu">Fornecedor</span>
@@ -113,11 +113,11 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
                             <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
@@ -129,17 +129,6 @@
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2" id="unidadeDeNegocio">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -150,20 +139,8 @@
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
-                                    <li>
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -178,7 +155,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="detalhes">
+            <div class="content" id="cadastro">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -212,25 +189,25 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Fornecedor</h1>
                                     </div>
                                 </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="unidade-de-negocio.html">Unidade de Negócio</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                                  <li class="breadcrumb-item"><a href="fornecedor.html">Fornecedor</a></li>                                  
+                                  <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
                                 </ol>
                             </nav>
-                            <div class="alert alert-success d-none mb-5" id="msg-inclusao" role="alert">
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-10">
-                                            <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da alteração: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
                                         </div>
                                         <div class="col-2">
-                                            <button type="button" class="btn btn-close close-inclusao">
+                                            <button type="button" class="btn btn-close close-cadastro">
                                                 <img src="../img/close.svg">
                                             </button>
                                         </div>
@@ -248,73 +225,60 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>                          
-                                <div class="col-lg-3">
-                                    <p class="p-select">Tipo</p>
-                                    <select class="wide">
-                                        <option data-display="Origem"></option>
-                                        <option value="1">Origem</option>
-                                        <option value="2">Prestador</option>
-                                        <option value="3">Bradesco</option>
-                                        <option value="4">Mediservice</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-5">
+                                </div>                             
+                                <div class="col-lg-4">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="nome01" value="Bradesco" autocomplete="off" required>
-                                            <label for="nome01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="cnpj01" value="03.235.562/00001-00" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                            <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
                                             <label for="cnpj01" class="label-name">
                                                 <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                                        <div class="form">
-                                          <input class="form-control date form_date input-date" size="16" type="text" value="25/10/2020" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
-                                          <label for="text" class="label-name">
-                                            <span class="content-name">
-                                                <span>Data término do contrato</span>
-                                            </span>
-                                          </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <div class="radio-title">
-                                        <h6 class="mt-2 mb-3">Status</h6>
-                                    </div>
+                                <div class="col-lg-3">
                                     <div class="d-flex">
-                                        <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio_one" name="radio_group" checked/>
-                                            <label for="radio-estilo">Ativo</label>
+                                        <div class="form">
+                                            <input type="text" name="ie01" autocomplete="off" required>
+                                            <label for="ie01" class="label-name">
+                                                <span class="content-name">Inscrição Estadual</span>
+                                            </label>
                                         </div>
-                                        <div class="ex-radio">
-                                            <input type="radio" id="radio_two" name="radio_group"/>
-                                            <label for="radio-estilo">Inativo</label>
-                                          </div>
-                                    </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="ie01" autocomplete="off" required>
+                                            <label for="ie01" class="label-name">
+                                                <span class="content-name">Inscrição Municipal</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-8 mt-3">
-                                    <label for="observacoes"><span class="obrigatorio">*</span>Observações</label>
-                                    <textarea class="form-control" id="observacoes" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas placerat massa, ac pharetra risus maximus eu. Aenean sed velit eget lectus commodo efficitur. In hac habitasse platea dictumst. Suspendisse enim purus, condimentum id dolor in, commodo mattis mi. Proin dignissim, dui a pulvinar efficitur, sem purus malesuada lectus, vel iaculis erat libero quis dolor. Aliquam quis luctus nunc. Mauris vel est suscipit, aliquam sem ut, ultricies enim. Etiam vestibulum lectus nec erat pulvinar accumsan sed ac augue.</textarea>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="ie01" autocomplete="off" required>
+                                            <label for="ie01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Razão Social</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
                                 </div>
-                            </div>                            
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="ie01" autocomplete="off" required>
+                                            <label for="ie01" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Nome Fantasia</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
                             <div class="row mt-4 mb-2">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
@@ -326,7 +290,7 @@
                                 <div class="col-lg-2">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="cep01" value="20.250-505" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                            <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
                                             <label for="cep01" class="label-name">
                                                 <span class="content-name">CEP</span>
                                             </label>
@@ -336,7 +300,7 @@
                                 <div class="col-lg-5">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="Avenida Roberto Silveira" name="logradouro01" autocomplete="off" required>
+                                            <input type="text" name="logradouro01" autocomplete="off" required>
                                             <label for="logradouro01" class="label-name">
                                                 <span class="content-name">Logradouro</span>
                                             </label>
@@ -346,7 +310,7 @@
                                 <div class="col-lg-2">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" name="numero01" value="23" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
                                             <label for="numero01" class="label-name">
                                                 <span class="content-name">Nº</span>
                                             </label>
@@ -356,7 +320,7 @@
                                 <div class="col-lg-3">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="apto:708" name="complemento01" autocomplete="off" required>
+                                            <input type="text" name="complemento01" autocomplete="off" required>
                                             <label for="complemento01" class="label-name">
                                                 <span class="content-name">Complemento</span>
                                             </label>
@@ -368,7 +332,7 @@
                                 <div class="col-lg-5">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="Icaraí" name="bairro01" autocomplete="off" required>
+                                            <input type="text" name="bairro01" autocomplete="off" required>
                                             <label for="bairro01" class="label-name">
                                                 <span class="content-name">Bairro</span>
                                             </label>
@@ -378,7 +342,7 @@
                                 <div class="col-lg-2">
                                     <p class="p-select">UF</p>
                                     <select class="wide">
-                                        <option data-display="RJ"></option>
+                                        <option data-display="Selecione"></option>
                                         <option value="1">RJ</option>
                                         <option value="2">SP</option>
                                         <option value="3">MG</option>
@@ -388,112 +352,116 @@
                                 <div class="col-lg-5">
                                     <div class="d-flex">
                                         <div class="form">
-                                            <input type="text" value="Niterói" name="cidade01" autocomplete="off" required>
+                                            <input type="text" name="cidade01" autocomplete="off" required>
                                             <label for="cidade01" class="label-name">
                                                 <span class="content-name">Cidade</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 mt-4">
+                            </div>
+                            <div class="row mt-4 mb-4">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4">
+                                        <h6>Informações Complementares</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
                                     <div class="radio-title">
-                                        <h6 class="mt-2 mb-3">Este endereço é o mesmo para entrega?</h6>
+                                        <h6 class="mt-2 mb-3">Status</h6>
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio_yes" name="radio_group2"/>
-                                            <label for="radio-estilo">Sim</label>
+                                            <input type="radio" id="radio_one" name="radio_group1"/>
+                                            <label for="radio-estilo">Ativo</label>
                                         </div>
                                         <div class="ex-radio">
-                                            <input type="radio" id="radio_no" name="radio_group2" checked/>
-                                            <label for="radio-estilo">Não</label>
+                                            <input type="radio" id="radio_two" name="radio_group1"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Processo de Avaliação</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio-p1" name="radio_group2"/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio-p2" name="radio_group2"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Relação Comercial</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio-rc1" name="radio_group3"/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio-rc2" name="radio_group3"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Matriz/Filial</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio-mf1" name="radio_group4"/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio-mf2" name="radio_group4"/>
+                                            <label for="radio-estilo">Inativo</label>
                                           </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="endereco-entrega">
-                                <div class="row mt-4 mb-2">
-                                    <div class="col-lg-12">
-                                        <div class="sub-title mt-4">
-                                            <h6>Endereço de entrega</h6>
-                                        </div>
-                                    </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-4">
+                                    <p class="p-select">Grupo de Fornecedor</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">OPME</option>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="24.160-506" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
-                                                <label for="cep01" class="label-name">
-                                                    <span class="content-name">CEP</span>
-                                                </label>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Rua Passos Barreto" name="logradouro01" autocomplete="off" required>
-                                                <label for="logradouro01" class="label-name">
-                                                    <span class="content-name">Logradouro</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" name="numero01" value="350" onkeypress="$(this).mask('000000');" autocomplete="off" required>
-                                                <label for="numero01" class="label-name">
-                                                    <span class="content-name">Nº</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="casa" name="complemento01" autocomplete="off" required>
-                                                <label for="complemento01" class="label-name">
-                                                    <span class="content-name">Complemento</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Condições de Pagamento</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">À vista - Conforme cronograma</option>
+                                        <option value="2">Em conta - Hospital/Clinica</option>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Ingá" name="bairro01" autocomplete="off" required>
-                                                <label for="bairro01" class="label-name">
-                                                    <span class="content-name">Bairro</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <p class="p-select">UF</p>
-                                        <select class="wide">
-                                            <option data-display="RJ"></option>
-                                            <option value="1">RJ</option>
-                                            <option value="2">SP</option>
-                                            <option value="3">MG</option>
-                                            <option value="4">RS</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Niterói" name="cidade01" autocomplete="off" required>
-                                                <label for="cidade01" class="label-name">
-                                                    <span class="content-name">Cidade</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Transportadora</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">RJ</option>
+                                        <option value="2">SP</option>
+                                        <option value="3">MG</option>
+                                        <option value="4">RS</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-8 mt-3">
+                                    <label for="observacoes">Observações</label>
+                                    <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                </div>
+                            </div>      
                             <div class="row mt-4" id="">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
@@ -534,7 +502,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div id="conteudo-contato" class="row b-contato">
+                            <div id="conteudo-contato" class="row b-contato d-none">
                                 <div class="col-lg-12">
                                     <div id="box-contato">
                                         <div class="table-responsive mt-5">
@@ -562,10 +530,10 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">(21)99999-9999</td>
-                                                    <td class="email">teste@teste.com</td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
                                                 </tr>
-                                                    <tr class="separator d-none">
+                                                    <tr class="separator">
                                                     <td colspan="5"></td>
                                                 </tr>
                                                 <tr class="tr-2 d-none">
@@ -586,7 +554,7 @@
                                                     <td class="tel"></td>
                                                     <td class="email"></td>
                                                 </tr>
-                                                <tr class="separator d-none">
+                                                <tr class="separator">
                                                 <td colspan="5"></td>
                                                 </tr>
                                                 <tr class="tr-3 d-none">
@@ -607,6 +575,9 @@
                                                     <td class="tel"></td>
                                                     <td class="email"></td>
                                                 </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
                                             </tbody>
                                             </table>
                                         </div>
@@ -616,7 +587,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12 mt-5">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="button" name="button" class="b-incluir btn btn-incluir" onclick="window.location.href='#detalhes'">Salvar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro'">Salvar</button>
                                 </div>
                             </div>
                         </div>
