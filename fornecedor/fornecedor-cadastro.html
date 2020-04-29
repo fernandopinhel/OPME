@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Negócio</title>
+        <title>Protótipo OPME - Fornecedor</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -368,7 +368,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 mt-4">
                                     <div class="radio-title">
                                         <h6 class="mt-2 mb-3">Status</h6>
                                     </div>
@@ -383,7 +383,7 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 mt-4">
                                     <div class="radio-title">
                                         <h6 class="mt-2 mb-3">Processo de Avaliação</h6>
                                     </div>
@@ -398,7 +398,7 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 mt-4">
                                     <div class="radio-title">
                                         <h6 class="mt-2 mb-3">Relação Comercial</h6>
                                     </div>
@@ -413,7 +413,7 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 mt-4">
                                     <div class="radio-title">
                                         <h6 class="mt-2 mb-3">Matriz/Filial</h6>
                                     </div>
@@ -429,15 +429,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-5">
-                                <div class="col-lg-4">
+                            <div class="row mt-3">
+                                <div class="col-lg-4 mt-4">
                                     <p class="p-select">Grupo de Fornecedor</p>
                                     <select class="wide">
                                         <option data-display="Selecione"></option>
                                         <option value="1">OPME</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mt-4">
                                     <p class="p-select">Condições de Pagamento</p>
                                     <select class="wide">
                                         <option data-display="Selecione"></option>
@@ -445,7 +445,7 @@
                                         <option value="2">Em conta - Hospital/Clinica</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mt-4">
                                     <p class="p-select">Transportadora</p>
                                     <select class="wide">
                                         <option data-display="Selecione"></option>
@@ -461,8 +461,9 @@
                                     <label for="observacoes">Observações</label>
                                     <textarea class="form-control" id="observacoes" rows="3"></textarea>
                                 </div>
-                            </div>      
-                            <div class="row mt-4" id="">
+                            </div>
+                            <!-- ADD CONTATO -->
+                            <div class="row mt-4" id="contato">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
                                         <h6>Contato</h6>
@@ -470,7 +471,7 @@
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-sm-5 col-lg-3">
+                                <div class="col-sm-12 col-lg-3">
                                     <div class="d-flex">
                                         <div class="form">
                                             <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
@@ -480,7 +481,7 @@
                                         </div>
                                     </div> 
                                 </div>
-                                <div class="col-sm-5 col-lg-3">
+                                <div class="col-sm-12 col-lg-3">
                                     <div class="d-flex">
                                         <div class="form">
                                             <input type="text" id="email-add" name="email01" autocomplete="off" required>
@@ -490,7 +491,7 @@
                                         </div>
                                     </div> 
                                 </div>
-                                <div class="col-sm-2 col-lg-2 mt-3">
+                                <div class="col-sm-12 col-lg-2 mt-3">
                                     <button type="button" name="button" id="btn-add" class="btn btn-adicionar" data-toggle="tooltip" data-original-title="Adicionar contato">
                                         <img src="../img/add.svg" class="i-add">
                                     </button>
@@ -499,14 +500,312 @@
                                     </button>
                                     <button type="button" name="button" id="btn-add" class="btn btn-adicionar-3 d-none" data-toggle="tooltip" data-original-title="Adicionar contato">
                                         <img src="../img/add.svg" class="i-add">
+                                    </button>                                 
+                                    <button type="button" name="button" id="btn-busca-lista" class="btn" data-toggle="tooltip" data-original-title="Lista de contatos">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
                                     </button>
                                 </div>
                             </div>
-                            <div id="conteudo-contato" class="row b-contato">
+                            <div id="conteudo-contato" class="row b-contato d-none">
                                 <div class="col-lg-12">
-                                    <div id="box-contato">
-                                        <div class="table-responsive mt-5">
-                                            <table class="table t-contato">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table t-contato-2">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-contato-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator s-contato-1 d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-contato-2 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator s-contato-2 d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-contato-3 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator s-contato-3 d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-contato-2" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de contatos</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="telefone-add" name="nome-fornecedor" autocomplete="off" required>
+                                                            <label for="nome-fornecedor" class="label-name">
+                                                                <span class="content-name">Fornecedor</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                                            <label for="telefone01" class="label-name">
+                                                                <span class="content-name">Telefone</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                                            <label for="email01" class="label-name">
+                                                                <span class="content-name">Email</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar b-lista">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-3">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Fornecedor</th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Fornecedor 1</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Fornecedor 2</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Fornecedor 3</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Fornecedor 3</td>
+                                                    <td class="tel">(21)96889-5506</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD CONTATO -->
+                            <!-- ADD MARCAS E FORNECEDORES -->
+                            <div class="row mt-4" id="marcas-fornecedores">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4 mb-4">
+                                        <h6>Marcas e Fornecedores</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-lg-3">
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">MEDMATERIAL</option>
+                                        <option value="2">SUPRIMATERIAL LTDA</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-sm-12 col-lg-2">
+                                    <button type="button" name="button" id="" class="btn " data-toggle="tooltip" data-original-title="Adicionar Marcas/Fornecedor">
+                                        <img src="../img/add.svg" class="i-add">
+                                    </button>
+                                    <button type="button" name="button" id="btn-busca-lista-2" class="btn" data-toggle="tooltip" data-original-title="Lista de Marcas e Fornecedores">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-marcas-fornecedores" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
                                             <thead>
                                                 <tr>
                                                 <th></th>
@@ -533,7 +832,7 @@
                                                     <td class="tel"></td>
                                                     <td class="email"></td>
                                                 </tr>
-                                                    <tr class="separator">
+                                                <tr class="separator d-none">
                                                     <td colspan="5"></td>
                                                 </tr>
                                                 <tr class="tr-2 d-none">
@@ -554,8 +853,8 @@
                                                     <td class="tel"></td>
                                                     <td class="email"></td>
                                                 </tr>
-                                                <tr class="separator">
-                                                <td colspan="5"></td>
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
                                                 </tr>
                                                 <tr class="tr-3 d-none">
                                                     <td class="actions">
@@ -575,7 +874,10 @@
                                                     <td class="tel"></td>
                                                     <td class="email"></td>
                                                 </tr>
-                                                <tr class="tr-4">
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-4 d-none">
                                                     <td class="actions">
                                                         <div class="float-right">
                                                         <div class="menu-visible">
@@ -590,10 +892,10 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">(21)96889-5506</td>
-                                                    <td class="email">email@email.com</td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
                                                 </tr>
-                                                <tr class="separator">
+                                                <tr class="separator d-none">
                                                     <td colspan="5"></td>
                                                 </tr>
                                             </tbody>
@@ -602,6 +904,452 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="conteudo-marcas-fornecedores-2" class="row mt-2 d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de Marcas e Fornedores</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista-2" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid mt-4 mb-4">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <select class="wide">
+                                                        <option data-display="Selecione"></option>
+                                                        <option value="1">MEDMATERIAL</option>
+                                                        <option value="2">SUPRIMATERIAL LTDA</option>                                        
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-4">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Marcas/Fornecedores</th>
+                                                <th>Data de Inclusão</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD MARCAS E FORNECEDORES -->
+                            <!-- ADD ESPECIALIDADES -->
+                            <div class="row mt-4" id="especialiaddes">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4 mb-4">
+                                        <h6>Especialidades</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-lg-3">
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">Cardiologia</option>
+                                        <option value="2">Ortopedia</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-sm-12 col-lg-2">
+                                    <button type="button" name="button" id="" class="btn btn-adicionar-3" data-toggle="tooltip" data-original-title="Adicionar Marcas/Fornecedor">
+                                        <img src="../img/add.svg" class="i-add">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-especialidades" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-4 d-none">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel"></td>
+                                                    <td class="email"></td>
+                                                </tr>
+                                                <tr class="separator d-none">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-especialidades-2" class="row mt-2 d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de Marcas e Fornedores</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista-2" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid mt-4 mb-4">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <select class="wide">
+                                                        <option data-display="Selecione"></option>
+                                                        <option value="1">MEDMATERIAL</option>
+                                                        <option value="2">SUPRIMATERIAL LTDA</option>                                        
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-4">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Marcas/Fornecedores</th>
+                                                <th>Data de Inclusão</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-marcas-fornecedores-2" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="fornecedor">MEDMATERIAL</td>
+                                                    <td class="dt-forn-alter">01/01/2019</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD ESPECIALIDADES -->
+
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12 mt-5">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>

@@ -390,6 +390,8 @@ a {
   background: #f4f4f4;
   padding: 10px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 .sub-title > h6 {
@@ -1203,6 +1205,30 @@ table.table-condensed tbody tr td.day.active {
   border-bottom: 6px solid #e9e5e3;
 }
 
+#box-lista-subs {
+  padding: 30px;
+  background: #f9f7f7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#box-lista-subs > hr {
+  margin: 10px;
+  border: 1px solid #fff;
+}
+
+#box-lista-subs > .title-listas > div > div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h6.title-lista {
+  color: #cc092f;
+  margin: 0;
+}
+
 .i-detalhes, .i-excluir {
   width: 37px;
 }
@@ -1211,8 +1237,13 @@ table.table-condensed tbody tr td.day.active {
   width: 100px;
 }
 
-.i-add {
+.i-add, .i-add-lista, .i-busca-lista, .i-close-lista {
   width: 25px;
+  height: 25px;
+}
+
+.b-lista {
+  margin: 17px 0;
 }
 
 .resultado-filtro > h4, .resultado-filtro-todos > h4 {
@@ -1457,6 +1488,34 @@ table.t-contato tbody tr > td:nth-child(2) {
   width: 20%;
 }
 
+table.t-contato-2 tbody tr > td:nth-child(1) {
+  width: 7%;
+}
+
+table.t-contato-2 tbody tr > td:nth-child(2) {
+  width: 20%;
+}
+
+table.t-3 tbody tr > td:nth-child(1) {
+  width: 7%;
+}
+
+table.t-3 tbody tr > td:nth-child(2) {
+  width: 15%;
+}
+
+table.t-3 tbody tr > td:nth-child(3) {
+  width: 20%;
+}
+
+table.t-4 tbody tr > td:nth-child(1) {
+  width: 7%;
+}
+
+table.t-4 tbody tr > td:nth-child(2) {
+  width: 25%;
+}
+
 .pagination .icon {
   font-size: 11px;
   margin: -4px;
@@ -1612,6 +1671,9 @@ tr:hover td.actions .menu-invisible {
   table.t-contato {
     overflow: hidden !important;
   }
+  .pagination li {
+    width: 37px;
+  }
 }
 
 @media (max-width: 1444px) {
@@ -1662,9 +1724,6 @@ tr:hover td.actions .menu-invisible {
   #sidebarCollapse.active span:last-of-type {
     -webkit-transform: rotate(-45deg) translate(1px, -1px);
             transform: rotate(-45deg) translate(1px, -1px);
-  }
-  .pagination li {
-    width: 39px;
   }
   .alert-success > div > div > div > img {
     margin-bottom: 2px;

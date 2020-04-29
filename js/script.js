@@ -69,7 +69,7 @@ $("#radio_yes").click(function(){
     $('#endereco-entrega').addClass('d-none')
 });
 
-
+// Unidade de Negócio
 $('.btn-adicionar').click(function(){
     $('.b-contato').removeClass('d-none')
     $('.btn-adicionar-2').removeClass('d-none')
@@ -97,8 +97,60 @@ $('.btn-adicionar-3').click(function(){
     $('.t-contato tbody .tr-3 td.email').append(emailValue)
     $('.tr-3').removeClass('d-none')
 });
+// Fim Unidade de Negócio
+
+// Fornecedor Contato
+$('.btn-adicionar').click(function(){
+    $('.b-contato').removeClass('d-none')
+    $('.btn-adicionar-2').removeClass('d-none')
+    $('.btn-adicionar').addClass('d-none')
+    var telValue = $('#telefone-add').val()
+    var emailValue = $('#email-add').val()
+    $('.t-contato-2 tbody .tr-contato-1 td.tel').append(telValue)
+    $('.t-contato-2 tbody .tr-contato-1 td.email').append(emailValue)
+});
+
+$('.btn-adicionar-2').click(function(){
+    $('.btn-adicionar-2').addClass('d-none')
+    $('.btn-adicionar-3').removeClass('d-none')
+    var telValue = $('#telefone-add').val()
+    var emailValue = $('#email-add').val()
+    $('.t-contato-2 tbody .tr-contato-2 td.tel').append(telValue)
+    $('.t-contato-2 tbody .tr-contato-2 td.email').append(emailValue)
+    $('.tr-contato-2').removeClass('d-none')
+    $('.s-contato-1').removeClass('d-none')
+});
+
+$('.btn-adicionar-3').click(function(){
+    var telValue = $('#telefone-add').val()
+    var emailValue = $('#email-add').val()
+    $('.t-contato-2 tbody .tr-contato-3 td.tel').append(telValue)
+    $('.t-contato-2 tbody .tr-contato-3 td.email').append(emailValue)
+    $('.tr-contato-3').removeClass('d-none')
+    $('.s-contato-2').removeClass('d-none')
+    $('.s-contato-3').removeClass('d-none')
+});
+// Fim Fornecedor Contato
 
 $(".excluir").click(function() {
     $(this).parents('tr').remove();
 });
+
+$("#btn-busca-lista").click(function(){
+    $("#conteudo-contato-2").toggleClass("d-none");
+});
+
+$("#btn-close-lista").click(function(){
+    $("#conteudo-contato-2").toggleClass("d-none");
+});
+
+$("#btn-busca-lista-2").click(function(){
+    $("#conteudo-marcas-fornecedores-2").toggleClass("d-none");
+});
+
+$("#btn-close-lista-2").click(function(){
+    $("#conteudo-marcas-fornecedores-2").toggleClass("d-none");
+});
+
+
 // fim script add contato
