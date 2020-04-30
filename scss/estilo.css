@@ -1350,6 +1350,10 @@ table {
   -moz-transition: all 0.3s linear;
 }
 
+.table > tbody > tr > td:nth-child(2) {
+  width: 10%;
+}
+
 .table > tbody > tr > td:first-child {
   border-left: 2px solid #fff;
   -webkit-border-top-left-radius: 5px;
@@ -1706,6 +1710,9 @@ tr:hover td.actions .menu-invisible {
   }
   tr:hover td.actions .menu-invisible {
     left: -5px;
+  }
+  .table > tbody > tr > td:nth-child(2) {
+    width: 25%;
   }
 }
 /*# sourceMappingURL=estilo.css.map */
