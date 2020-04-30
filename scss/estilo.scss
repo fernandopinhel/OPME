@@ -1432,19 +1432,7 @@ tr:hover td.actions .menu-invisible{
 // fim tabela sem hover
     
 // responsivo
-@media (min-width:767px) and (max-width: 1444px) {
-    table.t-contato{
-        overflow: hidden !important;
-    }
-
-    .pagination li{width: 37px;}
-}
-
-@media (max-width: 1444px) {
-    .table-responsive{
-        overflow-x: auto !important;
-    }
-
+@media (min-width: 768px) and (max-width: 1444px) {
     .content {
         width: 100%;
         transition: all 0.3s;
@@ -1460,7 +1448,7 @@ tr:hover td.actions .menu-invisible{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #sidebar {
         margin-left: -300px;
     }
@@ -1502,5 +1490,7 @@ tr:hover td.actions .menu-invisible{
         margin-bottom: 6px;
         margin-top: 4px !important;
     }
+
+    .pagination li{width: 37px;}
 }
 // fim responsivo

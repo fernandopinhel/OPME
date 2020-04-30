@@ -132,6 +132,106 @@ $('.btn-adicionar-3').click(function(){
 });
 // Fim Fornecedor Contato
 
+// Marcas e Fornecedores
+$('.bt-add').click(function(){
+    $('#conteudo-marcas-fornecedores').removeClass('d-none')
+    $('.bt-add').addClass('d-none')
+    $('.bt-add-2').removeClass('d-none')
+    var selectMf = $('#add-mf :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-mf tbody .tr-1 td.mf').append(selectMf)
+    $('.lista-mf tbody .tr-1 td.date-mf').append(date +'/'+ day +'/'+ ano);
+});
+
+$('.bt-add-2').click(function(){
+    $('.bt-add-2').addClass('d-none')
+    $('.bt-add-3').removeClass('d-none')
+    $('.lista-mf tbody .tr-2').removeClass('d-none')
+    var selectMf = $('#add-mf :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-mf tbody .tr-2 td.mf').append(selectMf)
+    $('.lista-mf tbody .tr-2 td.date-mf').append(date +'/'+ day +'/'+ ano);
+});
+
+$('.bt-add-3').click(function(){
+    $('.bt-add-3').addClass('d-none')
+    $('.bt-add').removeClass('d-none')
+    $('.lista-mf tbody .tr-3').removeClass('d-none')
+    var selectMf = $('#add-mf :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-mf tbody .tr-3 td.mf').append(selectMf)
+    $('.lista-mf tbody .tr-3 td.date-mf').append(date +'/'+ day +'/'+ ano);
+});
+// Fim Marcas e Fornecedores
+
+// Especialidades
+$('.bt-add-e').click(function(){
+    $('#conteudo-especialidades').removeClass('d-none')
+    $('.bt-add-e').addClass('d-none')
+    $('.bt-add-e-2').removeClass('d-none')
+    var selectE = $('#add-e :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-e tbody .tr-1 td.especialidade').append(selectE)
+    $('.lista-e tbody .tr-1 td.date-esp').append(date +'/'+ day +'/'+ ano);
+});
+
+$('.bt-add-e-2').click(function(){
+    $('.bt-add-e-2').addClass('d-none')
+    $('.bt-add-e-3').removeClass('d-none')
+    $('.lista-e tbody .tr-2').removeClass('d-none')
+    var selectE = $('#add-e :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-e tbody .tr-2 td.especialidade').append(selectE)
+    $('.lista-e tbody .tr-2 td.date-esp').append(date +'/'+ day +'/'+ ano);
+});
+
+$('.bt-add-e-3').click(function(){
+    $('.bt-add-e-3').addClass('d-none')
+    $('.bt-add-e').removeClass('d-none')
+    $('.lista-e tbody .tr-3').removeClass('d-none')
+    var selectE = $('#add-e :selected').text();
+    var dateValue = new Date();
+    var day = dateValue.getDay()
+    var date = dateValue.getDate()
+    var mes =  dateValue.getMonth()
+    var ano =  dateValue.getFullYear()
+    var horas =  dateValue.getHours()
+    var minutos =  dateValue.getMinutes()
+    $('.lista-e tbody .tr-3 td.especialidade').append(selectE)
+    $('.lista-e tbody .tr-3 td.date-esp').append(date +'/'+ day +'/'+ ano);
+});
+// Fim Especialidades
+
 $(".excluir").click(function() {
     $(this).parents('tr').remove();
 });
