@@ -163,6 +163,7 @@ $('.bt-add-2').click(function(){
     var minutos =  dateValue.getMinutes()
     $('.lista-mf tbody .tr-2 td.mf').append(selectMf)
     $('.lista-mf tbody .tr-2 td.date-mf').append(date +'/'+ day +'/'+ ano);
+    $('.s-mf-1').removeClass('d-none')
 });
 
 $('.bt-add-3').click(function(){
@@ -179,6 +180,8 @@ $('.bt-add-3').click(function(){
     var minutos =  dateValue.getMinutes()
     $('.lista-mf tbody .tr-3 td.mf').append(selectMf)
     $('.lista-mf tbody .tr-3 td.date-mf').append(date +'/'+ day +'/'+ ano);
+    $('.s-mf-2').removeClass('d-none')
+    $('.s-mf-3').removeClass('d-none')
 });
 // Fim Marcas e Fornecedores
 
