@@ -1155,6 +1155,7 @@ table {background-color: none;}
     -moz-border-radius-bottom-right: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    width: 5%;
 }
     
 .table > tbody > tr > td:last-child{
@@ -1264,23 +1265,6 @@ table td:last-child {width: 180px;}
 .header-table li:last-child{
     border: none;
 }
-
-// tabela contato, fornecedor, marcas etc
-table.t-contato tbody tr > td:nth-child(1){width: 5%;}
-table.t-contato tbody tr > td:nth-child(2){width: 20%;}
-
-table.t-contato-2 tbody tr > td:nth-child(1){width: 7%;}
-table.t-contato-2 tbody tr > td:nth-child(2){width: 20%;}
-
-table.t-3 tbody tr > td:nth-child(1){width: 7%;}
-table.t-3 tbody tr > td:nth-child(2){width: 15%;}
-table.t-3 tbody tr > td:nth-child(3){width: 20%;}
-
-table.t-4 tbody tr > td:nth-child(1){width: 7%;}
-table.t-4 tbody tr > td:nth-child(2){width: 25%;}
-
-// fim tabela contato, fornecedor, marcas etc
-
 // fim tabela com header
 
 // paginacao
@@ -1438,11 +1422,6 @@ tr:hover td.actions .menu-invisible{
         transition: all 0.3s;
     }
 
-    .table-responsive{
-        padding: 0;
-        overflow: auto !important;
-    }
-
     .table-responsive table tbody tr td.actions{
         padding-left: 32px;
     }
@@ -1492,5 +1471,13 @@ tr:hover td.actions .menu-invisible{
     }
 
     .pagination li{width: 37px;}
+
+    .table-responsive{
+        padding: 0;
+        overflow: auto !important;
+    }
+    .table > tbody > tr > td:first-child{width: 11%;}
+    td.actions .menu-visible {left: 11px;}
+    tr:hover td.actions .menu-invisible{left: -5px;}
 }
 // fim responsivo
