@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Negócio</title>
+        <title>Protótipo OPME - Hospital</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -196,7 +196,7 @@
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="unidade-de-negocio.html">Unidade de Negócio</a></li>                                  
+                                  <li class="breadcrumb-item"><a href="hospital.html">Hospitais e Clínicas</a></li>                                  
                                   <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
                                 </ol>
                             </nav>
@@ -226,30 +226,8 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>                                
-                                <div class="col-lg-3">
-                                    <p class="p-select">Tipo</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Origem</option>
-                                        <option value="2">Prestador</option>
-                                        <option value="3">Bradesco</option>
-                                        <option value="4">Mediservice</option>
-                                    </select>
                                 </div>
-                                <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="nome01" autocomplete="off" required>
-                                            <label for="nome01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <div class="d-flex">
                                         <div class="form">
                                             <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
@@ -259,17 +237,45 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                                <div class="col-lg-3">
+                                    <div class="d-flex">
                                         <div class="form">
-                                          <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
-                                          <label for="text" class="label-name">
-                                            <span class="content-name">
-                                                <span>Data término do contrato</span>
-                                            </span>
-                                          </label>
+                                            <input type="text" name="inscricao-estadual" onkeypress="$(this).mask('00.000.00');" autocomplete="off" required>
+                                            <label for="inscricao-estadual" class="label-name">
+                                                <span class="content-name">Inscrição Estadual</span>
+                                            </label>
                                         </div>
                                     </div>
+                                </div>                               
+                                <div class="col-lg-3">
+                                    <p class="p-select">Unidade de Negócio</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="3">Bradesco</option>
+                                        <option value="4">Mediservice</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="razao-social" autocomplete="off" required>
+                                            <label for="razao-social" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Razão Social</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="nome-fantasia" autocomplete="off" required>
+                                            <label for="nome-fantasia" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Nome Fantasia</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="radio-title">
@@ -510,6 +516,9 @@
                                     <button type="button" name="button" id="btn-add" class="btn btn-adicionar-3 d-none" data-toggle="tooltip" data-original-title="Adicionar contato">
                                         <img src="../img/add.svg" class="i-add">
                                     </button>
+                                    <button type="button" name="button" id="btn-busca-lista" class="btn" data-toggle="tooltip" data-original-title="Lista de contatos">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
+                                    </button>
                                 </div>
                             </div>
                             <div id="conteudo-contato" class="row b-contato d-none">
@@ -591,6 +600,193 @@
                                             </tbody>
                                             </table>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-contato-2" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de contatos</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="hospital-clinicas" name="nome-hospital" autocomplete="off" required>
+                                                            <label for="nome-hospital" class="label-name">
+                                                                <span class="content-name">Hospitais/Clínicas</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                                            <label for="telefone01" class="label-name">
+                                                                <span class="content-name">Telefone</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                                            <label for="email01" class="label-name">
+                                                                <span class="content-name">Email</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar b-lista">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-3">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Hospital/Clínicas</th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Hospital/Clínicas</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="tel">(21)96889-5506</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

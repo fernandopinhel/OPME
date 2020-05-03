@@ -568,6 +568,12 @@ span.current {
   -moz-border-left: 5px solid #cc092f;
 }
 
+#configuracoes-submenu {
+  border-top: 2px solid #212e4b;
+  -webkit-border-top: 2px solid #212e4b;
+  -moz-border-top: 2px solid #212e4b;
+}
+
 #sidebar ul li > .subs .active:nth-child(1) {
   border-top: 1px solid #212e4b;
   -webkit-border-top: 1px solid #212e4b;
@@ -1351,7 +1357,7 @@ table {
 }
 
 .table > tbody > tr > td:nth-child(2) {
-  width: 10%;
+  width: 15%;
 }
 
 .table > tbody > tr > td:first-child {
@@ -1425,14 +1431,14 @@ table {
   border: none;
 }
 
-table td:last-child {
-  width: 180px;
-}
-
 .table > tbody > tr.separator {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.t-3 > tbody > tr > td:nth-child(2), .t-3 > tbody > tr > td:nth-child(3) {
+  width: 15% !important;
 }
 
 .header-table {
