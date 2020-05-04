@@ -234,6 +234,53 @@ $('.bt-add-e-3').click(function(){
     $('.lista-e tbody .tr-3 td.date-esp').append(date +'/'+ day +'/'+ ano);
 });
 // Fim Especialidades
+$('#btn-add-associacoes').click(function(){
+    $('#conteudo-associacoes').removeClass('d-none')
+});
+$('#btn-busca-lista-assoc').click(function(){
+    $('#conteudo-associacoes-2').toggleClass('d-none')
+});
+$('#btn-close-lista-assoc').click(function(){
+    $('#conteudo-associacoes-2').toggleClass('d-none')
+});
+
+$('.busca-assoc').click(function(){
+    $('#conteudo-associacoes').removeClass('d-none')
+});
+
+
+$('#btn-add-especialidades').click(function(){
+    $('#conteudo-especialidades').removeClass('d-none')
+});
+$('#btn-busca-lista-especi').click(function(){
+    $('#conteudo-especialidade-2').toggleClass('d-none')
+});
+$('#btn-close-lista-especi').click(function(){
+    $('#conteudo-especialidade-2').toggleClass('d-none')
+});
+
+
+$('#btn-add-procedimentos').click(function(){
+    $('#conteudo-procedimentos').removeClass('d-none')
+});
+$('#btn-busca-lista-proce').click(function(){
+    $('#conteudo-procedimentos-2').toggleClass('d-none')
+});
+$('#btn-close-lista-proce').click(function(){
+    $('#conteudo-procedimentos-2').toggleClass('d-none')
+});
+
+
+$('#reutilizavel-sim').click(function(){
+    $('.n-reutilizavel').removeClass('d-none')
+});
+
+$('#reutilizavel-nao').click(function(){
+    $('.n-reutilizavel').addClass('d-none')
+});
+// Itens 
+
+// Fim Itens 
 
 $(".excluir").click(function() {
     $(this).parents('tr').remove();
@@ -257,3 +304,4 @@ $("#btn-close-lista-2").click(function(){
 
 
 // fim script add contato
+

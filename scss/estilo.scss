@@ -1035,11 +1035,11 @@ h6.title-lista{
     margin: 0;
 }
 
-.i-detalhes, .i-excluir{width: 37px;}
+.i-detalhes, .i-excluir, .i-editar, .i-historico{width: 37px;}
 
 .i-result{width: 100px;}
 
-.i-add, .i-add-lista, .i-busca-lista, .i-close-lista{width: 25px; height: 25px;}
+.i-add, .i-add-lista, .i-busca-lista, .i-close-lista{width: 30px; height: 30px;}
 
 .b-lista{margin: 17px 0;}
 
@@ -1410,6 +1410,15 @@ tr:hover td.actions .menu-invisible{
     left: -25px;
     opacity: 1;
 }
+
+tr:hover td.a-2{width: 7% !important;}
+
+tr:hover td.a-2 .menu-invisible{
+    top: -8px;
+    left: -44px;
+    opacity: 1;
+}
+
 
 // tabela sem hover
 

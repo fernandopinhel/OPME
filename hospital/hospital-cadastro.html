@@ -30,11 +30,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -92,6 +92,12 @@
                                     <span class="item-menu">Referenciados</span>
                                 </a>
                             </li>
+                            <li class="active">
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
@@ -113,18 +119,18 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
                             <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
@@ -151,7 +157,7 @@
                             </li>
                         </ul>
                     </li><!-- fim configuracoes -->
-                </ul>                
+                </ul>                  
             </nav>
             <!-- fim sidebar -->
 

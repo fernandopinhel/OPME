@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Protótipo OPME - Itens</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box) -->
+        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+    </head>
+
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header text-center">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
+                    <h1>Gestão OPME</h1>                                          
+                </div>
+                <ul class="list-unstyled components">
+                    <li><!-- painel -->
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
+                            <li>
+                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-rendimento mr-4"></i>
+                                    <span class="item-menu">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-doc-papel mr-4"></i>
+                                    <span class="item-menu">Processos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-mensagem mr-4"></i>
+                                    <span class="item-menu">Mensagens</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-dados-grafico mr-4"></i>
+                                    <span class="item-menu">Análises</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatórios</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                                    <li>
+                                        <a href="#">Geral de Precificação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ranking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Economia por Negociação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Log de Auditoria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produtividade por Analista</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ordem Fornecedor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon referenciados mr-4"></i>
+                                    <span class="item-menu">Referenciados</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-produtos mr-4"></i>
+                                    <span class="item-menu">Marcas/Fabricantes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-compras mr-4"></i>
+                                    <span class="item-menu">Fornecedor</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-diversidade mr-4"></i>
+                                    <span class="item-menu">Itens</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><!-- fim painel -->
+                    <li><!-- configuracoes -->
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Configurações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon unidade-de-medida mr-4"></i>
+                                    <span class="item-menu">Unidade de Medida</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-pasta mr-4"></i>
+                                    <span class="item-menu">Unidade de Negócio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon usuarios mr-4"></i>
+                                    <span class="item-menu">Usuários</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon telas mr-4"></i>
+                                    <span class="item-menu">Telas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-alerta-duvida mr-4"></i>
+                                    <span class="item-menu">Ajuda</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><!-- fim configuracoes -->
+                </ul>                  
+            </nav>
+            <!-- fim sidebar -->
+
+            <!-- conteudo pagina -->
+            <div class="content" id="cadastro">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                        <div class="float-left">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="user float-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">Renata Scott</p>
+                                    <img src="../img/user.png">
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Cadastro</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="itens.html">Itens</a></li>                                  
+                                  <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+                                </ol>
+                            </nav>
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-close close-cadastro">
+                                                <img src="../img/close.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <p class="disabled">ID</p>
+                                    <div class="d-flex">
+                                        <div class="form form-disabled">
+                                            <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                            <label for="codigo-01" class="label-name">
+                                                <span class="content-name"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" value="123" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                            <label for="cod-provisorio" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Código Provisório</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" value="1234" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                            <label for="cod-tuss" class="label-name">
+                                                <span class="content-name">Código TUSS</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                               
+                                <div class="col-lg-2">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Status</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group" checked/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 mt-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" value="AGULHA DE PUNCAO" name="item" autocomplete="off" required>
+                                            <label for="item" class="label-name">
+                                                <span class="content-name"><span class="obrigatorio">*</span>Item</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-lg-3 mt-4">                                    
+                                    <p class="p-select">Grupo</p>
+                                    <select class="wide">                                        
+                                        <option data-display="OPME" value="1">OPME</option>
+                                    </select>                                                             
+                                </div>
+                                <div class="col-lg-3 mt-4">                                    
+                                    <p class="p-select">Sub-Grupo</p>
+                                    <select class="wide">                                        
+                                        <option data-display="OPME" value="1">OPME</option>
+                                    </select>                                                             
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 mt-5">                                    
+                                    <p class="p-select">Unidade de Negócio</p>
+                                    <select class="wide">
+                                        <option data-display="Bradesco" value="1">Bradesco</option>
+                                        <option value="2">Mediservice</option>
+                                    </select>                                                             
+                                </div>
+                                <div class="col-lg-4 mt-5">                                    
+                                    <p class="p-select">Unidade de Medida para Compras</p>
+                                    <select class="wide">                                        
+                                        <option data-display="UND" value="1">UND</option>
+                                        <option value="2">CX</option>
+                                        <option value="3">PCT</option>
+                                        <option value="4">ENV</option>
+                                        <option value="5">DZ</option>
+                                        <option value="6">ROL</option>
+                                    </select>                                                            
+                                </div>
+                                <div class="col-lg-4 mt-5">                                    
+                                    <p class="p-select">Unidade de Medida para Consulta</p>
+                                    <select class="wide">
+                                        <option data-display="UND" value="1">UND</option>
+                                        <option value="2">CX</option>
+                                        <option value="3">PCT</option>
+                                        <option value="4">ENV</option>
+                                        <option value="5">DZ</option>
+                                        <option value="6">ROL</option>
+                                    </select>                                                             
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 mt-5">                                    
+                                    <p class="p-select">Origem</p>
+                                    <select class="wide">                                        
+                                        <option data-display="Nacional" value="1">Nacional</option>
+                                        <option value="2">Importado</option>
+                                    </select>                                                             
+                                </div>
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Status</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group2" checked/>
+                                            <label for="radio-estilo">Ativo</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group2"/>
+                                            <label for="radio-estilo">Inativo</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Inspeção</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group3"/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group3" checked/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Avaliação</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group4"/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group4" checked/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Crítico</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="radio_one" name="radio_group5"/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="radio_two" name="radio_group5" checked/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Reutilizavel</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="reutilizavel-sim" name="radio_group6" checked/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="reutilizavel-nao" name="radio_group6"/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mt-5 n-reutilizavel">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" value="10" name="item" autocomplete="off" required>
+                                            <label for="item" class="label-name">
+                                                <span class="content-name">Nº de vezes para Reutilização</span>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-lg-2 mt-5">
+                                    <div class="radio-title">
+                                        <h6 class="mt-2 mb-3">Reesterilização</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="rees-sim" name="radio_group7"/>
+                                            <label for="radio-estilo">Sim</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="rees-nao" name="radio_group7" checked/>
+                                            <label for="radio-estilo">Não</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ADD ASSOC VALORES -->
+                            <div class="row mt-4 mb-2">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4">
+                                        <h6>Associar Valores por Fornecedor ou Hospital</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mt-3">
+                                    <h6>Fornecedor</h6>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cod-fornecedor" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="cod-fornecedor" class="label-name">
+                                                <span class="content-name">Código</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="fornecedor" autocomplete="off" required>
+                                            <label for="fornecedor" class="label-name">
+                                                <span class="content-name">Fornecedor</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cod-hosp-clinica" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="cod-hosp-clinica" class="label-name">
+                                                <span class="content-name">Código</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="hospital-clinica" autocomplete="off" required>
+                                            <label for="hospital-clinica" class="label-name">
+                                                <span class="content-name">Hospital/Clínica</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mt-3">
+                                    <h6>Marca/Fabricante</h6>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cod-marca-fabricante" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="cod-marca-fabricante" class="label-name">
+                                                <span class="content-name">Código</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="marca-fabricante" autocomplete="off" required>
+                                            <label for="marca-fabricante" class="label-name">
+                                                <span class="content-name">Marca/Fabricante</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mt-3">
+                                    <h6>Valor e Referências</h6>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="ref-fabricante" autocomplete="off" required>
+                                            <label for="ref-fabricante" class="label-name">
+                                                <span class="content-name">Referência do Fabricante</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="ref-fornecedor" autocomplete="off" required>
+                                            <label for="ref-fornecedor" class="label-name">
+                                                <span class="content-name">Referência do Fornecedor</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="anvisa" autocomplete="off" required>
+                                            <label for="anvisa" class="label-name">
+                                                <span class="content-name">Anvisa</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="validade-anvisa" autocomplete="off" required>
+                                            <label for="validade-anvisa" class="label-name">
+                                                <span class="content-name">Validade Anvisa</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="valor" autocomplete="off" required>
+                                            <label for="valor" class="label-name">
+                                                <span class="content-name">Valor</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-2 mt-3">
+                                    <button type="button" class="btn btn-buscar busca-assoc">Buscar</button>                   
+                                    <button type="button" name="button" id="btn-busca-lista-assoc" class="btn" data-toggle="tooltip" data-original-title="Lista de Valores">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-associacoes" class="row">
+                                <div class="col-lg-12">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Fornecedor/Hospital</th>
+                                                <th>Marca/Fabricante</th>
+                                                <th>Referência Fabricante</th>
+                                                <th>Referência Fornecedor</th>
+                                                <th>Anvisa</th>
+                                                <th>Valor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#conteudo-associacoes" class="historico" data-target="#historico-detalhes" data-toggle="modal" title="Histórico">
+                                                                    <img src="../img/historico.svg" class="i-historico">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                                    <td class="mar-fab">0083 - BIOMETRIX</td>
+                                                    <td class="ref-fab">HQ-1510</td>
+                                                    <td class="ref-forn">HQ-1510</td>
+                                                    <td class="anvisa">10332200034</td>
+                                                    <td class="valor">51,92</td>
+                                                </tr>
+                                                <tr class="separator s-1">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-associacoes" class="excluir" data-toggle="tooltip" data-original-title="Histórico">
+                                                                <img src="../img/historico.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000060 - VASCULINE COMERCIO DE MATERIAI</td>
+                                                    <td class="mar-fab">0058 - CORDIS</td>
+                                                    <td class="ref-fab">12004943</td>
+                                                    <td class="ref-forn">12004943</td>
+                                                    <td class="anvisa">80145900795</td>
+                                                    <td class="valor">38,43</td>
+                                                </tr>
+                                                <tr class="separator s-2">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-associacoes" class="excluir" data-toggle="tooltip" data-original-title="Histórico">
+                                                                <img src="../img/historico.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000074 - E TAMUSSINO & CIA LTDA RJ</td>
+                                                    <td class="mar-fab">0035 - COOK</td>
+                                                    <td class="ref-fab">BSDN-18-4.0</td>
+                                                    <td class="ref-forn">BSDN-18-4.0</td>
+                                                    <td class="anvisa">10.212.990.100</td>
+                                                    <td class="valor">7.000,00</td>
+                                                </tr>
+                                                <tr class="separator s-3">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-associacoes-2" class="row d-none mt-2">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de valores</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista-assoc" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" name="nome-fornecedor" autocomplete="off" required>
+                                                            <label for="nome-fornecedor" class="label-name">
+                                                                <span class="content-name">Fornecedor/Hospital</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" name="marc-fabri" autocomplete="off" required>
+                                                            <label for="marc-fabri" class="label-name">
+                                                                <span class="content-name">Marca/Fabricante</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" name="lista-valor" autocomplete="off" required>
+                                                            <label for="lista-valor" class="label-name">
+                                                                <span class="content-name">Valor</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar b-lista">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Fornecedor/Hospital</th>
+                                                <th>Marca/Fabricante</th>
+                                                <th>Referência Fabricante</th>
+                                                <th>Referência Fornecedor</th>
+                                                <th>Anvisa</th>
+                                                <th>Valor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-associacoes" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                                    <td class="mar-fab">0083 - BIOMETRIX</td>
+                                                    <td class="ref-fab">HQ-1510</td>
+                                                    <td class="ref-forn">HQ-1510</td>
+                                                    <td class="anvisa">10332200034</td>
+                                                    <td class="valor">51,92</td>
+                                                </tr>
+                                                <tr class="separator s-1">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-associacoes" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000060 - VASCULINE COMERCIO DE MATERIAI</td>
+                                                    <td class="mar-fab">0058 - CORDIS</td>
+                                                    <td class="ref-fab">12004943</td>
+                                                    <td class="ref-forn">12004943</td>
+                                                    <td class="anvisa">80145900795</td>
+                                                    <td class="valor">38,43</td>
+                                                </tr>
+                                                <tr class="separator s-2">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-associacoes" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="forn-hosp">000074 - E TAMUSSINO & CIA LTDA RJ</td>
+                                                    <td class="mar-fab">0035 - COOK</td>
+                                                    <td class="ref-fab">BSDN-18-4.0</td>
+                                                    <td class="ref-forn">BSDN-18-4.0</td>
+                                                    <td class="anvisa">10.212.990.100</td>
+                                                    <td class="valor">7.000,00</td>
+                                                </tr>
+                                                <tr class="separator s-3">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD ASSOC VALORES -->
+                            <!-- ADD ESPECIALIDADES -->
+                            <div class="row mt-4" id="especialiaddes">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4 mb-4">
+                                        <h6>Especialidades</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12 col-lg-3">
+                                    <select class="wide" id="add-e">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">Cardiologia</option>
+                                        <option value="2">Ortopedia</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-sm-12 col-lg-2">
+                                    <button type="button" name="button" id="btn-busca-lista-especi" class="btn" data-toggle="tooltip" data-original-title="Lista de Contatos">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-especialidades" class="row">
+                                <div class="col-lg-12">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table lista-e">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Especialidade</th>                                                
+                                                <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-especialidades" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="especialidade">Cardiologia</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-especialidades" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="especialidade">Hemodinamica</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-especialidades" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="especialidade">Ortopedia</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-especialidade-2" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de contatos</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista-especi" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3 mt-3">
+                                                    <select class="wide" id="add-e">
+                                                        <option data-display="Selecione"></option>
+                                                        <option value="1">Cardiologia</option>
+                                                        <option value="2">Ortopedia</option>                                        
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                                            <label for="telefone01" class="label-name">
+                                                                <span class="content-name">Telefone</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                                            <label for="email01" class="label-name">
+                                                                <span class="content-name">Email</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar b-lista">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-3">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Especialidade</th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Especialidade 1</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Especialidade 2</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Especialidade 3</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Especialidade 4</td>
+                                                    <td class="tel">(21)96889-5506</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD ESPECIALIDADES -->
+                            <!-- ADD PROCEDIMENTOS -->
+                            <div class="row mt-4" id="procedimentos">
+                                <div class="col-lg-12">
+                                    <div class="sub-title mt-4 mb-4">
+                                        <h6>Procedimentos</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-2">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="cod-proc" autocomplete="off" required>
+                                            <label for="cod-proc" class="label-name">
+                                                <span class="content-name">Código</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex">
+                                        <div class="form">
+                                            <input type="text" name="procedimento" autocomplete="off" required>
+                                            <label for="procedimento" class="label-name">
+                                                <span class="content-name">Procedimentos</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-lg-2 mt-3">
+                                    <button type="button" class="btn btn-buscar busca-assoc">Buscar</button>
+                                    <button type="button" name="button" id="btn-busca-lista-proce" class="btn" data-toggle="tooltip" data-original-title="Lista de Contatos">
+                                        <img src="../img/menu-buscar.svg" class="i-add-lista">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="conteudo-procedimentos" class="row">
+                                <div class="col-lg-12">
+                                    <div id="">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table lista-e">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Código</th>
+                                                <th>Procedimento</th>                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr-1">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-procedimentos" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00.02.003-6</td>
+                                                    <td class="especialidade">INTERNACAO CLINICA HOSP</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-2">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-procedimentos" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>10.10.201-9</td>
+                                                    <td class="especialidade">VISITA HOSPITALAR (PACIENTE INTERNADO) - ACOMPANHAMENTO MEDICO</td>                                                    
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr class="tr-3">
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-procedimentos" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>30.71.501-6</td>
+                                                    <td class="especialidade">ARTRODESE DA COLUNA C/ INSTRUMENTACAO POR SEGMENTO</td>                                                    
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-procedimentos-2" class="row d-none">
+                                <div class="col-lg-12">
+                                    <div id="box-lista-subs">
+                                        <div class="title-listas">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-lg-6">
+                                                        <h6 class="float-left title-lista">Lista de contatos</h6>
+                                                    </div>
+                                                    <div class="col-sm-4 col-lg-6">
+                                                        <button type="button" name="button" id="btn-close-lista-proce" class="btn float-right">
+                                                            <img src="../img/close.svg" class="i-close-lista">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" name="procedimento-contato" autocomplete="off" required>
+                                                            <label for="procedimento-contato" class="label-name">
+                                                                <span class="content-name">Procedimento</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                                            <label for="telefone01" class="label-name">
+                                                                <span class="content-name">Telefone</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="d-flex">
+                                                        <div class="form">
+                                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                                            <label for="email01" class="label-name">
+                                                                <span class="content-name">Email</span>
+                                                            </label>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <button type="button" class="btn btn-buscar b-lista">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table t-3">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Procedimento</th>
+                                                <th>Telefone</th>
+                                                <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Procedimento 1</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Procedimento 2</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Procedimento 3</td>
+                                                    <td class="tel">(21)99999-9999</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#conteudo-contato" class="excluir">
+                                                                <img src="../img/excluir.svg" class="i-excluir">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tel">Procedimento 4</td>
+                                                    <td class="tel">(21)96889-5506</td>
+                                                    <td class="email">email@email.com</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination lista-contatos">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM ADD PROCEDIMENTOS -->
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12 mt-5">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro'">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-version">
+                <p>V.1.0</p>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#historico-detalhes">
+            Launch demo modal
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="historico-detalhes" tabindex="-1" role="dialog" aria-labelledby="historico-detalhes-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="historico-detalhes-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+        <!-- jQuery -->
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="../js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="../js/bootstrap-datetimepicker.js"></script>
+        <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="../js/jquery.mask.min.js"></script>
+        <!-- script select(combo-box) -->
+        <script src="../js/jquery.nice-select.js"></script>
+        <!-- scripts -->
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>

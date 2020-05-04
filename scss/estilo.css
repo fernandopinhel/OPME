@@ -1235,7 +1235,7 @@ h6.title-lista {
   margin: 0;
 }
 
-.i-detalhes, .i-excluir {
+.i-detalhes, .i-excluir, .i-editar, .i-historico {
   width: 37px;
 }
 
@@ -1244,8 +1244,8 @@ h6.title-lista {
 }
 
 .i-add, .i-add-lista, .i-busca-lista, .i-close-lista {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .b-lista {
@@ -1618,6 +1618,16 @@ tr:hover td.actions .menu-visible {
 tr:hover td.actions .menu-invisible {
   top: -8px;
   left: -25px;
+  opacity: 1;
+}
+
+tr:hover td.a-2 {
+  width: 7% !important;
+}
+
+tr:hover td.a-2 .menu-invisible {
+  top: -8px;
+  left: -44px;
   opacity: 1;
 }
 
