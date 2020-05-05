@@ -301,7 +301,17 @@ $("#btn-busca-lista-2").click(function(){
 $("#btn-close-lista-2").click(function(){
     $("#conteudo-marcas-fornecedores-2").toggleClass("d-none");
 });
-
-
 // fim script add contato
 
+
+// modal
+$("#bt-modal").click(function(){    
+    $('#modal').toggleClass('d-none');
+});
+
+$(".close-modal").click(function(){
+    $('#modal').toggleClass('d-none');    
+});
+// fim modal
+
+  

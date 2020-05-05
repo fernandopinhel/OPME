@@ -605,9 +605,9 @@
                                                                 <span class="circle"></span>
                                                             </div>
                                                             <div class="menu-invisible">
-                                                                <a href="#conteudo-associacoes" class="historico" data-target="#historico-detalhes" data-toggle="modal" title="Histórico">
+                                                                <a href="#conteudo-associacoes" id="bt-modal" class="historico" data-toggle="tooltip" data-original-title="Histórico">
                                                                     <img src="../img/historico.svg" class="i-historico">
-                                                                </a>
+                                                                </a>                                                                
                                                             </div>
                                                         </div>
                                                     </td>
@@ -1464,32 +1464,43 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#historico-detalhes">
-            Launch demo modal
-        </button>
         
-        <!-- Modal -->
-        <div class="modal fade" id="historico-detalhes" tabindex="-1" role="dialog" aria-labelledby="historico-detalhes-title" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="historico-detalhes-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <div id="modal" class="d-none">
+            <div class="modal-wrap">
+                <div class="header-modal">
+                    <h6 class="float-left">Título</h6>
+                    <button class="float-right close-modal">Close</button>                    
                 </div>
-                <div class="modal-body">
-                ...
+                <div class="clearfix"></div>
+                <div class="content-modal mt-5">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fornecedor</th>
+                                    <th>Marca/Fabricante</th>
+                                    <th>Referência Fabricante</th>
+                                    <th>Referência Fornecedor</th>
+                                    <th>Anvisa</th>
+                                    <th>Data  Início</th>
+                                    <th>Valor Atual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
             </div>
         </div>
+          
   
         <!-- jQuery -->
         <script src="../js/jquery-3.3.1.slim.min.js"></script>
