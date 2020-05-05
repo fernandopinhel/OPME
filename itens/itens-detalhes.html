@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="../css/nice-select.css">
         <!-- datepicker -->
         <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+        <!-- modal -->
+        <link rel="stylesheet" href="../css/jquery.modal.min.css" />
     </head>
 
     <body>
@@ -195,14 +197,14 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Cadastro</h1>
+                                        <h1>Detalhes</h1>
                                     </div>
                                 </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="itens.html">Itens</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
                                 </ol>
                             </nav>
                             <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
@@ -551,12 +553,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="d-flex">
+                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                                         <div class="form">
-                                            <input type="text" name="validade-anvisa" autocomplete="off" required>
-                                            <label for="validade-anvisa" class="label-name">
-                                                <span class="content-name">Validade Anvisa</span>
-                                            </label>
+                                          <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
+                                          <label for="text" class="label-name">
+                                            <span class="content-name">
+                                                <span>Validade Anvisa</span>
+                                            </span>
+                                          </label>
                                         </div>
                                     </div>
                                 </div>
@@ -605,7 +609,7 @@
                                                                 <span class="circle"></span>
                                                             </div>
                                                             <div class="menu-invisible">
-                                                                <a href="#conteudo-associacoes" id="bt-modal" class="historico" data-toggle="tooltip" data-original-title="Histórico">
+                                                                <a href="#ex1" rel="modal:open" class="historico" data-toggle="tooltip" data-original-title="Histórico">
                                                                     <img src="../img/historico.svg" class="i-historico">
                                                                 </a>                                                                
                                                             </div>
@@ -1465,42 +1469,68 @@
             </div>
         </div><!-- fim conteudo geral wrapper -->
         
-        <div id="modal" class="d-none">
-            <div class="modal-wrap">
-                <div class="header-modal">
-                    <h6 class="float-left">Título</h6>
-                    <button class="float-right close-modal">Close</button>                    
-                </div>
-                <div class="clearfix"></div>
-                <div class="content-modal mt-5">
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Fornecedor</th>
-                                    <th>Marca/Fabricante</th>
-                                    <th>Referência Fabricante</th>
-                                    <th>Referência Fornecedor</th>
-                                    <th>Anvisa</th>
-                                    <th>Data  Início</th>
-                                    <th>Valor Atual</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                                <td>000036 - HEART LINE COMERCIO DE MATERIA</td>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div id="ex1" class="modal">
+            <div class="table-responsive mt-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>Fornecedor/Hospital</th>
+                        <th>Marca/Fabricante</th>
+                        <th>Referência Fabricante</th>
+                        <th>Referência Fornecedor</th>
+                        <th>Anvisa</th>
+                        <th>Data Início</th>
+                        <th>Valor Atual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-1">
+                            <td class="forn-hosp">000036 - HEART LINE COMERCIO DE MATERIA</td>
+                            <td class="mar-fab">0083 - BIOMETRIX</td>
+                            <td class="ref-fab">HQ-1510</td>
+                            <td class="ref-forn">HQ-1510</td>
+                            <td class="anvisa">10332200034</td>
+                            <td class="data-inicio">01/01/2020</td>
+                            <td class="valor">51,92</td>
+                        </tr>
+                        <tr class="separator s-1">
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="clearfix"></div>
+            <div class="table-responsive mt-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>Fornecedor/Hospital</th>
+                        <th>Marca/Fabricante</th>
+                        <th>Referência Fabricante</th>
+                        <th>Referência Fornecedor</th>
+                        <th>Anvisa</th>
+                        <th>Data Início</th>
+                        <th>Valor Atual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-1">
+                            <td class="forn-hosp">000036 - HEART LINE COMERCIO DE MATERIA</td>
+                            <td class="mar-fab">0083 - BIOMETRIX</td>
+                            <td class="ref-fab">HQ-1510</td>
+                            <td class="ref-forn">HQ-1510</td>
+                            <td class="anvisa">10332200034</td>
+                            <td class="data-inicio">01/01/2020</td>
+                            <td class="valor">51,92</td>
+                        </tr>
+                        <tr class="separator s-1">
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#" rel="modal:close">Close</a>
         </div>
-          
   
         <!-- jQuery -->
         <script src="../js/jquery-3.3.1.slim.min.js"></script>
@@ -1517,6 +1547,8 @@
         <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->
         <script src="../js/script.js"></script>
+        <!-- script modal -->
+        <script src="../js/jquery.modal.min.js"></script>
     </body>
 
 </html>

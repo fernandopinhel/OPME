@@ -305,13 +305,6 @@ $("#btn-close-lista-2").click(function(){
 
 
 // modal
-$("#bt-modal").click(function(){    
-    $('#modal').toggleClass('d-none');
-});
-
-$(".close-modal").click(function(){
-    $('#modal').toggleClass('d-none');    
-});
 // fim modal
 
   

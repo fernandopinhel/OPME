@@ -557,12 +557,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <div class="d-flex">
+                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                                         <div class="form">
-                                            <input type="text" name="validade-anvisa" autocomplete="off" required>
-                                            <label for="validade-anvisa" class="label-name">
-                                                <span class="content-name">Validade Anvisa</span>
-                                            </label>
+                                          <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
+                                          <label for="text" class="label-name">
+                                            <span class="content-name">
+                                                <span>Validade Anvisa</span>
+                                            </span>
+                                          </label>
                                         </div>
                                     </div>
                                 </div>
