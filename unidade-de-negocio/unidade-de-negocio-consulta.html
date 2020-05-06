@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida</title>
+        <title>Protótipo OPME - Unidade de Negócio</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -134,17 +134,17 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
-                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                            <li>
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
                                         <a href="unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
-                                    <li class="sub-active">
+                                    <li>
                                         <a href="unidade-de-medida-busca.html">Busca</a>
                                     </li>
                                     <li>
@@ -152,11 +152,23 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="active">
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li class="sub-active">
+                                        <a href="unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -183,7 +195,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="busca-unidade-de-medida">
+            <div class="content" id="consulta-unidade-de-negocio">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -213,71 +225,34 @@
                 </nav>
                 <form action="">
                     <div class="container-fluid">
-                        <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                        <div class="bg-blank">
+                            <div class="row mb-5">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Busca Unidade de Medida</h1>
+                                        <h1>Consulta Unidade de Negócio</h1>
                                     </div>
-                                </div>                               
-                            </div> 
-                            <div class="row">
-                                <div class="col-lg-3">                                    
-                                    <div class="form">
-                                        <input type="text" value="UND" name="descricao01" autocomplete="off">
-                                        <label for="descricao01" class="label-name">
-                                            <span class="content-name">Descrição</span>
-                                        </label>
-                                    </div>                      
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form">
-                                        <input type="text" value="Unidade" name="complemento-01" autocomplete="off">
-                                        <label for="complemento-01" class="label-name">
-                                            <span class="content-name">Complemento</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p class="p-select">Status</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
-                                    </select>
                                 </div>
                             </div>
-                            <div class="row btns-opcoes mt-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <button type="reset"  value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="resultado-filtro">
-                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
-                                            <a href="#" class="float-right">
-                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                            </a>
-                                        </div>
+                                    <div class="resultado-filtro-todos">
+                                        <h4 class="float-left">Itens:<span>126</span></h4>
+                                        <a href="#" class="float-right">
+                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                        </a>
                                     </div>
                                 </div>
-                                <hr>
                             </div>
-                            <div class="table-responsive mt-5">
+                            <hr> 
+                            <div class="table-responsive">
                                 <table class="table">
                                 <thead>
                                     <tr>
                                     <th></th>
                                     <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
+                                    <th>Nome</th>
+                                    <th>CNPJ</th>                                    
+                                    <th>Reponsável pela Alteração</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
@@ -291,16 +266,87 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="unidade-de-negocio-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
                                         <td>001</td>
-                                        <td>UND</td>
-                                        <td>Unidade</td>
-                                        <td>10/04/20</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                        <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-negocio-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>002</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-negocio-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>003</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Intivo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-negocio-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>004</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
                                         <td>Renata Scott</td>
                                         <td>Ativo</td>
                                     </tr>
@@ -311,6 +357,33 @@
                                 </table>
                             </div>
                         </div>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
@@ -329,7 +402,7 @@
         <script src="../js/bootstrap-datetimepicker.js"></script>
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="../js/jquery.mask.min.js"></script>   
+        <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
         <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->

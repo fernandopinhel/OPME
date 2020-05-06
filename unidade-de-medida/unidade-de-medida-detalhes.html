@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida / Detalhes</title>
+        <title>Protótipo OPME - Unidade de Medida</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -91,6 +91,24 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
@@ -117,10 +135,22 @@
                         </a>
                         <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
                             <li class="active">
-                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li class="sub-active">
+                                        <a href="unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -153,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="detalhes-unidade-de-medida">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -187,25 +217,25 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Detalhes Unidade de Medida</h1>
                                     </div>
-                                </div>                               
+                                </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="unidade-de-medida.html">Unidade de Medida</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                                  <li class="breadcrumb-item"><a href="#">Voltar</a></li>      
+                                  <li class="breadcrumb-item"><a href="#">Editar Conteúdo</a></li>                                  
                                 </ol>
-                            </nav>   
-                            <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
+                            </nav>
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
                                         <div class="col-10">
-                                            <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da alteração: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Data da Alteração: <b>18/12/2019</b> | Responsável: <b>Renata Scott</b></span></p>
                                         </div>
                                         <div class="col-2">
-                                            <button type="button" class="btn btn-close close-inclusao">
+                                            <button type="button" class="btn btn-close close-cadastro">
                                                 <img src="../img/close.svg">
                                             </button>
                                         </div>
@@ -258,7 +288,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>                                    
-                                    <button type="button" name="button" class="b-incluir btn btn-incluir">Salvar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#detalhes-unidade-de-medida'">Salvar</button>
                                 </div>
                             </div>
                         </div>

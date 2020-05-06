@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Hospital</title>
+        <title>Protótipo OPME - Telas</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -28,11 +28,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -90,11 +90,23 @@
                                     <span class="item-menu">Referenciados</span>
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -117,11 +129,11 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
                             <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
@@ -140,11 +152,23 @@
                                     <span class="item-menu">Usuários</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="active">
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>                                    
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>                          
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li class="sub-active">
+                                        <a href="telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -159,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="consulta-telas">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -189,116 +213,79 @@
                 </nav>
                 <form action="">
                     <div class="container-fluid">
-                        <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                        <div class="bg-blank">
+                            <div class="row mb-5">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Hospitais e Clínicas</h1>
+                                        <h1>Consulta Telas</h1>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-5">                            
-                                <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="nome01" autocomplete="off" required>
-                                            <label for="nome01" class="label-name">
-                                                <span class="content-name">Razão Social</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
-                                            <label for="cnpj01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p class="p-select">Status</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row btns-opcoes mt-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='hospital-busca.html'" class="btn btn-buscar">Buscar</button>
-                                    <button type="button" name="button" class="btn btn-incluir" onclick="window.location.href='hospital-cadastro.html'" >Cadastrar</button>
+                                    <div class="resultado-filtro-todos">
+                                        <h4 class="float-left">Itens:<span>126</span></h4>
+                                        <a href="#" class="float-right">
+                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="resultado-filtro-todos">
-                                    <h4 class="float-left">Itens:<span>126</span></h4>
-                                    <a href="#" class="float-right">
-                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
+                            <hr>                                
                             <div class="table-responsive mt-5">
                                 <table class="table">
                                 <thead>
                                     <tr>
                                     <th></th>
                                     <th>Código</th>
-                                    <th>Razão Social</th>
-                                    <th>CNPJ</th>                                                                        
+                                    <th>Telas</th>
+                                    <th>Link</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>001</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Ativo</td>
+                                    <td class="actions">
+                                        <div class="float-right">
+                                        <div class="menu-visible">
+                                            <span class="circle"></span>
+                                            <span class="circle"></span>
+                                            <span class="circle"></span>
+                                        </div>
+                                        <div class="menu-invisible">
+                                            <a href="telas-detalhes.html">
+                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                            </a>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td>001</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
-                                        <tr class="separator">
-                                        <td colspan="5"></td>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
                                     </tr>
                                     <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>002</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Ativo</td>
+                                    <td class="actions">
+                                        <div class="float-right">
+                                        <div class="menu-visible">
+                                            <span class="circle"></span>
+                                            <span class="circle"></span>
+                                            <span class="circle"></span>
+                                        </div>
+                                        <div class="menu-invisible">
+                                            <a href="telas-detalhes.html">
+                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                            </a>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td>002</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
                                     <td colspan="5"></td>
@@ -312,16 +299,16 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
+                                                <a href="telas-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                        <td>003</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Ativo</td>
+                                    <td>003</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
                                     <tr class="separator">
                                     <td colspan="5"></td>
@@ -335,19 +322,39 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
+                                                <a href="telas-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>004</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="telas-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                        <td>004</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Inativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                        <td colspan="5"></td>
+                                    <td>005</td>
+                                    <td>Cadastro de Usuário</td>
+                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
+                                    <td>Ativo</td>
                                     </tr>
                                 </tbody>
                                 </table>

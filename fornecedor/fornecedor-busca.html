@@ -91,16 +91,46 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-fin-compras mr-4"></i>
                                     <span class="item-menu">Fornecedor</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
+                                    <li>
+                                        <a href="fornecedor-consulta.html">Consulta</a>
+                                    </li>
+                                    <li class="sub-active">
+                                        <a href="fornecedor-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="fornecedor-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -120,13 +150,37 @@
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li>
+                                        <a href="unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li>
+                                        <a href="unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -137,7 +191,7 @@
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
                             <li>
@@ -153,7 +207,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="busca-fornecedor">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -184,13 +238,13 @@
                 <form action="">
                     <div class="container-fluid">
                         <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                            <div class="row mb-5">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Fornecedor</h1>
+                                        <h1>Busca Fornecedor</h1>
                                     </div>
-                                </div>
-                            </div>
+                                </div>                               
+                            </div> 
                             <div class="row mt-5">                            
                                 <div class="col-lg-3">
                                     <p class="p-select">Procedência</p>
@@ -200,23 +254,19 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="nome01" autocomplete="off" required>
-                                            <label for="nome01" class="label-name">
-                                                <span class="content-name">Razão Social</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
+                                    <div class="form">
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="nome01" autocomplete="off" required>
+                                        <label for="nome01" class="label-name">
+                                            <span class="content-name">Razão Social</span>
+                                        </label>
+                                    </div>                             
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
-                                            <label for="cnpj01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
-                                            </label>
-                                        </div>
+                                    <div class="form">
+                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <label for="cnpj01" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -233,21 +283,24 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar" onclick="window.location.href='fornecedor.html'">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='fornecedor-busca.html'" class="btn btn-buscar">Buscar</button>
-                                    <button type="button" name="button" class="btn btn-incluir" onclick="window.location.href='fornecedor-cadastro.html'" >Cadastrar</button>
+                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
                                 </div>
                             </div>
                         </div>
                         <div class="bg-blank">
                             <div class="container-fluid mb-5">
-                                <div class="resultado-filtro">
-                                    <h4 class="float-left">Itens encontrados:<span>1</span></h4>
-                                    <a href="#" class="float-right">
-                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                    </a>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="resultado-filtro">
+                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
+                                <hr>
                             </div>
-                            <hr>
                             <div class="table-responsive mt-5">
                                 <table class="table">
                                 <thead>

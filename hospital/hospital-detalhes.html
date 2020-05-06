@@ -93,10 +93,22 @@
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li class="sub-active">
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -145,8 +157,7 @@
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
                             <li>
@@ -162,7 +173,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="cadastro">
+            <div class="content" id="detalhes-hospitais-clinicas">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -196,14 +207,14 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Detalhes Hospitais e Clínicas</h1>
                                     </div>
                                 </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="hospital.html">Hospitais e Clínicas</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                                  <li class="breadcrumb-item"><a href="#">Voltar</a></li>      
+                                  <li class="breadcrumb-item"><a href="#">Editar Conteúdo</a></li>                                  
                                 </ol>
                             </nav>
                             <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
@@ -211,7 +222,7 @@
                                     <div class="row">
                                         <div class="col-10">
                                             <img src="../img/check-cadatro.svg"  width="23" class="float-left">
-                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                            <p><span class="mr-2 ml-2">Data da Alteração: <b>18/12/2019</b> | Responsável: <b>Renata Scott</b></span></p>
                                         </div>
                                         <div class="col-2">
                                             <button type="button" class="btn btn-close close-cadastro">
@@ -224,33 +235,27 @@
                             <div class="row">
                                 <div class="col-lg-2">
                                     <p class="disabled">Código</p>
-                                    <div class="d-flex">
-                                        <div class="form form-disabled">
-                                            <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
-                                            <label for="codigo-01" class="label-name">
-                                                <span class="content-name"></span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <div class="form form-disabled">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                        <label for="codigo-01" class="label-name">
+                                            <span class="content-name"></span>
+                                        </label>
+                                    </div>                                    
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
-                                            <label for="cnpj01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <div class="form">
+                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <label for="cnpj01" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
+                                        </label>
+                                    </div>                                    
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="02.053.62" name="inscricao-estadual" onkeypress="$(this).mask('00.000.00');" autocomplete="off" required>
-                                            <label for="inscricao-estadual" class="label-name">
-                                                <span class="content-name">Inscrição Estadual</span>
-                                            </label>
-                                        </div>
+                                <div class="col-lg-3">    
+                                    <div class="form">
+                                        <input type="text" value="02.053.62" name="inscricao-estadual" onkeypress="$(this).mask('00.000.00');" autocomplete="off" required>
+                                        <label for="inscricao-estadual" class="label-name">
+                                            <span class="content-name">Inscrição Estadual</span>
+                                        </label>
                                     </div>
                                 </div>                               
                                 <div class="col-lg-3">
@@ -262,25 +267,21 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="razao-social" autocomplete="off" required>
-                                            <label for="razao-social" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Razão Social</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
+                                <div class="col-lg-5">                                    
+                                    <div class="form">
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="razao-social" autocomplete="off" required>
+                                        <label for="razao-social" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Razão Social</span>
+                                        </label>
+                                    </div>               
                                 </div>
                                 <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="LUCAS DISTRIBUIÇÃO" name="nome-fantasia" autocomplete="off" required>
-                                            <label for="nome-fantasia" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Nome Fantasia</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
+                                    <div class="form">
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO" name="nome-fantasia" autocomplete="off" required>
+                                        <label for="nome-fantasia" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Nome Fantasia</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
                                 <div class="col-lg-2">
                                     <p class="p-select">Status</p>
@@ -306,55 +307,45 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-2">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="20500-240" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
-                                            <label for="cep01" class="label-name">
-                                                <span class="content-name">CEP</span>
-                                            </label>
-                                        </div>
-                                    </div> 
+                                    <div class="form">
+                                        <input type="text" value="20500-240" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                        <label for="cep01" class="label-name">
+                                            <span class="content-name">CEP</span>
+                                        </label>
+                                    </div>                                    
                                 </div>
-                                <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" valu="Lorem ipsum" name="logradouro01" autocomplete="off" required>
-                                            <label for="logradouro01" class="label-name">
-                                                <span class="content-name">Logradouro</span>
-                                            </label>
-                                        </div>
+                                <div class="col-lg-5">                                    
+                                    <div class="form">
+                                        <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" required>
+                                        <label for="logradouro01" class="label-name">
+                                            <span class="content-name">Logradouro</span>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="72" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
-                                            <label for="numero01" class="label-name">
-                                                <span class="content-name">Nº</span>
-                                            </label>
-                                        </div>
+                                <div class="col-lg-2">                                    
+                                    <div class="form">
+                                        <input type="text" value="72" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                        <label for="numero01" class="label-name">
+                                            <span class="content-name">Nº</span>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
-                                            <label for="complemento01" class="label-name">
-                                                <span class="content-name">Complemento</span>
-                                            </label>
-                                        </div>
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
+                                        <label for="complemento01" class="label-name">
+                                            <span class="content-name">Complemento</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="Copacabana" name="bairro01" autocomplete="off" required>
-                                            <label for="bairro01" class="label-name">
-                                                <span class="content-name">Bairro</span>
-                                            </label>
-                                        </div>
+                                    <div class="form">
+                                        <input type="text" value="Copacabana" name="bairro01" autocomplete="off" required>
+                                        <label for="bairro01" class="label-name">
+                                            <span class="content-name">Bairro</span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-lg-2">
@@ -366,15 +357,13 @@
                                         <option value="4">RS</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-5">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
-                                            <label for="cidade01" class="label-name">
-                                                <span class="content-name">Cidade</span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-5">                                    
+                                    <div class="form">
+                                        <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
+                                        <label for="cidade01" class="label-name">
+                                            <span class="content-name">Cidade</span>
+                                        </label>
+                                    </div>                            
                                 </div>
                                 <div class="col-lg-12 mt-4">
                                     <div class="radio-title">
@@ -402,56 +391,46 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-2">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="25600-420" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
-                                                <label for="cep01" class="label-name">
-                                                    <span class="content-name">CEP</span>
-                                                </label>
-                                            </div>
-                                        </div> 
+                                        <div class="form">
+                                            <input type="text" value="25600-420" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                            <label for="cep01" class="label-name">
+                                                <span class="content-name">CEP</span>
+                                            </label>
+                                        </div>                                        
                                     </div>
-                                    <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" required>
-                                                <label for="logradouro01" class="label-name">
-                                                    <span class="content-name">Logradouro</span>
-                                                </label>
-                                            </div>
+                                    <div class="col-lg-5">                                        
+                                        <div class="form">
+                                            <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" required>
+                                            <label for="logradouro01" class="label-name">
+                                                <span class="content-name">Logradouro</span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="160" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
-                                                <label for="numero01" class="label-name">
-                                                    <span class="content-name">Nº</span>
-                                                </label>
-                                            </div>
+                                    <div class="col-lg-2">                                        
+                                        <div class="form">
+                                            <input type="text" value="160" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <label for="numero01" class="label-name">
+                                                <span class="content-name">Nº</span>
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
-                                                <label for="complemento01" class="label-name">
-                                                    <span class="content-name">Complemento</span>
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <div class="form">
+                                            <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
+                                            <label for="complemento01" class="label-name">
+                                                <span class="content-name">Complemento</span>
+                                            </label>
+                                        </div>                                
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Ipanema" name="bairro01" autocomplete="off" required>
-                                                <label for="bairro01" class="label-name">
-                                                    <span class="content-name">Bairro</span>
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <div class="form">
+                                            <input type="text" value="Ipanema" name="bairro01" autocomplete="off" required>
+                                            <label for="bairro01" class="label-name">
+                                                <span class="content-name">Bairro</span>
+                                            </label>
+                                        </div>                                        
                                     </div>
                                     <div class="col-lg-2">
                                         <p class="p-select">UF</p>
@@ -463,13 +442,11 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-5">
-                                        <div class="d-flex">
-                                            <div class="form">
-                                                <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
-                                                <label for="cidade01" class="label-name">
-                                                    <span class="content-name">Cidade</span>
-                                                </label>
-                                            </div>
+                                        <div class="form">
+                                            <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
+                                            <label for="cidade01" class="label-name">
+                                                <span class="content-name">Cidade</span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -483,24 +460,20 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-sm-5 col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
-                                            <label for="cep01" class="label-name">
-                                                <span class="content-name">Telefone</span>
-                                            </label>
-                                        </div>
-                                    </div> 
+                                    <div class="form">
+                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                        <label for="cep01" class="label-name">
+                                            <span class="content-name">Telefone</span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="col-sm-5 col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
-                                            <label for="email01" class="label-name">
-                                                <span class="content-name">Email</span>
-                                            </label>
-                                        </div>
-                                    </div> 
+                                <div class="col-sm-5 col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                        <label for="email01" class="label-name">
+                                            <span class="content-name">Email</span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="col-sm-2 col-lg-2 mt-3">
                                     <button type="button" name="button" id="btn-add" class="btn btn-adicionar" data-toggle="tooltip" data-original-title="Adicionar contato">
@@ -517,86 +490,82 @@
                                     </button>
                                 </div>
                             </div>
-                            <div id="conteudo-contato" class="row b-contato">
-                                <div class="col-lg-12">
-                                    <div id="">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table t-contato-2">
-                                            <thead>
-                                                <tr>
+                            <div id="conteudo-contato" class="row b-contato">                                                               
+                                <div class="table-responsive mt-3">
+                                    <table class="table t-contato-2">
+                                        <thead>
+                                            <tr>
                                                 <th></th>
                                                 <th>Telefone</th>
                                                 <th>Email</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="tr-contato-1">
-                                                    <td class="actions">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#conteudo-contato" class="excluir">
-                                                                <img src="../img/excluir.svg" class="i-excluir">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="tel">(21)99999-9999</td>
-                                                    <td class="email">email@email.com</td>
-                                                </tr>
-                                                <tr class="separator s-contato-1 d-none">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr class="tr-contato-2 d-none">
-                                                    <td class="actions">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#conteudo-contato" class="excluir">
-                                                                <img src="../img/excluir.svg" class="i-excluir">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="tel"></td>
-                                                    <td class="email"></td>
-                                                </tr>
-                                                <tr class="separator s-contato-2 d-none">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr class="tr-contato-3 d-none">
-                                                    <td class="actions">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#conteudo-contato" class="excluir">
-                                                                <img src="../img/excluir.svg" class="i-excluir">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="tel"></td>
-                                                    <td class="email"></td>
-                                                </tr>
-                                                <tr class="separator s-contato-3 d-none">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="tr-contato-1">
+                                                <td class="actions">
+                                                    <div class="float-right">
+                                                    <div class="menu-visible">
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                    </div>
+                                                    <div class="menu-invisible">
+                                                        <a href="#conteudo-contato" class="excluir">
+                                                            <img src="../img/excluir.svg" class="i-excluir">
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </td>
+                                                <td class="tel">(21)99999-9999</td>
+                                                <td class="email">email@email.com</td>
+                                            </tr>
+                                            <tr class="separator s-contato-1 d-none">
+                                                <td colspan="5"></td>
+                                            </tr>
+                                            <tr class="tr-contato-2 d-none">
+                                                <td class="actions">
+                                                    <div class="float-right">
+                                                    <div class="menu-visible">
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                    </div>
+                                                    <div class="menu-invisible">
+                                                        <a href="#conteudo-contato" class="excluir">
+                                                            <img src="../img/excluir.svg" class="i-excluir">
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </td>
+                                                <td class="tel"></td>
+                                                <td class="email"></td>
+                                            </tr>
+                                            <tr class="separator s-contato-2 d-none">
+                                                <td colspan="5"></td>
+                                            </tr>
+                                            <tr class="tr-contato-3 d-none">
+                                                <td class="actions">
+                                                    <div class="float-right">
+                                                    <div class="menu-visible">
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                        <span class="circle"></span>
+                                                    </div>
+                                                    <div class="menu-invisible">
+                                                        <a href="#conteudo-contato" class="excluir">
+                                                            <img src="../img/excluir.svg" class="i-excluir">
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </td>
+                                                <td class="tel"></td>
+                                                <td class="email"></td>
+                                            </tr>
+                                            <tr class="separator s-contato-3 d-none">
+                                                <td colspan="5"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div id="conteudo-contato-2" class="row d-none">
@@ -789,7 +758,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12 mt-5">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro'">Salvar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#detalhes-hospitais-clinicas'">Salvar</button>
                                 </div>
                             </div>
                         </div>

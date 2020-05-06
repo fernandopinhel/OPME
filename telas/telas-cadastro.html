@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida</title>
+        <title>Protótipo OPME - Telas</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -134,23 +134,11 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
-                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                            <li>
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
-                                    <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
-                                    <li>
-                                        <a href="unidade-de-medida-consulta.html">Consulta</a>
-                                    </li>
-                                    <li class="sub-active">
-                                        <a href="unidade-de-medida-busca.html">Busca</a>
-                                    </li>
-                                    <li>
-                                        <a href="unidade-de-medida-cadastro.html">Cadastro</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -164,11 +152,23 @@
                                     <span class="item-menu">Usuários</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="active">
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>                                    
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>                          
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas-busca.html">Busca</a>
+                                    </li>
+                                    <li class="sub-active">
+                                        <a href="telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -183,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="busca-unidade-de-medida">
+            <div class="content" id="cadastro-telas">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -217,24 +217,39 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Busca Unidade de Medida</h1>
+                                        <h1>Cadastro Telas</h1>
                                     </div>
-                                </div>                               
-                            </div> 
-                            <div class="row">
+                                </div>
+                            </div>
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-close close-cadastro">
+                                                <img src="../img/close.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
                                 <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" value="UND" name="descricao01" autocomplete="off">
-                                        <label for="descricao01" class="label-name">
-                                            <span class="content-name">Descrição</span>
+                                        <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <label for="telas" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
                                         </label>
-                                    </div>                      
+                                    </div>                               
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6">                                    
                                     <div class="form">
-                                        <input type="text" value="Unidade" name="complemento-01" autocomplete="off">
-                                        <label for="complemento-01" class="label-name">
-                                            <span class="content-name">Complemento</span>
+                                        <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <label for="telas" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
                                         </label>
                                     </div>
                                 </div>
@@ -249,66 +264,9 @@
                             </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
-                                    <button type="reset"  value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-telas'">Salvar</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="resultado-filtro">
-                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
-                                            <a href="#" class="float-right">
-                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="table-responsive mt-5">
-                                <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th></th>
-                                    <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
-                                    <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>001</td>
-                                        <td>UND</td>
-                                        <td>Unidade</td>
-                                        <td>10/04/20</td>
-                                        <td>Renata Scott</td>
-                                        <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                        <td colspan="5"></td>
-                                    </tr>
-                                </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -329,7 +287,7 @@
         <script src="../js/bootstrap-datetimepicker.js"></script>
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="../js/jquery.mask.min.js"></script>   
+        <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
         <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->

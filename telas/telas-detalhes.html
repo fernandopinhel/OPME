@@ -91,6 +91,24 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
@@ -135,10 +153,22 @@
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>                                    
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>                          
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li class="sub-active">
+                                        <a href="telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -153,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="detalhes-telas">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -187,16 +217,16 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Detalhes</h1>
+                                        <h1>Detalhes Telas</h1>
                                     </div>
-                                </div>                               
+                                </div>
                             </div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="telas.html">Telas</a></li>                                  
-                                  <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                                  <li class="breadcrumb-item"><a href="#">Voltar</a></li>      
+                                  <li class="breadcrumb-item"><a href="#">Editar Conteúdo</a></li>                                  
                                 </ol>
-                            </nav>   
+                            </nav>  
                             <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
                                 <div class="container-fluid p-0">
                                     <div class="row">
@@ -215,35 +245,29 @@
                             <div class="row">
                                 <div class="col-lg-2">
                                     <p class="disabled">Código</p>
-                                    <div class="d-flex">
-                                        <div class="form form-disabled">
-                                            <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
-                                            <label for="codigo-01" class="label-name">
-                                                <span class="content-name"></span>
-                                            </label>
-                                        </div>
+                                    <div class="form form-disabled">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                        <label for="codigo-01" class="label-name">
+                                            <span class="content-name"></span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="telas" value="Cadastro de Usuário" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="telas" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
-                                            </label>
-                                        </div>
-                                    </div>                                  
+                                    <div class="form">
+                                        <input type="text" name="telas" value="Cadastro de Usuário" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <label for="telas" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
+                                        </label>
+                                    </div>                                                                     
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="telas" value="http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="telas" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
-                                            </label>
-                                        </div>
+                                <div class="col-lg-6">                                    
+                                    <div class="form">
+                                        <input type="text" name="telas" value="http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <label for="telas" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">

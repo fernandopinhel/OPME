@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Telas</title>
+        <title>Protótipo OPME - Unidade de Negócio</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -18,6 +18,16 @@
     </head>
 
     <body>
+        <div class="loading">
+            <div class="load-wrapp">
+                <div class="load-1">                    
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <p>Carregando<span class="p1">.</span><span class="p2">.</span><span class="p3">.</span></p>
+            </div>
+        </div>
         <!-- conteudo geral wrapper -->
         <div class="wrapper">
             <!-- sidebar -->
@@ -91,6 +101,24 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
@@ -120,13 +148,37 @@
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li>
+                                        <a href="unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="active">
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li class="sub-active">
+                                        <a href="unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -134,7 +186,7 @@
                                     <span class="item-menu">Usuários</span>
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>                                    
@@ -153,7 +205,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="consulta-unidade-de-negocio">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -183,136 +235,39 @@
                 </nav>
                 <form action="">
                     <div class="container-fluid">
-                        <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                        <div class="bg-blank">
+                            <div class="row mb-5">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Telas</h1>
+                                        <h1>Consulta Unidade de Negócio</h1>
                                     </div>
                                 </div>
                             </div>
-                            <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
-                                <div class="container-fluid p-0">
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da inclusão: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-close close-inclusao">
-                                                <img src="../img/close.svg">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="telas" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
-                                            </label>
-                                        </div>
-                                    </div>                                  
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="telas" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="telas" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p class="p-select">Status</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row btns-opcoes mt-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='telas-busca.html'" class="btn btn-buscar">Buscar</button>
-                                    <button type="button" name="button" class="btn btn-incluir b-incluir">Incluir</button>
+                                    <div class="resultado-filtro-todos">
+                                        <h4 class="float-left">Itens:<span>126</span></h4>
+                                        <a href="#" class="float-right">
+                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="resultado-filtro-todos">
-                                    <h4 class="float-left">Itens:<span>126</span></h4>
-                                    <a href="#" class="float-right">
-                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="table-responsive mt-5">
+                            <hr> 
+                            <div class="table-responsive">
                                 <table class="table">
                                 <thead>
                                     <tr>
                                     <th></th>
                                     <th>Código</th>
-                                    <th>Telas</th>
-                                    <th>Link</th>
+                                    <th>Nome</th>
+                                    <th>CNPJ</th>                                    
+                                    <th>Reponsável pela Alteração</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="telas-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>001</td>
-                                    <td>Cadastro de Usuário</td>
-                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="telas-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>002</td>
-                                    <td>Cadastro de Usuário</td>
-                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
                                         <td class="actions">
                                             <div class="float-right">
                                             <div class="menu-visible">
@@ -321,41 +276,19 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="telas-detalhes.html">
+                                                <a href="unidade-de-negocio-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                    <td>003</td>
-                                    <td>Cadastro de Usuário</td>
-                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
-                                    <td>Ativo</td>
+                                        <td>001</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
                                     </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="telas-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>004</td>
-                                    <td>Cadastro de Usuário</td>
-                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
+                                        <tr class="separator">
                                         <td colspan="5"></td>
                                     </tr>
                                     <tr>
@@ -367,16 +300,68 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="telas-detalhes.html">
+                                                <a href="unidade-de-negocio-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                    <td>005</td>
-                                    <td>Cadastro de Usuário</td>
-                                    <td>http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario</td>
-                                    <td>Ativo</td>
+                                        <td>002</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-negocio-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>003</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Intivo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-negocio-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>004</td>
+                                        <td>Bradesco</td>
+                                        <td>03.235.562/00001-00</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
                                     </tr>
                                 </tbody>
                                 </table>

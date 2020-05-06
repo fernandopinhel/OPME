@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Unidade de Medida</title>
+        <title>Protótipo OPME - Marcas/Fabricantes</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
@@ -28,11 +28,11 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -91,10 +91,40 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                    <li>
+                                        <a href="hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-nav-produtos mr-4"></i>
                                     <span class="item-menu">Marcas/Fabricantes</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
+                                    <li class="sub-active">
+                                        <a href="marcas-e-fabricantes-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="marcas-e-fabricantes-busca.html">Busca</a>
+                                    </li>
+                                    <li>
+                                        <a href="marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -111,12 +141,12 @@
                         </ul>
                     </li><!-- fim painel -->
                     <li><!-- configuracoes -->
-                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
-                            <li class="active">
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
@@ -137,7 +167,7 @@
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>
+                                    <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
                             <li>
@@ -153,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content">
+            <div class="content" id="consulta-marcas-e-fabricantes">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -183,142 +213,39 @@
                 </nav>
                 <form action="">
                     <div class="container-fluid">
-                        <div class="bg-blank mb-5">
-                            <div class="row mb-3">
+                        <div class="bg-blank">                        
+                            <div class="row mb-5">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Unidade de Medida</h1>
+                                        <h1>Consulta Marcas e Fabricantes</h1>
                                     </div>
                                 </div>
                             </div>
-                            <div class="alert alert-success d-none" id="msg-inclusao" role="alert">
-                                <div class="container-fluid p-0">
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <img src="../img/check-cadatro.svg" width="23" class="float-left">
-                                            <p><span class="mr-2">Data da inclusão: <b>18/12/2019</b></span> | <span class="ml-2">Responsável: <b>Renata Scott</b></span></p>
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn btn-close close-inclusao">
-                                                <img src="../img/close.svg">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="descricao01" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="descricao01" class="label-name">
-                                                <span class="content-name"><span class="obrigatorio">*</span>Descrição</span>
-                                            </label>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex">
-                                        <div class="form">
-                                            <input type="text" name="complemento-01" autocomplete="off" required oninvalid="setCustomValidity('Preencha o Complemento')" onchange="try{setCustomValidity('')}catch(e){}">
-                                            <label for="complemento-01" class="label-name">
-                                                <span class="content-name">Complemento</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p class="p-select">Status</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row btns-opcoes mt-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='unidade-de-medida-busca.html'" class="btn btn-buscar">Buscar</button>
-                                    <button type="button" name="button" class="b-incluir btn btn-incluir">Incluir</button>
+                                    <div class="resultado-filtro-todos">
+                                        <h4 class="float-left">Itens:<span>126</span></h4>
+                                        <a href="#" class="float-right">
+                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="resultado-filtro-todos">
-                                    <h4 class="float-left">Itens:<span>126</span></h4>
-                                    <a href="#" class="float-right">
-                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
+                            <hr>                                 
                             <div class="table-responsive mt-5">
                                 <table class="table">
                                 <thead>
                                     <tr>
                                     <th></th>
                                     <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
+                                    <th>Nome</th>
+                                    <th>Procedência</th>                                    
+                                    <th>Reponsável pela Alteração</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>001</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                    <td class="actions">
-                                        <div class="float-right">
-                                        <div class="menu-visible">
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                            <span class="circle"></span>
-                                        </div>
-                                        <div class="menu-invisible">
-                                            <a href="unidade-de-medida-detalhes.html">
-                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td>002</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
                                         <td class="actions">
                                             <div class="float-right">
                                             <div class="menu-visible">
@@ -327,45 +254,19 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                    <td>003</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
+                                        <td>001</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
                                     </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>004</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
+                                        <tr class="separator">
                                         <td colspan="5"></td>
                                     </tr>
                                     <tr>
@@ -377,18 +278,68 @@
                                                 <span class="circle"></span>
                                             </div>
                                             <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
                                                     <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                 </a>
                                             </div>
                                             </div>
                                         </td>
-                                    <td>005</td>
-                                    <td>UND</td>
-                                    <td>Unidade</td>
-                                    <td>10/04/20</td>
-                                    <td>Renata Scott</td>
-                                    <td>Inativo</td>
+                                        <td>002</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>003</td>
+                                        <td>Bradesco</td>
+                                        <td>Importado</td>
+                                        <td>Renata Scott</td>
+                                        <td>Intivo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                    <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="marcas-e-fabricantes-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>004</td>
+                                        <td>Bradesco</td>
+                                        <td>Nacional</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
                                     </tr>
                                 </tbody>
                                 </table>

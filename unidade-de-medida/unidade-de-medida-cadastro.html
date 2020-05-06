@@ -144,10 +144,10 @@
                                     <li>
                                         <a href="unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
-                                    <li class="sub-active">
+                                    <li>
                                         <a href="unidade-de-medida-busca.html">Busca</a>
                                     </li>
-                                    <li>
+                                    <li class="sub-active">
                                         <a href="unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
@@ -183,7 +183,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="busca-unidade-de-medida">
+            <div class="content" id="cadastro-unidade-de-medida">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -217,22 +217,37 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Busca Unidade de Medida</h1>
+                                        <h1>Cadastro Unidade de Medida</h1>
                                     </div>
-                                </div>                               
+                                </div>                           
+                            </div>
+                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <img src="../img/check-cadatro.svg"  width="23" class="float-left">
+                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="button" class="btn btn-close close-cadastro">
+                                                <img src="../img/close.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div> 
                             <div class="row">
                                 <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" value="UND" name="descricao01" autocomplete="off">
+                                        <input type="text" name="descricao01" autocomplete="off" required>
                                         <label for="descricao01" class="label-name">
                                             <span class="content-name">Descrição</span>
                                         </label>
-                                    </div>                      
+                                    </div>                    
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form">
-                                        <input type="text" value="Unidade" name="complemento-01" autocomplete="off">
+                                        <input type="text" name="complemento-01" autocomplete="off" required>
                                         <label for="complemento-01" class="label-name">
                                             <span class="content-name">Complemento</span>
                                         </label>
@@ -250,65 +265,8 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset"  value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
+                                    <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-unidade-de-medida'">Salvar</button>                                
                                 </div>
-                            </div>
-                        </div>
-                        <div class="bg-blank">
-                            <div class="container-fluid mb-5">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="resultado-filtro">
-                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
-                                            <a href="#" class="float-right">
-                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="table-responsive mt-5">
-                                <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th></th>
-                                    <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Complemento</th>
-                                    <th>Data da Inclusão</th>
-                                    <th>Reponsável pela Inclusão</th>
-                                    <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>001</td>
-                                        <td>UND</td>
-                                        <td>Unidade</td>
-                                        <td>10/04/20</td>
-                                        <td>Renata Scott</td>
-                                        <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                        <td colspan="5"></td>
-                                    </tr>
-                                </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
