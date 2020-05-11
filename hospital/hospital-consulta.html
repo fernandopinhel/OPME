@@ -91,18 +91,15 @@
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                                <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li class="sub-active">
                                         <a href="hospital-consulta.html">Consulta</a>
-                                    </li>
-                                    <li>
-                                        <a href="hospital-busca.html">Busca</a>
-                                    </li>
+                                    </li>                                    
                                     <li>
                                         <a href="hospital-cadastro.html">Cadastro</a>
                                     </li>
@@ -171,7 +168,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="consulta-hospitais-clinicas">
+            <div class="content" id="busca-hospitais-clinicas">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -201,25 +198,61 @@
                 </nav>
                 <form action="">
                     <div class="container-fluid">
-                        <div class="bg-blank">                            
-                            <div class="row mb-5">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
                                         <h1>Consulta Hospitais e Clínicas</h1>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-lg-12">
-                                    <div class="resultado-filtro-todos">
-                                        <h4 class="float-left">Itens:<span>126</span></h4>
-                                        <a href="#" class="float-right">
-                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
-                                        </a>
+                            <div class="row mt-5">                            
+                                <div class="col-lg-5">                                    
+                                    <div class="form">
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="nome01" autocomplete="off" required>
+                                        <label for="nome01" class="label-name">
+                                            <span class="content-name">Razão Social</span>
+                                        </label>
+                                    </div>               
+                                </div>
+                                <div class="col-lg-4">                                    
+                                    <div class="form">
+                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <label for="cnpj01" class="label-name">
+                                            <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
+                                        </label>
                                     </div>
                                 </div>
+                                <div class="col-lg-3">
+                                    <p class="p-select">Status</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione"></option>
+                                        <option value="1">Ativo</option>
+                                        <option value="2">Inativo</option>                                        
+                                    </select>
+                                </div>
                             </div>
-                            <hr>                                
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid mb-5">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="resultado-filtro">
+                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
                             <div class="table-responsive mt-5">
                                 <table class="table">
                                 <thead>
@@ -253,75 +286,6 @@
                                         <td>Ativo</td>
                                     </tr>
                                         <tr class="separator">
-                                        <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>002</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>003</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Ativo</td>
-                                    </tr>
-                                    <tr class="separator">
-                                    <td colspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="actions">
-                                            <div class="float-right">
-                                            <div class="menu-visible">
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                                <span class="circle"></span>
-                                            </div>
-                                            <div class="menu-invisible">
-                                                <a href="hospital-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </td>
-                                        <td>004</td>
-                                        <td>LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA</td>
-                                        <td>05.253.654/0001-00</td>
-                                        <td>Inativo</td>
-                                    </tr>
-                                    <tr class="separator">
                                         <td colspan="5"></td>
                                     </tr>
                                 </tbody>

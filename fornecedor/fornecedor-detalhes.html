@@ -103,9 +103,6 @@
                                         <a href="hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital-busca.html">Busca</a>
-                                    </li>
-                                    <li>
                                         <a href="hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
@@ -125,9 +122,6 @@
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li class="sub-active">
                                         <a href="fornecedor-consulta.html">Consulta</a>
-                                    </li>
-                                    <li>
-                                        <a href="fornecedor-busca.html">Busca</a>
                                     </li>
                                     <li>
                                         <a href="fornecedor-cadastro.html">Cadastro</a>
@@ -159,9 +153,6 @@
                                         <a href="unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida-busca.html">Busca</a>
-                                    </li>
-                                    <li>
                                         <a href="unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
@@ -175,9 +166,6 @@
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
                                         <a href="unidade-de-negocio-consulta.html">Consulta</a>
-                                    </li>
-                                    <li>
-                                        <a href="unidade-de-negocio-busca.html">Busca</a>
                                     </li>
                                     <li>
                                         <a href="unidade-de-negocio-cadastro.html">Cadastro</a>
@@ -489,8 +477,16 @@
                             <div class="row mt-4">
                                 <div class="col-sm-12 col-lg-3">
                                     <div class="form">
+                                        <input type="text" id="nome-add" name="nome01" autocomplete="off" required>
+                                        <label for="nome01" class="label-name">
+                                            <span class="content-name">Nome</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-lg-3">
+                                    <div class="form">
                                         <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
-                                        <label for="cep01" class="label-name">
+                                        <label for="telefone01" class="label-name">
                                             <span class="content-name">Telefone</span>
                                         </label>
                                     </div>
@@ -521,10 +517,11 @@
                             <div id="conteudo-contato" class="row b-contato">
                                 <div class="col-lg-12">
                                     <div class="table-responsive mt-3">
-                                        <table class="table t-contato-2">
+                                        <table class="table t-3">
                                         <thead>
                                             <tr>
                                             <th></th>
+                                            <th>Nome</th>
                                             <th>Telefone</th>
                                             <th>Email</th>
                                             </tr>
@@ -545,6 +542,7 @@
                                                     </div>
                                                     </div>
                                                 </td>
+                                                <td class="nome">Nome</td>
                                                 <td class="tel">(21)99999-9999</td>
                                                 <td class="email">email@email.com</td>
                                             </tr>
@@ -566,6 +564,7 @@
                                                     </div>
                                                     </div>
                                                 </td>
+                                                <td class="nome"></td>
                                                 <td class="tel"></td>
                                                 <td class="email"></td>
                                             </tr>
@@ -622,7 +621,7 @@
                                                     <div class="form">
                                                         <input type="text" id="telefone-add" name="nome-fornecedor" autocomplete="off" required>
                                                         <label for="nome-fornecedor" class="label-name">
-                                                            <span class="content-name">Fornecedor</span>
+                                                            <span class="content-name">Nome</span>
                                                         </label>
                                                     </div>                                                    
                                                 </div>
@@ -652,7 +651,7 @@
                                             <thead>
                                                 <tr>
                                                 <th></th>
-                                                <th>Fornecedor</th>
+                                                <th>Nome</th>
                                                 <th>Telefone</th>
                                                 <th>Email</th>
                                                 </tr>

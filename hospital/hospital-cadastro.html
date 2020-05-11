@@ -93,17 +93,14 @@
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                                <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
                                         <a href="hospital-consulta.html">Consulta</a>
-                                    </li>
-                                    <li>
-                                        <a href="hospital-busca.html">Busca</a>
                                     </li>
                                     <li class="sub-active">
                                         <a href="hospital-cadastro.html">Cadastro</a>
@@ -236,7 +233,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-2">
                                     <div class="form">
                                         <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
                                         <label for="cnpj01" class="label-name">
@@ -252,7 +249,7 @@
                                         </label>
                                     </div>
                                 </div>                               
-                                <div class="col-lg-3">
+                                <div class="col-lg-5">
                                     <p class="p-select">Unidade de Negócio</p>
                                     <select class="wide">
                                         <option data-display="Selecione"></option>
@@ -456,7 +453,15 @@
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-lg-3">
+                                <div class="col-sm-12 col-lg-3">
+                                    <div class="form">
+                                        <input type="text" id="nome-add" name="nome01" autocomplete="off" required>
+                                        <label for="cep01" class="label-name">
+                                            <span class="content-name">Nome</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-lg-3">
                                     <div class="form">
                                         <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
                                         <label for="cep01" class="label-name">
@@ -464,7 +469,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-sm-12 col-lg-3">
                                     <div class="form">
                                         <input type="text" id="email-add" name="email01" autocomplete="off" required>
                                         <label for="email01" class="label-name">
@@ -490,10 +495,11 @@
                             <div id="conteudo-contato" class="row b-contato d-none">
                                 <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <table class="table t-contato">
+                                        <table class="table t-3">
                                         <thead>
                                             <tr>
                                             <th></th>
+                                            <th>Nome</th>
                                             <th>Telefone</th>
                                             <th>Email</th>
                                             </tr>
@@ -514,6 +520,7 @@
                                                     </div>
                                                     </div>
                                                 </td>
+                                                <td class="nome"></td>
                                                 <td class="tel"></td>
                                                 <td class="email"></td>
                                             </tr>
@@ -535,6 +542,7 @@
                                                     </div>
                                                     </div>
                                                 </td>
+                                                <td class="nome"></td>
                                                 <td class="tel"></td>
                                                 <td class="email"></td>
                                             </tr>
@@ -556,6 +564,7 @@
                                                     </div>
                                                     </div>
                                                 </td>
+                                                <td class="nome"></td>
                                                 <td class="tel"></td>
                                                 <td class="email"></td>
                                             </tr>
@@ -592,7 +601,7 @@
                                                         <div class="form">
                                                             <input type="text" id="hospital-clinicas" name="nome-hospital" autocomplete="off" required>
                                                             <label for="nome-hospital" class="label-name">
-                                                                <span class="content-name">Hospitais/Clínicas</span>
+                                                                <span class="content-name">Nome</span>
                                                             </label>
                                                         </div>
                                                     </div> 
@@ -627,7 +636,7 @@
                                             <thead>
                                                 <tr>
                                                 <th></th>
-                                                <th>Hospital/Clínicas</th>
+                                                <th>Nome</th>
                                                 <th>Telefone</th>
                                                 <th>Email</th>
                                                 </tr>
@@ -648,7 +657,7 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">Hospital/Clínicas</td>
+                                                    <td class="nome">Nome</td>
                                                     <td class="tel">(21)99999-9999</td>
                                                     <td class="email">email@email.com</td>
                                                 </tr>
@@ -670,7 +679,7 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="nome">Nome</td>
                                                     <td class="tel">(21)99999-9999</td>
                                                     <td class="email">email@email.com</td>
                                                 </tr>
@@ -692,7 +701,7 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="nome">Nome</td>
                                                     <td class="tel">(21)99999-9999</td>
                                                     <td class="email">email@email.com</td>
                                                 </tr>
@@ -714,7 +723,7 @@
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td class="tel">Hospitais/Clínicas</td>
+                                                    <td class="nome">Nome</td>
                                                     <td class="tel">(21)96889-5506</td>
                                                     <td class="email">email@email.com</td>
                                                 </tr>
