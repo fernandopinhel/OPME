@@ -303,8 +303,17 @@ $("#btn-close-lista-2").click(function(){
 });
 // fim script add contato
 
-
-// modal
-// fim modal
+// carregando divs do select
+$(function() { //onload aqui
+    $('#opcoes').on('change', function() {
+      $('.sel').hide();
+      let idSelecionado = $(this).val(); //construir o id
+      if (idSelecionado != "") $("#" + idSelecionado).show(); //mostrar o elemento
+    });
+  
+    $('#opcoes').trigger("change"); //aplicar a lógica do change
+  })
+  // fim carregando divs do select
+  
 
   

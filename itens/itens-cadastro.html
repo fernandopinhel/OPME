@@ -280,13 +280,13 @@
                                     <a class="nav-link" data-toggle="tab" href="#fabricantes">Fabricantes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#fornecedores">Fornecedores</a>
+                                    <a class="nav-link" data-toggle="tab" href="#fornecedores">Fornecedores</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#cadastrar-cotacao">Cadastrar Cotação</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#consultar-renegociar-cotacao">Consultar/Renegociar Cotação</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#consultar-renegociar-cotacao">Consultar/Renegociar Cotação</a>
                                 </li>
                             </ul>
                             <!-- fim nav tabs -->
@@ -500,11 +500,9 @@
                                 <!-- fim caracteristicas -->
                                 <!-- especialidades -->
                                 <div class="tab-pane container-fluid fade" id="especialidades">
-                                    <div class="row">
+                                    <div class="row sub-title">
                                         <div class="col-lg-12">
-                                            <div class="box-item">
-                                                <p>02111 - Agulha de Punção</p>
-                                            </div>
+                                            <p>02111 - Agulha de Punção</p>                                            
                                         </div>
                                     </div>
                                     <div class="row mt-5">
@@ -589,11 +587,9 @@
                                 <!-- fim especialidades -->
                                 <!-- procedimentos -->
                                 <div class="tab-pane container-fluid fade" id="procedimentos">
-                                    <div class="row">
+                                    <div class="row sub-title">
                                         <div class="col-lg-12">
-                                            <div class="box-item">
-                                                <p>02111 - Agulha de Punção</p>
-                                            </div>
+                                            <p>02111 - Agulha de Punção</p>                                            
                                         </div>
                                     </div>
                                     <div class="row mt-5">
@@ -678,11 +674,9 @@
                                 <!-- fim procedimentos -->
                                 <!-- fabricantes -->
                                 <div class="tab-pane container-fluid fade" id="fabricantes">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="box-item">
-                                                <p>02111 - Agulha de Punção</p>
-                                            </div>
+                                    <div class="row sub-title">
+                                        <div class="col-lg-12">                                            
+                                            <p>02111 - Agulha de Punção</p>
                                         </div>
                                     </div>
                                     <div class="row mt-5">
@@ -788,12 +782,10 @@
                                 </div>
                                 <!-- fim fabricantes -->
                                 <!-- fornecedores -->
-                                <div class="tab-pane container-fluid active" id="fornecedores">
-                                    <div class="row">
+                                <div class="tab-pane container-fluid fade" id="fornecedores">
+                                    <div class="row sub-title">
                                         <div class="col-lg-12">
-                                            <div class="box-item">
-                                                <p>02111 - Agulha de Punção</p>
-                                            </div>
+                                            <p>02111 - Agulha de Punção</p>
                                         </div>
                                     </div>
                                     <div class="row mt-5">
@@ -824,18 +816,14 @@
                                                 <tr>
                                                 <th>Status</th>
                                                 <th>Código</th>
-                                                <th>Nome do Procedimento</th>
-                                                <th>Ref. Fabricante</th>
-                                                <th>Anvisa</th>
+                                                <th>Nome do Fornecedor</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
                                                     <td>002000</td>
-                                                    <td>Excisão de Pequenas lesões dérmicas</td>
-                                                    <td>Ref. Fabricante</td>
-                                                    <td>Anvisa</td>
+                                                    <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
@@ -843,9 +831,7 @@
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
                                                     <td>01242</td>
-                                                    <td>Excisão de Granuloma de corpo estranho</td>
-                                                    <td>Ref. Fabricante</td>
-                                                    <td>Anvisa</td>
+                                                    <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
@@ -882,8 +868,406 @@
                                     </ul>
                                 </div>
                                 <!-- fim fornecedores -->
-                                <div class="tab-pane container-fluid fade" id="cadastrar-cotacao">cadastrar-cotacao</div>
-                                <div class="tab-pane container-fluid fade" id="consultar-renegociar-cotacao">consultar-renegociar-cotacao</div>
+                                <!-- cadastrar cotacao -->
+                                <div class="tab-pane container-fluid fade" id="cadastrar-cotacao">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <p class="p-select">Negociado com:</p>
+                                            <select class="wide" id="opcoes">
+                                                <option data-display="Selecione"></option>
+                                                <option value="fornecedor">Fornecedor</option>
+                                                <option value="hospital-clinica">Hospital/Clínica</option>
+                                                <option value="fabricantes">Fabricantes</option>                                     
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <section class="fornecedor sel" id="fornecedor">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <label for="cod" class="label-name">
+                                                        <span class="content-name">Código do Fornecedor</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="nome-fornecedor" autocomplete="off" required>
+                                                    <label for="nome-fornecedor" class="label-name">
+                                                        <span class="content-name">Nome do Fornecedor</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-3">
+                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 sub-title">                                            
+                                            <div class="col-lg-2"><p>Código: 1234</p></div>
+                                            <div class="col-lg-4"><p>Fornecedor: HEART MATERIAL HOSPITALAR</p></div>                                            
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="ref-fornecedor" autocomplete="off" required>
+                                                    <label for="ref-fornecedor" class="label-name">
+                                                        <span class="content-name">Ref. Fornecedor</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Fabricante</p>
+                                                <select class="wide">
+                                                    <option data-display="Selecione"></option>
+                                                    <option value="1">Brotec</option>
+                                                    <option value="2">Fabrimedi</option>                                        
+                                                    <option value="2">Interfabri</option>                                        
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="ref-fabricante" autocomplete="off" required>
+                                                    <label for="ref-fabricante" class="label-name">
+                                                        <span class="content-name">Ref. Fabricante</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="anvisa" autocomplete="off" required>
+                                                    <label for="anvisa" class="label-name">
+                                                        <span class="content-name">Anvisa</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                                                    <div class="form">
+                                                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
+                                                      <label for="text" class="label-name">
+                                                        <span class="content-name">
+                                                            <span>Validade Anvisa</span>
+                                                        </span>
+                                                      </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <label for="valor-inicial" class="label-name">
+                                                        <span class="content-name">Valor Inicial</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Inicial</p>
+                                                <select class="wide">
+                                                    <option data-display="Selecione"></option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <label for="valor-final" class="label-name">
+                                                        <span class="content-name">Valor final</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Final</p>
+                                                <select class="wide">
+                                                    <option data-display="Selecione"></option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes mt-5">
+                                            <div class="col-lg-12 mt-5">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <!-- fim cadastrar cotacao -->
+                                <div class="tab-pane container-fluid active" id="consultar-renegociar-cotacao">
+                                    <div class="row sub-title">
+                                        <div class="col-lg-12">                                            
+                                            <p>02111 - Agulha de Punção</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Nome do Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Ref. Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Anvisa</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Nome do Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Ref. Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p class="p-select">Ordenar Valor</p>
+                                            <select class="wide">
+                                                <option data-display="Sem Ordenação">Sem Ordenação</option>
+                                                <option value="1">Menor Valor</option>
+                                                <option value="2">Maior Valor</option>                                        
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código Hospital</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Nome Hospital</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Ref. Hospital</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-flex">
+                                            <div class="form w-50">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Faixa de valor</span>
+                                                </label>
+                                            </div>
+                                            <div class="w-space"></div>
+                                            <div class="form w-50">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Até</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5">
+                                        <div class="col-lg-12">
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                            <button type="submit" name="button" class="btn btn-buscar">Buscar</button>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-5">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Fornecedor/Hospital</th>
+                                                <th>Tipo</th>
+                                                <th>Ref. Fornecedor/Hospital</th>                                                                        
+                                                <th>Fabricante</th>
+                                                <th>Ref. Fabricante</th>
+                                                <th>Anvisa</th>
+                                                <th>Valor Negociado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="por-8">                                                        
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                        </a>
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                        </a>
+                                                    </td>
+                                                    <td>00036 - HEART LINE COMÉRCIO DE MATERIAL</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>HQ-15</td>
+                                                    <td>012452 - BIOMETRIX</td>
+                                                    <td>12511</td>
+                                                    <td>1231221301</td>
+                                                    <td>R$ 1.150,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="por-8">                                                        
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                        </a>
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                        </a>
+                                                    </td>
+                                                    <td>00060 - VASCULINE COMÉRCIO DE MATERIAIS</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>12465666</td>
+                                                    <td>023542 - CORDIS</td>
+                                                    <td>21544233</td>
+                                                    <td>2500002100</td>
+                                                    <td>R$ 950,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="por-8">                                                        
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                        </a>
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                        </a>
+                                                    </td>
+                                                    <td>00120 - HOSPITAL SÃO JOSÉ</td>
+                                                    <td>REFERENCIADO</td>
+                                                    <td>GKP-23F</td>
+                                                    <td>02000 - BIOMETRIX</td>
+                                                    <td>12511</td>
+                                                    <td>523022202</td>
+                                                    <td>R$ 1005,20</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="por-8">                                                        
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                        </a>
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                        </a>
+                                                    </td>
+                                                    <td>00121 - HOSPITAL NOSSA SENHORA DE FÁTIMA</td>
+                                                    <td>REFERENCIADO</td>
+                                                    <td>3928033</td>
+                                                    <td>02001 - BIOMEDICINE FABR. MATERIAL HOSP.</td>
+                                                    <td>AB-2322</td>
+                                                    <td>15210000100</td>
+                                                    <td>R$ 1022,32</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="por-8">                                                        
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                        </a>
+                                                        <a href="itens-detalhes.html">
+                                                            <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                        </a>
+                                                    </td>
+                                                    <td>00130 - MEDICE COMÉRCIO DE MATERIAL HOSP.</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>1235123</td>
+                                                    <td>01520 - LABINDUS INDUSTRIAL DE MATERIAL HOSP.</td>
+                                                    <td>GHI5253</td>
+                                                    <td>120111110</td>
+                                                    <td>R$ 1253,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!-- fim tab panes -->
                         </div>

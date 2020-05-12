@@ -308,7 +308,7 @@ a {
 .focus-erro > label > span, .focus-erro > input{color: $bg-active !important;}
 // fim mensagens
 
-// select(combo box) nice-select
+
 .sub-title{
     background: #f4f4f4;
     padding: 10px;
@@ -321,6 +321,14 @@ a {
     color: $color-content;
     padding-top: 5px;
 }
+
+.sub-title > div > p{
+    margin: 0;
+    font-weight: 600;
+}
+
+.w-space{width: 5%;}
+// select(combo box) nice-select
 
 .p-select{
     margin-bottom: 6px;
@@ -370,6 +378,18 @@ td > .toggle{
 }
 // fim toggle on/off
 
+//navtabs
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    font-weight: 500;
+    color: $bg-dark;
+    background-color: #f4f4f4;
+}
+
+.nav-tabs .nav-link{
+    color: $color-content;    
+}
+// fim navtabs
+
 // fim globais
 
 //navbar
@@ -377,6 +397,12 @@ td > .toggle{
 //navbar
 
 // conteudo
+.tab-pane > section{
+    // background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .wrapper {
     display: flex;
     width: 100%;
@@ -1139,6 +1165,8 @@ p.disabled{
 // fim datepicker
 
 // tabela
+.por-8{width: 8% !important;}
+
 #box-lista-subs{
     padding:30px;
     background: #f9f7f7;
