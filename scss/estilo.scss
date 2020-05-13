@@ -57,6 +57,12 @@ a {
     outline: none;
 }
 
+.form-control:focus{
+    background-color: transparent;
+    border-color: none;
+    outline: 0;
+    box-shadow: 0
+}
 // botoes 
 
 .btn.focus, .btn:focus{
@@ -392,11 +398,17 @@ td > .toggle{
 
 // fim globais
 
-//navbar
-
-//navbar
-
 // conteudo
+.consulta-negociacao{
+    background: #fff;
+    padding: 25px 2px 0 2px;
+}
+
+.consulta-negociacao > div > p > span{
+    font-weight: 600;
+    
+}
+
 .tab-pane > section{
     // background: #f7f7f7;
     padding: 20px;
@@ -559,7 +571,6 @@ td > .toggle{
 }
 
 #configuracoes-submenu{
-    border-top: 2px solid $bg-dark;
     -webkit-border-top: 2px solid $bg-dark;
     -moz-border-top: 2px solid $bg-dark;
 }
@@ -1165,7 +1176,6 @@ p.disabled{
 // fim datepicker
 
 // tabela
-.por-8{width: 8% !important;}
 
 #box-lista-subs{
     padding:30px;
@@ -1178,6 +1188,18 @@ p.disabled{
 #box-lista-subs > hr{
     margin: 10px;
     border: 1px solid #fff;
+}
+
+#box-lista-subs > a{
+    font-size: 14px;
+}
+
+#box-lista-subs > p{
+    color: $bg-dark;
+    font-weight: 500;    
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+    margin: 0;
 }
 
 #box-lista-subs > .title-listas > div > div{align-items: center;}
@@ -1262,7 +1284,7 @@ table {background-color: none;}
     text-transform: uppercase;
     font-weight: 700;
     color: $bg-medium;
-    font-size: 13px;
+    font-size: 11px;
     background: #fff;
     border: none;
     padding: 15px;
@@ -1282,13 +1304,13 @@ table {background-color: none;}
     padding: 13px;
     font-weight: 500;
     color: $color-content;
-    font-size: 14px;
+    font-size: 12px;
     background: transparent;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     transition: all 0.3s linear;
     -webkit-transition:all 0.3s linear;
-    -moz-transition:all 0.3s linear;    
+    -moz-transition:all 0.3s linear;
 }
     
 .table > tbody > tr:hover > td{
@@ -1298,10 +1320,6 @@ table {background-color: none;}
     -webkit-transition:all 0.3s linear;
     -moz-transition:all 0.3s linear;
 }
-
-.table > tbody > tr > td:nth-child(2){
-    width: 15%;
-}   
 
 .table > tbody > tr > td:first-child{
     border-left: 2px solid #fff;
@@ -1383,9 +1401,24 @@ table {background-color: none;}
     box-shadow: none;
 }
 
-.t-3 > tbody > tr > td:nth-child(2), .t-3 > tbody > tr > td:nth-child(3){
-    width: 15% !important;
-}   
+.t-3 tbody tr > td:nth-child(2), .t-3 tbody tr > td:nth-child(3){width: 15%;}
+
+.t-2 tbody tr > td:nth-child(1){width: 5% !important;}
+.t-2 tbody tr > td:nth-child(2){width: 15%;}
+.t-2 tbody tr > td:nth-child(3){width: 80%}
+
+.t-4 tbody tr > td:nth-child(1){width: 5% !important;}
+.t-4 tbody tr > td:nth-child(2){width: 15%;}
+.t-4 tbody tr > td:nth-child(3){width: 80%}
+
+
+.t-contato tbody tr > td:nth-child(1){width: 5% !important;}
+.t-contato tbody tr > td:nth-child(2){width: 15%;}
+.t-contato tbody tr > td:nth-child(3){width: 80%}
+
+.t-contato-2 tbody tr > td:nth-child(1){width: 5% !important;}
+.t-contato-2 tbody tr > td:nth-child(2){width: 15%;}
+.t-contato-2 tbody tr > td:nth-child(3){width: 80%}
 
 // tabela com header
 .header-table{
@@ -1430,6 +1463,12 @@ table {background-color: none;}
 .header-table li:last-child{
     border: none;
 }
+
+.por-8{width: 8% !important;}
+.por-10{width: 10% !important;}
+.por-15{width: 15% !important;}
+.por-20{width: 20% !important;}
+
 // fim tabela com header
 
 // paginacao
@@ -1538,8 +1577,34 @@ td.actions .menu-visible{
     margin-left: -10px;
 }
 
-td.actions .menu-invisible > img{
-    width: 37px !important;
+
+td.ac-2{
+width: 7% !important;
+}
+
+tr:hover td.ac-2 .menu-invisible{
+    left: -45px !important;    
+    width: 80px !important;
+}
+
+tr td.ac-2 .menu-invisible{
+    left: -60px !important;    
+    width: 80px !important;
+}
+
+tr:hover td.ac-3{
+    transition: $transition;
+    width: 10% !important;
+}
+
+tr:hover td.ac-3 .menu-invisible{
+    left: -85px !important;    
+    width: 120px !important;
+}
+
+tr td.ac-3 .menu-invisible{
+    left: -100px !important;    
+    width: 120px !important;
 }
 
 td.actions .menu-invisible{
@@ -1551,7 +1616,6 @@ td.actions .menu-invisible{
     transition: all 0.2s linear;
     -webkit-transition:all 0.2s linear;
     -moz-transition:all 0.2s linear;
-    width:90px;    
 }
 
 td.actions .menu-invisible a{margin-right: 0;}
@@ -1563,8 +1627,6 @@ tr:hover td.actions .menu-invisible{
     left: -25px;
     opacity: 1;
 }
-
-tr:hover td.a-2{width: 7% !important;}
 
 tr:hover td.a-2 .menu-invisible{
     top: -8px;

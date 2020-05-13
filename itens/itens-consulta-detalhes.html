@@ -268,7 +268,7 @@
                             <!-- nav tabs -->
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#caracteristicas">Características</a>
+                                    <a class="nav-link" data-toggle="tab" href="#caracteristicas">Características</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#especialidades">Especialidades</a>
@@ -286,14 +286,14 @@
                                     <a class="nav-link" data-toggle="tab" href="#cadastrar-cotacao">Cadastrar Cotação</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#consultar-renegociar-cotacao">Consultar/Renegociar Cotação</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#consultar-renegociar-cotacao">Consultar/Renegociar Cotação</a>
                                 </li>
                             </ul>
                             <!-- fim nav tabs -->
                             <!-- tab panes -->
                             <div class="tab-content mt-5">
                                 <!-- caracteristicas -->
-                                <div class="tab-pane container-fluid active" id="caracteristicas">
+                                <div class="tab-pane container-fluid fade" id="caracteristicas">
                                     <div class="row">
                                         <div class="col-lg-2">
                                             <p class="disabled">ID</p>
@@ -539,7 +539,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td class="por-8">002000</td>
+                                                    <td>002000</td>
                                                     <td>Ortopedia</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -547,7 +547,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td class="por-8">01242</td>
+                                                    <td>01242</td>
                                                     <td>Bucomaxilo</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -626,7 +626,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td class="por-8">002000</td>
+                                                    <td>002000</td>
                                                     <td>Excisão de Pequenas lesões dérmicas</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -634,7 +634,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td class="por-8">01242</td>
+                                                    <td>01242</td>
                                                     <td>Excisão de Granuloma de corpo estranho</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -731,9 +731,9 @@
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td class="por-8">002000</td>
-                                                    <td class="por-20">Excisão de Pequenas lesões dérmicas</td>
-                                                    <td class="por-15">Ref. Fabricante</td>
+                                                    <td>002000</td>
+                                                    <td>Excisão de Pequenas lesões dérmicas</td>
+                                                    <td>Ref. Fabricante</td>
                                                     <td>Anvisa</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -822,7 +822,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td class="por-8">002000</td>
+                                                    <td>002000</td>
                                                     <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -830,7 +830,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td class="por-8">01242</td>
+                                                    <td>01242</td>
                                                     <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
                                                 </tr>
                                                 <tr class="separator">
@@ -875,13 +875,13 @@
                                             <p class="p-select">Negociado com:</p>
                                             <select class="wide" id="opcoes">
                                                 <option data-display="Selecione"></option>
-                                                <option value="s-fornecedor">Fornecedor</option>
-                                                <option value="s-hospital-clinica">Hospital/Clínica</option>
-                                                <option value="s-fabricantes">Fabricantes</option>                                     
+                                                <option value="fornecedor">Fornecedor</option>
+                                                <option value="hospital-clinica">Hospital/Clínica</option>
+                                                <option value="fabricantes">Fabricantes</option>                                     
                                             </select>
                                         </div>
                                     </div>
-                                    <section class="sessao-fornecedor sel" id="s-fornecedor">
+                                    <section class="fornecedor sel" id="fornecedor">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form">
@@ -997,149 +997,72 @@
                                             </div>
                                         </div>
                                     </section>
-                                    <section class="sessao-hospital-clinica sel" id="s-hospital-clinica"></section>
-                                    <section class="sessao-fabricantes sel" id="s-fabricantes"></section>
                                 </div>
                                 <!-- fim cadastrar cotacao -->
-                                <div class="tab-pane container-fluid fade" id="consultar-renegociar-cotacao">
-                                    <div class="row sub-title">
+                                <div class="tab-pane container-fluid active" id="consultar-renegociar-cotacao">
+                                    <div class="sub-title mb-2">
                                         <div class="col-lg-12">                                            
                                             <p>02111 - Agulha de Punção</p>
                                         </div>
                                     </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Fabricante</span>
-                                                </label>
-                                            </div>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="itens-cadastro.html">Voltar</a></li>      
+                                          <li class="breadcrumb-item">Negociação da Cotação</li>                                  
+                                        </ol>
+                                    </nav>                               
+                                    <div class="row consulta-negociacao">
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Fornecedor: <span>HEART LINE COMÉRCIO DE MATERIAL</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome do Fabricante</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Ref. Fornecedor: <span>HQ-15</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Fabricante</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Fabricante: <span>012452 - BIOMETRIX</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Anvisa</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Ref. Fabricante: <span>12511</span></p>
                                         </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Fornecedor</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Anvisa: <span>1231221301</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome do Fornecedor</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Valor Atual Vigente: <span>R$ 850,00</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Fornecedor</span>
-                                                </label>
-                                            </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Situação do Fornecedor: <span>Ativo</span></p>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <p class="p-select">Ordenar Valor</p>
-                                            <select class="wide">
-                                                <option data-display="Sem Ordenação">Sem Ordenação</option>
-                                                <option value="1">Menor Valor</option>
-                                                <option value="2">Maior Valor</option>                                        
-                                            </select>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Está sendo negociado novo valor? <span>Sim</span></p>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <p>Observação sobre o Fornecedor: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
                                         </div>
                                     </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 d-flex">
-                                            <div class="form w-50">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Faixa de valor</span>
-                                                </label>
-                                            </div>
-                                            <div class="w-space"></div>
-                                            <div class="form w-50">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Até</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5">
-                                        <div class="col-lg-12">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="submit" name="button" class="btn btn-buscar">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive">
+                                    <div id="box-lista-subs">
+                                        <p>Detalhe da Negociação</p>
+                                        <a href="#">Voltar</a>
+                                        <div class="table-responsive mt-3">
                                             <table class="table">
                                             <thead>
                                                 <tr>
                                                 <th></th>
-                                                <th>Fornecedor/Hospital</th>
-                                                <th>Tipo</th>
-                                                <th>Ref. Fornecedor/Hospital</th>                                                                        
-                                                <th>Fabricante</th>
-                                                <th>Ref. Fabricante</th>
-                                                <th>Anvisa</th>
-                                                <th>Valor Negociado</th>
+                                                <th>Data da Proposta</th>
+                                                <th>Condição da Proposta</th>
+                                                <th>Valor da Proposta</th> 
+                                                <th>Origem da Proposta</th>
+                                                <th>Responsável por Cadastrar a Proposta</th>
+                                                <th>Data da Resposta</th>
+                                                <th>Resposta a Proposta</th>
+                                                <th>Origem da Resposta</th>
+                                                <th>Responsável por Cadastrar a resposta da Proposta</th>
+                                                <th>SITUAÇÃO</th>                                                
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="actions ac-2">
+                                                    <td class="actions ac-3">
                                                         <div class="float-right">
                                                         <div class="menu-visible">
                                                             <span class="circle"></span>
@@ -1147,28 +1070,34 @@
                                                             <span class="circle"></span>
                                                         </div>
                                                         <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
                                                             </a>
-                                                            <a href="#">
-                                                                <img src="../img/suspender-negociacao.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
                                                             </a>
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td>00036 - HEART LINE COMÉRCIO DE MATERIAL</td>
+                                                    <td>03/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>1.150,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>03/01/2020</td>
+                                                    <td>ACEITO</td>
                                                     <td>FORNECEDOR</td>
-                                                    <td>HQ-15</td>
-                                                    <td>012452 - BIOMETRIX</td>
-                                                    <td>12511</td>
-                                                    <td>1231221301</td>
-                                                    <td>R$ 1.150,00</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>ACEITO</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="actions ac-2">
+                                                    <td class="actions ac-3">
                                                         <div class="float-right">
                                                         <div class="menu-visible">
                                                             <span class="circle"></span>
@@ -1176,28 +1105,34 @@
                                                             <span class="circle"></span>
                                                         </div>
                                                         <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
                                                             </a>
-                                                            <a href="#">
-                                                                <img src="../img/suspender-negociacao.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
                                                             </a>
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td>00060 - VASCULINE COMÉRCIO DE MATERIAIS</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>1.250,00</td>
                                                     <td>FORNECEDOR</td>
-                                                    <td>12465666</td>
-                                                    <td>023542 - CORDIS</td>
-                                                    <td>21544233</td>
-                                                    <td>2500002100</td>
-                                                    <td>R$ 950,00</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>03/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>CONTRA-PROPOSTA</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="actions ac-2">
+                                                    <td class="actions ac-3">
                                                         <div class="float-right">
                                                         <div class="menu-visible">
                                                             <span class="circle"></span>
@@ -1205,80 +1140,98 @@
                                                             <span class="circle"></span>
                                                         </div>
                                                         <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
                                                             </a>
-                                                            <a href="#">
-                                                                <img src="../img/suspender-negociacao.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
                                                             </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00120 - HOSPITAL SÃO JOSÉ</td>
-                                                    <td>REFERENCIADO</td>
-                                                    <td>GKP-23F</td>
-                                                    <td>02000 - BIOMETRIX</td>
-                                                    <td>12511</td>
-                                                    <td>523022202</td>
-                                                    <td>R$ 1005,20</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/suspender-negociacao.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
                                                             </a>
                                                         </div>
                                                         </div>
                                                     </td>
-                                                    <td>00121 - HOSPITAL NOSSA SENHORA DE FÁTIMA</td>
-                                                    <td>REFERENCIADO</td>
-                                                    <td>3928033</td>
-                                                    <td>02001 - BIOMEDICINE FABR. MATERIAL HOSP.</td>
-                                                    <td>AB-2322</td>
-                                                    <td>15210000100</td>
-                                                    <td>R$ 1022,32</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/suspender-negociacao.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Suspender Negocição">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00130 - MEDICE COMÉRCIO DE MATERIAL HOSP.</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA -PROPOSTA</td>
+                                                    <td>950,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
                                                     <td>FORNECEDOR</td>
-                                                    <td>1235123</td>
-                                                    <td>01520 - LABINDUS INDUSTRIAL DE MATERIAL HOSP.</td>
-                                                    <td>GHI5253</td>
-                                                    <td>120111110</td>
-                                                    <td>R$ 1253,00</td>
+                                                    <td>JEAN BELCHIOR</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA -PROPOSTA</td>
+                                                    <td>850,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>CANCELADA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>01/01/2020</td>
+                                                    <td>INICIAL</td>
+                                                    <td>1500,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>CONTRA-PROPOSTA</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
