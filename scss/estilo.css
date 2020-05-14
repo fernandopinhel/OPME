@@ -813,8 +813,7 @@ td > .toggle {
 }
 
 #configuracoes-submenu {
-  -webkit-border-top: 2px solid #212e4b;
-  -moz-border-top: 2px solid #212e4b;
+  border-top: 2px solid #212e4b;
 }
 
 #sidebar ul li > .subs .active:nth-child(1) {
@@ -1500,6 +1499,7 @@ h6.title-lista {
 
 .i-detalhes, .i-excluir, .i-editar, .i-historico {
   width: 37px;
+  height: 37px;
 }
 
 .i-result {
@@ -2004,7 +2004,10 @@ tr:hover td.a-2 .menu-invisible {
     transition: all 0.3s;
   }
   .table-responsive table tbody tr td.actions {
-    padding-left: 32px;
+    padding-left: 52px;
+  }
+  .table-responsive table tbody tr:hover td.ac-3 {
+    padding-left: 92px !important;
   }
 }
 

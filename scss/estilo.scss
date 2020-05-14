@@ -1,4 +1,5 @@
 // imports
+@charset "UTF-8";
 @import 'nice-select.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
@@ -571,8 +572,7 @@ td > .toggle{
 }
 
 #configuracoes-submenu{
-    -webkit-border-top: 2px solid $bg-dark;
-    -moz-border-top: 2px solid $bg-dark;
+    border-top: 2px solid $bg-dark;
 }
 
 #sidebar ul li > .subs .active:nth-child(1){
@@ -1209,7 +1209,7 @@ h6.title-lista{
     margin: 0;
 }
 
-.i-detalhes, .i-excluir, .i-editar, .i-historico{width: 37px;}
+.i-detalhes, .i-excluir, .i-editar, .i-historico{width: 37px; height: 37px;}
 
 .i-result{width: 100px;}
 
@@ -1659,8 +1659,10 @@ tr:hover td.a-2 .menu-invisible{
     }
 
     .table-responsive table tbody tr td.actions{
-        padding-left: 32px;
+        padding-left: 52px;
     }
+
+    .table-responsive table tbody tr:hover td.ac-3{padding-left: 92px !important;}
 }
 
 @media (max-width: 767px) {
