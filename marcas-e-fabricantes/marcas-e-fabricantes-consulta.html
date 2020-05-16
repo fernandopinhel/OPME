@@ -52,12 +52,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -87,12 +81,6 @@
                             <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -164,12 +152,6 @@
                                     <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -219,14 +201,14 @@
                                 <div class="col-lg-3">
                                     <p class="p-select">Procedência</p>
                                     <select class="wide">
-                                        <option data-display="Nacional"></option>
-                                        <option value="1">Nacional</option>
+                                        <option data-display="Nacional" value="1">Nacional</option>
                                         <option value="2">Importado</option>                                        
+                                        <option value="3">Selecione</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form">
-                                        <input type="text" value="Bradesco" name="nome01" autocomplete="off" required>
+                                        <input type="text" value="Bradesco" name="nome01" autocomplete="off" class="used">
                                         <label for="nome01" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
                                         </label>
@@ -235,18 +217,18 @@
                                 <div class="col-lg-3">
                                     <p class="p-select">Status</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
+                                        <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
                                         <option value="2">Inativo</option>                                        
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8 mt-3">
-                                    <label for="observacoes">Observações</label>
-                                    <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                            <div class="row mt-2">
+                                <div class="col-lg-12 mt-5">
+                                    <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                                    <textarea class="form-control" id="observacoes" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan at ligula eget finibus. Curabitur leo ipsum, pulvinar sed volutpat et, tincidunt sed nisl. Sed ac ullamcorper augue, ut dictum metus.</textarea>
                                 </div>
-                            </div>
+                            </div>  
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>

@@ -294,7 +294,6 @@ a {
     
 }
 
-
 .btn-close{
     float: right;
     cursor: pointer;
@@ -327,6 +326,10 @@ a {
 .sub-title > h6{
     color: $color-content;
     padding-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .sub-title > div > p{
@@ -410,8 +413,12 @@ td > .toggle{
     
 }
 
+.tab-pane{
+    position: relative;
+    top: -20px;
+}
+
 .tab-pane > section{
-    // background: #f7f7f7;
     padding: 20px;
     border-radius: 10px;
 }
@@ -832,14 +839,14 @@ li.sub-active > a{
 // fim sidebar
 
 // input animado
-
 textarea.form-control{
     border: 1px solid #D6D6D6;
+    color: $color-content;
 }
 
 textarea.form-control:focus{
     border: 1px solid #BABABA !important;
-    font-weight: 600;
+    color: $color-content;
 }
 
 textarea.form-control:focus{
@@ -850,123 +857,84 @@ textarea.form-control:focus{
     transition: $transition;
 }
 
-p.disabled{
-    margin-bottom: -24px;
-}
-
-.form {
+.form{
     position: relative;
-    height: 80px;
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 19px 0 0 0;
 }
-
-.form {
-    input {
-        font-size: 15px;
-        width: 100%;
-        height: 100%;
-        border: none;
-        background-color: transparent;
-        padding-left: 0;
-        color: $color-content;
-        font-weight: 600;
-    }
-}
-
-.form-control {
-    color: $color-content;
-    border: 1px solid #D6D6D6;
-}
-
-.form {
-    label {
-        position: absolute;
-        bottom: 18px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        border-bottom: 1px solid #D6D6D6;
-        font-weight: 300;
-    }
-}
-
-.form {
-    label::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        border-bottom: 1px solid #BABABA;
-        transform: translateX(-100%);
-        transition: $transition;
-    }
-}
-
-.content-name {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    padding-bottom: 0!important;
-    transition: $transition;
-    color: $color-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.content-name {
-    span:last-child {
-        height: 22px;
-    }
-}
-
-.form {
-    input:focus {
-        outline: none;
-    }
-}
-
-.input::placeholder{
-    color: $color-content !important;
-}
-
-.input-date::placeholder{
-    color: $color-content !important;
-}
-
-.form input:focus + .label-name .content-name,
-.form input:valid + .label-name .content-name {
-    transform: translateY(-100%);
-    left: 0px;
-    color: $color-content;
-}
-
-.form input:focus + .label-name::after,
-.form input:valid + .label-name::after {
-    transform: translateX(0%);
-}
-
-.form input:focus+.label-name .content-name{
-    color: $color-content;
-}
-
-.form-group{margin-bottom: 0}
 
 .obrigatorio{
     color: $bg-active;
     font-weight: 600;
     margin-right: 5px;
 }
+
+input{
+	font-size: 16px;
+	padding: 5px;
+	-webkit-appearance: none;
+	display: block;
+	color: $color-content;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+    border-bottom: 1px solid #D6D6D6;
+    transition: $transition;   
+    background: transparent; 
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #BABABA;
+    transition: $transition;
+}
+
+label {
+	color: $color-content; 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+    top: 10px;
+    left: 0;
+    transition: $transition;
+    font-weight: 300;
+}
+
+label.observacoes{
+    top: -30px;
+    left: 17px;
+}
+
+// active
+input:focus ~ label, input.used ~ label {
+    top: -20px;    
+    transform: translateY(-30%);
+    color: $color-content;
+    transition: $transition;
+    font-size: 16px;
+}
+
+input:disabled {    
+    background: transparent !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: 10px !important;
+}
 // fim input animado
 
 // radio animado
+input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
+    top: 0px !important;
+    transform: none !important;
+    left: 0 !important;
+    padding-left: 27px !important;
+    font-size: 16px !important;
+    color: #989a9e !important;
+    font-weight: normal !important;
+    display: inline-block !important;
+    position: relative !important;    
+}
+
 .ex-checkbox label,
 .ex-radio label {
 	padding-left: 27px;
@@ -974,7 +942,20 @@ p.disabled{
     color: $color-content;
 	font-weight: normal;
 	display: inline-block;
-	position: relative;
+    position: relative;
+    top: 0px !important;
+}
+
+.ex-checkbox input[type=checkbox].used,
+.ex-radio input[type=radio].used {
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	z-index: 10;
+    position: absolute;
+    bottom: 12px;    
 }
 
 .ex-checkbox input[type=checkbox],
@@ -985,7 +966,8 @@ p.disabled{
 	width: 16px;
 	height: 16px;
 	z-index: 10;
-	position: absolute;
+    position: absolute;
+    bottom: 12px;
 }
 
 .ex-radio input[type=radio] + label::before {
@@ -1207,6 +1189,9 @@ p.disabled{
 h6.title-lista{
     color: #cc092f;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 7px;
 }
 
 .i-detalhes, .i-excluir, .i-editar, .i-historico{width: 37px; height: 37px;}
@@ -1311,6 +1296,7 @@ table {background-color: none;}
     transition: all 0.3s linear;
     -webkit-transition:all 0.3s linear;
     -moz-transition:all 0.3s linear;
+    text-transform: uppercase;
 }
     
 .table > tbody > tr:hover > td{
@@ -1652,7 +1638,7 @@ tr:hover td.a-2 .menu-invisible{
 // fim tabela sem hover
     
 // responsivo
-@media (min-width: 768px) and (max-width: 1444px) {
+@media (min-width: 993px) and (max-width: 1444px) {
     .content {
         width: 100%;
         transition: all 0.3s;
@@ -1665,7 +1651,7 @@ tr:hover td.a-2 .menu-invisible{
     .table-responsive table tbody tr:hover td.ac-3{padding-left: 92px !important;}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
     #sidebar {
         margin-left: -300px;
     }
@@ -1703,11 +1689,6 @@ tr:hover td.a-2 .menu-invisible{
         margin: 10px 0;
     }
 
-    .p-select{
-        margin-bottom: 6px;
-        margin-top: 4px !important;
-    }
-
     .pagination li{width: 37px;}
 
     .table-responsive{
@@ -1721,6 +1702,16 @@ tr:hover td.a-2 .menu-invisible{
 
     .toggle-off, .toggle-on{
         text-align: left;
+    }
+
+    .p-select{
+        margin-bottom: 6px;
+        margin-top: 34px !important;
+    }
+    
+    .form {
+        position: relative;
+        margin: 19px 0 19px 0;
     }
 
 }

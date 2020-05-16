@@ -52,12 +52,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -87,12 +81,6 @@
                             <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -182,12 +170,6 @@
                                     <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -238,12 +220,13 @@
                                     <p class="p-select">Procedência</p>
                                     <select class="wide">
                                         <option data-display="Nacional" value="1">Nacional</option>
-                                        <option value="2">Importado</option>                                        
+                                        <option value="2">Importado</option>              
+                                        <option value="3">Selecione</option>                          
                                     </select>
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="form">
-                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="nome01" autocomplete="off" required>
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="nome01" autocomplete="off" class="used">
                                         <label for="nome01" class="label-name">
                                             <span class="content-name">Razão Social</span>
                                         </label>
@@ -251,18 +234,18 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form">
-                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" class="used">
                                         <label for="cnpj01" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-lg-3 mt-2">
                                     <p class="p-select">Status</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
+                                        <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
                                         <option value="2">Inativo</option>                                        
                                     </select>

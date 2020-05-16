@@ -57,12 +57,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -90,14 +84,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -214,12 +202,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -298,7 +280,7 @@
                                         <div class="col-lg-2">
                                             <p class="disabled">ID</p>
                                             <div class="form form-disabled">
-                                                <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                                <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" >
                                                 <label for="codigo-01" class="label-name">
                                                     <span class="content-name"></span>
                                                 </label>
@@ -306,7 +288,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod-provisorio" class="label-name">
                                                     <span class="content-name"><span class="obrigatorio">*</span>Código Provisório</span>
                                                 </label>
@@ -314,7 +296,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod-tuss" class="label-name">
                                                     <span class="content-name">Código TUSS</span>
                                                 </label>
@@ -332,7 +314,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 mt-4">
                                             <div class="form">
-                                                <input type="text" name="item" autocomplete="off" required>
+                                                <input type="text" name="item" autocomplete="off" >
                                                 <label for="item" class="label-name">
                                                     <span class="content-name"><span class="obrigatorio">*</span>Item</span>
                                                 </label>
@@ -468,7 +450,7 @@
                                         </div>
                                         <div class="col-lg-3 mt-5 mr-5 n-reutilizavel d-none">
                                             <div class="form">
-                                                <input type="text" name="item" autocomplete="off" required>
+                                                <input type="text" name="item" autocomplete="off" >
                                                 <label for="item" class="label-name">
                                                     <span class="content-name">Nº de vezes para Reutilização</span>
                                                 </label>
@@ -508,7 +490,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -516,7 +498,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" required>
+                                                <input type="text" name="cod" autocomplete="off" >
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Nome da Especialidade</span>
                                                 </label>
@@ -595,7 +577,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -603,7 +585,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" required>
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Procedimento</span>
                                                 </label>
@@ -682,7 +664,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -690,7 +672,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" required>
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Procedimento</span>
                                                 </label>
@@ -698,7 +680,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" required>
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Ref. Fabricante</span>
                                                 </label>
@@ -706,7 +688,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" required>
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Anvisa</span>
                                                 </label>
@@ -791,7 +773,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -799,7 +781,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" required>
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Fornecedor</span>
                                                 </label>
@@ -885,7 +867,7 @@
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                     <label for="cod" class="label-name">
                                                         <span class="content-name">Código do Fornecedor</span>
                                                     </label>
@@ -893,7 +875,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="nome-fornecedor" autocomplete="off" required>
+                                                    <input type="text" name="nome-fornecedor" autocomplete="off" >
                                                     <label for="nome-fornecedor" class="label-name">
                                                         <span class="content-name">Nome do Fornecedor</span>
                                                     </label>
@@ -910,7 +892,7 @@
                                         <div class="row mt-5">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="ref-fornecedor" autocomplete="off" required>
+                                                    <input type="text" name="ref-fornecedor" autocomplete="off" >
                                                     <label for="ref-fornecedor" class="label-name">
                                                         <span class="content-name">Ref. Fornecedor</span>
                                                     </label>
@@ -927,7 +909,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="ref-fabricante" autocomplete="off" required>
+                                                    <input type="text" name="ref-fabricante" autocomplete="off" >
                                                     <label for="ref-fabricante" class="label-name">
                                                         <span class="content-name">Ref. Fabricante</span>
                                                     </label>
@@ -937,7 +919,7 @@
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="anvisa" autocomplete="off" required>
+                                                    <input type="text" name="anvisa" autocomplete="off" >
                                                     <label for="anvisa" class="label-name">
                                                         <span class="content-name">Anvisa</span>
                                                     </label>
@@ -946,7 +928,7 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                                                     <div class="form">
-                                                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
+                                                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" ="">
                                                       <label for="text" class="label-name">
                                                         <span class="content-name">
                                                             <span>Validade Anvisa</span>
@@ -957,7 +939,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                     <label for="valor-inicial" class="label-name">
                                                         <span class="content-name">Valor Inicial</span>
                                                     </label>
@@ -975,7 +957,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" required>
+                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                     <label for="valor-final" class="label-name">
                                                         <span class="content-name">Valor final</span>
                                                     </label>
@@ -1060,21 +1042,17 @@
                                         </div>
                                         <div class="row mt-5">
                                             <div class="col-lg-4">
-                                                <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                                                    <div class="form">
-                                                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
-                                                      <label for="text" class="label-name">
-                                                        <span class="content-name">
-                                                            <span>Data da Resposta</span>
-                                                        </span>
-                                                      </label>
-                                                    </div>
+                                                <div class="form">
+                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
+                                                    <label for="valor-final" class="label-name">
+                                                        <span class="content-name">Data da Resposta</span>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <p class="p-select">Origem da Proposta</p>
                                                 <select class="wide">
-                                                    <option data-display="Selecione"></option>
+                                                    <option data-display="Selecione">Selecione</option>
                                                     <option value="1">Bradesco</option>
                                                     <option value="2">Fornecedor</option>       
                                                     <option value="2">Hospital</option>                                        
@@ -1094,11 +1072,11 @@
                                                         <label for="radio-estilo">Não</label>
                                                       </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-12 mt-3">
-                                                <label for="observacoes"><span class="obrigatorio">*</span>Observação:</label>
+                                            </div>                                            
+                                            <div class="col-lg-12 mt-5">
+                                                <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
                                                 <textarea class="form-control" id="observacoes" rows="3"></textarea>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                         <div class="row btns-opcoes">
                                             <div class="col-lg-12 mt-5">

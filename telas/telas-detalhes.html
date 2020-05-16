@@ -52,12 +52,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -87,12 +81,6 @@
                             <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -164,12 +152,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -238,19 +220,18 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-2">
-                                    <p class="disabled">Código</p>
-                                    <div class="form form-disabled">
-                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                    <div class="form">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" class="used">
                                         <label for="codigo-01" class="label-name">
-                                            <span class="content-name"></span>
+                                            <span class="content-name">Código</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-5">
                                 <div class="col-lg-3">
                                     <div class="form">
-                                        <input type="text" name="telas" value="Cadastro de Usuário" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <input type="text" name="telas" value="Cadastro de Usuário" autocomplete="off" class="used">
                                         <label for="telas" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Tela</span>
                                         </label>
@@ -258,7 +239,7 @@
                                 </div>
                                 <div class="col-lg-6">                                    
                                     <div class="form">
-                                        <input type="text" name="telas" value="http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario" autocomplete="off" required oninvalid="setCustomValidity('Preencha a Descrição')" onchange="try{setCustomValidity('')}catch(e){}">
+                                        <input type="text" name="telas" value="http://www.bradseg.com.br/SISB-GestaoOPME/CadastroUsuario" autocomplete="off" class="used">
                                         <label for="telas" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Link da Tela</span>
                                         </label>

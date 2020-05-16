@@ -54,12 +54,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -86,15 +80,9 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
                             <li class="active">
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
+                                    <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -155,12 +143,6 @@
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>                                    
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
                                 </a>
                             </li>
                         </ul>
@@ -231,17 +213,16 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-2">
-                                    <p class="disabled">Código</p>
-                                    <div class="form form-disabled">
-                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                    <div class="form">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" class="used">
                                         <label for="codigo-01" class="label-name">
-                                            <span class="content-name"></span>
+                                            <span class="content-name">Código</span>
                                         </label>
-                                    </div>                                    
+                                    </div>
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <input type="text" value="05.253.654/0001-00" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" class="used">
                                         <label for="cnpj01" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
                                         </label>
@@ -249,7 +230,7 @@
                                 </div>
                                 <div class="col-lg-3">    
                                     <div class="form">
-                                        <input type="text" value="02.053.62" name="inscricao-estadual" onkeypress="$(this).mask('00.000.00');" autocomplete="off" required>
+                                        <input type="text" value="02.053.62" name="inscricao-estadual" onkeypress="$(this).mask('00.000.00');" autocomplete="off" class="used">
                                         <label for="inscricao-estadual" class="label-name">
                                             <span class="content-name">Inscrição Estadual</span>
                                         </label>
@@ -263,10 +244,10 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-lg-5">                                    
                                     <div class="form">
-                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="razao-social" autocomplete="off" required>
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO DE MATERIAL LTDA" name="razao-social" autocomplete="off" class="used">
                                         <label for="razao-social" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Razão Social</span>
                                         </label>
@@ -274,7 +255,7 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="form">
-                                        <input type="text" value="LUCAS DISTRIBUIÇÃO" name="nome-fantasia" autocomplete="off" required>
+                                        <input type="text" value="LUCAS DISTRIBUIÇÃO" name="nome-fantasia" autocomplete="off" class="used">
                                         <label for="nome-fantasia" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Nome Fantasia</span>
                                         </label>
@@ -283,19 +264,19 @@
                                 <div class="col-lg-2">
                                     <p class="p-select">Status</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
+                                        <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
                                         <option value="2">Inativo</option>                                        
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8 mt-3">
-                                    <label for="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                            <div class="row mt-2">
+                                <div class="col-lg-12 mt-5">
+                                    <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
                                     <textarea class="form-control" id="observacoes" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan at ligula eget finibus. Curabitur leo ipsum, pulvinar sed volutpat et, tincidunt sed nisl. Sed ac ullamcorper augue, ut dictum metus.</textarea>
                                 </div>
-                            </div>                            
-                            <div class="row mt-4 mb-2">
+                            </div>                             
+                            <div class="row mt-2 mb-4">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
                                         <h6>Endereço</h6>
@@ -305,7 +286,7 @@
                             <div class="row">
                                 <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" value="20500-240" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                        <input type="text" value="20500-240" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" class="used">
                                         <label for="cep01" class="label-name">
                                             <span class="content-name">CEP</span>
                                         </label>
@@ -313,7 +294,7 @@
                                 </div>
                                 <div class="col-lg-5">                                    
                                     <div class="form">
-                                        <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" required>
+                                        <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" class="used">
                                         <label for="logradouro01" class="label-name">
                                             <span class="content-name">Logradouro</span>
                                         </label>
@@ -321,7 +302,7 @@
                                 </div>
                                 <div class="col-lg-2">                                    
                                     <div class="form">
-                                        <input type="text" value="72" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                        <input type="text" value="72" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" class="used">
                                         <label for="numero01" class="label-name">
                                             <span class="content-name">Nº</span>
                                         </label>
@@ -329,17 +310,17 @@
                                 </div>
                                 <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
+                                        <input type="text" value="Casa" name="complemento01" autocomplete="off" class="used">
                                         <label for="complemento01" class="label-name">
                                             <span class="content-name">Complemento</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-5">
                                 <div class="col-lg-5">
                                     <div class="form">
-                                        <input type="text" value="Copacabana" name="bairro01" autocomplete="off" required>
+                                        <input type="text" value="Copacabana" name="bairro01" autocomplete="off" class="used">
                                         <label for="bairro01" class="label-name">
                                             <span class="content-name">Bairro</span>
                                         </label>
@@ -356,7 +337,7 @@
                                 </div>
                                 <div class="col-lg-5">                                    
                                     <div class="form">
-                                        <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
+                                        <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" class="used">
                                         <label for="cidade01" class="label-name">
                                             <span class="content-name">Cidade</span>
                                         </label>
@@ -379,7 +360,7 @@
                                 </div>
                             </div>
                             <div id="endereco-entrega">
-                                <div class="row mt-4 mb-2">
+                                <div class="row mt-2 mb-4">
                                     <div class="col-lg-12">
                                         <div class="sub-title mt-4">
                                             <h6>Endereço de entrega</h6>
@@ -389,7 +370,7 @@
                                 <div class="row">
                                     <div class="col-lg-2">
                                         <div class="form">
-                                            <input type="text" value="25600-420" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                            <input type="text" value="25600-420" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" class="used">
                                             <label for="cep01" class="label-name">
                                                 <span class="content-name">CEP</span>
                                             </label>
@@ -397,7 +378,7 @@
                                     </div>
                                     <div class="col-lg-5">                                        
                                         <div class="form">
-                                            <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" required>
+                                            <input type="text" value="Lorem ipsum" name="logradouro01" autocomplete="off" class="used">
                                             <label for="logradouro01" class="label-name">
                                                 <span class="content-name">Logradouro</span>
                                             </label>
@@ -405,7 +386,7 @@
                                     </div>
                                     <div class="col-lg-2">                                        
                                         <div class="form">
-                                            <input type="text" value="160" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <input type="text" value="160" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" class="used">
                                             <label for="numero01" class="label-name">
                                                 <span class="content-name">Nº</span>
                                             </label>
@@ -413,17 +394,17 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form">
-                                            <input type="text" value="Casa" name="complemento01" autocomplete="off" required>
+                                            <input type="text" value="Casa" name="complemento01" autocomplete="off" class="used">
                                             <label for="complemento01" class="label-name">
                                                 <span class="content-name">Complemento</span>
                                             </label>
                                         </div>                                
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-5">
                                     <div class="col-lg-5">
                                         <div class="form">
-                                            <input type="text" value="Ipanema" name="bairro01" autocomplete="off" required>
+                                            <input type="text" value="Ipanema" name="bairro01" autocomplete="off" class="used">
                                             <label for="bairro01" class="label-name">
                                                 <span class="content-name">Bairro</span>
                                             </label>
@@ -440,7 +421,7 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form">
-                                            <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" required>
+                                            <input type="text" value="Rio de Janeiro" name="cidade01" autocomplete="off" class="used">
                                             <label for="cidade01" class="label-name">
                                                 <span class="content-name">Cidade</span>
                                             </label>
@@ -448,7 +429,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-4" id="">
+                            <div class="row mt-2 mb-4">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
                                         <h6>Contato</h6>
@@ -458,7 +439,7 @@
                             <div class="row mt-4">
                                 <div class="col-sm-12 col-lg-3">
                                     <div class="form">
-                                        <input type="text" id="nome-add" name="nome01" autocomplete="off" required>
+                                        <input type="text" id="nome-add" name="nome01" autocomplete="off">
                                         <label for="nome01" class="label-name">
                                             <span class="content-name">Nome</span>
                                         </label>
@@ -466,7 +447,7 @@
                                 </div>
                                 <div class="col-sm-12 col-lg-3">
                                     <div class="form">
-                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off">
                                         <label for="telefone01" class="label-name">
                                             <span class="content-name">Telefone</span>
                                         </label>
@@ -474,7 +455,7 @@
                                 </div>
                                 <div class="col-sm-12 col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                        <input type="text" id="email-add" name="email01" autocomplete="off">
                                         <label for="email01" class="label-name">
                                             <span class="content-name">Email</span>
                                         </label>
@@ -597,34 +578,28 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-sm-12 col-lg-3">
-                                                    <div class="d-flex">
-                                                        <div class="form">
-                                                            <input type="text" id="hospital-clinicas" name="nome-hospital" autocomplete="off" required>
-                                                            <label for="nome-hospital" class="label-name">
-                                                                <span class="content-name">Nome</span>
-                                                            </label>
-                                                        </div>
-                                                    </div> 
+                                                    <div class="form">
+                                                        <input type="text" id="hospital-clinicas" name="nome-hospital" autocomplete="off">
+                                                        <label for="nome-hospital" class="label-name">
+                                                            <span class="content-name">Nome</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="d-flex">
-                                                        <div class="form">
-                                                            <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
-                                                            <label for="telefone01" class="label-name">
-                                                                <span class="content-name">Telefone</span>
-                                                            </label>
-                                                        </div>
-                                                    </div> 
+                                                <div class="col-sm-12 col-lg-3">                                                    
+                                                    <div class="form">
+                                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off">
+                                                        <label for="telefone01" class="label-name">
+                                                            <span class="content-name">Telefone</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="d-flex">
-                                                        <div class="form">
-                                                            <input type="text" id="email-add" name="email01" autocomplete="off" required>
-                                                            <label for="email01" class="label-name">
-                                                                <span class="content-name">Email</span>
-                                                            </label>
-                                                        </div>
-                                                    </div> 
+                                                <div class="col-sm-12 col-lg-3">                                                    
+                                                    <div class="form">
+                                                        <input type="text" id="email-add" name="email01" autocomplete="off">
+                                                        <label for="email01" class="label-name">
+                                                            <span class="content-name">Email</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                                 <div class="col-sm-12 col-lg-3">
                                                     <button type="button" class="btn btn-buscar b-lista">Buscar</button>
