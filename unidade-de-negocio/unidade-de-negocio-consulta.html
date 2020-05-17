@@ -52,12 +52,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -87,12 +81,6 @@
                             <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -173,12 +161,6 @@
                                     <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -225,37 +207,38 @@
                                 </div>                               
                             </div> 
                             <div class="row">
-                                <div class="col-lg-2">                                    
+                                <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" name="codigo02" value="001" onkeypress="$(this).mask('000000');" autocomplete="off" required>
-                                        <label for="codigo02" class="label-name">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" class="used">
+                                        <label for="codigo-01" class="label-name">
                                             <span class="content-name">Código</span>
                                         </label>
                                     </div>
-                                </div>                                
+                                </div>                               
                                 <div class="col-lg-3">
                                     <p class="p-select">Tipo</p>
                                     <select class="wide">
-                                        <option data-display="Origem"></option>
-                                        <option value="1">Origem</option>
-                                        <option value="2">Prestador</option>
-                                        <option value="3">Bradesco</option>
-                                        <option value="4">Mediservice</option>
+                                        <option value="1" data-display="Origem">Origem</option>
+                                        <option value="2">Origem</option>
+                                        <option value="3">Prestador</option>
+                                        <option value="4">Bradesco</option>
+                                        <option value="5">Mediservice</option>
+                                        <option value="6">Selecione</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-7">                                    
                                     <div class="form">
-                                        <input type="text" value="Bradesco" name="nome01" autocomplete="off" required>
+                                        <input type="text" value="Bradesco" name="nome01" autocomplete="off" class="used">
                                         <label for="nome01" class="label-name">
                                             <span class="content-name">Nome</span>
                                         </label>
                                     </div>             
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" name="cnpj01" value="03.235.562/00001-00" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <input type="text" name="cnpj01" value="03.235.562/00001-00" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" class="used">
                                         <label for="cnpj01" class="label-name">
                                             <span class="content-name">CNPJ</span>
                                         </label>
@@ -263,7 +246,7 @@
                                 </div>
                                 <div class="col-lg-6">                                    
                                     <div class="form">
-                                        <input type="text" value="Renata Scott" name="nome02" autocomplete="off" required>
+                                        <input type="text" value="Renata Scott" name="nome02" autocomplete="off" class="used">
                                         <label for="nome02" class="label-name">
                                             <span class="content-name">Usuário responsável pelo cadastro</span>
                                         </label>
@@ -272,9 +255,9 @@
                                 <div class="col-lg-3">
                                     <p class="p-select">Status</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
+                                        <option value="1" data-display="Selecione">Selecione</option>
+                                        <option value="2">Ativo</option>
+                                        <option value="3">Inativo</option>                                        
                                     </select>
                                 </div>
                             </div>

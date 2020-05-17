@@ -54,12 +54,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#analisesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-dados-grafico mr-4"></i>
-                                    <span class="item-menu">Análises</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
@@ -89,12 +83,6 @@
                             <li>
                                 <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
-                                    <span class="item-menu">Referenciados</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-saude-primeiros-socorros mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
@@ -175,12 +163,6 @@
                                     <span class="item-menu">Telas</span>                                    
                                 </a>
                             </li>
-                            <li>
-                                <a href="#ajudaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-alerta-duvida mr-4"></i>
-                                    <span class="item-menu">Ajuda</span>
-                                </a>
-                            </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
@@ -243,70 +225,65 @@
                             </div> 
                             <div class="row">
                                 <div class="col-lg-2">
-                                    <p class="disabled">Código</p>                                    
-                                    <div class="form form-disabled">
-                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" required>
+                                    <div class="form">
+                                        <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" class="used">
                                         <label for="codigo-01" class="label-name">
-                                            <span class="content-name"></span>
+                                            <span class="content-name">Código</span>
                                         </label>
-                                    </div>                                    
-                                </div>                                
-                                <div class="col-lg-3">
+                                    </div>
+                                </div>                                  
+                                <div class="col-lg-4">
                                     <p class="p-select">Tipo</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Origem</option>
-                                        <option value="2">Prestador</option>
-                                        <option value="3">Bradesco</option>
-                                        <option value="4">Mediservice</option>
+                                        <option value="1" data-display="Selecione">Selecione</option>
+                                        <option value="2">Origem</option>
+                                        <option value="3">Prestador</option>
+                                        <option value="4">Bradesco</option>
+                                        <option value="5">Mediservice</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-6">
                                     <div class="form">
-                                        <input type="text" name="nome01" autocomplete="off" required>
+                                        <input type="text" name="nome01" autocomplete="off" >
                                         <label for="nome01" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>Nome</span>
                                         </label>
                                     </div>                 
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-3">                                    
+                            <div class="row mt-4">
+                                <div class="col-lg-4">                                    
                                     <div class="form">
-                                        <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" required>
+                                        <input type="text" name="cnpj01" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" >
                                         <label for="cnpj01" class="label-name">
                                             <span class="content-name"><span class="obrigatorio">*</span>CNPJ</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                                        <div class="form">
-                                          <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" required="">
-                                          <label for="text" class="label-name">
-                                            <span class="content-name">
-                                                <span>Data término do contrato</span>
-                                            </span>
-                                          </label>
-                                        </div>
+                                    <div class="form">
+                                        <input type="text" name="data-termino-contrato" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
+                                        <label for="data-termino-contrato" class="label-name">
+                                            <span>Data término do contrato</span>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     <p class="p-select">Status</p>
                                     <select class="wide">
-                                        <option data-display="Selecione"></option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
+                                        <option value="1" data-display="Selecione">Selecione</option>
+                                        <option value="2">Ativo</option>
+                                        <option value="3">Inativo</option>                                        
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8 mt-3">
-                                    <label for="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                            <div class="row mt-2">
+                                <div class="col-lg-12 mt-5">
+                                    <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
                                     <textarea class="form-control" id="observacoes" rows="3"></textarea>
                                 </div>
-                            </div>                            
-                            <div class="row mt-4 mb-2">
+                            </div>                               
+                            <div class="row mt-2 mb-4">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
                                         <h6>Endereço</h6>
@@ -316,7 +293,7 @@
                             <div class="row">
                                 <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                        <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" >
                                         <label for="cep01" class="label-name">
                                             <span class="content-name">CEP</span>
                                         </label>
@@ -324,7 +301,7 @@
                                 </div>
                                 <div class="col-lg-5">                                    
                                     <div class="form">
-                                        <input type="text" name="logradouro01" autocomplete="off" required>
+                                        <input type="text" name="logradouro01" autocomplete="off" >
                                         <label for="logradouro01" class="label-name">
                                             <span class="content-name">Logradouro</span>
                                         </label>
@@ -332,7 +309,7 @@
                                 </div>
                                 <div class="col-lg-2">                                    
                                     <div class="form">
-                                        <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                        <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" >
                                         <label for="numero01" class="label-name">
                                             <span class="content-name">Nº</span>
                                         </label>
@@ -340,17 +317,17 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form">
-                                        <input type="text" name="complemento01" autocomplete="off" required>
+                                        <input type="text" name="complemento01" autocomplete="off" >
                                         <label for="complemento01" class="label-name">
                                             <span class="content-name">Complemento</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-5">
                                 <div class="col-lg-5">
                                     <div class="form">
-                                        <input type="text" name="bairro01" autocomplete="off" required>
+                                        <input type="text" name="bairro01" autocomplete="off" >
                                         <label for="bairro01" class="label-name">
                                             <span class="content-name">Bairro</span>
                                         </label>
@@ -368,7 +345,7 @@
                                 </div>
                                 <div class="col-lg-5">                                    
                                     <div class="form">
-                                        <input type="text" name="cidade01" autocomplete="off" required>
+                                        <input type="text" name="cidade01" autocomplete="off" >
                                         <label for="cidade01" class="label-name">
                                             <span class="content-name">Cidade</span>
                                         </label>
@@ -381,27 +358,27 @@
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
                                             <input type="radio" id="radio_yes" name="radio_group"/>
-                                            <label for="radio-estilo">Sim</label>
+                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
                                         </div>
                                         <div class="ex-radio">
                                             <input type="radio" id="radio_no" name="radio_group"/>
-                                            <label for="radio-estilo">Não</label>
+                                            <label for="radio-estilo" class="radio-estilo">Não</label>
                                           </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="endereco-entrega" class="d-none">
-                                <div class="row mt-4 mb-2">
+                                <div class="row mt-2 mb-4">
                                     <div class="col-lg-12">
                                         <div class="sub-title mt-4">
-                                            <h6>Endereço de entrega</h6>
+                                            <h6>Endereço de Entrega</h6>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-2">
                                         <div class="form">
-                                            <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" required>
+                                            <input type="text" name="cep01" onkeypress="$(this).mask('00000-000');" autocomplete="off" >
                                             <label for="cep01" class="label-name">
                                                 <span class="content-name">CEP</span>
                                             </label>
@@ -409,7 +386,7 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form">
-                                            <input type="text" name="logradouro01" autocomplete="off" required>
+                                            <input type="text" name="logradouro01" autocomplete="off" >
                                             <label for="logradouro01" class="label-name">
                                                 <span class="content-name">Logradouro</span>
                                             </label>
@@ -417,7 +394,7 @@
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form">
-                                            <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" required>
+                                            <input type="text" name="numero01" onkeypress="$(this).mask('000000');" autocomplete="off" >
                                             <label for="numero01" class="label-name">
                                                 <span class="content-name">Nº</span>
                                             </label>
@@ -425,17 +402,17 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form">
-                                            <input type="text" name="complemento01" autocomplete="off" required>
+                                            <input type="text" name="complemento01" autocomplete="off" >
                                             <label for="complemento01" class="label-name">
                                                 <span class="content-name">Complemento</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-5">
                                     <div class="col-lg-5">
                                         <div class="form">
-                                            <input type="text" name="bairro01" autocomplete="off" required>
+                                            <input type="text" name="bairro01" autocomplete="off" >
                                             <label for="bairro01" class="label-name">
                                                 <span class="content-name">Bairro</span>
                                             </label>
@@ -453,7 +430,7 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form">
-                                            <input type="text" name="cidade01" autocomplete="off" required>
+                                            <input type="text" name="cidade01" autocomplete="off" >
                                             <label for="cidade01" class="label-name">
                                                 <span class="content-name">Cidade</span>
                                             </label>
@@ -461,7 +438,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-4" id="">
+                            <div class="row mt-2 mb-4">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
                                         <h6>Contato</h6>
@@ -471,7 +448,7 @@
                             <div class="row mt-4">
                                 <div class="col-sm-5 col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" required>
+                                        <input type="text" id="telefone-add" name="telefone01" onkeypress="$(this).mask('(00)00000-0000');" autocomplete="off" >
                                         <label for="cep01" class="label-name">
                                             <span class="content-name">Telefone</span>
                                         </label>
@@ -479,7 +456,7 @@
                                 </div>
                                 <div class="col-sm-5 col-lg-3">
                                     <div class="form">
-                                        <input type="text" id="email-add" name="email01" autocomplete="off" required>
+                                        <input type="text" id="email-add" name="email01" autocomplete="off" >
                                         <label for="email01" class="label-name">
                                             <span class="content-name">Email</span>
                                         </label>

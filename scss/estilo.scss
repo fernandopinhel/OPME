@@ -386,6 +386,11 @@ td > .toggle{
     background: $bg-active;
     color: #fff;
 }
+
+.toggle-off, .toggle-on{
+    font-size: 12px;
+    padding-top: 7px;
+}
 // fim toggle on/off
 
 //navtabs
@@ -924,7 +929,7 @@ input:disabled {
 
 // radio animado
 input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
-    top: 0px !important;
+    top: 10px !important;
     transform: none !important;
     left: 0 !important;
     padding-left: 27px !important;
@@ -943,7 +948,6 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 	font-weight: normal;
 	display: inline-block;
     position: relative;
-    top: 0px !important;
 }
 
 .ex-checkbox input[type=checkbox].used,
@@ -955,7 +959,7 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 	height: 16px;
 	z-index: 10;
     position: absolute;
-    bottom: 12px;    
+    bottom: 0 !important;    
 }
 
 .ex-checkbox input[type=checkbox],
@@ -967,7 +971,7 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 	height: 16px;
 	z-index: 10;
     position: absolute;
-    bottom: 12px;
+    bottom: 8px !important;
 }
 
 .ex-radio input[type=radio] + label::before {
