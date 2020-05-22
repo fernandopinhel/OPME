@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - MENU</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Protótipo OPME - Solicitação de Compra</title>
         <!-- Bootstrap -->    
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
-        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="../css/estilo.css">
         <!-- Icons -->
-        <link rel="stylesheet" href="css/icones-bradesco.css">
+        <link rel="stylesheet" href="../css/icones-bradesco.css">
         <!-- estilo select(combo-box -->
-        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="../css/nice-select.css">
     </head>
 
     <body>
@@ -23,16 +23,16 @@
             <!-- sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header text-center">
-                    <img src="img/icon-logo-bradesco.png" class="mb-3">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
                     <h1>Gestão OPME</h1>                                          
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
                                 <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
@@ -109,14 +109,14 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="active">
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-fin-resgate mr-4"></i>
                                     <span class="item-menu">Solicitação/Compra</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
-                                    <li>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li class="sub-active">
                                         <a href="solicitacao-compras-consulta.html">Consulta</a>
                                     </li>
                                     <li>
@@ -220,7 +220,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="busca-fornecedor">
+            <div class="content">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -234,7 +234,7 @@
                             <div class="btn-group">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <p class="float-left">Renata Scott</p>
-                                    <img src="img/user.png">
+                                    <img src="../img/user.png">
                                     <div class="options">
                                         <span></span>
                                         <span></span>
@@ -248,6 +248,149 @@
                         </div>
                     </div>
                 </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Consulta Solicitação de Compra</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">                            
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" value="1234" name="codigoTuss" autocomplete="off" class="used">
+                                        <label for="codigoTuss" class="label-name">
+                                            <span class="content-name">Código TUSS</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" value="10413960144" name="codigoAnvisa" autocomplete="off" class="used">
+                                        <label for="codigoAnvisa" class="label-name">
+                                            <span class="content-name">Código Anvisa</span>
+                                        </label>
+                                    </div>                                  
+                                </div>
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" value="AGULHA DE PUNÇAO" name="item" autocomplete="off" class="used">
+                                        <label for="item" class="label-name">
+                                            <span class="content-name">Item</span>
+                                        </label>
+                                    </div>                               
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" value="9875687" name="codigoProvisorio" autocomplete="off" class="used">
+                                        <label for="codigoProvisorio" class="label-name">
+                                            <span class="content-name">Código Provisório</span>
+                                        </label>
+                                    </div>                               
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-3">
+                                    <p class="p-select">Status</p>
+                                    <select class="wide">
+                                        <option data-display="Selecione">Selecione</option>
+                                        <option value="1">Ativo</option>
+                                        <option value="2">Inativo</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" name="button" onclick="window.location.href='itens-busca.html'" class="btn btn-buscar">Buscar</button>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="resultado-filtro">
+                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th></th>
+                                        <th>Código Anvisa</th>
+                                        <th>Código TUSS</th>
+                                        <th>Item</th>                                                                        
+                                        <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="itens-detalhes.html">
+                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>10413960144</td>
+                                            <td>1234</td>
+                                            <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ativo</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
             </div>
             <div class="footer-version">
                 <p>V.1.0</p>
@@ -255,20 +398,20 @@
         </div><!-- fim conteudo geral wrapper -->
 
         <!-- jQuery -->
-        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
         <!-- Popper.JS -->
-        <script src="js/popper.min.js"></script>
+        <script src="../js/popper.min.js"></script>
         <!-- Bootstrap JS -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
         <!-- script datepicker -->
-        <script src="js/bootstrap-datetimepicker.js"></script>
-        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <script src="../js/bootstrap-datetimepicker.js"></script>
+        <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
-        <script src="js/jquery.mask.min.js"></script>
+        <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
-        <script src="js/jquery.nice-select.js"></script>
+        <script src="../js/jquery.nice-select.js"></script>
         <!-- scripts -->
-        <script src="js/script.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 
 </html>

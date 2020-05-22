@@ -278,6 +278,14 @@ $('#reutilizavel-sim').click(function(){
 $('#reutilizavel-nao').click(function(){
     $('.n-reutilizavel').addClass('d-none')
 });
+
+$('#reanalise-sim').click(function(){
+    $('.n-reanalise').removeClass('d-none')
+});
+
+$('#reanalise-nao').click(function(){
+    $('.n-reanalise').addClass('d-none')
+});
 // Itens 
 
 // Fim Itens 
