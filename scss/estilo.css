@@ -220,6 +220,18 @@ a {
           box-shadow: 0;
 }
 
+.item-novo {
+  color: #601f25;
+  font-weight: 500;
+}
+
+.item-novo > i {
+  position: relative;
+  font-size: 20px;
+  top: 3px;
+  right: 3px;
+}
+
 .btn.focus, .btn:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -236,6 +248,7 @@ a {
   transition: 0.6s all;
   width: 120px;
   height: 40px;
+  letter-spacing: 2px;
 }
 
 .btn-buscar:hover {
@@ -246,6 +259,7 @@ a {
   background: #499ED0;
   border-color: #499ED0;
   border-radius: 100px;
+  letter-spacing: 2px;
 }
 
 .btn-incluir {
@@ -259,9 +273,34 @@ a {
   width: 120px;
   height: 40px;
   margin-right: 10px;
+  letter-spacing: 2px;
 }
 
 .btn-incluir:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #11C25D;
+  border-color: #11C25D;
+  border-radius: 100px;
+}
+
+.btn-confirmar {
+  opacity: 0.7;
+  background: #11C25D;
+  border-color: #11C25D;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 256px;
+  height: 40px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-confirmar:hover {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   color: #fff;
@@ -281,6 +320,7 @@ a {
   transition: 0.6s all;
   width: 120px;
   height: 40px;
+  letter-spacing: 2px;
 }
 
 .btn-cancelar:hover {
@@ -303,6 +343,7 @@ a {
   transition: 0.6s all;
   width: 120px;
   height: 40px;
+  letter-spacing: 2px;
 }
 
 .btn-excluir:hover {
@@ -312,6 +353,53 @@ a {
   opacity: 1;
   background: #e60935;
   border-color: #e60935;
+  border-radius: 100px;
+}
+
+.btn-recusar-lote {
+  opacity: 0.7;
+  background: #e60935;
+  border-color: #e60935;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 190px;
+  height: 40px;
+  letter-spacing: 2px;
+}
+
+.btn-recusar-lote:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #e60935;
+  border-color: #e60935;
+  border-radius: 100px;
+}
+
+.btn-aprovar-lote {
+  opacity: 0.7;
+  background: #11C25D;
+  border-color: #11C25D;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 190px;
+  height: 40px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-aprovar-lote:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #11C25D;
+  border-color: #11C25D;
   border-radius: 100px;
 }
 
@@ -559,7 +647,7 @@ a {
 }
 
 .sub-title {
-  background: #f4f4f4;
+  background: #f9f7f7;
   padding: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -573,15 +661,31 @@ a {
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
+  font-weight: 600;
 }
 
-.sub-title > div > p {
+.sub-title > p {
   margin: 0;
   font-weight: 600;
 }
 
 .w-space {
   width: 5%;
+}
+
+.border-itens {
+  border-right: 1px solid #d7e5ff;
+}
+
+.border-itens-2 {
+  border-left: 1px solid #d7e5ff;
+}
+
+.print-itens > img {
+  width: 30px;
+  height: 30px;
+  float: right;
 }
 
 .p-select {
@@ -641,7 +745,7 @@ td > .toggle {
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   font-weight: 500;
   color: #212e4b;
-  background-color: #f4f4f4;
+  background-color: #f9f7f7;
 }
 
 .nav-tabs .nav-link {
@@ -1207,7 +1311,6 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
   position: relative !important;
 }
 
-.ex-checkbox label,
 .ex-radio label {
   padding-left: 27px;
   font-size: 16px;
@@ -1217,7 +1320,6 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
   position: relative;
 }
 
-.ex-checkbox input[type=checkbox].used,
 .ex-radio input[type=radio].used {
   margin: 0;
   opacity: 0;
@@ -1229,7 +1331,6 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
   bottom: 0 !important;
 }
 
-.ex-checkbox input[type=checkbox],
 .ex-radio input[type=radio] {
   margin: 0;
   opacity: 0;
@@ -1319,6 +1420,92 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
   font-family: 'Open Sans', sans-serif !important;
   color: #989a9e;
   font-weight: 300;
+}
+
+input:focus ~ label.check-estilo, input.used ~ label.check-estilo {
+  top: 10px !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  left: 0 !important;
+  padding-left: 27px !important;
+  font-size: 16px !important;
+  color: #989a9e !important;
+  font-weight: normal !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+.ex-checkbox {
+  position: relative;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.ex-checkbox label {
+  padding-left: 32px;
+  line-height: 140%;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+}
+
+.ex-checkbox input[type=checkbox] {
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  position: absolute;
+}
+
+.ex-checkbox input[type=checkbox] + label::before {
+  border: 1px solid #9f9f9f;
+  width: 20px;
+  height: 20px;
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  top: -17px;
+}
+
+.ex-checkbox input[type=checkbox]:hover + label::before {
+  border: 2px solid #0e81ed;
+}
+
+.ex-checkbox input[type=checkbox]:focus + label::before {
+  -webkit-box-shadow: 0 0 1px #0e81ed;
+          box-shadow: 0 0 1px #0e81ed;
+  outline: none;
+}
+
+.ex-checkbox input[type=checkbox]:checked + label::before {
+  border: 1px solid #d6d7d8;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjMDI4OGQxIiBkPSJNMTguOSA4LjhsLTguNyA4LjdjLS4xLjEtLjIuMS0uMyAwbC00LjktNC45Yy0uMS0uMS0uMS0uMiAwLS4zbDEuMi0xLjJjLjEtLjEuMi0uMS4zIDBsMy42IDMuNiA3LjMtNy4zYy4xLS4xLjItLjEuMyAwbDEuMiAxLjJjLjEgMCAuMS4xIDAgLjJ6IiAvPjwvc3ZnPg==") no-repeat center center;
+  background-size: 24px 24px;
+}
+
+.ex-checkbox input[type=checkbox]:checked:hover + label::before {
+  background-size: 30px 30px;
+}
+
+.ex-checkbox input[type=checkbox]:disabled {
+  cursor: not-allowed;
+}
+
+.ex-checkbox input[type=checkbox]:disabled + label {
+  color: #bcbcbc;
+  cursor: not-allowed;
+}
+
+.ex-checkbox input[type=checkbox]:disabled:checked + label::before {
+  border: 1px solid transparent;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBmaWxsPSIjYmNiY2JjIiBkPSJNMTguOSA4LjhsLTguNyA4LjdjLS4xLjEtLjIuMS0uMyAwbC00LjktNC45Yy0uMS0uMS0uMS0uMiAwLS4zbDEuMi0xLjJjLjEtLjEuMi0uMS4zIDBsMy42IDMuNiA3LjMtNy4zYy4xLS4xLjItLjEuMyAwbDEuMiAxLjJjLjEgMCAuMS4xIDAgLjJ6IiAvPjwvc3ZnPg==") no-repeat center center;
+}
+
+.ex-checkbox input[type=checkbox]:disabled + label::before {
+  border: 1px solid #bcbcbc;
 }
 
 .datetimepicker {
@@ -1429,7 +1616,7 @@ table.table-condensed tbody tr td.day.active {
 }
 
 #box-lista-subs {
-  padding: 30px;
+  padding: 20px 30px 30px 30px;
   background: #f9f7f7;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1446,6 +1633,14 @@ table.table-condensed tbody tr td.day.active {
 }
 
 #box-lista-subs > p {
+  color: #212e4b;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#box-lista-subs > div > div > div > p {
   color: #212e4b;
   font-weight: 500;
   letter-spacing: 2px;
@@ -1786,6 +1981,14 @@ table {
   width: 20% !important;
 }
 
+.por-30 {
+  width: 30% !important;
+}
+
+.por-40 {
+  width: 40% !important;
+}
+
 .pagination .icon {
   font-size: 11px;
   margin: -4px;
@@ -1856,6 +2059,10 @@ table {
   right: -1px;
 }
 
+.top-10 {
+  top: 10px !important;
+}
+
 .menu-visible .circle {
   border-radius: 100px;
   background: #AFB7C3;
@@ -1904,16 +2111,22 @@ tr:hover td.ac-3 {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   width: 10% !important;
+  top: 2px !important;
 }
 
 tr:hover td.ac-3 .menu-invisible {
   left: -85px !important;
   width: 120px !important;
+  top: 2px !important;
 }
 
 tr td.ac-3 .menu-invisible {
   left: -100px !important;
   width: 120px !important;
+}
+
+.table-responsive table tbody tr:hover td.ac-3 {
+  padding-left: 60px !important;
 }
 
 td.actions .menu-invisible {
@@ -1974,7 +2187,7 @@ tr:hover td.a-2 .menu-invisible {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .table-responsive table tbody tr td.actions {
+  .table-responsive table tbody tr:hover td.actions {
     padding-left: 52px;
   }
   .table-responsive table tbody tr:hover td.ac-3 {
@@ -2055,6 +2268,10 @@ tr:hover td.a-2 .menu-invisible {
   .form {
     position: relative;
     margin: 19px 0 19px 0;
+  }
+  .border-itens {
+    border-bottom: 1px solid #d7e5ff;
+    border-right: none;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

@@ -361,3 +361,7 @@ $(function() { //onload aqui
   
   });
   // fim Inputs animado
+
+  $(".buscar-item").click(function(){
+    $(".tabela-busca-item").toggleClass("d-none");
+});
