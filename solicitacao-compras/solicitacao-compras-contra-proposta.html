@@ -500,331 +500,70 @@
                                     <div class="sub-title mb-2">
                                         <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
                                     </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-tuss" class="label-name">
-                                                    <span class="content-name">Código TUSS</span>
-                                                </label>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="solicitacao-compras-cadastro.html">Itens</a></li>      
+                                          <li class="breadcrumb-item"><a href="solicitacao-compras-detalhes.html">Detalhes da Negociação</a></li>
+                                          <li class="breadcrumb-item">Contra-Proposta</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <div class="sub-title mb-2 bg-green">
+                                        <p>AGULHA DE PUNÇÃO -15mm - TUSS : 12523 - Código Provisório: 213221 - Negociação realizada com: Hospital São Luiz</p>                                        
+                                    </div>                                    
+                                    <div id="box-lista-subs">
+                                        <p>Contra-Proposta</p>
+                                        <div class="row consulta-negociacao mt-3">
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Data da Última Proposta: <span>03/01/2020</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Valor da Última Proposta: <span>R$ 1.150,00</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Origem da Proposta: <span>Hospital São Luiz</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Responsável por cadastrar a Proposta: <span>Renata Scott</span></p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <p>Observação: <span>Hospital recusou a proposta por existir um acordo por tabela.</span></p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-provisorio" class="label-name">
-                                                    <span class="content-name">Código Provisório</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-item" autocomplete="off" >
-                                                <label for="nome-item" class="label-name">
-                                                    <span class="content-name">Nome do Item</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-4">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <p>Itens Solicitados</p>
-                                                </div>
-                                                <div class="col-lg-6">                                                    
-                                                    <a href="solicitacao-compras-cadastro-incluir-item.html" class="float-right item-novo">
-                                                        <i class="icon icon-nav-adicionar"></i>
-                                                        <span>Incluir Item</span>
-                                                    </a>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="valor-contra-proposta" autocomplete="off">
+                                                    <label for="valor-contra-proposta" class="label-name">
+                                                        <span class="content-name">Valor da Contra-Proposta</span>
+                                                    </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="ex-checkbox m-0" data-toggle="tooltip" data-original-title="Marcar todos">
-                                                                <input type="checkbox"  onclick="marcarTodos(this.checked);" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </th>
-                                                        <th></th>
-                                                        <th data-toggle="tooltip" data-original-title="Código TUSS">TUSS</th>
-                                                        <th data-toggle="tooltip" data-original-title="Código Provisório">Provisório</th>
-                                                        <th>Item</th> 
-                                                        <th>Quantidade</th>
-                                                        <th data-toggle="tooltip" data-original-title="Proposta Inicial (unitário)">Proposta Inicial</th>
-                                                        <th data-toggle="tooltip" data-original-title="Responsável pela Proposta Inicial">Responsável Inicial</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Proposta Atual (unitário)">Proposta Atual</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Responsável pela Proposta Atual">Responsável Atual</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Cotação Final (unitário)">Cotação Final</th>
-                                                        <th>Status</th>                                                
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Analista Responsável Pelo Status">Reponsável Status</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Valor Total Negociado do Item">Total Negociado</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title">
-                                                <div class="row d-flex">
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de itens solicitados: <b>3</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de itens aprovados: <b>2</b></p>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Valor total aprovado: <b>R$ 5.500,00 </b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title">
-                                                            <p>% Economizado: <b>7,64</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-1 my-auto">
-                                                        <a href="#" class="print-itens">
-                                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir">
-                                                        </a>
-                                                    </div>
-                                                </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável Pela Contra-Proposta</p>
+                                                <select class="wide">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>       
+                                                    <option value="3">Hospital</option>                                        
+                                                    <option value="4">Fabricante</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4 mt-2">
+                                                <p class="m-0">Data da Contra-Proposta: <b>26/05/2020</b></p>
+                                                <p class="m-0">Responsável Contra-Proposta: <b>Renata Scott</b></p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-2">
-                                        <div class="col-lg-12 mt-3">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-recusar-lote" onclick="window.location.href='solicitacao-recusar-lote.html'">Recusar em Lote</button>
-                                            <button type="button" name="button" class="btn btn-aprovar-lote" onclick="window.location.href='solicitacao-aprovar-lote.html'">Aprovar em Lote</button>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-12">
+                                                <label for="observacoes" class="observacoes">Observação</label>
+                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes">
+                                            <div class="col-lg-12 mt-5">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro">Confirmar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

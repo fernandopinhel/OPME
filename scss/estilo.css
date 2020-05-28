@@ -220,6 +220,10 @@ a {
           box-shadow: 0;
 }
 
+.bg-green {
+  background: #d6ede6 !important;
+}
+
 .item-novo {
   color: #601f25;
   font-weight: 500;
@@ -379,7 +383,30 @@ a {
   border-radius: 100px;
 }
 
-.btn-aprovar-lote {
+.btn-recusar-lote-2 {
+  opacity: 0.7;
+  background: #e60935;
+  border-color: #e60935;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 290px;
+  height: 40px;
+  letter-spacing: 2px;
+}
+
+.btn-recusar-lote-2:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #e60935;
+  border-color: #e60935;
+  border-radius: 100px;
+}
+
+.btn-aprovar-lote, .btn-aceitar {
   opacity: 0.7;
   background: #11C25D;
   border-color: #11C25D;
@@ -389,11 +416,33 @@ a {
   transition: 0.6s all;
   width: 190px;
   height: 40px;
-  margin-right: 10px;
   letter-spacing: 2px;
 }
 
-.btn-aprovar-lote:hover {
+.btn-aprovar-lote:hover, .btn-aceitar:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #11C25D;
+  border-color: #11C25D;
+  border-radius: 100px;
+}
+
+.btn-aprovar-lote-2 {
+  opacity: 0.7;
+  background: #11C25D;
+  border-color: #11C25D;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 310px;
+  height: 40px;
+  letter-spacing: 2px;
+}
+
+.btn-aprovar-lote-2:hover {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   color: #fff;
@@ -1087,6 +1136,10 @@ ul.list-unstyled ul a {
           transform: none;
   opacity: 1;
   margin: 5px auto;
+}
+
+.subs li a i.icon-fin-resgate {
+  font-size: 37px;
 }
 
 .subs li a i {
@@ -2063,6 +2116,10 @@ table {
   top: 10px !important;
 }
 
+.top-5 {
+  top: 5px !important;
+}
+
 .menu-visible .circle {
   border-radius: 100px;
   background: #AFB7C3;
@@ -2111,13 +2168,12 @@ tr:hover td.ac-3 {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   width: 10% !important;
-  top: 2px !important;
+  padding-left: 60px !important;
 }
 
 tr:hover td.ac-3 .menu-invisible {
   left: -85px !important;
   width: 120px !important;
-  top: 2px !important;
 }
 
 tr td.ac-3 .menu-invisible {
@@ -2125,8 +2181,27 @@ tr td.ac-3 .menu-invisible {
   width: 120px !important;
 }
 
-.table-responsive table tbody tr:hover td.ac-3 {
-  padding-left: 60px !important;
+tr:hover td.ac-4 {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  width: 180px !important;
+  padding-left: 52px;
+  padding-right: 110px;
+}
+
+tr:hover td.ac-4 .menu-invisible {
+  left: -55px !important;
+  width: 180px !important;
+}
+
+tr td.ac-4 .menu-invisible {
+  left: -100px !important;
+  width: 180px !important;
+  padding-left: 20px;
+}
+
+tr td.ac-4 .menu-visible {
+  margin-left: 0;
 }
 
 td.actions .menu-invisible {

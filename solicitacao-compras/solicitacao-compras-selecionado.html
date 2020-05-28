@@ -548,7 +548,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 mt-5">
-                                            <div class="sub-title mb-2">
+                                            <div class="sub-title mb-2 bg-green">
                                                 <p>ORTHOLOC 3DI - SISTEMA MIDFOOT/FLATFOOT - PLACA SHIFT-FIX MDCO - Marca: WRIGHT MEDICAL</p>                                        
                                             </div>
                                         </div>
@@ -572,7 +572,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-4 mt-5">
+                                        <div class="col-lg-4 mt-5 ml-3">
                                             <div class="form">
                                                 <input type="text" name="valor-proposta-inicial" autocomplete="off" >
                                                 <label for="valor-proposta-inicial" class="label-name">
@@ -582,21 +582,375 @@
                                         </div>
                                         <div class="col-lg-4 mt-5">
                                             <p class="p-select">Responsável pela Proposta inicial</p>
-                                            <select class="wide">
+                                            <select class="wide" id="opcoes">
                                                 <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Hospital</option>
-                                                <option value="2">Fornecedor</option>   
-                                                <option value="3">Fabricante</option>   
-                                                <option value="4">Bradesco</option>                                        
-                                            </select>   
+                                                <option value="s-hospital">Hospital</option>
+                                                <option value="s-fornecedor">Fornecedor</option>
+                                                <option value="s-fabricante">Fabricante</option>                                     
+                                                <option value="s-bradesco">Bradesco</option>                                     
+                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5">
-                                        <div class="col-lg-12">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#'">Salvar</button>
+                                    </div>                                    
+                                    <section class="sessao-hospital sel" id="s-hospital">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="cnpj" onkeypress="$(this).mask('99.999.999/9999-99');" autocomplete="off">
+                                                    <label for="cnpj" class="label-name">
+                                                        <span class="content-name">CNPJ</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="hospital" autocomplete="off" >
+                                                    <label for="hospital" class="label-name">
+                                                        <span class="content-name">Hospital</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <button type="button" name="button" class="btn btn-buscar buscar-item mt-4 mr-3">Buscar</button>
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar mt-4">Cancelar</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div id="box-lista-subs" class="mt-4  d-none tabela-busca-item">
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>CNPJ</th>
+                                                            <th>Hospital</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="actions">
+                                                                <div class="float-right">
+                                                                <div class="menu-visible">
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                </div>
+                                                                <div class="menu-invisible">
+                                                                    <a href="#" class="mostrar-itens-section">
+                                                                        <img src="../img/selecionar.svg" class="i-detalhes" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="por-15">03.575.309/0001-75</td>
+                                                            <td class="por-20">Distribuidor Mediimport Ltda</td>
+                                                            <td>Ativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="por-15">05.575.309/0001-00</td>
+                                                            <td class="por-20">Mediimport Dist Ltda</td>
+                                                            <td>Inativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <div class="sub-title bg-green">                                                            
+                                                    <p>Hospital: <b>DISTRIBUIDOR MEDIIMPORT LTDA CNPJ: 03.575.309/0001-75</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <label for="show-itens-sectionsital" class="observacoes">Observação</label>
+                                                <textarea class="form-control" id="show-itens-sectionsital" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='solicitacao-compras-cadastro.html'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sessao-fornecedor sel" id="s-fornecedor">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="cnpj" onkeypress="$(this).mask('99.999.999/9999-99');" autocomplete="off">
+                                                    <label for="cnpj" class="label-name">
+                                                        <span class="content-name">CNPJ</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="fornecedor" autocomplete="off" >
+                                                    <label for="fornecedor" class="label-name">
+                                                        <span class="content-name">Fornecedor</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <button type="button" name="button" class="btn btn-buscar buscar-item mt-4 mr-3">Buscar</button>
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar mt-4">Cancelar</button>
+                                            </div>
+                                        </div>
+                                        <div id="box-lista-subs" class="mt-4  d-none tabela-busca-item">
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>CNPJ</th>
+                                                            <th>Fornecedor</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="actions">
+                                                                <div class="float-right">
+                                                                <div class="menu-visible">
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                </div>
+                                                                <div class="menu-invisible">
+                                                                    <a href="#" class="mostrar-itens-section">
+                                                                        <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="por-15">03.575.309/0001-75</td>
+                                                            <td class="por-20">Distribuidor Mediimport Ltda</td>
+                                                            <td>Ativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="por-15">05.575.309/0001-00</td>
+                                                            <td class="por-20">Mediimport Dist Ltda</td>
+                                                            <td>Inativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <div class="sub-title">                                                            
+                                                    <p>Fornecedor: <b>DISTRIBUIDOR MEDIIMPORT LTDA CNPJ: 03.575.309/0001-75</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <label for="show-itens-sectionsital" class="observacoes">Observação</label>
+                                                <textarea class="form-control" id="show-itens-sectionsital" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='solicitacao-compras-cadastro.html'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sessao-fabricante sel" id="s-fabricante">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="cnpj" onkeypress="$(this).mask('99.999.999/9999-99');" autocomplete="off">
+                                                    <label for="cnpj" class="label-name">
+                                                        <span class="content-name">CNPJ</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="fabricante" autocomplete="off" >
+                                                    <label for="fabricante" class="label-name">
+                                                        <span class="content-name">Fabricante</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <button type="button" name="button" class="btn btn-buscar buscar-item mt-4 mr-3">Buscar</button>
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar mt-4">Cancelar</button>
+                                            </div>
+                                        </div>
+                                        <div id="box-lista-subs" class="mt-4  d-none tabela-busca-item">
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>CNPJ</th>
+                                                            <th>Fabricante</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="actions">
+                                                                <div class="float-right">
+                                                                <div class="menu-visible">
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                </div>
+                                                                <div class="menu-invisible">
+                                                                    <a href="#" class="mostrar-itens-section">
+                                                                        <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="por-15">03.575.309/0001-75</td>
+                                                            <td class="por-20">Distribuidor Mediimport Ltda</td>
+                                                            <td>Ativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="por-15">05.575.309/0001-00</td>
+                                                            <td class="por-20">Mediimport Dist Ltda</td>
+                                                            <td>Inativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <div class="sub-title">                                                            
+                                                    <p>Fabricante: <b>DISTRIBUIDOR MEDIIMPORT LTDA CNPJ: 03.575.309/0001-75</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <label for="show-itens-sectionsital" class="observacoes">Observação</label>
+                                                <textarea class="form-control" id="show-itens-sectionsital" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='solicitacao-compras-cadastro.html'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sessao-bradesco sel" id="s-bradesco">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="cnpj" onkeypress="$(this).mask('99.999.999/9999-99');" autocomplete="off">
+                                                    <label for="cnpj" class="label-name">
+                                                        <span class="content-name">CNPJ</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-2 mb-4">
+                                                <div class="form">
+                                                    <input type="text" name="hospital" autocomplete="off" >
+                                                    <label for="hospital" class="label-name">
+                                                        <span class="content-name">Hospital</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <button type="button" name="button" class="btn btn-buscar buscar-item mt-4 mr-3">Buscar</button>
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar mt-4">Cancelar</button>
+                                            </div>
+                                        </div>
+                                        <div id="box-lista-subs" class="mt-4  d-none tabela-busca-item">
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>CNPJ</th>
+                                                            <th>Hospital</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="actions">
+                                                                <div class="float-right">
+                                                                <div class="menu-visible">
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                </div>
+                                                                <div class="menu-invisible">
+                                                                    <a href="#" class="mostrar-itens-section">
+                                                                        <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="por-15">03.575.309/0001-75</td>
+                                                            <td class="por-20">Distribuidor Mediimport Ltda</td>
+                                                            <td>Ativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td class="por-15">05.575.309/0001-00</td>
+                                                            <td class="por-20">Mediimport Dist Ltda</td>
+                                                            <td>Inativo</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <div class="sub-title">                                                            
+                                                    <p>Fornecedor: <b>DISTRIBUIDOR MEDIIMPORT LTDA CNPJ: 03.575.309/0001-75</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <label for="show-itens-sectionsital" class="observacoes">Observação</label>
+                                                <textarea class="form-control" id="show-itens-sectionsital" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes show-itens-sections d-none mt-5">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='solicitacao-compras-cadastro.html'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                                 <!-- fim itens -->
                                 <!-- procedimentos -->

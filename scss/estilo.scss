@@ -21,6 +21,7 @@
 $bg-color: #f4f4f6;
 $bg-medium: #2e3e61;
 $bg-dark: #212e4b;
+$bg-green: #d6ede6;
 $color-content: #989a9e;
 $color-header-menu: #afc4db;
 $color-header-content: #d7e5ff;
@@ -64,6 +65,9 @@ a {
     outline: 0;
     box-shadow: 0
 }
+
+.bg-green{background: $bg-green !important;}
+
 // botoes 
 .item-novo{    
     color: #601f25;
@@ -212,7 +216,28 @@ a {
     border-radius: 100px;
 }
 
-.btn-aprovar-lote{
+.btn-recusar-lote-2{
+    opacity: 0.7;
+    background: $btn-excluir;
+    border-color: $btn-excluir;
+    color: #fff;
+    border-radius: 100px;
+    transition: $transition;
+    width: 290px;
+    height: 40px;
+    letter-spacing: 2px;
+}
+
+.btn-recusar-lote-2:hover{
+    transition: $transition;
+    color: #fff;
+    opacity: 1;
+    background: $btn-excluir;
+    border-color: $btn-excluir;
+    border-radius: 100px;
+}
+
+.btn-aprovar-lote, .btn-aceitar{
     opacity: 0.7;
     background: $btn-incluir;
     border-color: $btn-incluir;
@@ -221,11 +246,31 @@ a {
     transition: $transition;
     width: 190px;
     height: 40px;
-    margin-right: 10px;
     letter-spacing: 2px;
 }
 
-.btn-aprovar-lote:hover{
+.btn-aprovar-lote:hover, .btn-aceitar:hover{
+    transition: $transition;
+    color: #fff;
+    opacity: 1;
+    background: $btn-incluir;
+    border-color: $btn-incluir;
+    border-radius: 100px;
+}
+
+.btn-aprovar-lote-2{
+    opacity: 0.7;
+    background: $btn-incluir;
+    border-color: $btn-incluir;
+    color: #fff;
+    border-radius: 100px;
+    transition: $transition;
+    width: 310px;
+    height: 40px;
+    letter-spacing: 2px;
+}
+
+.btn-aprovar-lote-2:hover{
     transition: $transition;
     color: #fff;
     opacity: 1;
@@ -811,6 +856,8 @@ ul.list-unstyled ul a {background: $bg-dark;}
     opacity: 1;
     margin: 5px auto;
 }
+
+.subs li a i.icon-fin-resgate{font-size: 37px;}
 
 .subs li a i{
     width: 35px;
@@ -1722,6 +1769,7 @@ cursor: pointer;
 
 // fim corpo tabela
 .top-10{top: 10px !important;}
+.top-5{top: 5px !important;}
 
 .menu-visible .circle{
     -webkit-border-radius: 100px;
@@ -1770,14 +1818,13 @@ tr td.ac-2 .menu-invisible{
 
 tr:hover td.ac-3{
     transition: $transition;
-    width: 10% !important;
-    top: 2px !important;
+    width: 10% !important;    
+    padding-left: 60px !important;
 }
 
 tr:hover td.ac-3 .menu-invisible{
     left: -85px !important;    
-    width: 120px !important;
-    top: 2px !important;
+    width: 120px !important;    
 }
 
 tr td.ac-3 .menu-invisible{
@@ -1785,9 +1832,25 @@ tr td.ac-3 .menu-invisible{
     width: 120px !important;
 }
 
-.table-responsive table tbody tr:hover td.ac-3 {
-    padding-left: 60px !important;
+tr:hover td.ac-4{
+    transition: $transition;
+    width: 180px !important;
+    padding-left: 52px;
+    padding-right: 110px;  
 }
+
+tr:hover td.ac-4 .menu-invisible{
+    left: -55px !important;    
+    width: 180px !important;
+}
+
+tr td.ac-4 .menu-invisible{
+    left: -100px !important;    
+    width: 180px !important;
+    padding-left: 20px;
+}
+
+tr td.ac-4 .menu-visible{margin-left: 0;}
 
 td.actions .menu-invisible{
     position: absolute;
@@ -1841,7 +1904,7 @@ tr:hover td.a-2 .menu-invisible{
     }
 
     .table-responsive table tbody tr:hover td.actions{
-        padding-left: 52px;
+        padding-left: 52px;        
     }
 
     .table-responsive table tbody tr:hover td.ac-3{padding-left: 92px !important;}

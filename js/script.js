@@ -365,3 +365,16 @@ $(function() { //onload aqui
   $(".buscar-item").click(function(){
     $(".tabela-busca-item").toggleClass("d-none");
 });
+
+$(".mostrar-itens-section").click(function(){
+    $(".tabela-busca-item").toggleClass("d-none");
+    $(".show-itens-sections").toggleClass("d-none");
+});
+
+
+// marcar todos checkbox
+function marcarTodos(marcardesmarcar){
+    $('.marcar').each(function () {
+        this.checked = marcardesmarcar;
+    });
+}
