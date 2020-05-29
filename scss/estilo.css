@@ -719,6 +719,11 @@ a {
   font-weight: 600;
 }
 
+.sub-title > div > p {
+  margin: 0;
+  font-weight: 600;
+}
+
 .w-space {
   width: 5%;
 }

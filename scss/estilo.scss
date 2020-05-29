@@ -464,6 +464,11 @@ a {
     font-weight: 600;
 }
 
+.sub-title > div > p{
+    margin: 0;    
+    font-weight: 600;
+}
+
 .w-space{width: 5%;}
 
 .border-itens{border-right: 1px solid $color-header-content;}

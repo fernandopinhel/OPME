@@ -278,25 +278,24 @@
                                 <div class="tab-pane container-fluid fade" id="caracteristicas">
                                     <div class="row">
                                         <div class="col-lg-2">
-                                            <p class="disabled">ID</p>
-                                            <div class="form form-disabled">
-                                                <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" >
+                                            <div class="form">
+                                                <input type="text" name="codigo-01" value="001" disabled="disabled" autocomplete="off" class="used">
                                                 <label for="codigo-01" class="label-name">
-                                                    <span class="content-name"></span>
+                                                    <span class="content-name">Código</span>
                                                 </label>
                                             </div>
-                                        </div>
+                                        </div>  
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="16478848" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod-provisorio" class="label-name">
-                                                    <span class="content-name"><span class="obrigatorio">*</span>Código Provisório</span>
+                                                    <span class="content-name">Código Provisório</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="16478848" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod-tuss" class="label-name">
                                                     <span class="content-name">Código TUSS</span>
                                                 </label>
@@ -305,67 +304,67 @@
                                         <div class="col-lg-2">
                                             <p class="p-select">Status</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">Ativo</option>
+                                                <option data-display="Ativo" value="1">Ativo</option>
                                                 <option value="2">Inativo</option>                                        
+                                                <option value="3">Selecione</option>
                                             </select>
                                         </div>         
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6 mt-4">
                                             <div class="form">
-                                                <input type="text" name="item" autocomplete="off" >
+                                                <input type="text" value="AGULHA DE PUNÇAO" name="item" autocomplete="off" class="used">
                                                 <label for="item" class="label-name">
-                                                    <span class="content-name"><span class="obrigatorio">*</span>Item</span>
+                                                    <span class="content-name">Item</span>
                                                 </label>
                                             </div>         
                                         </div>
                                         <div class="col-lg-3 mt-4">                                    
                                             <p class="p-select">Grupo</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">OPME</option>
+                                            <select class="wide">                                                
+                                                <option data-display="OPME" value="1">OPME</option>
+                                                <option value="2">Selecione</option>
                                             </select>                                                             
                                         </div>
                                         <div class="col-lg-3 mt-4">                                    
                                             <p class="p-select">Sub-Grupo</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">OPME</option>
+                                                <option data-display="OPME" value="1">OPME</option>
+                                                <option value="2">Selecione</option>
                                             </select>                                                             
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4 mt-5">                                    
                                             <p class="p-select">Unidade de Negócio</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">Bradesco</option>
+                                            <select class="wide">                                                
+                                                <option data-display="Bradesco" value="1">Bradesco</option>
                                                 <option value="2">Mediservice</option>
+                                                <option value="3">Selecione</option>
                                             </select>                                                             
                                         </div>
                                         <div class="col-lg-4 mt-5">                                    
                                             <p class="p-select">Unidade de Medida para Compras</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">UND</option>
+                                                <option data-display="UND" value="1">UND</option>
                                                 <option value="2">CX</option>
                                                 <option value="3">PCT</option>
                                                 <option value="4">ENV</option>
                                                 <option value="5">DZ</option>
                                                 <option value="6">ROL</option>
+                                                <option value="7">Selecione</option>
                                             </select>                                                            
                                         </div>
                                         <div class="col-lg-4 mt-5">                                    
                                             <p class="p-select">Unidade de Medida para Consulta</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">UND</option>
+                                                <option data-display="UND" value="1">UND</option>
                                                 <option value="2">CX</option>
                                                 <option value="3">PCT</option>
                                                 <option value="4">ENV</option>
                                                 <option value="5">DZ</option>
                                                 <option value="6">ROL</option>
+                                                <option value="7">Selecione</option>
                                             </select>                                                             
                                         </div>
                                     </div>
@@ -373,17 +372,17 @@
                                         <div class="col-lg-4 mt-5">                                    
                                             <p class="p-select">Origem</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">Nacional</option>
+                                                <option data-display="Nacional" value="1">Nacional</option>
                                                 <option value="2">Importado</option>
+                                                <option value="3">Selecione</option>
                                             </select>                                                             
                                         </div>
                                         <div class="col-lg-2 mt-5">
                                             <p class="p-select">Status</p>
                                             <select class="wide">
-                                                <option data-display="Selecione"></option>
-                                                <option value="1">Ativo</option>
-                                                <option value="2">Inativo</option>                                        
+                                                <option data-display="Ativo" value="1">Ativo</option>
+                                                <option value="2">Inativo</option>     
+                                                <option value="3">Selecione</option>                                   
                                             </select>
                                         </div>
                                         <div class="col-lg-2 mt-5">
@@ -392,7 +391,7 @@
                                             </div>
                                             <div class="d-flex">
                                                 <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group1"/>
+                                                    <input type="radio" id="radio_one" name="radio_group1" checked/>
                                                     <label for="radio-estilo" class="radio-estilo">Sim</label>
                                                 </div>
                                                 <div class="ex-radio">
@@ -407,7 +406,7 @@
                                             </div>
                                             <div class="d-flex">
                                                 <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group2"/>
+                                                    <input type="radio" id="radio_one" name="radio_group2" checked/>
                                                     <label for="radio-estilo" class="radio-estilo">Sim</label>
                                                 </div>
                                                 <div class="ex-radio">
@@ -422,7 +421,7 @@
                                             </div>
                                             <div class="d-flex">
                                                 <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group3"/>
+                                                    <input type="radio" id="radio_one" name="radio_group3" checked/>
                                                     <label for="radio-estilo" class="radio-estilo">Sim</label>
                                                 </div>
                                                 <div class="ex-radio">
@@ -439,7 +438,7 @@
                                             </div>
                                             <div class="d-flex">
                                                 <div class="ex-radio mr-4">
-                                                    <input type="radio" id="reutilizavel-sim" name="radio_group6"/>
+                                                    <input type="radio" id="reutilizavel-sim" name="radio_group6" checked/>
                                                     <label for="radio-estilo" class="radio-estilo">Sim</label>
                                                 </div>
                                                 <div class="ex-radio">
@@ -448,9 +447,9 @@
                                                   </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 mt-5 mr-5 n-reutilizavel d-none">
+                                        <div class="col-lg-3 mt-5 mr-5 n-reutilizavel">
                                             <div class="form">
-                                                <input type="text" name="item" autocomplete="off" >
+                                                <input type="text" value="10" name="item" autocomplete="off" class="used">
                                                 <label for="item" class="label-name">
                                                     <span class="content-name">Nº de vezes para Reutilização</span>
                                                 </label>
@@ -462,7 +461,7 @@
                                             </div>
                                             <div class="d-flex">
                                                 <div class="ex-radio mr-4">
-                                                    <input type="radio" id="rees-sim" name="radio_group7"/>
+                                                    <input type="radio" id="rees-sim" name="radio_group7" checked/>
                                                     <label for="radio-estilo" class="radio-estilo">Sim</label>
                                                 </div>
                                                 <div class="ex-radio">
@@ -482,7 +481,7 @@
                                 <!-- fim caracteristicas -->
                                 <!-- especialidades -->
                                 <div class="tab-pane container-fluid fade" id="especialidades">
-                                    <div class="row sub-title">
+                                    <div class="row sub-title bg-green">
                                         <div class="col-lg-12">
                                             <p>02111 - Agulha de Punção</p>                                            
                                         </div>
@@ -490,7 +489,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="12316515" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -498,78 +497,80 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
+                                                <input type="text" value="Ortopedia" name="cod" autocomplete="off" class="used">
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Nome da Especialidade</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Incluir</button>
+                                        <div class="col-lg-4">
+                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
                                         </div>
                                     </div>
-                                    <div class="table-responsive mt-3">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                <th>Status</th>
-                                                <th>Código</th>
-                                                <th>Nome da Especialidade</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td>002000</td>
-                                                    <td>Ortopedia</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td>01242</td>
-                                                    <td>Bucomaxilo</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <ul class="pagination">
-                                        <li>
+                                    <div id="box-lista-subs" class="mt-5">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th>Status</th>
+                                                    <th>Código</th>
+                                                    <th>Nome da Especialidade</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                                        <td class="por-8">002000</td>
+                                                        <td>Ortopedia</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                                        <td class="por-8">01242</td>
+                                                        <td>Bucomaxilo</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
                                             <a href="#" class="prev">
-                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                        <li>
-                                        <a href="#" class="prev">
-                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li><a href="#" class="active">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                        <a href="#" class="next">
-                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
                                             <a href="#" class="next">
-                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- fim especialidades -->
                                 <!-- procedimentos -->
                                 <div class="tab-pane container-fluid fade" id="procedimentos">
-                                    <div class="row sub-title">
+                                    <div class="row sub-title bg-green">
                                         <div class="col-lg-12">
                                             <p>02111 - Agulha de Punção</p>                                            
                                         </div>
@@ -577,7 +578,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="16161516" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -585,78 +586,80 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <input type="text" value="Excisão de Pequenas lesões dérmicas" name="nome-procedimento" autocomplete="off" class="used">
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Procedimento</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Incluir</button>
+                                        <div class="col-lg-4">
+                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
                                         </div>
                                     </div>
-                                    <div class="table-responsive mt-3">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                <th>Status</th>
-                                                <th>Código</th>
-                                                <th>Nome do Procedimento</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td>002000</td>
-                                                    <td>Excisão de Pequenas lesões dérmicas</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td>01242</td>
-                                                    <td>Excisão de Granuloma de corpo estranho</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <ul class="pagination">
-                                        <li>
+                                    <div id="box-lista-subs" class="mt-5">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th>Status</th>
+                                                    <th>Código</th>
+                                                    <th>Nome do Procedimento</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                                        <td class="por-8">002000</td>
+                                                        <td>Excisão de Pequenas lesões dérmicas</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                                        <td class="por-8">01242</td>
+                                                        <td>Excisão de Granuloma de corpo estranho</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
                                             <a href="#" class="prev">
-                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                        <li>
-                                        <a href="#" class="prev">
-                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li><a href="#" class="active">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                        <a href="#" class="next">
-                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
                                             <a href="#" class="next">
-                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- fim procedimentos -->
                                 <!-- fabricantes -->
                                 <div class="tab-pane container-fluid fade" id="fabricantes">
-                                    <div class="row sub-title">
+                                    <div class="row sub-title bg-green">
                                         <div class="col-lg-12">                                            
                                             <p>02111 - Agulha de Punção</p>
                                         </div>
@@ -664,7 +667,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="5161651" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -672,7 +675,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <input type="text" value="Excisão de Pequenas lesões dérmicas" name="nome-procedimento" autocomplete="off" class="used">
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Procedimento</span>
                                                 </label>
@@ -680,92 +683,94 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <input type="text" value="Ref. Fabricante" name="nome-procedimento" autocomplete="off" class="used">
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Ref. Fabricante</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-4 mt-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <input type="text" value="Anvisa" name="nome-procedimento" autocomplete="off" class="used">
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Anvisa</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Incluir</button>
+                                        <div class="col-lg-4 mt-4">
+                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
                                         </div>
                                     </div>
-                                    <div class="table-responsive mt-3">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                <th>Status</th>
-                                                <th>Código</th>
-                                                <th>Nome do Procedimento</th>
-                                                <th>Ref. Fabricante</th>
-                                                <th>Anvisa</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td>002000</td>
-                                                    <td>Excisão de Pequenas lesões dérmicas</td>
-                                                    <td>Ref. Fabricante</td>
-                                                    <td>Anvisa</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td>01242</td>
-                                                    <td>Excisão de Granuloma de corpo estranho</td>
-                                                    <td>Ref. Fabricante</td>
-                                                    <td>Anvisa</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <ul class="pagination">
-                                        <li>
+                                    <div id="box-lista-subs" class="mt-5">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th>Status</th>
+                                                    <th>Código</th>
+                                                    <th>Nome do Procedimento</th>
+                                                    <th>Ref. Fabricante</th>
+                                                    <th>Anvisa</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                                        <td class="por-8">002000</td>
+                                                        <td class="por-20">Excisão de Pequenas lesões dérmicas</td>
+                                                        <td class="por-15">Ref. Fabricante</td>
+                                                        <td>Anvisa</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                                        <td class="por-8">01242</td>
+                                                        <td class="por-20">Excisão de Granuloma de corpo estranho</td>
+                                                        <td class="por-15">Ref. Fabricante</td>
+                                                        <td>Anvisa</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
                                             <a href="#" class="prev">
-                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                        <li>
-                                        <a href="#" class="prev">
-                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li><a href="#" class="active">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                        <a href="#" class="next">
-                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
                                             <a href="#" class="next">
-                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- fim fabricantes -->
                                 <!-- fornecedores -->
                                 <div class="tab-pane container-fluid fade" id="fornecedores">
-                                    <div class="row sub-title">
+                                    <div class="row sub-title bg-green">
                                         <div class="col-lg-12">
                                             <p>02111 - Agulha de Punção</p>
                                         </div>
@@ -773,7 +778,7 @@
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" value="1651651" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                 <label for="cod" class="label-name">
                                                     <span class="content-name">Código</span>
                                                 </label>
@@ -781,73 +786,75 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <input type="text" value="BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR" name="nome-procedimento" autocomplete="off" class="used">
                                                 <label for="nome-procedimento" class="label-name">
                                                     <span class="content-name">Nome do Fornecedor</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Incluir</button>
+                                        <div class="col-lg-4">
+                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
                                         </div>
                                     </div>
-                                    <div class="table-responsive mt-3">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                <th>Status</th>
-                                                <th>Código</th>
-                                                <th>Nome do Fornecedor</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                    <td>002000</td>
-                                                    <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                    <td>01242</td>
-                                                    <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <ul class="pagination">
-                                        <li>
+                                    <div id="box-lista-subs" class="mt-5">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th>Status</th>
+                                                    <th>Código</th>
+                                                    <th>Nome do Fornecedor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                                        <td class="por-8">002000</td>
+                                                        <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                                        <td class="por-8">01242</td>
+                                                        <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
                                             <a href="#" class="prev">
-                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                        <li>
-                                        <a href="#" class="prev">
-                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li><a href="#" class="active">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                        <a href="#" class="next">
-                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                        </a>
-                                        </li>
-                                        <li>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
                                             <a href="#" class="next">
-                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
                                             </a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- fim fornecedores -->
                                 <!-- cadastrar cotacao -->
@@ -856,18 +863,17 @@
                                         <div class="col-lg-3">
                                             <p class="p-select">Negociado com:</p>
                                             <select class="wide" id="opcoes">
-                                                <option data-display="Selecione"></option>
-                                                <option value="fornecedor">Fornecedor</option>
-                                                <option value="hospital-clinica">Hospital/Clínica</option>
-                                                <option value="fabricantes">Fabricantes</option>                                     
+                                                <option value="s-fornecedor">Fornecedor</option>
+                                                <option value="s-hospital-clinica">Hospital/Clínica</option>
+                                                <option value="s-fabricantes">Fabricantes</option>                                                
                                             </select>
                                         </div>
                                     </div>
-                                    <section class="fornecedor sel" id="fornecedor">
+                                    <section class="sessao-fornecedor sel" id="s-fornecedor">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
                                                     <label for="cod" class="label-name">
                                                         <span class="content-name">Código do Fornecedor</span>
                                                     </label>
@@ -875,7 +881,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="nome-fornecedor" autocomplete="off" >
+                                                    <input type="text" name="nome-fornecedor" autocomplete="off">
                                                     <label for="nome-fornecedor" class="label-name">
                                                         <span class="content-name">Nome do Fornecedor</span>
                                                     </label>
@@ -892,7 +898,7 @@
                                         <div class="row mt-5">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="ref-fornecedor" autocomplete="off" >
+                                                    <input type="text" value="Ref. Fornecedor" name="ref-fornecedor" autocomplete="off" class="used">
                                                     <label for="ref-fornecedor" class="label-name">
                                                         <span class="content-name">Ref. Fornecedor</span>
                                                     </label>
@@ -901,45 +907,41 @@
                                             <div class="col-lg-4">
                                                 <p class="p-select">Fabricante</p>
                                                 <select class="wide">
-                                                    <option data-display="Selecione"></option>
-                                                    <option value="1">Brotec</option>
+                                                    <option data-display="Brotec" value="1" value="1">Brotec</option>
                                                     <option value="2">Fabrimedi</option>                                        
                                                     <option value="2">Interfabri</option>                                        
+                                                    <option value="3">Selecione</option>
                                                 </select>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="ref-fabricante" autocomplete="off" >
+                                                    <input type="text" value="Ref. Fabricante" name="ref-fabricante" autocomplete="off" class="used">
                                                     <label for="ref-fabricante" class="label-name">
                                                         <span class="content-name">Ref. Fabricante</span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mt-3">
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="anvisa" autocomplete="off" >
+                                                    <input type="text" value="Anvisa" name="anvisa" autocomplete="off" class="used">
                                                     <label for="anvisa" class="label-name">
                                                         <span class="content-name">Anvisa</span>
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
-                                                <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                                                    <div class="form">
-                                                      <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="$(this).mask('00/00/0000');" placeholder="" autocomplete="off" >
-                                                      <label for="text" class="label-name">
-                                                        <span class="content-name">
-                                                            <span>Validade Anvisa</span>
-                                                        </span>
-                                                      </label>
-                                                    </div>
+                                                <div class="form">
+                                                    <input type="text" value="12/05/20" name="valid-anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" class="used">
+                                                    <label for="valid-anvisa" class="label-name">
+                                                        <span class="content-name">Validade Anvisa</span>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                    <input type="text" value="1200" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                     <label for="valor-inicial" class="label-name">
                                                         <span class="content-name">Valor Inicial</span>
                                                     </label>
@@ -950,14 +952,14 @@
                                             <div class="col-lg-4">
                                                 <p class="p-select">Responsável pelo Valor Inicial</p>
                                                 <select class="wide">
-                                                    <option data-display="Selecione"></option>
-                                                    <option value="1">Bradesco</option>
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
                                                     <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
                                                 </select>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form">
-                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                    <input type="text" value="1300" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
                                                     <label for="valor-final" class="label-name">
                                                         <span class="content-name">Valor final</span>
                                                     </label>
@@ -966,33 +968,252 @@
                                             <div class="col-lg-4">
                                                 <p class="p-select">Responsável pelo Valor Final</p>
                                                 <select class="wide">
-                                                    <option data-display="Selecione"></option>
-                                                    <option value="1">Bradesco</option>
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
                                                     <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row btns-opcoes mt-5">
-                                            <div class="col-lg-12 mt-5">
+                                        <div class="row btns-opcoes mt-4">
+                                            <div class="col-lg-12">
                                                 <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
                                                 <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
                                             </div>
                                         </div>
                                     </section>
+                                    <section class="sessao-hospital-clinica sel" id="s-hospital-clinica">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                    <label for="cod" class="label-name">
+                                                        <span class="content-name">Código do Hospital/Clínica</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="nome-hospital" autocomplete="off">
+                                                    <label for="nome-hospital" class="label-name">
+                                                        <span class="content-name">Nome do Hospital/Clínica</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-3">
+                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 sub-title">                                            
+                                            <div class="col-lg-2"><p>Código: 1234</p></div>
+                                            <div class="col-lg-4"><p>Hospital/Clínica: HEART MATERIAL HOSPITALAR</p></div>                                            
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="Ref. Hospital/Clínica" name="ref-fornecedor" autocomplete="off" class="used">
+                                                    <label for="ref-fornecedor" class="label-name">
+                                                        <span class="content-name">Ref. Hospital/Clínica</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Hospital/Clínica</p>
+                                                <select class="wide">
+                                                    <option data-display="Brotec" value="1">Brotec</option>
+                                                    <option value="2">Fabrimedi</option>                                        
+                                                    <option value="2">Interfabri</option>                                        
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="Ref. Hospital/Clínica" name="ref-fabricante" autocomplete="off" class="used">
+                                                    <label for="ref-fabricante" class="label-name">
+                                                        <span class="content-name">Ref. Hospital/Clínica</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="Anvisa" name="anvisa" autocomplete="off" class="used">
+                                                    <label for="anvisa" class="label-name">
+                                                        <span class="content-name">Anvisa</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="15/05/2020" name="valid-anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" class="used">
+                                                    <label for="valid-anvisa" class="label-name">
+                                                        <span class="content-name">Validade Anvisa</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="1200" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
+                                                    <label for="valor-inicial" class="label-name">
+                                                        <span class="content-name">Valor Inicial</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Inicial</p>
+                                                <select class="wide">
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="1300" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
+                                                    <label for="valor-final" class="label-name">
+                                                        <span class="content-name">Valor final</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Final</p>
+                                                <select class="wide">
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes mt-4">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sessao-fabricantes sel" id="s-fabricantes">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                    <label for="cod" class="label-name">
+                                                        <span class="content-name">Código do Fabricante</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="nome-fabricante" autocomplete="off">
+                                                    <label for="nome-fabricante" class="label-name">
+                                                        <span class="content-name">Nome do Fabricante</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-3">
+                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 sub-title">                                            
+                                            <div class="col-lg-2"><p>Código: 1234</p></div>
+                                            <div class="col-lg-4"><p>Fabricante: HEART MATERIAL HOSPITALAR</p></div>                                            
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="Ref. Fabricante" name="ref-fabricante" autocomplete="off" class="used">
+                                                    <label for="ref-fornecedor" class="label-name">
+                                                        <span class="content-name">Ref. Fabricante</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Fabricante</p>
+                                                <select class="wide">
+                                                    <option data-display="Brotec" value="1">Brotec</option>
+                                                    <option value="2">Fabrimedi</option>                                        
+                                                    <option value="2">Interfabri</option>                                        
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="Anvisa" name="anvisa" autocomplete="off" class="used">
+                                                    <label for="anvisa" class="label-name">
+                                                        <span class="content-name">Anvisa</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="20/05/2020" name="anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" class="used">
+                                                    <label for="anvisa" class="label-name">
+                                                        <span class="content-name">Validade Anvisa</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="1200" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
+                                                    <label for="valor-inicial" class="label-name">
+                                                        <span class="content-name">Valor Inicial</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Inicial</p>
+                                                <select class="wide">
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" value="1300" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" class="used">
+                                                    <label for="valor-final" class="label-name">
+                                                        <span class="content-name">Valor final</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Responsável pelo Valor Final</p>
+                                                <select class="wide">
+                                                    <option data-display="Bradesco" value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                                                                            
+                                                    <option value="3">Selecione</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes mt-4">
+                                            <div class="col-lg-12">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </section>                                                                        
                                 </div>
                                 <!-- fim cadastrar cotacao -->
+                                <!-- consultar/renegociar cotacao -->
                                 <div class="tab-pane container-fluid active" id="consultar-renegociar-cotacao">
-                                    <div class="sub-title mb-2">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="itens-cadastro.html">Itens</a></li>      
+                                          <li class="breadcrumb-item"><a href="itens-consulta-negociacao.html">Negociações</a></li>      
+                                          <li class="breadcrumb-item"><a href="itens-consulta-detalhes.html">Detalhe da Negociação</a></li>  
+                                          <li class="breadcrumb-item">Contra-Proposta</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <div class="sub-title mb-2 bg-green">
                                         <div class="col-lg-12">                                            
                                             <p>02111 - Agulha de Punção</p>
                                         </div>
-                                    </div>
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                          <li class="breadcrumb-item"><a href="itens-cadastro.html">Voltar</a></li>      
-                                          <li class="breadcrumb-item">Negociação da Cotação</li>                                  
-                                        </ol>
-                                    </nav>                               
+                                    </div>                             
                                     <div class="row consulta-negociacao">
                                         <div class="col-lg-3 mb-4">
                                             <p>Fornecedor: <span>HEART LINE COMÉRCIO DE MATERIAL</span></p>
@@ -1025,7 +1246,6 @@
                                     
                                     <div id="box-lista-subs">
                                         <p>Contra-Proposta</p>
-                                        <a href="itens-consulta-detalhes.html">Voltar</a>
                                         <div class="row consulta-negociacao mt-3">
                                             <div class="col-lg-3 mb-4">
                                                 <p>Data da Proposta anterior: <span>03/01/2020</span></p>
@@ -1085,6 +1305,7 @@
                                     </div>
                                     
                                 </div>
+                                <!-- fim consultar/renegociar cotacao -->
                             </div>
                             <!-- fim tab panes -->
                         </div>
