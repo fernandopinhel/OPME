@@ -1117,6 +1117,8 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
     bottom: 0 !important;    
 }
 
+.ex-radio input[type=radio].b-24 {bottom: 24px !important;}
+
 .ex-radio input[type=radio] {
 	margin: 0;
 	opacity: 0;
@@ -1206,6 +1208,20 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 }
 // fim radio animado
 
+// input file
+input[type="file"] {
+    width: 390px;
+    background-color: #f9f7f7;
+    color: #212e4b;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: transparent;
+}
+// fim input file
 // chekbox
 input:focus ~ label.check-estilo, input.used ~ label.check-estilo{
     top: 10px !important;
@@ -1242,7 +1258,6 @@ input:focus ~ label.check-estilo, input.used ~ label.check-estilo{
 	z-index: 10;
 	position: absolute;
 }
-
 
 .ex-checkbox input[type=checkbox] + label::before {
 	border: 1px solid #9f9f9f;

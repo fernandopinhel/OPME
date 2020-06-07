@@ -18,7 +18,7 @@
         <!-- estilo toggle on/off -->
         <link rel="stylesheet" href="../css/bootstrap4-toggle.min.css">
         <!-- datepicker -->
-        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">        
     </head>
 
     <body>
@@ -1052,6 +1052,36 @@
                                         <div class="col-lg-7">
                                             <p>Situação: <b>Aguardando confirmação de procedimento realizado.</b></p>
                                         </div>
+                                        <div class="col-lg-12"><hr></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-3">
+                                            <div class="radio-title">
+                                                <h6 class="mt-2">Hospital enviou o pós operatório?</h6>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="ex-radio mr-4">
+                                                    <input type="radio" id="pos-sim" name="radio_group_pos" class="b-24">
+                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
+                                                </div>
+                                                <div class="ex-radio">
+                                                    <input type="radio" id="pos-nao" name="radio_group_pos" class="b-24">
+                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">                                            
+                                            <p>Documentos pós operatório</p>
+                                            <input type="file" name="arquivo" id="arquivo" multiple />
+                                        </div>
+                                        <div class="col-lg-5 mt-4">
+                                            <div class="form">
+                                                <input type="text" name="data-proc" onkeypress="$(this).mask('99/99/9999');" autocomplete="off">
+                                                <label for="data-proc" class="label-name">
+                                                    <span class="content-name">Data do Procedimento</span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row btns-opcoes mt-5">
                                         <div class="col-lg-12">
@@ -1063,7 +1093,94 @@
                                 <!-- fim finalizar compra -->
                                 <!-- aprovação gestores -->
                                 <div class="tab-pane container-fluid fade" id="tab-aprovacao-gestores">
-                                    <p>Em desenvolvimento</p>
+                                    <div class="sub-title mb-2">
+                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-4">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p>Aprovações</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Aprovador</th>
+                                                        <th data-toggle="tooltip" data-original-title="Situação da Aprovação">Situação</th>
+                                                        <th>Resposta</th> 
+                                                        <th data-toggle="tooltip" data-original-title="Data da Resposta">Data</th>
+                                                        <th data-toggle="tooltip" data-original-title="Responsável por cadastrar a resposta">Responsável</th>
+                                                        <th data-toggle="tooltip" data-original-title="Data do cadastro da reposta">Data do cadastro</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="actions ac-3">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                </a>
+                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
+                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
+                                                                </a>
+                                                                <a href="solicitacao-compras-reabrir-aprovacoes.html">
+                                                                    <img src="../img/reabrir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Reabrir">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Thais Jorge de Oliveira e Silva</td>
+                                                        <td>Respondido</td>
+                                                        <td>Aprovado</td>
+                                                        <td>01/06/2020</td>
+                                                        <td>Renata Scott</td>
+                                                        <td>02/06/2020</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions ac-3">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                </a>
+                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
+                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Maria Beatriz Padilha Soares</td>
+                                                        <td>Pendente</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- fim aprovação gestores -->
                             </div>
