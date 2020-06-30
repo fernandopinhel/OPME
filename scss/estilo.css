@@ -248,8 +248,6 @@ a {
   border-color: #499ED0;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 120px;
   height: 40px;
   letter-spacing: 2px;
@@ -272,8 +270,6 @@ a {
   border-color: #11C25D;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 120px;
   height: 40px;
   margin-right: 10px;
@@ -320,8 +316,6 @@ a {
   border-color: #989a9e;
   color: #989a9e;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 120px;
   height: 40px;
   letter-spacing: 2px;
@@ -343,8 +337,6 @@ a {
   border-color: #e60935;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 120px;
   height: 40px;
   letter-spacing: 2px;
@@ -366,8 +358,6 @@ a {
   border-color: #e60935;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 190px;
   height: 40px;
   letter-spacing: 2px;
@@ -389,8 +379,6 @@ a {
   border-color: #e60935;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 290px;
   height: 40px;
   letter-spacing: 2px;
@@ -412,8 +400,6 @@ a {
   border-color: #11C25D;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 190px;
   height: 40px;
   letter-spacing: 2px;
@@ -435,8 +421,6 @@ a {
   border-color: #11C25D;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 0.6s all;
-  transition: 0.6s all;
   width: 310px;
   height: 40px;
   letter-spacing: 2px;
@@ -988,8 +972,6 @@ td > .toggle {
   max-width: 300px;
   background: #2e3e61;
   color: #fff;
-  -webkit-transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
-  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }

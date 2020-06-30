@@ -378,3 +378,9 @@ function marcarTodos(marcardesmarcar){
         this.checked = marcardesmarcar;
     });
 }
+
+// animação sidebar
+
+$(".btn-sidebar").click(function(){
+    $("#sidebar").css("transition", "all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665)");
+});
