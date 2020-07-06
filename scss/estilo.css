@@ -189,14 +189,19 @@
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Bradesco Sans';
+  src: url(../fonts/bradesco-sans/BradescoSans-Regular.ttf);
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat' !important;
+  font-family: 'Bradesco Sans' !important;
   font-weight: 500;
   color: #2e3e61;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bradesco Sans', sans-serif;
   margin: 0;
   color: #989a9e;
   background: #f4f4f6;

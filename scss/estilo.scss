@@ -15,6 +15,12 @@
 	font-family: 'Open Sans';
 	src: url(../fonts/OpenSans-Regular.ttf);
 }
+
+@font-face {
+	font-family: 'Bradesco Sans';
+	src: url(../fonts/bradesco-sans/BradescoSans-Regular.ttf);
+}
+
 // fim fonts
 
 // variaveis sass
@@ -37,13 +43,13 @@ $btn-buscar: #499ED0;
 
 // globais
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Montserrat' !important;
+	font-family:'Bradesco Sans' !important;
 	font-weight: 500;
 	color: 	$bg-medium;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Bradesco Sans', sans-serif;
 	margin: 0;
 	color: $color-content;
 	background: $bg-color;
