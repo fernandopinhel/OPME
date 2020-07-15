@@ -304,8 +304,9 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="data-solicitacao" onkeypress="$(this).mask('00/00/0000');" autocomplete="off">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-solicitacao" onkeypress="mascaraData(this, event)" autocomplete="off">
                                                 <label for="data-solicitacao" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                                     <span class="content-name">Data da Solicitação</span>
                                                 </label>
                                             </div>
@@ -365,8 +366,9 @@
                                     <div class="row">
                                         <div class="col-lg-4 mt-5">
                                             <div class="form">
-                                                <input type="text" name="data-entrega" onkeypress="$(this).mask('00/00/0000');" autocomplete="off">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-entrega" onkeypress="mascaraData(this, event)" autocomplete="off">
                                                 <label for="data-entrega" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                                     <span class="content-name">Data da Entrega</span>
                                                 </label>
                                             </div>
@@ -1076,7 +1078,7 @@
                                         </div>
                                         <div class="col-lg-5 mt-4">
                                             <div class="form">
-                                                <input type="text" name="data-proc" onkeypress="$(this).mask('99/99/9999');" autocomplete="off">
+                                                <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="data-proc" onkeypress="mascaraData(this, event)" autocomplete="off">                                                
                                                 <label for="data-proc" class="label-name">
                                                     <span class="content-name">Data do Procedimento</span>
                                                 </label>

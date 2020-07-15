@@ -43,7 +43,7 @@ $btn-buscar: #499ED0;
 
 // globais
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Bradesco Sans' !important;
+	font-family: 'Bradesco Sans', sans-serif;
 	font-weight: 500;
 	color: 	$bg-medium;
 }
@@ -71,6 +71,16 @@ a {
     outline: 0;
     box-shadow: 0
 }
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid #D6D6D6;
+    border-radius: 0;
+    line-height: 1.4;
+    height: 35px;
+}
+
+.input-date{background: transparent;}
 
 .bg-green{background: $bg-green !important;}
 

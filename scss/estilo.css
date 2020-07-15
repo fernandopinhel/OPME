@@ -195,7 +195,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bradesco Sans' !important;
+  font-family: 'Bradesco Sans', sans-serif;
   font-weight: 500;
   color: #2e3e61;
 }
@@ -223,6 +223,18 @@ a {
   outline: 0;
   -webkit-box-shadow: 0;
           box-shadow: 0;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #D6D6D6;
+  border-radius: 0;
+  line-height: 1.4;
+  height: 35px;
+}
+
+.input-date {
+  background: transparent;
 }
 
 .bg-green {

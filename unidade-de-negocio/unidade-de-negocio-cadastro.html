@@ -262,8 +262,9 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form">
-                                        <input type="text" name="data-termino-contrato" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
+                                        <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-termino-contrato" onkeypress="mascaraData(this, event)" autocomplete="off">
                                         <label for="data-termino-contrato" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                             <span>Data término do contrato</span>
                                         </label>
                                     </div>
