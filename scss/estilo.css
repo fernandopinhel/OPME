@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
 .nice-select {
@@ -219,10 +220,11 @@ a {
 
 .form-control:focus {
   background-color: transparent;
-  border-color: none;
-  outline: 0;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
+  border-color: #D6D6D6;
+  border-bottom: 2px solid #D6D6D6;
+  outline: transparent;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .form-control {
@@ -231,6 +233,7 @@ a {
   border-radius: 0;
   line-height: 1.4;
   height: 35px;
+  color: #989a9e;
 }
 
 .input-date {
@@ -766,6 +769,7 @@ a {
 .p-select {
   margin-bottom: 6px;
   margin-top: -16px;
+  padding-top: 5px;
 }
 
 span.current {
@@ -825,6 +829,10 @@ td > .toggle {
 
 .nav-tabs .nav-link {
   color: #989a9e;
+}
+
+.h-35 {
+  height: 35px;
 }
 
 .consulta-negociacao {
@@ -1346,7 +1354,7 @@ label {
   font-weight: normal;
   position: absolute;
   pointer-events: none;
-  top: 10px;
+  top: 4px;
   left: 0;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
@@ -2389,5 +2397,260 @@ tr:hover td.a-2 .menu-invisible {
     border-bottom: 1px solid #d7e5ff;
     border-right: none;
   }
+}
+
+td.actions .menu-invisible {
+  position: absolute;
+  top: -8px;
+  left: -47px;
+  opacity: 0;
+  display: inline-block;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+}
+
+td.actions .menu-invisible a {
+  margin-right: 0;
+}
+
+tr:hover td.actions .menu-visible {
+  opacity: 0;
+}
+
+tr:hover td.actions .menu-invisible {
+  top: -8px;
+  left: -25px;
+  opacity: 1;
+}
+
+tr:hover td.a-2 .menu-invisible {
+  top: -8px;
+  left: -44px;
+  opacity: 1;
+}
+
+.no-hover .table > tbody > tr:hover > td {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.no-hover .actions .menu, .no-hover .actions .menu-invisible {
+  display: none;
+}
+
+.no-hover .table > tbody > tr > td:first-child {
+  border-left: 2px solid #fff;
+}
+
+.no-hover .table > tbody > tr > td:last-child {
+  border-right: 2px solid #fff;
+}
+
+.no-hover .table > tbody > tr.separator > td {
+  border: none;
+}
+
+@media (min-width: 993px) and (max-width: 1444px) {
+  .content {
+    width: 100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .table-responsive table tbody tr td.actions {
+    padding-left: 52px;
+  }
+  .table-responsive table tbody tr:hover td.ac-3 {
+    padding-left: 92px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    margin-left: -300px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  #sidebarCollapse span:first-of-type,
+  #sidebarCollapse span:nth-of-type(2),
+  #sidebarCollapse span:last-of-type {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+    margin: 5px auto;
+  }
+  #sidebarCollapse.active span {
+    margin: 0 auto;
+  }
+  #sidebarCollapse.active span:first-of-type {
+    -webkit-transform: rotate(45deg) translate(2px, 2px);
+            transform: rotate(45deg) translate(2px, 2px);
+  }
+  #sidebarCollapse.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #sidebarCollapse.active span:last-of-type {
+    -webkit-transform: rotate(-45deg) translate(1px, -1px);
+            transform: rotate(-45deg) translate(1px, -1px);
+  }
+  .alert-success > div > div > div > img {
+    margin-bottom: 2px;
+  }
+  .alert-danger > div > div > div > img {
+    margin-bottom: 2px;
+  }
+  .btn {
+    text-align: center;
+    float: inherit;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .pagination li {
+    width: 37px;
+  }
+  .table-responsive {
+    padding: 0;
+    overflow: auto !important;
+  }
+  .table > tbody > tr > td:first-child {
+    width: 7%;
+  }
+  td.actions .menu-visible {
+    left: 11px;
+  }
+  tr:hover td.actions .menu-invisible {
+    left: -5px;
+  }
+  .table > tbody > tr > td:nth-child(2) {
+    width: 11%;
+  }
+  .toggle-off, .toggle-on {
+    text-align: left;
+  }
+  .p-select {
+    margin-bottom: 6px;
+    margin-top: 34px !important;
+  }
+  .form {
+    position: relative;
+    margin: 19px 0 19px 0;
+  }
+}
+
+/* MODIFICA��ES DO TABLE */
+.paginate_button {
+  /*
+	line-height: 27px !important;
+	font-size: 12px !important;
+	transition: 0.6s all !important;
+	*/
+  border-radius: 100% !important;
+  color: #989a9e;
+  border: 1px solid #989a9e !important;
+  font-weight: 600 !important;
+  -webkit-transition: ease 0.3s all !important;
+  transition: ease 0.3s all !important;
+}
+
+.paginate_button.current {
+  color: #cccdce !important;
+}
+
+.paginate_button.current, .paginate_button:hover, .paginate_button.current:active, .paginate_button.current.nice-select.open {
+  color: #fff !important;
+  background: #989a9e !important;
+  border-color: #989a9e !important;
+  text-decoration: none !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 10px 18px;
+  border-botton: none;
+}
+
+table.dataTable tbody tr {
+  background: none;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: none;
+}
+
+table.dataTable.no-footer {
+  border-bottom: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0.25em 0.7em;
+  color: #989a9e !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled.nice-select.open {
+  cursor: default;
+  color: #666 !important;
+  background: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: none;
+}
+
+button.dt-button,
+div.dt-button,
+a.dt-button {
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.frmSearch {
+  border: 1px solid #a8d4b1;
+  background-color: #c6f7d0;
+  margin: 2px 0px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#country-list {
+  font-size: 12px;
+  color: black;
+  float: left;
+  list-style: none;
+  margin-top: -3px;
+  padding: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#country-list li {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #f0f0f0;
+  border-bottom: #bbb9b9 1px solid;
+}
+
+#country-list li:hover {
+  background: #5a75a2;
+  color: white;
+  cursor: pointer;
+}
+
+#search-box {
+  padding: 10px;
+  border: #a8d4b1 1px solid;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=estilo.css.map */
