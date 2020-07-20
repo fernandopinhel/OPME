@@ -14,7 +14,7 @@
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
         <!-- estilo select(combo-box) -->
-        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
         <!-- datepicker -->
         <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
     </head>
@@ -336,7 +336,7 @@
                                 </div>
                                 <div class="col-lg-2">
                                     <p class="p-select">UF</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">RJ</option>
                                         <option value="2">SP</option>
@@ -363,69 +363,70 @@
                             <div class="row">
                                 <div class="col-lg-3 mt-4">
                                     <p class="p-select">Status</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
+                                        <option value="2">Inativo</option>   
                                     </select>
                                 </div>
-                                <div class="col-lg-3 mt-3">
+                                <div class="col-lg-2 mt-3">
                                     <div class="radio-title">
-                                        <h6 class="mt-2 mb-3">Processo de Avaliação</h6>
+                                        <h6 class="mt-2">Processo de Avaliação</h6>
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio-p1" name="radio_group2"/>
-                                            <label for="radio-estilo">Ativo</label>
+                                            <input type="radio" id="proc-ava-sim" name="radio_group7">
+                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
                                         </div>
                                         <div class="ex-radio">
-                                            <input type="radio" id="radio-p2" name="radio_group2"/>
-                                            <label for="radio-estilo">Inativo</label>
+                                            <input type="radio" id="proc-ava-nao" name="radio_group7">
+                                            <label for="radio-estilo" class="radio-estilo">Não</label>
                                           </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 mt-3">
+                                <div class="col-lg-2 mt-3">
                                     <div class="radio-title">
-                                        <h6 class="mt-2 mb-3">Relação Comercial</h6>
+                                        <h6 class="mt-2">Relação Comercial</h6>
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio-rc1" name="radio_group3"/>
-                                            <label for="radio-estilo">Ativo</label>
+                                            <input type="radio" id="rela-ava-sim" name="radio_groupp">
+                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
                                         </div>
                                         <div class="ex-radio">
-                                            <input type="radio" id="radio-rc2" name="radio_group3"/>
-                                            <label for="radio-estilo">Inativo</label>
+                                            <input type="radio" id="rela-ava-nao" name="radio_groupp">
+                                            <label for="radio-estilo" class="radio-estilo">Não</label>
                                           </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 mt-3">
+                                <div class="col-lg-2 mt-3">
                                     <div class="radio-title">
-                                        <h6 class="mt-2 mb-3">Matriz/Filial</h6>
+                                        <h6 class="mt-2">Matriz/Filial</h6>
                                     </div>
                                     <div class="d-flex">
                                         <div class="ex-radio mr-4">
-                                            <input type="radio" id="radio-mf1" name="radio_group4"/>
-                                            <label for="radio-estilo">Ativo</label>
+                                            <input type="radio" id="matriz-ava-sim" name="radio_grouup">
+                                            <label for="radio-estilo" class="radio-estilo">Sim</label>
                                         </div>
                                         <div class="ex-radio">
-                                            <input type="radio" id="radio-mf2" name="radio_group4"/>
-                                            <label for="radio-estilo">Inativo</label>
+                                            <input type="radio" id="matriz-ava-nao" name="radio_grouup">
+                                            <label for="radio-estilo" class="radio-estilo">Não</label>
                                           </div>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="row mt-3">
                                 <div class="col-lg-4 mt-4">
                                     <p class="p-select">Grupo de Fornecedor</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">OPME</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-4 mt-4">
                                     <p class="p-select">Condições de Pagamento</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">À vista - Conforme cronograma</option>
                                         <option value="2">Em conta - Hospital/Clinica</option>
@@ -433,7 +434,7 @@
                                 </div>
                                 <div class="col-lg-4 mt-4">
                                     <p class="p-select">Transportadora</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">CIF</option>
                                     </select>
@@ -755,17 +756,17 @@
                                 </div>
                             </div>
                             <!-- FIM ADD CONTATO -->
-                            <!-- ADD MARCAS E FORNECEDORES -->
+                            <!-- ADD MARCAS E Fabricantes -->
                             <div class="row mt-2 mb-4" id="marcas-fornecedores">
                                 <div class="col-lg-12">
                                     <div class="sub-title mt-4">
-                                        <h6>Marcas e Fornecedores</h6>
+                                        <h6>Marcas e Fabricantes</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-sm-12 col-lg-3">
-                                    <select class="wide" id="add-mf">
+                                    <select class="form-control h-35" id="add-mf">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">MEDMATERIAL</option>
                                         <option value="2">SUPRIMATERIAL LTDA</option>                                        
@@ -793,7 +794,7 @@
                                         <thead>
                                             <tr>
                                             <th></th>
-                                            <th>Marcas/Fornecedores</th>
+                                            <th>Marcas/Fabricantes</th>
                                             <th>Data de Inclusão</th>
                                             </tr>
                                         </thead>
@@ -873,7 +874,7 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-sm-8 col-lg-6">
-                                                        <h6 class="float-left title-lista">Lista de Marcas e Fornedores</h6>
+                                                        <h6 class="float-left title-lista">Lista de Marcas e Fabricantes</h6>
                                                     </div>
                                                     <div class="col-sm-4 col-lg-6">
                                                         <button type="button" name="button" id="btn-close-lista-2" class="btn float-right">
@@ -887,7 +888,7 @@
                                         <div class="container-fluid mt-4 mb-4">
                                             <div class="row">
                                                 <div class="col-sm-12 col-lg-3">
-                                                    <select class="wide">
+                                                    <select class="form-control h-35">
                                                         <option data-display="Selecione">Selecione</option>
                                                         <option value="1">MEDMATERIAL</option>
                                                         <option value="2">SUPRIMATERIAL LTDA</option>                                        
@@ -1036,7 +1037,7 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-sm-12 col-lg-3">
-                                    <select class="wide" id="add-e">
+                                    <select class="form-control h-35" id="add-e">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">Cardiologia</option>
                                         <option value="2">Ortopedia</option>                                        
@@ -1165,9 +1166,10 @@
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
-        <script src="../js/jquery.nice-select.js"></script>
+        <!-- <script src="../js/jquery.nice-select.js"></script> -->
         <!-- scripts -->
         <script src="../js/script.js"></script>
+        <script src="../js/util.js"></script>
     </body>
 
 </html>

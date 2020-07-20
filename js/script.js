@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
         $(this).toggleClass('active');
+        $("#sidebar").css("transition", "all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665)");
     });
 });
 // fim script Toggle
@@ -326,7 +327,6 @@ $(function() { //onload aqui
 
   // inputs animado
   $(window, document, undefined).ready(function() {
-
     $('input').blur(function() {
       var $this = $(this);
       if ($this.val())
@@ -334,6 +334,14 @@ $(function() { //onload aqui
       else
         $this.removeClass('used');
     });
+
+    $('input[type=radio').blur(function() {
+        var $this = $(this);
+        if ($this.val())
+          $this.removeClass('used');
+        else
+          $this.removeClass('used');
+      });
   
     var $ripples = $('.ripples');
   
@@ -358,7 +366,6 @@ $(function() { //onload aqui
     $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
         $(this).removeClass('is-active');
     });
-  
   });
   // fim Inputs animado
 
@@ -391,11 +398,10 @@ $(".mostrar-itens-section").click(function(){
 
 var inputDate = $('.input-date')
 if($(".input-date").val(length.css("display", "none"))){
-    $(".datetimepicker").click(function(inputDate){
+        $(".datetimepicker").click(function(inputDate){
         $(this).addClass("used");
     });   
 }
-
 
 // var inputDate = $('.input-date')
 // $(".input-date").click(function(inputDate){
@@ -412,8 +418,3 @@ function marcarTodos(marcardesmarcar){
     });
 }
 
-// animação sidebar
-
-$(".btn-sidebar").click(function(){
-    $("#sidebar").css("transition", "all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665)");
-});
