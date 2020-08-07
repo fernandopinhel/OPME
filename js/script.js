@@ -342,6 +342,14 @@ $(function() { //onload aqui
         else
           $this.removeClass('used');
       });
+
+      $('input[type=checkbox').blur(function() {
+        var $this = $(this);
+        if ($this.val())
+          $this.removeClass('used');
+        else
+          $this.removeClass('used');
+      });
   
     var $ripples = $('.ripples');
   
@@ -367,16 +375,37 @@ $(function() { //onload aqui
         $(this).removeClass('is-active');
     });
   });
+
+
+$('input[type=checkbox').removeClass('used')
   // fim Inputs animado
 
-  $(".buscar-item").click(function(){
+$(".buscar-item").click(function(){
     $(".tabela-busca-item").toggleClass("d-none");
+});
+
+$(".selecionar-item").click(function(){
+    $(".tabela-busca-item").addClass("d-none");
+    $(".consultar-novos-itens").addClass("d-none");
+    $(".consulta-itens-selecionados").toggleClass("d-none");
+    $(".itens-editar-selecionados").toggleClass("d-none");
 });
 
 $(".mostrar-itens-section").click(function(){
     $(".tabela-busca-item").toggleClass("d-none");
     $(".show-itens-sections").toggleClass("d-none");
 });
+
+// input file
+// $("#arquivo").change(function() {
+//     $(this).prev().html($(this).val());
+// });
+// var $input    = document.getElementById('input-file'),
+//     $fileName = document.getElementById('file-name');
+
+// $input.addEventListener('change', function(){
+//     $fileName.innerHTML = this.value;
+// });
 
 // var inputDate = $('.input-date')
 // $(".datetimepicker").click(function(inputDate){

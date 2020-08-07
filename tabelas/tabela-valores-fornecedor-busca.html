@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Protótipo OPME - Tabelas</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box) -->
+        <!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
+        <!-- estilo toggle on/off -->
+        <link rel="stylesheet" href="../css/bootstrap4-toggle.min.css">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+    </head>
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header text-center">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
+                    <h1>Gestão OPME</h1>                                          
+                </div>
+                <ul class="list-unstyled components">
+                    <li><!-- painel -->
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
+                            <li>
+                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-rendimento mr-4"></i>
+                                    <span class="item-menu">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-doc-papel mr-4"></i>
+                                    <span class="item-menu">Processos</span>
+                                </a>
+                            </li>
+                            <li class="msg">
+                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-mensagem mr-4"></i>
+                                    <span class="ml-1 item-menu">Mensagens</span>
+                                    <span class="mensagem"><span class="quant-msg">8</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatórios</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                                    <li>
+                                        <a href="#">Geral de Precificação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ranking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Economia por Negociação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Log de Auditoria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produtividade por Analista</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ordem Fornecedor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon referenciados mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
+                                    <li>
+                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresHospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>                                    
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#tabelaValoresFornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-produtos mr-4"></i>
+                                    <span class="item-menu">Marcas/Fabricantes</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
+                                    <li>
+                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-compras mr-4"></i>
+                                    <span class="item-menu">Fornecedor</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
+                                    <li>
+                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-diversidade mr-4"></i>
+                                    <span class="item-menu">Itens</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
+                                    <li>
+                                        <a href="itens-consulta.html">Consulta</a>
+                                    </li>
+                                    <li class="sub-active">
+                                        <a href="itens-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim painel -->
+                    <li><!-- configuracoes -->
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Configurações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon unidade-de-medida mr-4"></i>
+                                    <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li>
+                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-pasta mr-4"></i>
+                                    <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li>
+                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon usuarios mr-4"></i>
+                                    <span class="item-menu">Usuários</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon telas mr-4"></i>
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>                               
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim configuracoes -->
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+
+            <!-- conteudo pagina -->
+            <div class="content" id="cadastro">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                        <div class="float-left">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="user float-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">Renata Scott</p>
+                                    <img src="../img/user.png">
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="title-page">
+                                        <h1>Tabela de Valores Fornecedor</h1>
+                                    </div>                                    
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="#" class="float-right">
+                                        <img src="../img/print.svg" width="30" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                    </a>
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="tabela-valores-fornecedor.html"> <i class="icon-seta-esquerda-a"></i> Buscar Fornecedor</a></li>                                  
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tabela-de-valores">Tabela de Valores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#novos-itens">Novos Itens</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#acompanhar-itens">Acompanhar Itens Em Negociação</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#importar-arquivos">Importar Arquivo de Itens</a>
+                                </li>
+                            </ul>
+                            <!-- fim nav tabs -->
+                            <!-- tab panes -->
+                            <div class="tab-content mt-5">
+                                <!-- tabela de valores -->
+                                <div class="tab-pane container-fluid active" id="tabela-de-valores">
+                                    <div class="row consulta-tabelas-valores bg-green pt-2 mb-2">
+                                        <div class="col-lg-3">
+                                            <p>CNPJ: <span>01.023.652/0001-13</span></p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p>Fornecedor: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
+                                        </div>
+                                        <div class="col-lg-2 ">
+                                            <p>Status: <span>ATIVO</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip">
+                                                <input type="checkbox" id="checkbox_one" checked/>
+                                                <label for="checkbox_one" class="check-estilo">Itens Vigentes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip">
+                                                <input type="checkbox" id="checkbox_one" checked/>
+                                                <label for="checkbox_one" class="check-estilo">Itens Suspensos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip">
+                                                <input type="checkbox" id="checkbox_one" checked/>
+                                                <label for="checkbox_one" class="check-estilo">Itens em Negociação</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip">
+                                                <input type="checkbox" id="checkbox_one" checked/>
+                                                <label for="checkbox_one" class="check-estilo">Itens Vencidos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ">
+                                            <div class="form">
+                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <label for="cod-tuss" class="label-name">
+                                                    <span class="content-name">TUSS</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form">
+                                                <input type="text" name="item" autocomplete="off" >
+                                                <label for="item" class="label-name">
+                                                    <span class="content-name">Item</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form">
+                                                <input type="text" name="ref-item-fabricante" autocomplete="off" >
+                                                <label for="ref-item-fabricante" class="label-name">
+                                                    <span class="content-name">Ref. Item Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form">
+                                                <input type="text" name="fabricante" autocomplete="off" >
+                                                <label for="fabricante" class="label-name">
+                                                    <span class="content-name">Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-3">
+                                            <div class="form">
+                                                <input type="text" name="ref-item-fabricante" autocomplete="off" >
+                                                <label for="ref-item-fabricante" class="label-name">
+                                                    <span class="content-name">Cód. Item Fornecedor</span>  
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-10 mt-4">
+                                            <button type="submit" name="button" class="btn btn-buscar float-right">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-cancelar float-right mr-3">Limpar</button>
+                                        </div>
+                                        <div id="box-lista-subs" class="col-lg-12 mt-4">
+                                            <div class="container-fluid">
+                                                <div class="row my-auto">
+                                                    <div class="col-lg-6 pl-0">
+                                                        <p>Tabela de Valores</p>
+                                                    </div>
+                                                    <div class="col-lg-6 pr-0">        
+                                                        <div class="lotes suspender">
+                                                            <a href="#" class="float-right btn-itens" data-toggle="modal" data-target="#modal-suspender">
+                                                                <span>Suspender Itens Selecionados</span>
+                                                            </a>
+                                                        </div>  
+                                                        <div class="lotes reativar">
+                                                            <a href="#" class="float-right btn-itens mr-4" data-toggle="modal" data-target="#modal-reativar">                                                                
+                                                                <span>Reativar Itens Selecionados</span>
+                                                            </a>
+                                                        </div>                                          
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="ex-checkbox m-0">
+                                                                    <input type="checkbox"  data-toggle="tooltip" data-original-title="Marcar todos" onclick="marcarTodos(this.checked);" id="checkbox_one"/>
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th>TUSS</th>
+                                                            <th>Nome do Item</th>
+                                                            <th>Ref. Fabricante</th>
+                                                            <th>Fabricante</th>
+                                                            <th>Cód. Item Fornecedor</th>
+                                                            <th>Último Valor Aprovado</th>
+                                                            <th>Data Início Vigência</th>
+                                                            <th>Data Fim Vigência</th>                                              
+                                                            <th>Situação</th>                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td por-10">
+                                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                    <input type="checkbox" class="marcar" id="checkbox_one"/>
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                                <div class="box-detalhes float-left mr-3">
+                                                                    <a href="tabela-valores-fornecedor-detalhes.html">
+                                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>70333467</td>
+                                                            <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                            <td>10400</td>
+                                                            <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                            <td>123456</td>
+                                                            <td>R$ 770,00</td>
+                                                            <td>10/01/2020</td>
+                                                            <td>-</td>                                                            
+                                                            <td>Vigente</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td por-10">
+                                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                    <input type="checkbox" class="marcar" id="checkbox_one"/>
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                                <div class="box-detalhes float-left mr-3">
+                                                                    <a href="tabela-valores-fornecedor-detalhes.html">
+                                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>77424220</td>
+                                                            <td>BALAO GASTRICO 350ML</td>
+                                                            <td>6330-350</td>
+                                                            <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                            <td>526452-RS</td>
+                                                            <td>R$ 3.500,00</td>
+                                                            <td>10/01/2020</td>
+                                                            <td>20/03/2020</td>                                                            
+                                                            <td>Vencido</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td por-10">
+                                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                    <input type="checkbox" class="marcar" id="checkbox_one"/>
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                                <div class="box-detalhes float-left mr-3">
+                                                                    <a href="tabela-valores-fornecedor-detalhes.html">
+                                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>73644749</td>
+                                                            <td>IMPLANTE PEITORAL CHEIO DE SILICONE SUPERFICIE LISA 230CM³ ESQUERDA</td>
+                                                            <td>10130-230D</td>
+                                                            <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                            <td>RTF-1255</td>
+                                                            <td>R$ 1.500,00</td>
+                                                            <td>10/01/2020</td>
+                                                            <td>-</td>                                                            
+                                                            <td>Suspenso</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td por-10">
+                                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                    <input type="checkbox" class="marcar" id="checkbox_one"/>
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                                <div class="box-detalhes float-left mr-3">
+                                                                    <a href="tabela-valores-fornecedor-detalhes.html">
+                                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>19000018</td>
+                                                            <td>INTRODUTOR CATETER 60CM 48409</td>
+                                                            <td>48409</td>
+                                                            <td>MEDTRONIC INC</td>
+                                                            <td>TT1232</td>
+                                                            <td>R$ 1.020,00</td>
+                                                            <td>10/01/2020</td>
+                                                            <td>-</td>                                                            
+                                                            <td>Em Negociação</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="pagination mt-4 mb-1">
+                                                <li>
+                                                    <a href="#" class="prev">
+                                                    <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                <a href="#" class="prev">
+                                                    <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                                </a>
+                                                </li>
+                                                <li><a href="#" class="active">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                                </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="next">
+                                                        <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 p-0">
+                                            <div class="sub-title">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total de Itens: <b>4</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total de Itens Vencidos: <b>1</b></p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total de Itens Vigentes: <b>1</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total de Itens Em Negociação: <b>1</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title">
+                                                            <p class="color-blue">Total de Itens Suspensos: <b>1</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim tabela de valores -->
+                                <!-- novos itens -->
+                                <div class="tab-pane container-fluid fade" id="novos-itens">
+                                    <div class="row consultar-novos-itens">
+                                        <div class="col-lg-2">
+                                            <div class="form">
+                                                <input type="text" name="tuss" autocomplete="off" >
+                                                <label for="tuss" class="label-name">
+                                                    <span class="content-name">TUSS</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form">
+                                                <input type="text" name="cod-provisorio" autocomplete="off" >
+                                                <label for="cod-provisorio" class="label-name">
+                                                    <span class="content-name">Cód. Provisório</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form">
+                                                <input type="text" name="tuss" autocomplete="off" >
+                                                <label for="tuss" class="label-name">
+                                                    <span class="content-name">Item</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mt-4">
+                                            <div class="form">
+                                                <input type="text" name="fabricante" autocomplete="off" >
+                                                <label for="fabricante" class="label-name">
+                                                    <span class="content-name">Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-4">
+                                            <div class="form">
+                                                <input type="text" name="item" autocomplete="off" >
+                                                <label for="item" class="label-name">
+                                                    <span class="content-name">Item</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-4">
+                                            <div class="form">
+                                                <input type="text" name="ref-fabricante" autocomplete="off" >
+                                                <label for="ref-fabricante" class="label-name">
+                                                    <span class="content-name">Ref. Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-4">
+                                            <button type="reset" name="button" class="btn btn-cancelar float-left">Limpar</button>
+                                            <button type="button" name="button" class="btn btn-buscar float-right buscar-item">Buscar</button>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-4 d-none tabela-busca-item">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Novos Itens</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>TUSS</th>                                                        
+                                                        <th>Nome do Item</th> 
+                                                        <th>Ref. Fabricante</th>
+                                                        <th>Fabricante</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>10400</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>10400</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>10400</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>10400</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row consulta-itens-selecionados d-none">
+                                        <div class="col-lg-12"><h6 class="txt-up">Item Selecionado</h6></div>
+                                        <div class="col-lg-12"><hr></div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>TUSS: <span>123456565</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Código Provisório: <span>536333333</span></p>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <p>Item: <span>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</span></p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p>Ref. Fabricante: <span>536366333</span></p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p>Fabricante: <span>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</span></p>
+                                        </div>
+                                        <div class="col-lg-12"><hr></div>
+                                    </div>
+                                    <div class="row itens-editar-selecionados d-none">
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="form">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-inicio-vigencia" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data-inicio-vigencia" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                    <span>Data Início de Vigência</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="form">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-fim-vigencia" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data-fim-vigencia" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                    <span>Data Fim de Vigência</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="form">
+                                                <input type="text" name="valor-inicial-proposto" autocomplete="off" >
+                                                <label for="valor-inicial-proposto" class="label-name">
+                                                    <span class="content-name">Valor Inicial Proposto</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-3">
+                                            <p class="p-select">Responsável pelo valor Inicial</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Fornecedor</option>                                        
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <div class="form">
+                                                <input type="text" name="valor-final-negociado" autocomplete="off" >
+                                                <label for="valor-final-negociado" class="label-name">
+                                                    <span class="content-name">Valor Final Negociado</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <p class="p-select">Responsável pelo valor Final</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Fornecedor</option>                                        
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 itens-editar-selecionados d-none">
+                                        <div class="col-lg-12">
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Salvar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim novos itens -->
+                                <!-- acompanhar itens em negociação -->
+                                <div class="tab-pane container-fluid fade" id="acompanhar-itens">
+                                    <nav aria-label="breadcrumb" class="bread-negociacoes">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="#">Itens</a></li>    
+                                          <li class="breadcrumb-item">Negociações</li>                                                                                 
+                                        </ol>
+                                    </nav>
+                                    <nav aria-label="breadcrumb" class="bread-detalhes-negociacao">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="#">Itens</a></li>    
+                                          <li class="breadcrumb-item"><a href="#">Negociações</a></li>      
+                                          <li class="breadcrumb-item">Detalhe da Negociação</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <nav aria-label="breadcrumb" class="bread-contra-proposta">
+                                        <ol class="breadcrumb">  
+                                          <li class="breadcrumb-item"><a href="#">Itens</a></li>    
+                                          <li class="breadcrumb-item"><a href="#">Negociações</a></li>      
+                                          <li class="breadcrumb-item"><a href="#">Detalhe da Negociação</a></li>  
+                                          <li class="breadcrumb-item">Contra-Proposta</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <nav aria-label="breadcrumb" class="bread-aceitar-proposta">
+                                        <ol class="breadcrumb">  
+                                          <li class="breadcrumb-item"><a href="#">Itens</a></li>    
+                                          <li class="breadcrumb-item"><a href="#">Negociações</a></li>      
+                                          <li class="breadcrumb-item"><a href="#">Detalhe da Negociação</a></li>  
+                                          <li class="breadcrumb-item">Aceitar Proposta</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <nav aria-label="breadcrumb" class="bread-recusar-proposta">
+                                        <ol class="breadcrumb">  
+                                          <li class="breadcrumb-item"><a href="#">Itens</a></li>    
+                                          <li class="breadcrumb-item"><a href="#">Negociações</a></li>      
+                                          <li class="breadcrumb-item"><a href="#">Detalhe da Negociação</a></li>  
+                                          <li class="breadcrumb-item">Recusar Proposta</li>                                  
+                                        </ol>
+                                    </nav>                                    
+                                    <div class="row mt-4 etapa-consulta">
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Nome do Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Ref. Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Anvisa</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5 etapa-consulta">
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Nome do Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Ref. Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-flex">
+                                            <div class="form w-50">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Faixa de valor</span>
+                                                </label>
+                                            </div>
+                                            <div class="w-space"></div>
+                                            <div class="form w-50">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Até</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5 etapa-consulta">     
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="ex-checkbox m-0" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="checkbox_one">
+                                                <label for="checkbox_one" class="check-estilo">Valores Vigentes</label>
+                                            </div>
+                                        </div>                                   
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="ex-checkbox m-0" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="checkbox_one">
+                                                <label for="checkbox_one" class="check-estilo">Ordenar pelo Valor mais Baixo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="ex-checkbox m-0" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="checkbox_one">
+                                                <label for="checkbox_one" class="check-estilo">Ordenar pelo Valor mais Alto</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="submit" name="button" class="btn btn-buscar float-right">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-cancelar float-right mr-3">Limpar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5 etapa-negociacao">
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Fornecedor: <span>HEART LINE COMÉRCIO DE MATERIAL</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Ref. Fornecedor: <span>HQ-15</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Fabricante: <span>012452 - BIOMETRIX</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Ref. Fabricante: <span>12511</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Anvisa: <span>1231221301</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Valor atual vigente: <span>R$ 850,00</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Situação do Fornecedor: <span>Ativo</span></p>
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <p>Está sendo negociado novo valor? <span>Sim</span></p>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <p>Observação sobre o Fornecedor: <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-consulta mt-5">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-6 pl-0">
+                                                    <p>Itens</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th>Fornecedor</th>
+                                                <th>Tipo</th>
+                                                <th>Ref. Fornecedor</th>                                                                        
+                                                <th>Fabricante</th>
+                                                <th>Ref. Fabricante</th>
+                                                <th>Anvisa</th>
+                                                <th>Valor Negociado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions ac-2">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-negociacao.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00036 - HEART LINE COMÉRCIO DE MATERIAL</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>HQ-15</td>
+                                                    <td>012452 - BIOMETRIX</td>
+                                                    <td>12511</td>
+                                                    <td>1231221301</td>
+                                                    <td>R$ 1.150,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-2">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-negociacao.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00060 - VASCULINE COMÉRCIO DE MATERIAIS</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>12465666</td>
+                                                    <td>023542 - CORDIS</td>
+                                                    <td>21544233</td>
+                                                    <td>2500002100</td>
+                                                    <td>R$ 950,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-2">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-negociacao.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00120 - HOSPITAL SÃO JOSÉ</td>
+                                                    <td>REFERENCIADO</td>
+                                                    <td>GKP-23F</td>
+                                                    <td>02000 - BIOMETRIX</td>
+                                                    <td>12511</td>
+                                                    <td>523022202</td>
+                                                    <td>R$ 1005,20</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-2">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-negociacao.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00121 - HOSPITAL NOSSA SENHORA DE FÁTIMA</td>
+                                                    <td>REFERENCIADO</td>
+                                                    <td>3928033</td>
+                                                    <td>02001 - BIOMEDICINE FABR. MATERIAL HOSP.</td>
+                                                    <td>AB-2322</td>
+                                                    <td>15210000100</td>
+                                                    <td>R$ 1022,32</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-2">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-negociacao.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>00130 - MEDICE COMÉRCIO DE MATERIAL HOSP.</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>1235123</td>
+                                                    <td>01520 - LABINDUS INDUSTRIAL DE MATERIAL HOSP.</td>
+                                                    <td>GHI5253</td>
+                                                    <td>120111110</td>
+                                                    <td>R$ 1253,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-consulta-negociacoes">
+                                        <p>Negociações</p>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data Início de Vigência">Início Vigência</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data Fim de Vigência">Fim Vigência</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data da Proposta Inicial">Proposta Inicial</th> 
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Valor Inicial da Proposta">Valor Inicial</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável da Proposta Inicial">Responsável Inicial</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data da Proposta Final">Proposta Final</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Valor Final">Valor Final</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável da Proposta Final">Responsável Final</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável da Aprovação">Responsável Aprovação</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Aprovação da Diretoria?">Aprovação Diretoria?</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="% Economia com base no valor inicial do Fornecedor/Hospital">Economia inicial</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Situação da Negociação">Situação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes detalhes-negociacao" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>06/05/2020</td>
+                                                    <td>-</td>
+                                                    <td>06/05/2020</td>
+                                                    <td>1.450,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>EM NEGOCIAÇÃO</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-consulta-detalhes.html">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>01/01/2020</td>
+                                                    <td>-</td>
+                                                    <td>01/01/2020</td>
+                                                    <td>1.500,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>15/01/2020</td>
+                                                    <td>1.180,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>SIM</td>
+                                                    <td>21,33</td>
+                                                    <td>VIGENTE</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes detalhes-negociacao" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>01/01/2020</td>
+                                                    <td>01/01/2020</td>
+                                                    <td>01/01/2020</td>
+                                                    <td>1.500,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>CANCELADA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="#">
+                                                                <img src="../img/detalhes.svg" class="i-detalhes detalhes-negociacao" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>01/01/2020</td>
+                                                    <td>14/01/2020</td>
+                                                    <td>05/01/2019</td>
+                                                    <td>1.350,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>06/01/2019</td>
+                                                    <td>985,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>NÃO</td>
+                                                    <td>27,03</td>
+                                                    <td>CONCLUÍDA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-detalhes-consulta-negociacoes">
+                                        <p>Detalhe da Negociação</p>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th></th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data da Proposta">Data</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Condição da Proposta">Condição</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Valor da Proposta">Valor</th> 
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Origem da Proposta">Origem</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável por Cadastrar Proposta" aria-describedby="tooltip628527">Responsável</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Data da Resposta">Resposta</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Resposta da Proposta">Resposta <br>Proposta</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Origem da Resposta">Origem da <br>Resposta</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável por Cadastrar a Resposta da Proposta">Responsável <br>Cadastro/Resposta</th>
+                                                <th data-toggle="tooltip" data-placement="top" data-original-title="Situação">Situação</th>                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>03/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>1.150,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>03/01/2020</td>
+                                                    <td>ACEITO</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>ACEITO</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>1.250,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>03/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA -PROPOSTA</td>
+                                                    <td>950,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>JEAN BELCHIOR</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA -PROPOSTA</td>
+                                                    <td>850,00</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>CANCELADA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="actions ac-3">
+                                                        <div class="float-right">
+                                                        <div class="menu-visible">
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                            <span class="circle"></span>
+                                                        </div>
+                                                        <div class="menu-invisible">
+                                                            <a href="itens-contra-proposta-negociacao.html">
+                                                                <img src="../img/contra-proposta.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Contra-Proposta">
+                                                            </a>
+                                                            <a href="itens-aceitar-proposta-negociacao.html">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
+                                                            </a>
+                                                            <a href="itens-recusar-proposta-negociacao.html">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
+                                                            </a>
+                                                        </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>01/01/2020</td>
+                                                    <td>INICIAL</td>
+                                                    <td>1500,00</td>
+                                                    <td>FORNECEDOR</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>02/01/2020</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                    <td>BRADESCO</td>
+                                                    <td>RENATA SCOTT</td>
+                                                    <td>CONTRA-PROPOSTA</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-aceitar-proposta">
+                                        <p>Aceitar Proposta</p>
+                                        <div class="row consulta-negociacao mt-3">
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Data da Proposta: <span>03/01/2020</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Condição da Proposta: <span>Contra-Proposta</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Valor da Proposta: <span>R$ 1.150,00</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Origem da Proposta anterior: <span>Fornecedor</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-resposta" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    <label for="data-resposta" class="label-name">
+                                                        <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                        <span>Data da Resposta</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Origem da Proposta</p>
+                                                <select class="form-control h-35">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                        
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="radio-title">
+                                                    <h6 class="mb-3">Aceite Aprovado pelos Gestores?</h6>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="ex-radio mr-4">
+                                                        <input type="radio" id="radio_yes" name="radio_group">
+                                                        <label for="radio-estilo" class="radio-estilo">Sim</label>
+                                                    </div>
+                                                    <div class="ex-radio">
+                                                        <input type="radio" id="radio_no" name="radio_group">
+                                                        <label for="radio-estilo" class="radio-estilo">Não</label>
+                                                      </div>
+                                                </div>
+                                            </div>                                            
+                                            <div class="col-lg-12 mt-5">
+                                                <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                            </div>                                            
+                                        </div>
+                                        <div class="row btns-opcoes">
+                                            <div class="col-lg-12 mt-5">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='itens-consulta-detalhes.html'">Aceitar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-recusar-proposta">
+                                        <p>Recusar Proposta</p>
+                                        <div class="row consulta-negociacao mt-3">
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Data da Proposta: <span>03/01/2020</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Condição da Proposta: <span>Contra-Proposta</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Valor da Proposta: <span>R$ 1.150,00</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Origem da Proposta anterior: <span>Fornecedor</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-resposta" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    <label for="data-resposta" class="label-name">
+                                                        <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                        <span>Data da Resposta</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Origem da Proposta</p>
+                                                <select class="form-control h-35">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                        
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-8 mt-5">
+                                                <p class="p-select">Justificativa da Recusa</p>
+                                                <select class="form-control h-35">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Fornecedor não comercializa mais o produto</option>
+                                                    <option value="2">Fabricante não negocia mais com este Fornecedor</option>                                        
+                                                    <option value="3">A Bradesco tem contrato permanente com outro Fornecedor</option>                                        
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-12 mt-5">
+                                                <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes">
+                                            <div class="col-lg-12 mt-5">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-excluir" onclick="window.location.href='itens-consulta-detalhes.html'">Recusar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="etapa-contra-proposta">
+                                        <p>Contra-Proposta</p>
+                                        <div class="row consulta-negociacao mt-3">
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Data da Proposta anterior: <span>03/01/2020</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Condição da Proposta: <span>Contra-Proposta</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Valor da Proposta anterior: <span>R$ 1.250,00</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mb-4">
+                                                <p>Origem da Proposta anterior: <span>Fornecedor</span></p>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p>Resposta da Proposta anterior: <span>Contra-Proposta</span></p>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Origem da Resposta anterior: <span>Bradesco</span></p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p>Responsável pela Resposta da Proposta anterior: <span>Renata Scott</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-proposta" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    <label for="data-proposta" class="label-name">
+                                                        <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                        <span>Data da Proposta</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Origem da Proposta</p>
+                                                <select class="form-control h-35">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Bradesco</option>
+                                                    <option value="2">Fornecedor</option>                                        
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">                                    
+                                                <div class="form">
+                                                    <input type="text" name="valor-proposta" autocomplete="off">
+                                                    <label for="valor-proposta" class="label-name">
+                                                        <span class="content-name">Valor da Proposta</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row btns-opcoes">
+                                            <div class="col-lg-12 mt-5">
+                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='itens-consulta-detalhes.html'">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim procedimentos -->
+                                <!-- fornecedores -->
+                                <div class="tab-pane container-fluid fade" id="fornecedores">
+                                    <div class="sub-title mb-2 bg-green">
+                                        <p>02111 - Agulha de Punção</p>                                 
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4">
+                                            <div class="form">
+                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <label for="cod" class="label-name">
+                                                    <span class="content-name">Código</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form">
+                                                <input type="text" name="nome-procedimento" autocomplete="off" >
+                                                <label for="nome-procedimento" class="label-name">
+                                                    <span class="content-name">Nome do Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                    <th>Status</th>
+                                                    <th>Código</th>
+                                                    <th>Nome do Fornecedor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
+                                                        <td class="por-8">002000</td>
+                                                        <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
+                                                        <td class="por-8">01242</td>
+                                                        <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- fim fornecedores -->   
+                                <!-- importar arquivos -->
+                                <div class="tab-pane container-fluid fade" id="importar-arquivos">
+                                    <div class="row">
+                                        <div class="col-lg-4">                                                                                    
+                                            <input type="file" name="arquivos" id="arquivo" multiple="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim importar arquivos -->
+                            </div>
+                            <!-- fim tab panes -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-version">
+                <p>V.1.0</p>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- modal reativar -->
+        <div class="modal fade" id="modal-reativar" tabindex="-1" role="dialog" aria-labelledby="modal-reativar-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-reativar-label">Reativar Itens Selecionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Tem certeza que deseja Reativar estes Itens?</p>
+                        <h6>- IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</h6>
+                        <h6>- BALAO GASTRICO 350ML</h6>
+                        <h6>- 9	IMPLANTE PEITORAL CHEIO DE SILICONE SUPERFICIE LISA 230CM³ ESQUERDA</h6>
+                        <h6 class="mt-4">Total de Itens Selecionados: <span class="color-green">3</span></h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal reativar -->
+
+        <!-- modal suspender -->
+        <div class="modal fade" id="modal-suspender" tabindex="-1" role="dialog" aria-labelledby="modal-suspender-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-suspender-label">Suspender Itens Selecionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Tem certeza que deseja Suspender estes Itens?</p>
+                        <h6>- IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</h6>
+                        <h6>- BALAO GASTRICO 350ML</h6>
+                        <h6>- 9	IMPLANTE PEITORAL CHEIO DE SILICONE SUPERFICIE LISA 230CM³ ESQUERDA</h6>
+                        <h6 class="mt-4">Total de Itens Selecionados: <span class="color-green">3</span></h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal suspender -->
+
+        <!-- jQuery -->
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="../js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="../js/bootstrap-datetimepicker.js"></script>
+        <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="../js/jquery.mask.min.js"></script>
+        <!-- script select(combo-box) -->
+        <!-- <script src="../js/jquery.nice-select.js"></script> -->
+        <!-- script toggle on/off -->
+        <script src="../js/bootstrap4-toggle.min.js"></script>
+        <!-- scripts -->
+        <script src="../js/script.js"></script>
+    </body>
+</html>

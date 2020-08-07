@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="../css/estilo.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
-        <!-- estilo select(combo-box -->
-        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- estilo select(combo-box)
+        <link rel="stylesheet" href="../css/nice-select.css"> -->
     </head>
 
     <body>
@@ -246,7 +246,7 @@
                             <div class="row mt-5">                            
                                 <div class="col-lg-3">
                                     <div class="form">
-                                        <input type="text" value="1234" name="codigoTuss" autocomplete="off" class="used">
+                                        <input type="text" value="" name="codigoTuss" autocomplete="off">
                                         <label for="codigoTuss" class="label-name">
                                             <span class="content-name">Código TUSS</span>
                                         </label>
@@ -254,7 +254,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form">
-                                        <input type="text" value="10413960144" name="codigoAnvisa" autocomplete="off" class="used">
+                                        <input type="text" value="" name="codigoAnvisa" autocomplete="off">
                                         <label for="codigoAnvisa" class="label-name">
                                             <span class="content-name">Código Anvisa</span>
                                         </label>
@@ -262,7 +262,7 @@
                                 </div>
                                 <div class="col-lg-3">                                    
                                     <div class="form">
-                                        <input type="text" value="AGULHA DE PUNÇAO" name="item" autocomplete="off" class="used">
+                                        <input type="text" value="" name="item" autocomplete="off">
                                         <label for="item" class="label-name">
                                             <span class="content-name">Item</span>
                                         </label>
@@ -270,7 +270,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form">
-                                        <input type="text" value="9875687" name="codigoProvisorio" autocomplete="off" class="used">
+                                        <input type="text" value="" name="codigoProvisorio" autocomplete="off">
                                         <label for="codigoProvisorio" class="label-name">
                                             <span class="content-name">Código Provisório</span>
                                         </label>
@@ -278,9 +278,25 @@
                                 </div>
                             </div>
                             <div class="row mt-5">
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" value="" name="ref-fabri" autocomplete="off">
+                                        <label for="ref-fabri" class="label-name">
+                                            <span class="content-name">Ref. Fabricante</span>
+                                        </label>
+                                    </div>                               
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" value="" name="nome-fabri" autocomplete="off">
+                                        <label for="nome-fabri" class="label-name">
+                                            <span class="content-name">Nome Fabricante</span>
+                                        </label>
+                                    </div>                               
+                                </div>
                                 <div class="col-lg-3">
                                     <p class="p-select">Status</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
                                         <option value="2">Inativo</option>                                        
@@ -290,7 +306,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='itens-busca.html'" class="btn btn-buscar">Buscar</button>                                    
+                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
                                 </div>
                             </div>
                         </div>
@@ -315,7 +331,9 @@
                                         <th></th>
                                         <th>Código Anvisa</th>
                                         <th>Código TUSS</th>
-                                        <th>Item</th>                                                                        
+                                        <th>Item</th>            
+                                        <th>Ref. Fabricante</th>            
+                                        <th>Nome Fabricante</th>                                                                        
                                         <th>Status</th>
                                         </tr>
                                     </thead>
@@ -338,6 +356,8 @@
                                             <td>10413960144</td>
                                             <td>1234</td>
                                             <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ref. Fabricante</td>
+                                            <td>Nome Fabricvante</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -361,6 +381,8 @@
                                             <td>10413960144</td>
                                             <td>1234</td>
                                             <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ref. Fabricante</td>
+                                            <td>Nome Fabricvante</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -384,6 +406,8 @@
                                             <td>10413960144</td>
                                             <td>1234</td>
                                             <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ref. Fabricante</td>
+                                            <td>Nome Fabricvante</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -407,6 +431,8 @@
                                             <td>10413960144</td>
                                             <td>1234</td>
                                             <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ref. Fabricante</td>
+                                            <td>Nome Fabricvante</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -430,6 +456,8 @@
                                             <td>10413960144</td>
                                             <td>1234</td>
                                             <td>AGULHA DE PUNÇAO</td>
+                                            <td>Ref. Fabricante</td>
+                                            <td>Nome Fabricvante</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -485,8 +513,8 @@
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="../js/jquery.mask.min.js"></script>
-        <!-- script select(combo-box) -->
-        <script src="../js/jquery.nice-select.js"></script>
+        <!-- script select(combo-box)
+        <script src="../js/jquery.nice-select.js"></script> -->
         <!-- scripts -->
         <script src="../js/script.js"></script>
     </body>
