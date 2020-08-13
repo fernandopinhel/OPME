@@ -38,48 +38,48 @@
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
                                     <span class="ml-1 item-menu">Mensagens</span>
                                     <span class="mensagem"><span class="quant-msg">8</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
                                     <span class="seta-accordion"></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ranking</a>
+                                        <a href="/relatorios/ranking.html">Ranking</a>
                                     </li>
                                     <li>
-                                        <a href="#">Economia por Negociação</a>
+                                        <a href="/relatorios/economia-por-negociacao.html">Economia por Negociação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Log de Auditoria</a>
+                                        <a href="/relatorios/log-de-auditoria.html">Log de Auditoria</a>
                                     </li>
                                     <li>
-                                        <a href="#">Produtividade por Analista</a>
+                                        <a href="/relatorios/produtividade-por-analista.html">Produtividade por Analista</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ordem Fornecedor</a>
+                                        <a href="/relatorios/ordem-fornecedor.html">Ordem Fornecedor</a>
                                     </li>
                                 </ul>
                             </li>
@@ -91,12 +91,24 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                </a>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -106,10 +118,25 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-resgate mr-4"></i>
+                                    <span class="item-menu">Solicitação/Compra</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -121,10 +148,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -136,10 +163,10 @@
                                 </a>
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
                                     <li class="sub-active">
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -159,10 +186,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -174,15 +201,15 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#usuariosSubmenu" onclick="window.location.href='/usuarios/usuarios.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
                                 </a>
@@ -195,10 +222,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -277,7 +304,7 @@
                             <!-- fim nav tabs -->
                             <!-- tab panes -->
                             <div class="tab-content mt-5">
-                                <!-- caracteristicas -->
+                                <!-- características -->
                                 <div class="tab-pane container-fluid active" id="caracteristicas">
                                     <div class="row">
                                         <div class="col-lg-2">
@@ -499,7 +526,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="cod-fabricante" value="002000" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                                <input type="text" name="cod-fabricante" value=""  onkeypress="$(this).mask('0000000');" autocomplete="off">
                                                 <label for="cod-fabricante" class="label-name">
                                                     <span class="content-name">Código do Fabricante</span>
                                                 </label>
@@ -507,34 +534,34 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form">
-                                                <input type="text" name="nome-fabricante" value="BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" name="nome-fabricante" value="" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="nome-fabricante" class="label-name">
                                                     <span class="content-name">Nome do Fabricante</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 busca-tipo-fabricante">Buscar</button>
                                         </div>
-                                        <div class="col-lg-4 mt-5">
+                                        <div class="col-lg-4 mt-5 resultado-tipo-fabricante d-none">
                                             <div class="form">
-                                                <input type="text" name="ref-item-fabricante" value="123452" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" name="ref-item-fabricante" value="" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="ref-item-fabricante" class="label-name">
                                                     <span class="content-name">Ref. Item do Fabricante</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-5">
+                                        <div class="col-lg-4 mt-5 resultado-tipo-fabricante d-none">
                                             <div class="form">
-                                                <input type="text" name="anvisa" value="102010201000" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <input type="text" name="anvisa" value="" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="anvisa" class="label-name">
                                                     <span class="content-name">Anvisa</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 mt-5">
+                                        <div class="col-lg-4 mt-5 resultado-tipo-fabricante d-none">
                                             <div class="form">
-                                                <input class="form-control form_date input-date used" size="16" type="text" value="07/06/2020" maxlength="10" name="validade-anvisa" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="validade-anvisa" onkeypress="mascaraData(this, event)" autocomplete="off">
                                                 <label for="validade-anvisa" class="label-name">
                                                     <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                                     <span>Validade Anvisa</span>
@@ -549,7 +576,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- fim caracteristicas -->
+                                <!-- fim características -->
                                 <!-- especialidades -->
                                 <div class="tab-pane container-fluid fade" id="especialidades">
                                     <div class="sub-title mb-2 bg-green">
@@ -560,7 +587,7 @@
                                             <div class="form">
                                                 <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
+                                                    <span class="content-name">Código da Especialidade</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -573,24 +600,66 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-5">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Busca Especialidade</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Código da Especialiade</th>
+                                                        <th>Nome da Especialidade</th>                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                <input type="checkbox" class="marcar" id="checkbox_one">
+                                                                <label for="checkbox_one" class="check-estilo"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="por-20">002000</td>
+                                                        <td>ORTOPEDIA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Especialidades</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="table-responsive mt-3">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
                                                     <th>Status</th>
-                                                    <th>Código</th>
+                                                    <th>Código da Especialidade</th>
                                                     <th>Nome da Especialidade</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
+                                                        <td class="por-20">002000</td>
                                                         <td>Ortopedia</td>
                                                     </tr>
                                                     <tr class="separator">
@@ -647,38 +716,80 @@
                                             <div class="form">
                                                 <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
+                                                    <span class="content-name">Código do Procedimento</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
+                                                <input type="text" name="cod" autocomplete="off" >
+                                                <label for="cod" class="label-name">
                                                     <span class="content-name">Nome do Procedimento</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-5">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Busca Procedimento</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Código do Procedimento</th>
+                                                        <th>Nome do Procedimento</th>                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                <input type="checkbox" class="marcar" id="checkbox_one">
+                                                                <label for="checkbox_one" class="check-estilo"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="por-20">002000</td>
+                                                        <td>ORTOPEDIA</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Procedimentos</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="table-responsive mt-3">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
                                                     <th>Status</th>
-                                                    <th>Código</th>
+                                                    <th>Código do Procedimento</th>
                                                     <th>Nome do Procedimento</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
-                                                        <td>Excisão de Pequenas lesões dérmicas</td>
+                                                        <td class="por-20">002000</td>
+                                                        <td>Ortopedia</td>
                                                     </tr>
                                                     <tr class="separator">
                                                         <td colspan="5"></td>
@@ -686,7 +797,7 @@
                                                     <tr>
                                                         <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
                                                         <td class="por-8">01242</td>
-                                                        <td>Excisão de Granuloma de corpo estranho</td>
+                                                        <td>Bucomaxilo</td>
                                                     </tr>
                                                     <tr class="separator">
                                                         <td colspan="5"></td>
@@ -843,37 +954,79 @@
                                             <div class="form">
                                                 <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
+                                                    <span class="content-name">Código do Fornecedor</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
+                                                <input type="text" name="cod" autocomplete="off" >
+                                                <label for="cod" class="label-name">
                                                     <span class="content-name">Nome do Fornecedor</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-5">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Busca Fornecedor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Código do Fornecedor</th>
+                                                        <th>Nome do Fornecedor</th>                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ex-checkbox float-left mt-2 mr-3">
+                                                                <input type="checkbox" class="marcar" id="checkbox_one">
+                                                                <label for="checkbox_one" class="check-estilo"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="por-20">002000</td>
+                                                        <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Fornecedores</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="table-responsive mt-3">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
                                                     <th>Status</th>
-                                                    <th>Código</th>
+                                                    <th>Código do Fornecedor</th>
                                                     <th>Nome do Fornecedor</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
+                                                        <td class="por-20">002000</td>
                                                         <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
                                                     </tr>
                                                     <tr class="separator">
@@ -1583,31 +1736,47 @@
                                     <div class="sub-title mb-2 bg-green">
                                         <p>02111 - Agulha de Punção</p>                                 
                                     </div>
-                                    <div class="row consulta-negociacao">
+                                    <div class="row consulta-itens-selecionados">
+                                        <!-- <div class="col-lg-12"><h6 class="txt-up">Informações</h6></div> -->
+                                        <div class="col-lg-12"><hr></div>
                                         <div class="col-lg-3 mb-4">
-                                            <p>Código do Fabricante: <span>020200</span></p>
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código do Fabricante: <b>020200</b></p>
+                                            </div>    
                                         </div>
                                         <div class="col-lg-6 mb-4">
-                                            <p>Nome do Fabricante: <span>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</span></p>
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Nome do Fabricante: <b>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</b></p>
+                                            </div>    
                                         </div>
                                         <div class="col-lg-3 mb-4">
-                                            <p>Ref. Item do Fabricante: <span>HR-12500</span></p>
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Ref. Item do Fabricante: <b>HR-12500</b></p>
+                                            </div>                                   
                                         </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Anvisa: <span>123452</span></p>
+                                        <div class="col-lg-3">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Anvisa: <b>123452</b></p>
+                                            </div>                               
                                         </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Validade Anvisa: <span>07/06/2020</span></p>
+                                        <div class="col-lg-3">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Validade Anvisa: <b>07/06/2020</b></p>
+                                            </div>    
                                         </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Código Provisório: <span>12345555</span></p>
+                                        <div class="col-lg-3">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>12345555</b></p>
+                                            </div>    
                                         </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>TUSS: <span>1211111111</span></p>
+                                        <div class="col-lg-3">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>1211111111</b></p>
+                                            </div>    
                                         </div>
+                                        <div class="col-lg-12"><hr></div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-4"><hr></div>
+                                    <div class="row">                                        
                                         <div class="col-lg-2 mt-3">
                                             <div class="ex-checkbox m-0" data-toggle="tooltip">
                                                 <input type="checkbox" id="checkbox_one"/>
@@ -1639,7 +1808,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar">Filtrar</button>
+                                            <button type="button" name="button" class="btn btn-buscar">Buscar</button>
                                         </div>
                                     </div>     
                                     <div class="alert alert-danger mt-4" id="msg-input-error" role="alert">

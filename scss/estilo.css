@@ -257,36 +257,117 @@ a {
   color: #499ED0 !important;
 }
 
-.lotes .btn-itens > span {
+.actions-table {
   border: 1px solid;
-  padding: 5px 10px;
   border-radius: 7px;
   text-align: center;
   color: #2e3e61;
   font-weight: 500;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
+  float: right;
 }
 
-.reativar:hover .btn-itens > span {
+.actions-table:hover {
   border: 1px solid;
-  padding: 5px 10px;
   border-radius: 7px;
   text-align: center;
-  color: #fff;
-  background: #11C25D;
+  background: #212e4b;
   font-weight: 500;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+
+.actions-table > button span {
+  text-transform: uppercase;
+}
+
+.actions-table:hover > button {
+  color: #fff;
+}
+
+.actions-table button .options {
+  float: right;
+}
+
+.actions-table button .options span {
+  background: #212e4b;
+  width: 4px;
+  height: 4px;
+  margin-top: 3px;
+  display: block;
+  border-radius: 100px;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
 }
 
-.suspender:hover .btn-itens > span {
+.actions-table:hover button .options span {
+  background: #fff;
+}
+
+.actions-table .dropdown-menu {
+  padding: 10px !important;
+  background: #F6F7FB;
+  -webkit-transform: translate3d(-158px, 31px, 0px) !important;
+          transform: translate3d(-158px, 31px, 0px) !important;
+  border-color: #212e4b;
+  top: 10px !important;
+  left: -16px !important;
+}
+
+.actions-table .dropdown-menu > span > a {
+  color: #212e4b;
+}
+
+.actions-table .dropdown-menu > span:hover > a {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.actions-table .dropdown-menu > span:active > a, .actions-table .dropdown-menu > span.nice-select.open > a {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.actions-table .dropdown-menu > span:visited > a {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.actions-table .dropdown-menu > span:hover {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.actions-table .dropdown-menu > span:active, .actions-table .dropdown-menu > span.nice-select.open {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.actions-table .dropdown-menu > span:visited {
+  color: #cc092f;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+}
+
+.lotes .btn-itens > span {
   border: 1px solid;
   padding: 5px 10px;
   border-radius: 7px;
   text-align: center;
-  color: #fff;
-  background: #cc092f;
+  color: #2e3e61;
   font-weight: 500;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
@@ -565,7 +646,6 @@ button:hover:disabled {
 
 .modal-body > p {
   color: #cc092f;
-  font-weight: 600;
   margin: 0;
 }
 
@@ -2152,6 +2232,10 @@ table {
   border: none;
 }
 
+.por-5 {
+  width: 5% !important;
+}
+
 .por-8 {
   width: 8% !important;
 }
@@ -2630,7 +2714,7 @@ tr:hover td.a-2 .menu-invisible {
   }
 }
 
-/* MODIFICA��ES DO TABLE */
+/* MODIFICAÇÕES DO TABLE */
 .paginate_button {
   /*
 	line-height: 27px !important;

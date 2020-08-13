@@ -1,3 +1,165 @@
+// Tela Tabelas
+// Acompanhar Itens Em Negociação
+$(".bread-negociacoes").addClass("d-none");
+$(".bread-detalhes-negociacao").addClass("d-none");
+$(".bread-contra-proposta").addClass("d-none");
+$(".bread-contra-proposta-direto").addClass("d-none");
+$(".bread-aceitar-proposta").addClass("d-none");
+$(".bread-aceitar-proposta-direto").addClass("d-none");
+$(".bread-recusar-proposta").addClass("d-none");
+$(".bread-recusar-proposta-direto").addClass("d-none");
+
+$(".etapa-negociacao").addClass("d-none");
+
+$(".etapa-consulta-negociacoes").addClass("d-none");
+$(".etapa-detalhes-consulta-negociacoes").addClass("d-none");
+$(".etapa-aceitar-proposta").addClass("d-none");
+$(".etapa-recusar-proposta").addClass("d-none");
+$(".etapa-contra-proposta").addClass("d-none");
+
+$(".c-negociacao").click(function(){
+    $('.bread-negociacoes').removeClass('d-none');   
+    $(".etapa-consulta-negociacoes").removeClass("d-none");
+    $(".etapa-consulta").addClass("d-none");
+    $(".etapa-negociacao").removeClass("d-none");
+});
+
+$(".d-consulta-negociacao").click(function(){
+    $('.bread-negociacoes').addClass('d-none')    
+    $('.bread-detalhes-negociacao').removeClass('d-none');   
+    $(".etapa-consulta-negociacoes").addClass("d-none");
+    $(".etapa-detalhes-consulta-negociacoes").removeClass("d-none");
+});
+
+$(".e-contra").click(function(){    
+    $('.bread-detalhes-negociacao').addClass('d-none');   
+    $('.bread-contra-proposta').removeClass('d-none');    
+    $(".etapa-detalhes-consulta-negociacoes").addClass("d-none");
+    $(".etapa-contra-proposta").removeClass("d-none");
+});
+
+$(".e-aceita").click(function(){    
+    $('.bread-detalhes-negociacao').addClass('d-none');   
+    $('.bread-aceitar-proposta').removeClass('d-none');    
+    $(".etapa-detalhes-consulta-negociacoes").addClass("d-none");
+    $(".etapa-aceitar-proposta").removeClass("d-none");
+});
+
+$(".e-recusa").click(function(){    
+    $('.bread-detalhes-negociacao').addClass('d-none');   
+    $('.bread-recusar-proposta').removeClass('d-none');    
+    $(".etapa-detalhes-consulta-negociacoes").addClass("d-none");
+    $(".etapa-recusar-proposta").removeClass("d-none"); 
+});
+
+$(".r-proposta").click(function(){    
+    $(".etapa-consulta").addClass("d-none");
+    $(".bread-recusar-proposta-inicio").removeClass("d-none");
+    $(".etapa-recusar-proposta").removeClass("d-none");
+    $(".etapa-negociacao").removeClass("d-none");
+});
+
+$(".bread-1").click(function(){    
+    $(".etapa-consulta").removeClass("d-none");
+
+    $(".bread-negociacoes").addClass("d-none");
+    $(".bread-detalhes-negociacao").addClass("d-none");
+    $(".bread-contra-proposta").addClass("d-none");
+    $(".bread-aceitar-proposta").addClass("d-none");
+    $(".bread-aceitar-proposta-direto").addClass("d-none");
+    $(".bread-recusar-proposta").addClass("d-none");
+    $(".bread-recusar-proposta-direto").addClass("d-none"); 
+    $(".bread-contra-proposta-direto").addClass("d-none");
+
+    $(".etapa-consulta-negociacoes").addClass("d-none");    
+    $(".etapa-detalhes-consulta-negociacoes").addClass("d-none");   
+    $(".etapa-aceitar-proposta").addClass("d-none");
+    $(".etapa-recusar-proposta").addClass("d-none");
+    $(".etapa-contra-proposta").addClass("d-none");
+    $(".etapa-negociacao").addClass("d-none");
+});
+
+$(".bread-2").click(function(){    
+    $(".etapa-consulta-negociacoes").removeClass("d-none");  
+    $(".etapa-consulta").removeClass("d-none");
+
+    $(".bread-negociacoes").removeClass("d-none");
+    $(".etapa-negociacao").removeClass("d-none");
+
+    $(".bread-detalhes-negociacao").addClass("d-none");
+    $(".bread-contra-proposta").addClass("d-none");
+    $(".bread-aceitar-proposta").addClass("d-none");
+    $(".bread-recusar-proposta").addClass("d-none");
+    $(".bread-recusar-proposta-inicio").addClass("d-none"); 
+
+
+    $(".etapa-consulta").addClass("d-none"); 
+    $(".etapa-detalhes-consulta-negociacoes").addClass("d-none");   
+    $(".etapa-aceitar-proposta").addClass("d-none");
+    $(".etapa-recusar-proposta").addClass("d-none");
+    $(".etapa-contra-proposta").addClass("d-none");
+});
+
+$(".bread-3").click(function(){    
+    $(".etapa-detalhes-consulta-negociacoes").removeClass("d-none");  
+    
+    $(".bread-detalhes-negociacao").removeClass("d-none");
+    $(".etapa-negociacao").removeClass("d-none");
+
+    $(".bread-negociacoes").addClass("d-none");
+    $(".bread-contra-proposta").addClass("d-none");
+    $(".bread-aceitar-proposta").addClass("d-none");
+    $(".bread-recusar-proposta").addClass("d-none");
+    $(".bread-recusar-proposta-inicio").addClass("d-none"); 
+    
+    
+    $(".etapa-consulta").addClass("d-none"); 
+    $(".etapa-consulta-negociacoes").addClass("d-none");  
+    $(".etapa-aceitar-proposta").addClass("d-none");
+    $(".etapa-recusar-proposta").addClass("d-none");
+    $(".etapa-contra-proposta").addClass("d-none");
+});
+
+$(".e-contra-direto").click(function(){    
+    $('.bread-contra-proposta-direto').removeClass('d-none');  
+    $('.etapa-contra-proposta').removeClass('d-none');  
+    $('.etapa-negociacao').removeClass('d-none'); 
+    $(".etapa-consulta").addClass("d-none"); 
+});
+
+$(".e-aceita-direto").click(function(){    
+    $('.bread-aceitar-proposta-direto').removeClass('d-none');       
+    $(".etapa-aceitar-proposta").removeClass("d-none");
+    $('.etapa-negociacao').removeClass('d-none');   
+    $(".etapa-consulta").addClass("d-none"); 
+});
+
+$(".e-recusa-direto").click(function(){    
+    $(".bread-recusar-proposta-direto").removeClass("d-none"); 
+    $(".etapa-consulta").addClass("d-none"); 
+    $(".etapa-recusar-proposta").removeClass("d-none"); 
+    $('.etapa-negociacao').removeClass('d-none');   
+});
+// FIM Tela Tabelas
+// FIM Acompanhar Itens Em Negociação
+
+// script interações itens
+$(".busca-tipo-itens").click(function(){
+    $('.busca-tipo-itens-table').toggleClass('d-block')
+    $('.incluir-tipo-itens').toggleClass('d-none')
+});
+
+$(".incluir-tipo-itens").click(function(){
+    $('.busca-tipo-itens-table').addClass('d-none')
+    $('.incluir-tipo-itens').addClass('d-none')
+    $('.busca-tipo-itens-table').removeClass('d-block')
+});
+
+$(".busca-tipo-fabricante").click(function(){
+    $('.resultado-tipo-fabricante').removeClass('d-none')    
+});
+// fim script interações itens
+
 // script Toggle
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {

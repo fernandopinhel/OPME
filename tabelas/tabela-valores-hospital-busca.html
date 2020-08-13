@@ -97,13 +97,13 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon tabela-de-valores mr-4"></i>
                                     <span class="item-menu">Tabela de Valores Hospital</span>                                    
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon tabela-de-valores mr-4"></i>
                                     <span class="item-menu">Tabela de Valores Fornecedor</span>
@@ -269,7 +269,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="title-page">
-                                        <h1>Tabela de Valores Fornecedor</h1>
+                                        <h1>Tabela de Valores Hospital</h1>
                                     </div>                                    
                                 </div>
                                 <div class="col-lg-6">
@@ -279,7 +279,7 @@
                                 </div>
                                 <div class="col-lg-12 mt-3">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="tabela-valores-fornecedor.html"> <i class="icon-seta-esquerda-a"></i> Buscar Fornecedor</a></li>                                  
+                                        <li class="breadcrumb-item"><a href="tabela-valores-hospital.html"> <i class="icon-seta-esquerda-a"></i> Buscar Hospital</a></li>                                  
                                     </ol>
                                 </div>
                             </div>
@@ -308,7 +308,7 @@
                                             <p>CNPJ: <span>01.023.652/0001-13</span></p>
                                         </div>
                                         <div class="col-lg-6">
-                                            <p>Fornecedor: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
+                                            <p>Hospital: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
                                         </div>
                                         <div class="col-lg-4">
                                             <p>Status: <span>ATIVO</span></p>
@@ -375,7 +375,7 @@
                                             <div class="form">
                                                 <input type="text" name="ref-item-fabricante" autocomplete="off" >
                                                 <label for="ref-item-fabricante" class="label-name">
-                                                    <span class="content-name">Cód. Item Fornecedor</span>  
+                                                    <span class="content-name">Cód. Item Hospital</span>  
                                                 </label>
                                             </div>
                                         </div>
@@ -412,25 +412,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="container-fluid">
-                                                <div class="row my-auto">
-                                                    <div class="col-sm-5 col-lg-6 pl-0">
-                                                        <p>Tabela de Valores</p>
-                                                    </div>
-                                                    <div class="col-sm-7 col-lg-6 pr-0">        
-                                                        <div class="lotes suspender">
-                                                            <a href="#" class="float-right btn-itens  mr-2" data-toggle="modal" data-target="#modal-suspender">
-                                                                <span>Suspender Itens Selecionados</span>
-                                                            </a>
-                                                        </div>  
-                                                        <div class="lotes reativar">
-                                                            <a href="#" class="float-right btn-itens mr-2" data-toggle="modal" data-target="#modal-reativar">                                                                
-                                                                <span>Reativar Itens Selecionados</span>
-                                                            </a>
-                                                        </div>                                          
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                             <div class="table-responsive mt-3">
                                                 <table class="table">
                                                     <thead>
@@ -445,7 +426,7 @@
                                                             <th>Nome do Item</th>
                                                             <th>Ref. Fabricante</th>
                                                             <th>Nome do Fabricante</th>
-                                                            <th>Cód. Item Fornecedor</th>
+                                                            <th>Cód. Item Hospital</th>
                                                             <th>Último Valor Aprovado</th>
                                                             <th>Data Início Vigência</th>
                                                             <th>Data Fim Vigência</th>                                              
@@ -627,7 +608,7 @@
                                             <p>CNPJ: <span>01.023.652/0001-13</span></p>
                                         </div>
                                         <div class="col-lg-6">
-                                            <p>Fornecedor: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
+                                            <p>Hospital: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
                                         </div>
                                         <div class="col-lg-4">
                                             <p>Status: <span>ATIVO</span></p>
@@ -897,7 +878,7 @@
                                             <p>CNPJ: <span>01.023.652/0001-13</span></p>
                                         </div>
                                         <div class="col-lg-6">
-                                            <p>Fornecedor: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
+                                            <p>Hospital: <span>MEDSERVIÇOS DE IMPORTAÇÕES DE MATERIAL HOSPITALAR LTDA</span></p>
                                         </div>
                                         <div class="col-lg-4">
                                             <p>Status: <span>ATIVO</span></p>
@@ -1013,7 +994,7 @@
                                             <div class="form">
                                                 <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Fornecedor</span>
+                                                    <span class="content-name">Ref. Hospital</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -1075,12 +1056,12 @@
                                         </div>
                                         <div class="col-lg-6 mb-4">
                                             <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Fornecedor: <b>HEART LINE COMÉRCIO DE MATERIAL</b></p>
+                                                <p class="color-blue m-0 my-auto">Hospital: <b>HEART LINE COMÉRCIO DE MATERIAL</b></p>
                                             </div>                                            
                                         </div>
                                         <div class="col-lg-3 mb-4">
                                             <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Ref. Fornecedor: <b>HQ-15</b></p>
+                                                <p class="color-blue m-0 my-auto">Ref. Hospital: <b>HQ-15</b></p>
                                             </div>                                            
                                         </div>
                                         <div class="col-lg-3 mb-4">
@@ -1190,26 +1171,9 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    </td>
-                                                    <!-- <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes c-negociacao" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes r-proposta" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td> -->
+                                                    </td>                                                  
                                                     <td>00036 - HEART LINE COMÉRCIO DE MATERIAL</td>
-                                                    <td>FORNECEDOR</td>
+                                                    <td>Hospital</td>
                                                     <td>HQ-15</td>
                                                     <td>012452 - BIOMETRIX</td>
                                                     <td>12511</td>
@@ -1249,7 +1213,7 @@
                                                     </div>
                                                     </td>
                                                     <td>00060 - VASCULINE COMÉRCIO DE MATERIAIS</td>
-                                                    <td>FORNECEDOR</td>
+                                                    <td>Hospital</td>
                                                     <td>12465666</td>
                                                     <td>023542 - CORDIS</td>
                                                     <td>21544233</td>

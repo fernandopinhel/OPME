@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="../css/estilo.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
-        <!-- estilo select(combo-box) -->
-        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- estilo select(combo-box)
+        <link rel="stylesheet" href="../css/nice-select.css"> -->
     </head>
 
     <body>
@@ -34,64 +34,77 @@
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="msg">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
-                                    <span class="item-menu">Mensagens</span>
+                                    <span class="ml-1 item-menu">Mensagens</span>
+                                    <span class="mensagem"><span class="quant-msg">8</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
                                     <span class="seta-accordion"></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ranking</a>
+                                        <a href="/relatorios/ranking.html">Ranking</a>
                                     </li>
                                     <li>
-                                        <a href="#">Economia por Negociação</a>
+                                        <a href="/relatorios/economia-por-negociacao.html">Economia por Negociação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Log de Auditoria</a>
+                                        <a href="/relatorios/log-de-auditoria.html">Log de Auditoria</a>
                                     </li>
                                     <li>
-                                        <a href="#">Produtividade por Analista</a>
+                                        <a href="/relatorios/produtividade-por-analista.html">Produtividade por Analista</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ordem Fornecedor</a>
+                                        <a href="/relatorios/ordem-fornecedor.html">Ordem Fornecedor</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#referenciadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse list-unstyled list-style-2 list-subs" id="referenciadosSubmenu">
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                </a>
                             </li>
                             <li class="active">
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
@@ -101,10 +114,10 @@
                                 </a>
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li class="sub-active">
-                                        <a href="marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -112,13 +125,31 @@
                                 <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-compras mr-4"></i>
                                     <span class="item-menu">Fornecedor</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
+                                    <li>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
+                                    <li>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li><!-- fim painel -->
@@ -132,16 +163,34 @@
                                 <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon unidade-de-medida mr-4"></i>
                                     <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-pasta mr-4"></i>
                                     <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#usuariosSubmenu" onclick="window.location.href='/usuarios/usuarios.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
                                 </a>
@@ -149,15 +198,23 @@
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
-                                    <span class="item-menu">Telas</span>                                    
+                                    <span class="item-menu">Telas</span>
+                                    <span class="seta-accordion"></span>                               
                                 </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li><!-- fim configuracoes -->
                 </ul>                
             </nav>
             <!-- fim sidebar -->
-
             <!-- conteudo pagina -->
             <div class="content" id="cadastro-marcas-e-fabricantes">
                 <nav class="navbar navbar-expand-lg">
@@ -215,11 +272,11 @@
                             <div class="row">                            
                                 <div class="col-lg-3">
                                     <p class="p-select">Procedência</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">Nacional</option>
                                         <option value="2">Importado</option>                                        
-                                    </select>
+                                    </select>             
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form">
@@ -231,11 +288,11 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <p class="p-select">Status</p>
-                                    <select class="wide">
+                                    <select class="form-control h-35">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">Ativo</option>
                                         <option value="2">Inativo</option>                                        
-                                    </select>
+                                    </select>             
                                 </div>
                             </div>
                             <div class="row mt-2">
@@ -298,8 +355,8 @@
         <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="../js/jquery.mask.min.js"></script>
-        <!-- script select(combo-box) -->
-        <script src="../js/jquery.nice-select.js"></script>
+        <!-- script select(combo-box)
+        <script src="../js/jquery.nice-select.js"></script> -->
         <!-- scripts -->
         <script src="../js/script.js"></script>
     </body>

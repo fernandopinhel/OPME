@@ -34,48 +34,48 @@
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
                                     <span class="ml-1 item-menu">Mensagens</span>
                                     <span class="mensagem"><span class="quant-msg">8</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
                                     <span class="seta-accordion"></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ranking</a>
+                                        <a href="/relatorios/ranking.html">Ranking</a>
                                     </li>
                                     <li>
-                                        <a href="#">Economia por Negociação</a>
+                                        <a href="/relatorios/economia-por-negociacao.html">Economia por Negociação</a>
                                     </li>
                                     <li>
-                                        <a href="#">Log de Auditoria</a>
+                                        <a href="/relatorios/log-de-auditoria.html">Log de Auditoria</a>
                                     </li>
                                     <li>
-                                        <a href="#">Produtividade por Analista</a>
+                                        <a href="/relatorios/produtividade-por-analista.html">Produtividade por Analista</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ordem Fornecedor</a>
+                                        <a href="/relatorios/ordem-fornecedor.html">Ordem Fornecedor</a>
                                     </li>
                                 </ul>
                             </li>
@@ -87,12 +87,24 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                </a>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -102,10 +114,25 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-resgate mr-4"></i>
+                                    <span class="item-menu">Solicitação/Compra</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -117,10 +144,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -132,10 +159,10 @@
                                 </a>
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li class="sub-active">
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -155,10 +182,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -170,15 +197,15 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#usuariosSubmenu" onclick="window.location.href='/usuarios/usuarios.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
                                 </a>
@@ -191,10 +218,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -306,7 +333,7 @@
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
+                                    <button type="button" name="button" class="btn btn-buscar">Buscar</button>                                    
                                 </div>
                             </div>
                         </div>
@@ -347,7 +374,7 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>
@@ -372,7 +399,7 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>
@@ -397,7 +424,7 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>
@@ -422,7 +449,7 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>
@@ -447,7 +474,7 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>

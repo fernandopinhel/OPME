@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="../css/bootstrap4-toggle.min.css">
         <!-- datepicker -->
         <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+        <!-- font awesome componentes -->
+        <link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -38,26 +40,26 @@
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
                             <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
                                     <span class="ml-1 item-menu">Mensagens</span>
                                     <span class="mensagem"><span class="quant-msg">8</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
                                     <span class="seta-accordion"></span>
@@ -91,22 +93,22 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="tabelas/tabela-valores-hospital.html" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-info-premio-individual mr-4"></i>
+                            <li class="active">
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
                                     <span class="item-menu">Tabela de Valores Hospital</span>                                    
                                 </a>
                             </li>
                             <li>
-                                <a href="tabelas/abela-valores-fornecedor.html" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon icon-info-premio-item mr-4"></i>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon tabela-de-valores mr-4"></i>
                                     <span class="item-menu">Tabela de Valores Fornecedor</span>
                                 </a>
                             </li>
@@ -118,10 +120,25 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-resgate mr-4"></i>
+                                    <span class="item-menu">Solicitação/Compra</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -133,25 +150,25 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="active">
-                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                            <li>
+                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
                                     <span class="seta-accordion"></span>
                                 </a>
-                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="itensSubmenu">
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
-                                    <li class="sub-active">
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                    <li>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -171,10 +188,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -186,10 +203,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -207,10 +224,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -252,1520 +269,37 @@
                 <form action="">
                     <div class="container-fluid">
                         <div class="bg-blank mb-5">
-                            <div class="row mb-5">
+                            <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <div class="title-page">
-                                        <h1>Cadastro Itens</h1>
+                                        <h1>Tabela de valores Hospital</h1>
                                     </div>
+                                </div>                               
+                            </div> 
+                            <div class="row mt-5">
+                                <div class="col-lg-4">                                    
+                                    <div class="form">
+                                        <input type="text" value="" name="cnpj-hospital" onkeypress="$(this).mask('00.000.000/0000-00');" autocomplete="off" >
+                                        <label for="cnpj-hospital" class="label-name">
+                                            <span class="content-name">CNPJ do Hospital</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-8">                                    
+                                    <div class="form">
+                                        <input type="text" value="" name="nome-hospital" autocomplete="off">
+                                        <label for="nome-hospital" class="label-name">
+                                            <span class="content-name">Nome do Hospital</span>
+                                        </label>
+                                    </div>                      
                                 </div>
                             </div>
-                            <!-- nav tabs -->
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#caracteristicas">Características</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#especialidades">Especialidades</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#procedimentos">Procedimentos</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#fabricantes">Fabricantes</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#fornecedores">Fornecedores</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#cadastrar-cotacao">Cadastrar Cotação</a>
-                                </li> -->
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#consultar-renegociar-cotacao">Consultar/Renegociar Cotação</a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#valores-tabelados-deste-item">Valores tabelados deste Item</a>
-                                </li>
-                            </ul>
-                            <!-- fim nav tabs -->
-                            <!-- tab panes -->
-                            <div class="tab-content mt-5">
-                                <!-- caracteristicas -->
-                                <div class="tab-pane container-fluid active" id="caracteristicas">
-                                    <div class="row">
-                                        <div class="col-lg-2">
-                                            <div class="form">
-                                                <input type="text" name="id-01" value="001" disabled="disabled" autocomplete="off" class="used">
-                                                <label for="id-01" class="label-name">
-                                                    <span class="content-name">ID</span>
-                                                </label>
-                                            </div>
-                                        </div>   
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-provisorio" class="label-name">
-                                                    <span class="content-name"><span class="obrigatorio">*</span>Código Provisório</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-tuss" class="label-name">
-                                                    <span class="content-name">Código TUSS</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <p class="p-select">Status</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Ativo</option>
-                                                <option value="2">Inativo</option>                                        
-                                            </select>
-                                        </div>         
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="item" autocomplete="off" >
-                                                <label for="item" class="label-name">
-                                                    <span class="content-name"><span class="obrigatorio">*</span>Item</span>
-                                                </label>
-                                            </div>         
-                                        </div>
-                                        <div class="col-lg-3 mt-4">                                    
-                                            <p class="p-select">Grupo</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">OPME</option>
-                                            </select>                                                             
-                                        </div>
-                                        <div class="col-lg-3 mt-4">                                    
-                                            <p class="p-select">Sub-Grupo</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">OPME</option>
-                                            </select>                                                             
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 mt-5">                                    
-                                            <p class="p-select">Unidade de Negócio</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Bradesco</option>
-                                                <option value="2">Mediservice</option>
-                                            </select>                                                             
-                                        </div>
-                                        <div class="col-lg-4 mt-5">                                    
-                                            <p class="p-select">Unidade de Medida para Compras</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">UND</option>
-                                                <option value="2">CX</option>
-                                                <option value="3">PCT</option>
-                                                <option value="4">ENV</option>
-                                                <option value="5">DZ</option>
-                                                <option value="6">ROL</option>
-                                            </select>                                                            
-                                        </div>
-                                        <div class="col-lg-4 mt-5">                                    
-                                            <p class="p-select">Unidade de Medida para Consulta</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">UND</option>
-                                                <option value="2">CX</option>
-                                                <option value="3">PCT</option>
-                                                <option value="4">ENV</option>
-                                                <option value="5">DZ</option>
-                                                <option value="6">ROL</option>
-                                            </select>                                                             
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 mt-5">                                    
-                                            <p class="p-select">Origem</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Nacional</option>
-                                                <option value="2">Importado</option>
-                                            </select>                                                             
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <p class="p-select">Status</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Ativo</option>
-                                                <option value="2">Inativo</option>                                        
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Inspeção</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group1"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="radio_two" name="radio_group1"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Avaliação</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group2"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="radio_two" name="radio_group2"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Crítico</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="radio_one" name="radio_group3"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="radio_two" name="radio_group3"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Reutilizavel</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="reutilizavel-sim" name="radio_group6"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="reutilizavel-nao" name="radio_group6"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 mt-5 mr-5 n-reutilizavel d-none">
-                                            <div class="form">
-                                                <input type="text" name="item" autocomplete="off" >
-                                                <label for="item" class="label-name">
-                                                    <span class="content-name">Nº de vezes para Reutilização</span>
-                                                </label>
-                                            </div>                               
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Reesterilização</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="rees-sim" name="radio_group7"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="rees-nao" name="radio_group7"/>
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2 mb-4">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title mt-4">
-                                                <h6>Fabricante</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="alert alert-danger mb-3" id="msg-input-error" role="alert">
-                                        <div class="container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <img src="../img/alert-error.svg" width="23" class="float-left">
-                                                    <p><span class="mr-2">O Item encontra-se fora da validade.</span></p>
-                                                </div>
-                                                <div class="col-2">
-                                                    <button type="button" class="btn btn-close close-error">
-                                                        <img src="../img/close.svg">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod-fabricante" value="002000" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off">
-                                                <label for="cod-fabricante" class="label-name">
-                                                    <span class="content-name">Código do Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form">
-                                                <input type="text" name="nome-fabricante" value="BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="nome-fabricante" class="label-name">
-                                                    <span class="content-name">Nome do Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3">Buscar</button>
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input type="text" name="ref-item-fabricante" value="123452" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="ref-item-fabricante" class="label-name">
-                                                    <span class="content-name">Ref. Item do Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input type="text" name="anvisa" value="102010201000" class="used" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="anvisa" class="label-name">
-                                                    <span class="content-name">Anvisa</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input class="form-control form_date input-date used" size="16" type="text" value="07/06/2020" maxlength="10" name="validade-anvisa" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                                <label for="validade-anvisa" class="label-name">
-                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                    <span>Validade Anvisa</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5">
-                                        <div class="col-lg-12 mt-5">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Salvar</button>
-                                        </div>
-                                    </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="reset"  value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="button" name="button" class="btn btn-buscar" onclick="window.location.href='tabela-valores-hospital-busca.html'">Buscar</button>                                    
                                 </div>
-                                <!-- fim caracteristicas -->
-                                <!-- especialidades -->
-                                <div class="tab-pane container-fluid fade" id="especialidades">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome da Especialidade</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th>Status</th>
-                                                    <th>Código</th>
-                                                    <th>Nome da Especialidade</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
-                                                        <td>Ortopedia</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">01242</td>
-                                                        <td>Bucomaxilo</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- fim especialidades -->
-                                <!-- procedimentos -->
-                                <div class="tab-pane container-fluid fade" id="procedimentos">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Nome do Procedimento</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th>Status</th>
-                                                    <th>Código</th>
-                                                    <th>Nome do Procedimento</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
-                                                        <td>Excisão de Pequenas lesões dérmicas</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">01242</td>
-                                                        <td>Excisão de Granuloma de corpo estranho</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- fim procedimentos -->
-                                <!-- fabricantes -->
-                                <!-- <div class="tab-pane container-fluid fade" id="fabricantes">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Nome do Procedimento</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Ref. Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Anvisa</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th>Status</th>
-                                                    <th>Código</th>
-                                                    <th>Nome do Procedimento</th>
-                                                    <th>Ref. Fabricante</th>
-                                                    <th>Anvisa</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
-                                                        <td class="por-20">Excisão de Pequenas lesões dérmicas</td>
-                                                        <td class="por-15">Ref. Fabricante</td>
-                                                        <td>Anvisa</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">01242</td>
-                                                        <td class="por-20">Excisão de Granuloma de corpo estranho</td>
-                                                        <td class="por-15">Ref. Fabricante</td>
-                                                        <td>Anvisa</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                                <!-- fim fabricantes -->
-                                <!-- fornecedores -->
-                                <div class="tab-pane container-fluid fade" id="fornecedores">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Nome do Fornecedor</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th>Status</th>
-                                                    <th>Código</th>
-                                                    <th>Nome do Fornecedor</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">002000</td>
-                                                        <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">01242</td>
-                                                        <td>TECNOINDUSTRI MATERIAIS HOSPITALARES</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- fim fornecedores -->
-                                <!-- cadastrar cotacao -->
-                                <!-- <div class="tab-pane container-fluid fade" id="cadastrar-cotacao">
-                                    <div class="row">
-                                        <div class="col-lg-3 mt-2">
-                                            <p class="p-select">Negociado com:</p>
-                                            <select class="form-control h-35" id="opcoes">
-                                                <option data-display="Selecione"></option>
-                                                <option value="s-fornecedor">Fornecedor</option>
-                                                <option value="s-hospital-clinica">Hospital/Clínica</option>
-                                                <option value="s-fabricantes">Fabricantes</option>                                     
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <section class="sessao-fornecedor sel" id="s-fornecedor">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="cod" class="label-name">
-                                                        <span class="content-name">Código do Fornecedor</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="nome-fornecedor" autocomplete="off" >
-                                                    <label for="nome-fornecedor" class="label-name">
-                                                        <span class="content-name">Nome do Fornecedor</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4 sub-title">                                            
-                                            <div class="col-lg-2"><p>Código: 1234</p></div>
-                                            <div class="col-lg-4"><p>Fornecedor: HEART MATERIAL HOSPITALAR</p></div>                                            
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="ref-fornecedor" autocomplete="off" >
-                                                    <label for="ref-fornecedor" class="label-name">
-                                                        <span class="content-name">Ref. Fornecedor</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Fabricante</p>
-                                                <select class="wide">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Brotec</option>
-                                                    <option value="2">Fabrimedi</option>                                        
-                                                    <option value="2">Interfabri</option>                                        
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="ref-fabricante" autocomplete="off" >
-                                                    <label for="ref-fabricante" class="label-name">
-                                                        <span class="content-name">Ref. Fabricante</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="anvisa" autocomplete="off" >
-                                                    <label for="anvisa" class="label-name">
-                                                        <span class="content-name">Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valid-anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
-                                                    <label for="valid-anvisa" class="label-name">
-                                                        <span class="content-name">Validade Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-inicial" class="label-name">
-                                                        <span class="content-name">Valor Inicial</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Inicial</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-final" class="label-name">
-                                                        <span class="content-name">Valor final</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Final</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row btns-opcoes mt-4">
-                                            <div class="col-lg-12">
-                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <section class="sessao-hospital-clinica sel" id="s-hospital-clinica">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="cod" class="label-name">
-                                                        <span class="content-name">Código do Hospital/Clínica</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="nome-hospital" autocomplete="off" >
-                                                    <label for="nome-hospital" class="label-name">
-                                                        <span class="content-name">Nome do Hospital/Clínica</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4 sub-title">                                            
-                                            <div class="col-lg-2"><p>Código: 1234</p></div>
-                                            <div class="col-lg-4"><p>Hospital/Clínica: HEART MATERIAL HOSPITALAR</p></div>                                            
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="ref-fornecedor" autocomplete="off" >
-                                                    <label for="ref-fornecedor" class="label-name">
-                                                        <span class="content-name">Ref. Hospital/Clínica</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Hospital/Clínica</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Brotec</option>
-                                                    <option value="2">Fabrimedi</option>                                        
-                                                    <option value="2">Interfabri</option>                                        
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="ref-fabricante" autocomplete="off" >
-                                                    <label for="ref-fabricante" class="label-name">
-                                                        <span class="content-name">Ref. Hospital/Clínica</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="anvisa" autocomplete="off" >
-                                                    <label for="anvisa" class="label-name">
-                                                        <span class="content-name">Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valid-anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
-                                                    <label for="valid-anvisa" class="label-name">
-                                                        <span class="content-name">Validade Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-inicial" class="label-name">
-                                                        <span class="content-name">Valor Inicial</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Inicial</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-final" class="label-name">
-                                                        <span class="content-name">Valor final</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Final</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row btns-opcoes mt-4">
-                                            <div class="col-lg-12">
-                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <section class="sessao-fabricantes sel" id="s-fabricantes">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="cod" class="label-name">
-                                                        <span class="content-name">Código do Fabricante</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="nome-fabricante" autocomplete="off" >
-                                                    <label for="nome-fabricante" class="label-name">
-                                                        <span class="content-name">Nome do Fabricante</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4 sub-title">                                            
-                                            <div class="col-lg-2"><p>Código: 1234</p></div>
-                                            <div class="col-lg-4"><p>Fabricante: HEART MATERIAL HOSPITALAR</p></div>                                            
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="ref-fabricante" autocomplete="off" >
-                                                    <label for="ref-fornecedor" class="label-name">
-                                                        <span class="content-name">Ref. Fabricante</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Fabricante</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Brotec</option>
-                                                    <option value="2">Fabrimedi</option>                                        
-                                                    <option value="2">Interfabri</option>                                        
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="anvisa" autocomplete="off" >
-                                                    <label for="anvisa" class="label-name">
-                                                        <span class="content-name">Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-4">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valid-anvisa" onkeypress="$(this).mask('00/00/0000');" autocomplete="off" >
-                                                    <label for="valid-anvisa" class="label-name">
-                                                        <span class="content-name">Validade Anvisa</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-inicial" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-inicial" class="label-name">
-                                                        <span class="content-name">Valor Inicial</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Inicial</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-5">
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-final" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                    <label for="valor-final" class="label-name">
-                                                        <span class="content-name">Valor final</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Responsável pelo Valor Final</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Bradesco</option>
-                                                    <option value="2">Fornecedor</option>                                                                                            
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row btns-opcoes mt-4">
-                                            <div class="col-lg-12">
-                                                <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                                <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-hospitais-clinicas'">Salvar</button>
-                                            </div>
-                                        </div>
-                                    </section>                                                                        
-                                </div> -->
-                                <!-- fim cadastrar cotacao -->
-                                <!-- consultar renegociar cotacao -->
-                                <!-- <div class="tab-pane container-fluid fade" id="consultar-renegociar-cotacao">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome do Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Fabricante</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Anvisa</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-5">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Fornecedor</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome do Fornecedor</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Fornecedor</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <p class="p-select">Ordenar Valor</p>
-                                            <select class="form-control h-35">
-                                                <option value="1" data-display="Sem Ordenação">Sem Ordenação</option>
-                                                <option value="2">Menor Valor</option>
-                                                <option value="3">Maior Valor</option>
-                                                <option value="4">Selecione</option>                                  
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Ref. Hospital</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 d-flex">
-                                            <div class="form w-50">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Faixa de valor</span>
-                                                </label>
-                                            </div>
-                                            <div class="w-space"></div>
-                                            <div class="form w-50">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Até</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5">
-                                        <div class="col-lg-12">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="submit" name="button" class="btn btn-buscar">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-5">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                            <thead>
-                                                <tr>
-                                                <th></th>
-                                                <th>Fornecedor/Hospital</th>
-                                                <th>Tipo</th>
-                                                <th>Ref. Fornecedor/Hospital</th>                                                                        
-                                                <th>Fabricante</th>
-                                                <th>Ref. Fabricante</th>
-                                                <th>Anvisa</th>
-                                                <th>Valor Negociado</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="itens-recusar-proposta-negociacao.html">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00036 - HEART LINE COMÉRCIO DE MATERIAL</td>
-                                                    <td>FORNECEDOR</td>
-                                                    <td>HQ-15</td>
-                                                    <td>012452 - BIOMETRIX</td>
-                                                    <td>12511</td>
-                                                    <td>1231221301</td>
-                                                    <td>R$ 1.150,00</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="itens-recusar-proposta-negociacao.html">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00060 - VASCULINE COMÉRCIO DE MATERIAIS</td>
-                                                    <td>FORNECEDOR</td>
-                                                    <td>12465666</td>
-                                                    <td>023542 - CORDIS</td>
-                                                    <td>21544233</td>
-                                                    <td>2500002100</td>
-                                                    <td>R$ 950,00</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="itens-recusar-proposta-negociacao.html">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00120 - HOSPITAL SÃO JOSÉ</td>
-                                                    <td>REFERENCIADO</td>
-                                                    <td>GKP-23F</td>
-                                                    <td>02000 - BIOMETRIX</td>
-                                                    <td>12511</td>
-                                                    <td>523022202</td>
-                                                    <td>R$ 1005,20</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="itens-recusar-proposta-negociacao.html">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00121 - HOSPITAL NOSSA SENHORA DE FÁTIMA</td>
-                                                    <td>REFERENCIADO</td>
-                                                    <td>3928033</td>
-                                                    <td>02001 - BIOMEDICINE FABR. MATERIAL HOSP.</td>
-                                                    <td>AB-2322</td>
-                                                    <td>15210000100</td>
-                                                    <td>R$ 1022,32</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions ac-2">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                        </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="itens-consulta-negociacao.html">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Consultar Negociação">
-                                                            </a>
-                                                            <a href="itens-recusar-proposta-negociacao.html">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                            </a>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>00130 - MEDICE COMÉRCIO DE MATERIAL HOSP.</td>
-                                                    <td>FORNECEDOR</td>
-                                                    <td>1235123</td>
-                                                    <td>01520 - LABINDUS INDUSTRIAL DE MATERIAL HOSP.</td>
-                                                    <td>GHI5253</td>
-                                                    <td>120111110</td>
-                                                    <td>R$ 1253,00</td>
-                                                </tr>
-                                                <tr class="separator">
-                                                    <td colspan="5"></td>
-                                                </tr>
-                                            </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                                <!-- fim consultar renegociar cotacao -->
-                                <!-- valores tabelados deste item -->
-                                <div class="tab-pane container-fluid fade" id="valores-tabelados-deste-item">
-                                    <div class="sub-title mb-2 bg-green">
-                                        <p>02111 - Agulha de Punção</p>                                 
-                                    </div>
-                                    <div class="row consulta-negociacao">
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Código do Fabricante: <span>020200</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Nome do Fabricante: <span>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Ref. Item do Fabricante: <span>HR-12500</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Anvisa: <span>123452</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Validade Anvisa: <span>07/06/2020</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>Código Provisório: <span>12345555</span></p>
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <p>TUSS: <span>1211111111</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-4"><hr></div>
-                                        <div class="col-lg-2 mt-3">
-                                            <div class="ex-checkbox m-0" data-toggle="tooltip">
-                                                <input type="checkbox" id="checkbox_one"/>
-                                                <label for="checkbox_one" class="check-estilo f-13">Tabelado por Fornecedores</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-3">
-                                            <div class="ex-checkbox m-0" data-toggle="tooltip">
-                                                <input type="checkbox" id="checkbox_one"/>
-                                                <label for="checkbox_one" class="check-estilo f-13">Tabelado por Hospitais/Clínicas</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-3">
-                                            <div class="ex-checkbox m-0" data-toggle="tooltip">
-                                                <input type="checkbox" id="checkbox_one"/>
-                                                <label for="checkbox_one" class="check-estilo f-13">Valores vigentes</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-3">
-                                            <div class="ex-checkbox m-0" data-toggle="tooltip">
-                                                <input type="checkbox" id="checkbox_one"/>
-                                                <label for="checkbox_one" class="check-estilo f-13">Ordenar pelo valor mais baixo</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-3">
-                                            <div class="ex-checkbox m-0" data-toggle="tooltip">
-                                                <input type="checkbox" id="checkbox_one"/>
-                                                <label for="checkbox_one" class="check-estilo f-13">Ordenar pelo valor mais alto</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar">Filtrar</button>
-                                        </div>
-                                    </div>     
-                                    <div class="alert alert-danger mt-4" id="msg-input-error" role="alert">
-                                        <div class="container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <img src="../img/alert-error.svg" width="23" class="float-left">
-                                                    <p><span class="mr-2">Este Item não consta em nenhuma tabela de valores!</span></p>
-                                                </div>
-                                                <div class="col-2">
-                                                    <button type="button" class="btn btn-close close-error">
-                                                        <img src="../img/close.svg">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>     
-                                    <div id="box-lista-subs" class="mt-2">
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Tipo</th>
-                                                        <th>Empresa</th>
-                                                        <th>Status da Empresa</th>
-                                                        <th>Ref. do Item na Empresa</th>
-                                                        <th>Valor da Tabela</th>
-                                                        <th>Validade da Tabela</th>
-                                                        <th>Status do Item na Tabela</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Fornecedor</td>
-                                                        <td>BIOINDUSTRIA DE DISTRIBUIÇÃO DE MEDICAMENTOS</td>
-                                                        <td>Ativa</td>
-                                                        <td>25123</td>
-                                                        <td>R$ 350,00</td>
-                                                        <td>30/12/2020</td>
-                                                        <td>Ativo</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Fornecedor</td>
-                                                        <td>BIOINDUSTRIA DE DISTRIBUIÇÃO DE MEDICAMENTOS</td>
-                                                        <td>Ativa</td>
-                                                        <td>25123</td>
-                                                        <td>R$ 350,00</td>
-                                                        <td>30/12/2020</td>
-                                                        <td>Ativo</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" class="prev">
-                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                            <a href="#" class="prev">
-                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li><a href="#" class="active">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                            <a href="#" class="next">
-                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title">
-                                                <div class="row d-flex">
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de Empresas: <b>2</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Valor mais baixo da Tabela: <b>R$ 350,00</b></p>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title">
-                                                            <p>Valor mais alto da Tabela: <b>R$ 420,00 </b></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- fim valores tabelados deste item -->
                             </div>
-                            <!-- fim tab panes -->
                         </div>
                     </div>
                 </form>

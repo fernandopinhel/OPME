@@ -97,6 +97,95 @@ a {
 .color-blue{color: $color-blue !important;}
 
 // botoes 
+
+.actions-table{
+    border: 1px solid;    
+    border-radius: 7px;
+    text-align: center;
+    color: $bg-medium;
+    font-weight: 500;    
+    transition: $transition;
+    float: right;
+}
+
+.actions-table:hover{
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    background: $bg-dark;
+    font-weight: 500;    
+    transition: $transition;
+    cursor: pointer;
+}   
+
+.actions-table > button span{text-transform: uppercase;}
+
+.actions-table:hover > button{color: #fff;}
+
+.actions-table button .options{float: right;}
+
+.actions-table button .options span{
+    background: $bg-dark;
+    width: 4px;
+    height: 4px;
+    margin-top: 3px;
+    display: block;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: $transition;
+}
+
+.actions-table:hover button .options span{background: #fff;}
+
+.actions-table .dropdown-menu{
+    padding: 10px !important;
+    background: #F6F7FB;
+    transform: translate3d(-158px, 31px, 0px) !important;
+    border-color: $bg-dark;
+    top:10px !important;
+    left: -16px !important;     
+}
+
+.actions-table .dropdown-menu > span > a{color: $bg-dark;}
+
+.actions-table .dropdown-menu > span:hover > a{    
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
+.actions-table .dropdown-menu > span:active > a{
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
+.actions-table .dropdown-menu > span:visited > a{
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
+
+.actions-table .dropdown-menu > span:hover{    
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
+.actions-table .dropdown-menu > span:active{
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
+.actions-table .dropdown-menu > span:visited{
+    color: $bg-active;
+    transition: $transition;
+    background: transparent;
+}
+
 .lotes .btn-itens > span{    
     border: 1px solid;
     padding: 5px 10px;
@@ -106,51 +195,6 @@ a {
     font-weight: 500;    
     transition: $transition;
 }
-
-.reativar:hover .btn-itens > span{    
-    border: 1px solid;
-    padding: 5px 10px;
-    border-radius: 7px;
-    text-align: center;    
-    color: #fff;
-    background: $color-green;
-    font-weight: 500;    
-    transition: $transition;
-}
-
-.suspender:hover .btn-itens > span{    
-    border: 1px solid;
-    padding: 5px 10px;
-    border-radius: 7px;
-    text-align: center;
-    color: #fff;
-    background: $bg-active;
-    font-weight: 500;    
-    transition: $transition;
-}
-
-// .reativar-lote:hover .btn-itens:first-child{    
-//     opacity: 1;
-//     transition: $transition;
-// }
-
-// .reativar-lote .btn-itens:first-child{    
-//     color: $bg-medium;
-//     font-weight: 500;    
-//     opacity: 0.8;
-//     transition: $transition;
-// }
-
-// .suspender-lote:hover .btn-itens:last-child{   
-//     opacity: 1;
-//     transition: $transition;   
-// }
-
-// .suspender-lote .btn-itens:last-child{    
-//     opacity: 0.8;
-//     color: $bg-medium;
-//     font-weight: 500;
-// }
 
 .btn-itens > i{    
     position: relative;
@@ -419,8 +463,7 @@ button:hover:disabled {
 .modal-title{font-size: 16px;}
 
 .modal-body > p{
-    color: $bg-active;
-    font-weight: 600;
+    color: $bg-active;      
     margin: 0;
 }
 
@@ -1835,6 +1878,7 @@ table {background-color: none;}
     border: none;
 }
 
+.por-5{width: 5% !important;}
 .por-8{width: 8% !important;}
 .por-10{width: 10% !important;}
 .por-15{width: 15% !important;}
@@ -2274,7 +2318,7 @@ tr:hover td.a-2 .menu-invisible {
 }
 
 
-/* MODIFICA��ES DO TABLE */
+/* MODIFICAÇÕES DO TABLE */
 
 .paginate_button{
 	/*
