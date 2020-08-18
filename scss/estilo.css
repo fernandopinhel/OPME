@@ -987,8 +987,21 @@ td > .toggle {
   background: transparent;
 }
 
+.w-234 {
+  width: 234px !important;
+}
+
 .txt-up {
   text-transform: uppercase;
+}
+
+.modal-1000 {
+  max-width: 1000px !important;
+}
+
+.icon-incluir {
+  font-weight: 600 !important;
+  font-size: 15px !important;
 }
 
 .consulta-negociacao, .consulta-itens-selecionados {

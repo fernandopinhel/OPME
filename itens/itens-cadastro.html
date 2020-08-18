@@ -561,7 +561,7 @@
                                         </div>
                                         <div class="col-lg-4 mt-5 resultado-tipo-fabricante d-none">
                                             <div class="form">
-                                                <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="validade-anvisa" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="validade-anvisa" onkeypress="mascaraData(this, event)" autocomplete="off">
                                                 <label for="validade-anvisa" class="label-name">
                                                     <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                                     <span>Validade Anvisa</span>
@@ -600,50 +600,24 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
-                                        <div class="container-fluid">
-                                            <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
-                                                    <p>Busca Especialidade</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>Código da Especialiade</th>
-                                                        <th>Nome da Especialidade</th>                                                       
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="ex-checkbox float-left mt-2 mr-3">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one">
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="por-20">002000</td>
-                                                        <td>ORTOPEDIA</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>                                            
                                         </div>
                                     </div>
                                     <div id="box-lista-subs" class="col-lg-12 mt-5">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
+                                                <div class="col-sm-6 col-lg-6 my-auto pl-0">
                                                     <p>Especialidades</p>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">         
+                                                    <div class="btn-group actions-table">
+                                                        <button class="btn btn-sm" type="button" data-toggle="modal" data-target="#modal-incluir-especialidades">
+                                                        <span class="mr-3">Incluir Especialidade</span>
+                                                        <div class="options">
+                                                            <i class="icon icon-nav-adicionar icon-incluir"></i>
+                                                        </div>
+                                                        </button>
+                                                    </div>                                              
                                                 </div>
                                             </div>
                                         </div>
@@ -730,49 +704,23 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
-                                        <div class="container-fluid">
-                                            <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
-                                                    <p>Busca Procedimento</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>Código do Procedimento</th>
-                                                        <th>Nome do Procedimento</th>                                                       
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="ex-checkbox float-left mt-2 mr-3">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one">
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="por-20">002000</td>
-                                                        <td>ORTOPEDIA</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                     <div id="box-lista-subs" class="col-lg-12 mt-5">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
+                                                <div class="col-sm-6 col-lg-6 my-auto pl-0">
                                                     <p>Procedimentos</p>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">         
+                                                    <div class="btn-group actions-table">
+                                                        <button class="btn btn-sm" type="button" data-toggle="modal" data-target="#modal-incluir-procedimentos">
+                                                        <span class="mr-3">Incluir Procedimentos</span>
+                                                        <div class="options">
+                                                            <i class="icon icon-nav-adicionar icon-incluir"></i>
+                                                        </div>
+                                                        </button>
+                                                    </div>                                              
                                                 </div>
                                             </div>
                                         </div>
@@ -874,7 +822,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-4 mt-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
                                             <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
                                         </div>
                                     </div>
@@ -954,7 +902,7 @@
                                             <div class="form">
                                                 <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Código do Fornecedor</span>
+                                                    <span class="content-name">Código do Fornecedor OPME</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -962,55 +910,29 @@
                                             <div class="form">
                                                 <input type="text" name="cod" autocomplete="off" >
                                                 <label for="cod" class="label-name">
-                                                    <span class="content-name">Nome do Fornecedor</span>
+                                                    <span class="content-name">Nome do Fornecedor OPME</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 incluir-tipo-itens b-cadastro d-none">Incluir</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table d-none">
-                                        <div class="container-fluid">
-                                            <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
-                                                    <p>Busca Fornecedor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>Código do Fornecedor</th>
-                                                        <th>Nome do Fornecedor</th>                                                       
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="ex-checkbox float-left mt-2 mr-3">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one">
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="por-20">002000</td>
-                                                        <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                     <div id="box-lista-subs" class="col-lg-12 mt-5">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
-                                                <div class="col-lg-12 pl-0">
-                                                    <p>Fornecedores</p>
+                                                <div class="col-sm-6 col-lg-6 my-auto pl-0">
+                                                    <p>Fornecedores OPME</p>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">         
+                                                    <div class="btn-group actions-table">
+                                                        <button class="btn btn-sm" type="button" data-toggle="modal" data-target="#modal-incluir-fornecedores">
+                                                        <span class="mr-3">Incluir Fornecedores</span>
+                                                        <div class="options">
+                                                            <i class="icon icon-nav-adicionar icon-incluir"></i>
+                                                        </div>
+                                                        </button>
+                                                    </div>                                              
                                                 </div>
                                             </div>
                                         </div>
@@ -1019,8 +941,8 @@
                                                 <thead>
                                                     <tr>
                                                     <th>Status</th>
-                                                    <th>Código do Fornecedor</th>
-                                                    <th>Nome do Fornecedor</th>
+                                                    <th>Código do Fornecedor OPME</th>
+                                                    <th>Nome do Fornecedor OPME</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -1105,7 +1027,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                                <button type="button" name="button" class="btn btn-buscar mr-3">Buscar</button>
                                             </div>
                                         </div>
                                         <div class="row mt-4 sub-title">                                            
@@ -1217,7 +1139,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                                <button type="button" name="button" class="btn btn-buscar mr-3">Buscar</button>
                                             </div>
                                         </div>
                                         <div class="row mt-4 sub-title">                                            
@@ -1329,7 +1251,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 mt-3">
-                                                <button type="submit" name="button" class="btn btn-buscar mr-3">Buscar</button>
+                                                <button type="button" name="button" class="btn btn-buscar mr-3">Buscar</button>
                                             </div>
                                         </div>
                                         <div class="row mt-4 sub-title">                                            
@@ -1534,7 +1456,7 @@
                                     <div class="row btns-opcoes mt-5">
                                         <div class="col-lg-12">
                                             <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="submit" name="button" class="btn btn-buscar">Buscar</button>
+                                            <button type="button" name="button" class="btn btn-buscar">Buscar</button>
                                         </div>
                                     </div>
                                     <div id="box-lista-subs" class="mt-5">
@@ -1931,6 +1853,256 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
+
+
+        <!-- modal incluir especialidades -->
+        <div class="modal fade" id="modal-incluir-especialidades" tabindex="-1" role="dialog" aria-labelledby="modal-incluir-especialidades-label" aria-hidden="true">
+            <div class="modal-dialog modal-1000" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-incluir-especialidades-label">Incluir Especialidades Corporativas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body container-fluid">
+                        <div class="row mt-4">
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Código da Especialidade Corporativa</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Nome da Especialidade Corporativa</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>                                            
+                            </div>
+                        </div>
+                        <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table">
+                            <div class="container-fluid">
+                                <div class="row my-auto">
+                                    <div class="col-lg-12 pl-0">
+                                        <p>Especialidades Corporativas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive mt-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Código da Especialiade Corporativa</th>
+                                            <th>Nome da Especialidade Corporativa</th>                                                       
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td>002000</td>
+                                            <td>ORTOPEDIA</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Incluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal incluir especialidades -->
+
+        <!-- modal incluir procedimentos -->
+        <div class="modal fade" id="modal-incluir-procedimentos" tabindex="-1" role="dialog" aria-labelledby="modal-incluir-procedimentos-label" aria-hidden="true">
+            <div class="modal-dialog modal-1000" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-incluir-procedimentos-label">Incluir Procedimentos Corporativos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body container-fluid">
+                        <div class="row mt-4">
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Código do Procedimento Corporativo</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Nome do Procedimento Corporativo</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>                                            
+                            </div>
+                        </div>
+                        <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table">
+                            <div class="container-fluid">
+                                <div class="row my-auto">
+                                    <div class="col-lg-12 pl-0">
+                                        <p>Procedimentos Corporativos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive mt-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Código do Procedimento Corporativo</th>
+                                            <th>Nome do Procedimento Corporativo</th>                                                       
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td>002000</td>
+                                            <td>ORTOPEDIA</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Incluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal incluir procedimentos -->
+
+        <!-- modal incluir fornecedores -->
+        <div class="modal fade" id="modal-incluir-fornecedores" tabindex="-1" role="dialog" aria-labelledby="modal-incluir-fornecedores-label" aria-hidden="true">
+            <div class="modal-dialog modal-1000" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-incluir-fornecedores-label">Incluir Fornecedores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body container-fluid">
+                        <div class="row mt-4">
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Código do Fornecedor</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="form">
+                                    <input type="text" name="cod" autocomplete="off">
+                                    <label for="cod" class="label-name">
+                                        <span class="content-name">Nome do Fornecedor</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="button" name="button" class="btn btn-buscar mt-3 mr-3 busca-tipo-itens">Buscar</button>                                            
+                            </div>
+                        </div>
+                        <div id="box-lista-subs" class="col-lg-12 mt-5 busca-tipo-itens-table">
+                            <div class="container-fluid">
+                                <div class="row my-auto">
+                                    <div class="col-lg-12 pl-0">
+                                        <p>Fornecedores</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive mt-3">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Código do Fornecedor</th>
+                                            <th>Nome do Fornecedor</th>                                                       
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="ex-checkbox float-left mt-2 mr-3">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td>002000</td>
+                                            <td>BIOMEDIC INDÚSTRIA DE MATERIAL HOSPITALAR</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Incluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal incluir procedimentos -->
 
         <!-- jQuery -->
         <script src="../js/jquery-3.3.1.slim.min.js"></script>
