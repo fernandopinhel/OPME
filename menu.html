@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/estilo.css">
         <!-- Icons -->
         <link rel="stylesheet" href="css/icones-bradesco.css">
-        <!-- estilo select(combo-box -->
-        <link rel="stylesheet" href="css/nice-select.css">
+        <!-- estilo select(combo-box) -->
+        <!-- <link rel="stylesheet" href="css/nice-select.css"> -->
     </head>
 
     <body>
@@ -23,44 +23,48 @@
             <!-- sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header text-center">
-                    <img src="img/icon-logo-bradesco.png" class="mb-3">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
                     <h1>Gestão OPME</h1>                                          
                 </div>
                 <ul class="list-unstyled components">
                     <li><!-- painel -->
-                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
                             <span class="item-menu">Painel</span>
                             <span class="seta-accordion"></span>
                         </a>
-                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
-                            <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
+                            <li class="fases">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="fases">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
                                     <span class="ml-1 item-menu">Mensagens</span>
-                                    <span class="mensagem"><span class="quant-msg">8</span></span>
+                                    <!-- <span class="mensagem"><span class="quant-msg">8</span></span> -->
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="dsv">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
                                         <a href="#">Ranking</a>
@@ -79,20 +83,35 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>   
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>                                 
+                                </a>
+                            </li>
+                            <li class="dsv">
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -102,25 +121,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-resgate mr-4"></i>
                                     <span class="item-menu">Solicitação/Compra</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
                                     <li>
-                                        <a href="solicitacao-compras-consulta.html">Consulta</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="solicitacao-compras-cadastro.html">Cadastro</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -132,25 +152,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -170,10 +191,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -185,31 +206,33 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>                               
+                                    <!-- <span class="seta-accordion"></span>-->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -266,7 +289,7 @@
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
-        <script src="js/jquery.nice-select.js"></script>
+        <!-- <script src="js/jquery.nice-select.js"></script> -->
         <!-- scripts -->
         <script src="js/script.js"></script>
     </body>

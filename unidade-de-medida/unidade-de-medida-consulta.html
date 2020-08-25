@@ -33,34 +33,38 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse list-unstyled subs" id="painelSubmenu">
-                            <li>
+                            <li class="fases">
                                 <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="fases">
                                 <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li class="msg">
                                 <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
                                     <span class="ml-1 item-menu">Mensagens</span>
-                                    <span class="mensagem"><span class="quant-msg">8</span></span>
+                                    <!-- <span class="mensagem"><span class="quant-msg">8</span></span> -->
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
                                         <a href="#">Ranking</a>
@@ -79,11 +83,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
@@ -96,14 +101,16 @@
                             </li>
                             <li>
                                 <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon tabela-de-valores mr-4"></i>
-                                    <span class="item-menu">Tabela de Valores Hospital</span>                                    
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>   
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>                                 
                                 </a>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                                    <i class="icon tabela-de-valores mr-4"></i>
+                                    <i class="icon icon-nav-servicos mr-4"></i>
                                     <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                             </li>
                             <li>
@@ -118,6 +125,22 @@
                                     </li>
                                     <li>
                                         <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-resgate mr-4"></i>
+                                    <span class="item-menu">Solicitação/Compra</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -136,11 +159,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
@@ -189,23 +213,25 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>                               
+                                    <!-- <span class="seta-accordion"></span>-->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
                                         <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
-                                    <li>
+                                    <li class="sub-active">
                                         <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
@@ -326,7 +352,7 @@
                                             </div>
                                             <div class="menu-invisible">
                                                 <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
                                                 </a>
                                             </div>
                                             </div>
@@ -351,7 +377,7 @@
                                             </div>
                                             <div class="menu-invisible">
                                                 <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
                                                 </a>
                                             </div>
                                             </div>
@@ -376,7 +402,7 @@
                                             </div>
                                             <div class="menu-invisible">
                                                 <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
                                                 </a>
                                             </div>
                                             </div>
@@ -401,7 +427,7 @@
                                             </div>
                                             <div class="menu-invisible">
                                                 <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
                                                 </a>
                                             </div>
                                             </div>
@@ -426,7 +452,7 @@
                                             </div>
                                             <div class="menu-invisible">
                                                 <a href="unidade-de-medida-detalhes.html">
-                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
                                                 </a>
                                             </div>
                                             </div>

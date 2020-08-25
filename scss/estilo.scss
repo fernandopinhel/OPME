@@ -858,7 +858,7 @@ td > .toggle{
 // fim header
 
 // sidebar
-.msg > a{
+.msg > a, .fases > a, .dsv > a{
     padding-right: 12px !important;
 }
 
@@ -873,7 +873,37 @@ td > .toggle{
     // color: $bg-dark !important;
 }
 
-.mensagem{
+.proximas-fases{
+    background: #FFBC00;
+    border-radius: 100px;
+    height: 20px;
+    width: 20px;
+    float: right;
+    text-align: center;
+    padding: 2px;
+    color: #212e4b !important;
+    font-size: 10px !important;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+}
+
+.desenvolvimento{
+    background: #90263f;
+    border-radius: 100px;
+    height: 20px;
+    width: 20px;
+    float: right;
+    text-align: center;
+    padding: 2px;
+    color: #fff !important;
+    font-size: 10px !important;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+}
+
+.mensagem, .proximas, .criando{
     width: 100%;
 }
 
@@ -1057,28 +1087,11 @@ ul.list-unstyled ul a {background: $bg-dark;}
     color: #fff;
 }
 
-i.tabela-de-valores{
-    background: url(../img/tabela-de-valores.svg);
-    width: 35px;
-    height: 29px;
-}
-
-.subs li:hover a i.tabela-de-valores{
-    background: url(../img/tabela-de-valores-hover.svg);
-    width: 35px;
-    height: 29px;
-}
-
-.subs li.active a i.tabela-de-valores{
-    background: url(../img/tabela-de-valores-hover.svg);
-    width: 35px;
-    height: 26px;
-}
-
 i.referenciados{
     background: url(../img/referenciados.svg);
     width: 35px;
     height: 35px;
+    padding-right: 32px;
 }
 
 .subs li:hover a i.referenciados{
@@ -1115,6 +1128,7 @@ i.usuarios{
     background: url(../img/usuarios.svg);
     width: 35px;
     height: 20px;
+    padding-right: 36px;
 }
 
 .subs li:hover a i.usuarios{
@@ -1133,6 +1147,7 @@ i.telas{
     background: url(../img/telas.svg);
     width: 35px;
     height: 35px;
+    padding-right: 36px;
 }
 
 .subs li:hover a i.telas{
