@@ -5,4 +5,7 @@
     .input-date {
         margin-top: -5px;
     }
+    .subs li a span.seta-accordion{
+        top: 20px;
+    }
 }
