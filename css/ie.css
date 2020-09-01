@@ -1,0 +1,5 @@
+@media all and (-ms-high-contrast:none){
+    .p-select {
+        margin-top: -22px;
+    }
+}
