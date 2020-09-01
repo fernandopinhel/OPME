@@ -1185,6 +1185,9 @@ td > .toggle {
 
 .mensagem, .proximas, .criando {
   width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .btn-sidebar {
@@ -1375,6 +1378,10 @@ ul.list-unstyled ul a {
 
 .subs li a i.icon-fin-resgate {
   font-size: 37px;
+}
+
+.subs li a i.icon-nav-servicos {
+  padding-right: 5px;
 }
 
 .subs li a i {

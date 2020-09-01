@@ -5,13 +5,4 @@
     .input-date {
         margin-top: -5px;
     }
-    .subs li a span{
-        margin-left: 35px;
-    }
-    .subs li a.mensagem span{
-        margin-left: 36px !important;
-    }    
-    .subs li a.hospital span{
-        margin-left: 0px !important;
-    }    
 }
