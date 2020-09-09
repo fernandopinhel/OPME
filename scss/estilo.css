@@ -1682,20 +1682,21 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
 
 .ex-radio input[type="radio"]:disabled {
   cursor: not-allowed;
+  color: #989a9e;
 }
 
 .ex-radio input[type="radio"]:disabled + label {
-  color: #212e4b;
+  color: #989a9e;
   cursor: not-allowed;
 }
 
 .ex-radio input[type=radio]:disabled + label::before,
 .ex-radio input[type=radio]:checked:disabled + label::before {
-  border: 1px solid #212e4b;
+  border: 1px solid #989a9e;
 }
 
 .ex-radio input[type=radio]:checked:disabled + label::after {
-  background-color: #212e4b;
+  background-color: #989a9e;
 }
 
 .radio-title {
