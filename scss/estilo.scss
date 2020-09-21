@@ -42,6 +42,7 @@ $btn-incluir: #11C25D;
 $btn-cancelar: #4d4e53;
 $btn-excluir: #e60935;
 $btn-buscar: #499ED0;
+$btn-voltar: #499ED0;
 // fim variaveis sass
 
 // globais
@@ -239,6 +240,26 @@ a {
     opacity: 1;
     background: $btn-buscar;
     border-color: $btn-buscar;
+    border-radius: 100px;
+    letter-spacing: 2px;
+}
+
+.btn-voltar {
+    opacity: 0.7;
+    transition: $transition;
+    background: transparent;
+    color:$btn-voltar;    
+    border: 1px solid $btn-voltar;
+    border-radius: 100px;
+    width: 120px;
+    height: 40px;
+}
+
+.btn-voltar:hover {
+    transition: $transition;
+    background: $btn-voltar;
+    color: #fff;    
+    border: 1px solid $btn-voltar;
     border-radius: 100px;
     letter-spacing: 2px;
 }

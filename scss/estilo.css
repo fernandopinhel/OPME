@@ -420,6 +420,28 @@ a {
   letter-spacing: 2px;
 }
 
+.btn-voltar {
+  opacity: 0.7;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: transparent;
+  color: #499ED0;
+  border: 1px solid #499ED0;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+}
+
+.btn-voltar:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  background: #499ED0;
+  color: #fff;
+  border: 1px solid #499ED0;
+  border-radius: 100px;
+  letter-spacing: 2px;
+}
+
 .btn-incluir {
   opacity: 0.7;
   background: #11C25D;
@@ -2517,6 +2539,32 @@ tr:hover td.a-2 .menu-invisible {
   border: none;
 }
 
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .por-8 {
+    width: 10% !important;
+  }
+  .por-15 {
+    width: 20% !important;
+  }
+  label {
+    font-size: 14px !important;
+  }
+  .box-detalhes {
+    position: absolute;
+    left: 77px;
+  }
+  .i-detalhes, .i-excluir, .i-editar, .i-historico {
+    width: 30px;
+    height: 30px;
+  }
+  p {
+    font-size: 14px;
+  }
+  button.mr-3 {
+    margin-right: 0 !important;
+  }
+}
+
 @media (min-width: 993px) and (max-width: 1444px) {
   .content {
     width: 100%;
@@ -2528,6 +2576,9 @@ tr:hover td.a-2 .menu-invisible {
   }
   .table-responsive table tbody tr:hover td.ac-3 {
     padding-left: 92px !important;
+  }
+  .table-responsive table tbody tr td.ac-4 {
+    padding-left: 0 !important;
   }
 }
 
