@@ -2126,17 +2126,38 @@ tr:hover td.a-2 .menu-invisible{
 // fim tabela sem hover
     
 // responsivo
+@media (min-width: 1366px) and (max-width: 1680px) {
+    .por-8{width: 10% !important;}
+    .por-15{width: 20% !important;}
+
+    label{font-size: 14px !important;}
+
+    .box-detalhes{
+        position: absolute;
+        left: 77px;
+    }
+
+    .i-detalhes, .i-excluir, .i-editar, .i-historico{
+        width: 30px;
+        height: 30px;
+    }
+
+    p{font-size: 14px;}
+
+    button.mr-3{margin-right: 0 !important;}
+}
+
 @media (min-width: 993px) and (max-width: 1444px) {
     .content {
         width: 100%;
         transition: all 0.3s;
     }
 
-    .table-responsive table tbody tr:hover td.actions{
-        padding-left: 52px;        
-    }
+    .table-responsive table tbody tr:hover td.actions{padding-left: 52px;}
 
     .table-responsive table tbody tr:hover td.ac-3{padding-left: 92px !important;}
+
+    .table-responsive table tbody tr td.ac-4{padding-left: 0 !important;}
 }
 
 @media (max-width: 992px) {
@@ -2276,7 +2297,7 @@ tr:hover td.a-2 .menu-invisible {
 	}
 	.table-responsive table tbody tr:hover td.ac-3 {
 		padding-left: 92px !important
-	}
+    }
 }
 
 @media ( max-width : 992px) {
