@@ -1369,11 +1369,14 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo{
 .ex-radio input[type="radio"]:disabled {
     cursor: not-allowed;
     color: $color-content;
+    height:0;
 }
 
 .ex-radio input[type="radio"]:disabled + label {
 	color: $color-content;
-	cursor: not-allowed;
+    cursor: not-allowed;
+    height: 0;
+    margin-top: 15px;
 }
 
 .ex-radio input[type=radio]:disabled +  label::before,
@@ -2381,49 +2384,49 @@ tr:hover td.a-2 .menu-invisible {
 
 table.dataTable thead th,
 table.dataTable thead td {
-  padding: 10px 18px;
-  border-bottom: none;
+    padding: 10px 18px;
+    border-bottom: none;
 }
 
 table.dataTable tbody tr {
- background: none;
+    background: none;
 }
 
 table.dataTable tbody th,
 table.dataTable tbody td {
- padding: none;
+    padding: none;
 }
 
 table.dataTable.no-footer {
- border-bottom: none;
+    border-bottom: none;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  padding: 0.25em 0.7em;
-  color: #989a9e !important
+    padding: 0.25em 0.7em;
+    color: #989a9e !important
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-   color: white !important;
+    color: white !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
-  cursor: default;
-  color: #666 !important;
-  background: none !important;
-  box-shadow: none;
+    cursor: default;
+    color: #666 !important;
+    background: none !important;
+    box-shadow: none;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  color: none; 
+    color: none; 
 }
 
 button.dt-button,
 div.dt-button,
 a.dt-button {
-  padding: 0 !important;
-  background: none !important;
-  border: none !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
 }
 
 .frmSearch {border: 1px solid #a8d4b1;background-color: #c6f7d0;margin: 2px 0px;padding:10px;border-radius:4px;}
