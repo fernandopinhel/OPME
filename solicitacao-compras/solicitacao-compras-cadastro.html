@@ -6,20 +6,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Solicitação de Compra</title>
+        <title>Protótipo OPME - Solicitação de Compras</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="../css/ie.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
         <!-- estilo select(combo-box) -->
-        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
         <!-- estilo toggle on/off -->
         <link rel="stylesheet" href="../css/bootstrap4-toggle.min.css">
         <!-- datepicker -->
-        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">        
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+        <!-- font awesome componentes -->
+        <link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
+
 
     <body>
         <!-- conteudo geral wrapper -->
@@ -37,34 +42,38 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
-                            <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="fases">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="fases">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
-                                    <span class="ml-1 item-menu">Mensagens</span>
-                                    <span class="mensagem"><span class="quant-msg">8</span></span>
+                                    <span class=" item-menu">Mensagens</span>
+                                    <!-- <span class="mensagem"><span class="quant-msg">8</span></span> -->
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
                                         <a href="#">Ranking</a>
@@ -83,20 +92,35 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>   
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>                                 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -106,25 +130,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="active">
+                            <li class="active dsv">
                                 <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-fin-resgate mr-4"></i>
                                     <span class="item-menu">Solicitação/Compra</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
                                     <li>
-                                        <a href="solicitacao-compras-consulta.html">Consulta</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
                                     </li>
                                     <li class="sub-active">
-                                        <a href="solicitacao-compras-cadastro.html">Cadastro</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -136,25 +161,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -174,10 +200,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -189,31 +215,33 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>                               
+                                    <!-- <span class="seta-accordion"></span>-->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -265,136 +293,236 @@
                             <!-- nav tabs -->
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tab-info-gerais">Informações Gerais</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab-itens">Itens</a>
+                                    <a class="nav-link" data-toggle="tab" href="#tab-solicitacao">Solicitação</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tab-procedimentos">Procedimentos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab-finalizar-compra">Finalizar Compra</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#tab-itens">Itens</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab-aprovacao-gestores">Aprovação Gestores</a>
+                                    <a class="nav-link" data-toggle="tab" href="#tab-entrega">Entrega</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab-aprovacao">Aprovação</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab-consolidado-mapa">Consolidado/Mapa</a>
                                 </li>
                             </ul>
                             <!-- fim nav tabs -->
                             <!-- tab panes -->
                             <div class="tab-content mt-5">
-                                <!-- Informações Gerais -->
-                                <div class="tab-pane container-fluid active" id="tab-info-gerais">
+                                <!-- solicitação -->
+                                <div class="tab-pane container-fluid fade" id="tab-solicitacao">
                                     <div class="row">
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-4">
+                                            <!-- Especificação
+                                            Só aparece na consulta, pois ele é a chave primária do projeto,
+                                            imputado pelo sistema na coluna (SOLTC_COMPR_MATRL_ESPCL.CSOLTC_COMPR_MATRL_ESPCL)
+                                            -->
                                             <div class="form">
-                                                <input type="text" name="solicitacao-01" value="001" disabled="disabled" autocomplete="off" class="used">
-                                                <label for="solicitacao-01" class="label-name">
-                                                    <span class="content-name">Solicitação</span>
+                                                <input type="text" name="garantia-compra" value="" autocomplete="off">
+                                                <label for="garantia-compra" class="label-name">
+                                                    <span class="content-name"><span class="obrigatorio">*</span>Garantia de Compra</span>
                                                 </label>
                                             </div>
                                         </div>   
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
+                                            <!-- Especificação
+                                            Armazena o número da solicitação de compra enviada pelo  Referenciado.
+                                            SOLTC_COMPR_MATRL_ESPCL.CSOLTC_COMPR_REFRD
+                                            -->
                                             <div class="form">
-                                                <input type="text" name="garantia-pagamento" autocomplete="off" >
-                                                <label for="garantia-pagamento" class="label-name">
-                                                    <span class="content-name">Garantia de Pagamento</span>
+                                                <input type="text" name="numero-solicitacao" autocomplete="off" >
+                                                <label for="numero-solicitacao" class="label-name">
+                                                    <span class="content-name"><span class="obrigatorio">*</span>Nº da Solicitação Hospital/Clínica</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
+                                            <!-- Especificação
+                                            Preenchido pelo Usuário no momento do cadastra com a data em que a solicitação foi enviada ao OPME pelo Hospital.
+                                            Armazenar : SOLTC_COMPR_MATRL_ESPCL.DSOLTC_COMPR
+                                            No caso de alteração, esse campo poderá ser alterado pelo usuário.
+                                            -->
                                             <div class="form">
-                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-solicitacao" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                                <label for="data-solicitacao" class="label-name">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data" class="label-name">
+                                                    <span class="obrigatorio">*</span>
                                                     <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                    <span class="content-name">Data da Solicitação</span>
+                                                    <span class="content-name">Data</span>
                                                 </label>
                                             </div>
                                         </div>     
-                                    </div>
-                                    <div class="row">
                                         <div class="col-lg-4 mt-5">
-                                            <p class="p-select">Prioridade</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Urgente</option>
-                                                <option value="2">Eletiva</option>                                        
-                                            </select>
-                                        </div>    
-                                        <div class="col-lg-4 mt-5">
-                                            <p class="p-select">Unidade de Negócio (Origem)</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Bradesco</option>
-                                                <option value="2">Mediservice</option>                                        
-                                            </select>     
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            Cadastro: Grava  o usuário que está logado e que vai efetuar o cadastro da solicitação.
+                                            Gravado pelo sistema.
+
+                                            Consulta: Exibe o usuário que realizou a última alteração na Solicitação de compra.
+
+                                            Alteração: Quando o usuário clicar no botão salvar o sistema vai gravar automaticamente com o login do usuário logado.
+                                            
+                                            Tabela.Coluna na base de dados:SOLTC_COMPR_MATRL_ESPCL.CUSUAR_INCL_REG
+                                            -->
                                             <div class="form">
-                                                <input type="text" name="senha" autocomplete="off">
-                                                <label for="senha" class="label-name">
-                                                    <span class="content-name">Senha</span>
+                                                <input type="text" name="numero-solicitacao" autocomplete="off" >
+                                                <label for="numero-solicitacao" class="label-name">
+                                                    <span class="content-name"><span class="obrigatorio">*</span>Responsável pela Última Alteração</span>
                                                 </label>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            O sistema vai exibir a lista de Unidades de Negócio disponíveis no para serem selecionada na tabela UND_NEGOC_MATRL_ESPCL.
+
+                                            SELECT N.NSEQ_PSSOA, P.IPSSOA FROM UND_NEGOC_MATRL_ESPCL  N
+                                            INNER JOIN PSSOA  P ON (P.NSEQ_PSSOA=N.NSEQ_PSSOA)
+                                            WHERE N.DFIM_VGCIA_UND_NEGOC IS NULL
+
+                                            Cadastro: O sistema vai gravar na coluna SOLTC_COMPR_MATRL_ESPCL.CUND_NEGOC_ORIGE o código  UND_NEGOC_MATRL_ESPCL .NSEQ_PSSOA
+                                            relacionado a Unidade de Negócio (Origem) que o usuário selecionou.
+
+                                            Consulta: Sistema vai carregar qual a Unidade de Negócio Origem que foi gravada para o usuário, neste caso poderá ser exibido uma
+                                            Unidade de Negócio já vencida, ou seja que tem data fim de vigência preenchida, pois quando foi gravado ela ainda estava vigente,
+                                            no entanto quando Habilitar Alteração, as outra opções caso o usuário deseje selecionar só poderá ser as unidades válidas.
+                                            Sendo assim as opções para alteração serão as Unidades de Negócio ativas + a Unidade de Negócio atual do registro.
+
+                                            Alteração: Quando Habilitar Alteração, as outra opções caso o usuário deseje selecionar só poderá ser as unidades válidas.
+                                            Sendo assim as opções para alteração serão as Unidades de Negócio ativas + a Unidade de Negócio atual do registro.
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Unidade de Negócio (Origem)</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Mediservice</option>                                       
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            O sistema vai exibir a lista de Unidades de Negócio disponíveis no para serem selecionada na tabela UND_NEGOC_MATRL_ESPCL.
+
+                                            SELECT N.NSEQ_PSSOA, P.IPSSOA FROM UND_NEGOC_MATRL_ESPCL  N
+                                            INNER JOIN PSSOA  P ON (P.NSEQ_PSSOA=N.NSEQ_PSSOA)
+                                            WHERE N.DFIM_VGCIA_UND_NEGOC IS NULL
+
+                                            Cadastro: O sistema vai gravar na coluna SOLTC_COMPR_MATRL_ESPCL.CUND_NEGOC_NEGOC_REFRD o código  UND_NEGOC_MATRL_ESPCL .NSEQ_PSSOA
+                                            relacionado a Unidade de Negócio (Origem) que o usuário selecionou.
+
+                                            Consulta: Sistema vai carregar qual a Unidade de Negócio Origem que foi gravada para o usuário, neste caso poderá ser exibido uma
+                                            Unidade de Negócio já vencida, ou seja que tem data fim de vigência preenchida, pois quando foi gravado ela ainda estava vigente,
+                                            no entanto quando Habilitar Alteração, as outra opções caso o usuário deseje selecionar só poderá ser as unidades válidas.
+                                            Sendo assim as opções para alteração serão as Unidades de Negócio ativas + a Unidade de Negócio atual do registro.
+
+                                            Alteração: Quando Habilitar Alteração, as outra opções caso o usuário deseje selecionar só poderá ser as unidades válidas.
+                                            Sendo assim as opções para alteração serão as Unidades de Negócio ativas + a Unidade de Negócio atual do registro.
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Unidade de Negócio (Prestadora)</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">prest-1</option>
+                                                <option value="2">prest-2</option>                                        
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            Cadastro: As possíveis Prioridades que devem ser exibidas para escolha são:
+                                            - URGÊNCIA
+                                            - ELETIVA
+
+                                            Sendo obrigatório a seleção de uma delas.
+
+                                            No momento do cadastro a opção selecionada deverá ser gravada na base de dados da seguinte forma:
+                                            Tabela.Coluna: SOLTC_COMPR_MATRL_ESPCL.CCARAC_SOLTC_COMPR
+                                            Condição: E - Eletiva U - Urgência
+
+                                            Alteração: O usuário que tem permissão para realizar a alteração poderá alterar sempre que desejar.
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Prioridade</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Urgente</option>
+                                                <option value="2">Eletiva</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            A data/hora da entrega deverá permitir que o usuário selecione em um calendário a data e a hora da entrega dos
+                                            Itens informados na solicitação de compra.
+                                            Essa informação não é obrigatória.
+
+                                            Cadastro: O usuário vai selecionar no calendário a data e a hora de entrega de um material, esta será armazenada na Tabela.
+                                            coluna SOLTC_COMPR_MATRL_ESPCL.APREVT_ENTRG_MATRL
+
+                                            Alteração: O usuário poderá alterar a informação sempre que desejar.
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="entrega-hora" autocomplete="off" >
+                                                <label for="entrega-hora" class="label-name">
+                                                    <span class="content-name">Entrega/Hora</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            As opções que vão popular o Faturamento são:
+                                            1= ORIGEM 2= PRESTADOR 3= DESTINO
+
+                                            Cadastro: O usuário é obrigado a selecionar um tipo de Faturamento.
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na SOLTC_COMPR_MATRL_ESPCL.CTPO_FATMT_COMPR
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Faturamento</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Urgente</option>
+                                                <option value="2">Eletiva</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            O usuário é obrigado a selecionar uma Especialidade.
+                                            As opções desde combo são carregadas da tabela ESPDE_MDICA
+                                            
+                                            SELECT CESPDE_MDICA CODIGO, RESPDE_MDICA NOME_ESPECIALIDADE FROM ESPDE_MDICA
+
+                                            Cadastro: No momento do cadastro a especialidade selecionada deverá ser gravada na tabela
+                                            SOLTC_COMPR_MATRL_ESPCL coluna CESPDE_MDICA
+
+                                            Consulta: Ao recuperar a informação gravada o código que foi gravado na coluna CESPDE_MDICA
+                                            deverá ser consultado na tabela ESPDE_MDICA para se obter o nome da especialidade.
+
+                                            Alterar: O usuário poderá alterar essa informação quando desejar.
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Especialidade</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">espc1</option>
+                                                <option value="2">espc2</option>                                            
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="row mt-2 mb-4">
                                         <div class="col-lg-12">
                                             <div class="sub-title mt-4">
-                                                <h6>Hospital/Clínica</h6>
+                                                <h6>Informações</h6>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="cod-hosp" onkeypress="$(this).mask('00000000');" autocomplete="off">
-                                                <label for="cod-hosp" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="form">
-                                                <input type="text" name="hosp-clinica" autocomplete="off">
-                                                <label for="hosp-clinica" class="label-name">
-                                                    <span class="content-name">Hospital/Clínica</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-entrega" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                                <label for="data-entrega" class="label-name">
-                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                    <span class="content-name">Data da Entrega</span>
-                                                </label>
-                                            </div>
-                                        </div>   
-                                        <div class="col-lg-4 mt-5">
-                                            <p class="p-select">Tipo de Faturamento</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Origem</option>
-                                                <option value="2">Destino</option>
-                                                <option value="3">Prestadora</option>                                        
-                                            </select>     
-                                        </div> 
-                                        <div class="col-lg-4 mt-5">
-                                            <p class="p-select">Especialidade</p>
-                                            <select class="wide">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">ORTOPEDIA</option>
-                                                <option value="2">CARDIOLOGIA</option>
-                                                <option value="3">UROLOGIA</option>                                        
-                                                <option value="4">VASCULAR</option>                                        
-                                            </select>     
-                                        </div> 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-3 mt-4">
+                                        <div class="col-lg-2">
+                                            <!-- Especificação
+                                            Essa informação não é obrigatória.
+                                            
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna CCOSLH_PROFS_SAUDE da
+                                            tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            -->
                                             <div class="form">
                                                 <input type="text" name="crm" onkeypress="$(this).mask('00000000');" autocomplete="off">
                                                 <label for="crm" class="label-name">
@@ -402,7 +530,15 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 mt-4">
+                                        <div class="col-lg-6">
+                                            <!-- Especificação
+                                            Essa informação não é obrigatória.
+                                        
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna IMDICO_SOLTC_COMPR da
+                                            tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            -->
                                             <div class="form">
                                                 <input type="text" name="nome-medico" autocomplete="off">
                                                 <label for="nome-medico" class="label-name">
@@ -410,427 +546,316 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 mt-4">
+                                        <div class="col-lg-4">
+                                            <!-- Especificação
+                                            Essa informação não é obrigatória.
+                                        
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna
+                                            NDDD_FONE_PROFS_SOLCT da tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            -->
                                             <div class="form">
-                                                <input type="text" name="tel-medico" onkeypress="$(this).mask('(99)99999-9999');" autocomplete="off">
-                                                <label for="tel-medico" class="label-name">
-                                                    <span class="content-name">Telefone do Médico</span>
+                                                <input type="text" name="telefone" onkeypress="$(this).mask('00000000');" autocomplete="off">
+                                                <label for="telefone" class="label-name">
+                                                    <span class="content-name">Telefone</span>
                                                 </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <!-- Especificação
+                                            As opções serão preenchidas neste item são:
+                                            NOVA SOLICITAÇÃO
+                                            REANÁLISE
+
+                                            Essa informação é obrigatória.
+
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna ORANLS_SOLTC_ANTER da
+                                            tabela SOLTC_COMPR_MATRL_ESPCL.
+                                            Se Reanálise então gravar S
+                                            Se Nova Solicitação então gravar N
+
+                                            Caso o usuário informe Reanálise então ele é obrigado a preencher o campo "Número da Solicitação vinculada a reanálise".
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            respeitando a mesma regra de cadastro.
+                                            Caso essa alterado de Reanálise para Nova Solicitação o Número da Solicitação vinculada a reanálise deverá receber nulo.
+                                            -->
+                                            <p class="p-select"><span class="obrigatorio">*</span>Motivo do Cadastro</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">NOVA SOLICITAÇÃO</option>
+                                                <option value="2">REANÁLISE</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            Essa informação é obrigatória caso o Motivo do Cadastro selecionado tenha sido Reanálise.
+
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna CSOLTC_MATRL_ANTER da
+                                            tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Ao informar o sistema deverá verificar na tabela SOLTC_COMPR_MATRL_ESPCL. se existe algum CSOLTC_COMPR_MATRL_ESPCL que
+                                            corresponda com o código informado no Número da Solicitação vinculada a reanálise.
+
+                                            A regra é que para informar uma reanálise ela precisa ser realizada relacionada a uma solicitação que já exista no sistema,
+                                            não podendo ser o mesmo número da reanálise que está sendo gravada ou que foi consultada.
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento. Desde que a regra seja a mesma relacionado ao cadastro acima.
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="numero-solic" onkeypress="$(this).mask('00000000');" autocomplete="off">
+                                                <label for="numero-solic" class="label-name">
+                                                    <span class="content-name">Nº da Solicitação vinculada a reanálise</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <!-- Especificação
+                                            Essa informação  é obrigatória.
+
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna CCATAO_SEGRD da tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            FASE 2 - Não implantado ainda
+
+                                            Futuramente essa informação deverá ser verificada no serviço BSP para garantir que o cartão exista, recuperando assim o
+                                            Nome do Paciente.
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="cartao-paciente" autocomplete="off">
+                                                <label for="cartao-paciente" class="label-name">
+                                                    <span class="content-name">Cartão do Paciente</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mt-5">
+                                            <!-- Especificação
+                                            Essa informação  é obrigatória.
+
+                                            Cadastro: No momento de realizar o cadastro essa informação será gravada na coluna ISEGRD_INTND da tabela SOLTC_COMPR_MATRL_ESPCL.
+                                            
+                                            Alteração: Essa informação poderá ser solicitada  a qualquer momento.
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="nome-paciente" autocomplete="off">
+                                                <label for="nome-paciente" class="label-name">
+                                                    <span class="content-name">Nome do Paciente</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <!-- Especificação
+                                            O usuário deverá informar a senha do sinistro, seja em um cadastro ou alteração, nesse momento o sistema deverá verificar com a
+                                            query abaixo que a senha existe no SISB, caso não exista o sistema exibe a mensagem "Senha inexistente" , e não grava o registro.
+
+                                            O registro só poderá ser gravado se a senha não foi inexistente.
+
+                                            SELECT CSENHA_AUTRZ  FROM SOLTC_ATDMT_SAUDE
+                                            WHERE CSENHA_AUTRZ= SENHA INFORMADA
+                                            -->
+                                            <div class="form">
+                                                <input type="password" name="senha-sinistro" onkeypress="$(this).mask('00000000');" autocomplete="off">
+                                                <label for="senha-sinistro" class="label-name">
+                                                    <span class="content-name"><span class="obrigatorio">*</span> Senha / Sinistro</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <!-- Especificação
+                                            O preenchimento é obrigatório.
+                                            
+                                            Cadastro: Os procedimentos são preenchidos com os dados da tabela PROCE_MDICO
+                                            O usuário poderá informar o código do procedimento ou o nome e o sistema vai filtrando a informação com o select abaixo.
+
+                                            SELECT CPROCE_MDICO CODIGO, RPROCE_MDICO PROCEDIMENTO FROM PROCE_MDICO
+                                            WHERE DFNAL_VGCIA_PROCE_MDICO IS NULL
+
+                                            Essa informação terá que ser gravada na coluna CPROCE_PUBL_FNAL tabela PROCE_SOLTC_COMPR, e na coluna OPROCE_PRINC será gravado S de
+                                            Sim, mostrando que é o procedimento principal, essa tabela está associada com a tabela SOLTC_COMPR_MATRL_ESPCL pela coluna
+                                            CSOLTC_COMPR_MATRL_ESPCL que existe nas duas tabelas.
+
+                                            Alteração: O usuário poderá alterar o procedimento principal a qualquer momento, desde que ele não seja um procedimento que esteja
+                                            gravado como procedimento secundário, caso isso ocorra o sistema deverá alterar o registro do procedimento secundário para primário,
+                                            alterando então a coluna OPROCE_PRINC = N do procedimento secundário para OPROCE_PRINC =S.
+
+                                            As opções disponíveis para seleção serão as mesmas que as do cadastro e mais a que ele está caso a data de vigência dela não seja nula.
+                                            -->
+                                            <p class="p-select">Procedimento Principal</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">proce1</option>
+                                                <option value="2">proce2</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 mt-5">
+                                            <!-- Especificação
+                                            O preenchimento é obrigatório.
+
+                                            Cadastro: Os CIDs são preenchidos com os dados da tabela COD_INTL_DOENC
+                                            O usuário poderá informar o código cid (CCID) do procedimento ou o nome (RCID) e o sistema vai filtrando a informação com o
+                                            select abaixo.
+
+                                            SELECT NSEQ_CID CODIGO_PRIMARIO
+                                            RCID NOME_CID
+                                            CCID CODIGO_CID FROM COD_INTL_DOENC
+                                            WHERE DFIM_CID IS NULL
+
+                                            Essa informação terá que ser gravada na coluna NSEQ_CID tabela SOLTC_COMPR_MATRL_ESPCL.
+
+                                            Alteração: O usuário poderá alterar o CID respeitando a regra do cadastro.
+                                            A lista será comporta dos CIDs sem data fim de vigência mas mesmo se o CID cadastrado nessa solicitação tenha data fim de vigência
+                                            ele deverá ser exibido também, pois a gravação foi realizada quando ele ainda estava ativo.
+                                            -->
+                                            <p class="p-select">CID</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">proce1</option>
+                                                <option value="2">proce2</option>                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 mb-4">
+                                        <div class="col-lg-12">
+                                            <div class="sub-title mt-4">
+                                                <h6>Informações do Medicamento</h6>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Reanálise</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="reanalise-sim" name="radio_group6">
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="reanalise-nao" name="radio_group6">
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-5 n-reanalise d-none">
-                                            <label for="just-reanalise" class="just-reanalise">Justificativa da reanálise</label>
-                                            <textarea class="form-control" id="just-reanalise" rows="3"></textarea>                            
-                                        </div>
-                                        <div class="col-lg-2 mt-5">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Liminar</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="liminar-sim" name="radio_group7">
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="liminar-nao" name="radio_group7">
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input type="text" name="cartao-segurado" autocomplete="off">
-                                                <label for="cartao-segurado" class="label-name">
-                                                    <span class="content-name">Cartão do Segurado</span>
-                                                </label>
-                                            </div>    
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <div class="form">
-                                                <input type="text" name="nome-segurado" autocomplete="off">
-                                                <label for="nome-segurado" class="label-name">
-                                                    <span class="content-name">Nome do Segurado</span>
-                                                </label>
-                                            </div>    
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-lg-3 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="cod-cid" onkeypress="$(this).mask('99999999999');" autocomplete="off">
-                                                <label for="cod-cid" class="label-name">
-                                                    <span class="content-name">Código CID</span>
-                                                </label>
+                                            <!-- Especificação
+                                            As opções que vão popular o Medicamento são:
+                                            S=SIM
+                                            N=NÃO
+
+                                            Cadastro: O usuário é obrigado a selecionar um medicamento
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na SOLTC_COMPR_MATRL_ESPCL a coluna precisará ser inclusa na tabela.
+                                            S para Sim e N para Não.
+
+                                            * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
+                                            -->
+                                            <p class="p-select">Medicamentos</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Medicamento-1</option>
+                                                <option value="2">Medicamento-2</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 mt-4">
+                                            <!-- Especificação
+                                            Preenchimento não é obrigatório.
+
+                                            Cadastro: O usuário não é obrigado a preencher o Mês e Ano da Utilização
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na
+                                            SOLTC_COMPR_MATRL_ESPCL a coluna precisará ser inclusa na tabela.
+                                            S para Sim e N para Não.
+
+                                            * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
+                                            -->
+                                        <div class="form">
+                                            <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                            <label for="data" class="label-name">                                                   
+                                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                <span class="content-name">Mês / Ano de Utilização</span>
+                                            </label>
+                                        </div>
+                                    </div>     
+                                    <div class="col-lg-2 mt-5">
+                                            <!-- Especificação
+                                            Preenchimento não é obrigatório.
+
+                                            Cadastro: O usuário não é obrigado a preencher Supex med/Diretoria
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na SOLTC_COMPR_MATRL_ESPCL a
+                                            coluna precisará ser inclusa na tabela.
+                                            S para Sim e N para Não.
+
+                                            * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
+                                            -->
+                                            <div class="ex-checkbox m-0 mt-3" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="" class="check-estilo">Supex Med / Diretoria</label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-9 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="desc-cid" autocomplete="off">
-                                                <label for="desc-cid" class="label-name">
-                                                    <span class="content-name">Descrição CID</span>
-                                                </label>
+                                        <div class="col-lg-2 mt-5">
+                                            <!-- Especificação
+                                            Preenchimento não é obrigatório.
+
+                                            Cadastro: O usuário não é obrigado a preencher Autorizado Estipulante
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na SOLTC_COMPR_MATRL_ESPCL a
+                                            coluna precisará ser inclusa na tabela.
+                                            S para Sim e N para Não.
+
+                                            * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
+                                            -->
+                                            <div class="ex-checkbox m-0 mt-3" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="" class="check-estilo">Autorizado Estipulante</label>
                                             </div>
+                                        </div>                                    
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-12 mt-5">
+                                            <!-- Especificação
+                                            Preenchimento não é obrigatório.
+                                            
+                                            Cadastro: O usuário não é obrigado a preencher Observação
+
+                                            Alteração: O usuário poderá alterar essa informação a qualquer momento.
+
+                                            Tabela/Coluna: Os dados selecionados são armazenados ou recuperados na
+                                            SOLTC_COMPR_MATRL_.RSOLTC_COMPR                                            
+                                            -->
+                                            <label for="observacoes" class="observacoes"><span class="obrigatorio">*</span>Observações</label>
+                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="row btns-opcoes mt-5">
                                         <div class="col-lg-12">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                            <!-- Especificação
+                                            Se o Usuário clicar neste botão todos os campos serão limpos.
+                                            Esse botão não deverá estar ativo                                       
+                                            -->
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar" disabled>Limpar</button>
+                                            <!-- Especificação
+                                            Cadastro:
+                                            Será realizado um insert na tabela SOLTC_COMPR_MATRL_ESPCL gravando nela os campos
+                                            correspondentes e informados no comentário de cada campo.
+                                            Os campos que não estão na tela estão especificados abaixo para preenchimento automático do
+                                            sistema no momento do insert.
+                                            No momento da gravação os dados abaixo devem ser preenchidos automaticamente pelo sistema:
+                                            Data de Inclusão do registro preenhido com a data do dia (current_date): SOLTC_COMPR_MATRL_ESPCL.DINCL_REG
+                                            Status da Solicitação de Compra será 1 gravado na SOLTC_COMPR_MATRL_ESPCL.CTPO_SIT_COMPR
+                                            1 significa cadastrado.
+
+
+                                            Alteração:
+                                            1 - Nenhuma alteração poderá ser realizada se o status da solicitação for enviado para o sinistro,
+                                            para isso o gestor deverá reabrir a solicitação para que ela seja alterada, com isso será novamente
+                                            solicitado aprovação da gestora.
+                                            
+                                            2 - O sistema deverá  verificar se a SOLTC_COMPR_MATRL_ESPCL.CTPO_SIT_COMPR
+                                            2.1 Se SOLTC_COMPR_MATRL_ESPCL.CTPO_SIT_COMPR for igual
+
+                                            Tabela Coluna na base de dados.                                     
+                                            -->
                                             <button type="button" name="button" class="btn btn-incluir b-cadastro" onclick="window.location.href='#cadastro-fornecedor'">Salvar</button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- fim Informações Gerais -->
-                                <!-- itens -->
-                                <div class="tab-pane container-fluid fade" id="tab-itens">
-                                    <div class="sub-title mb-2">
-                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod-tuss" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-tuss" class="label-name">
-                                                    <span class="content-name">Código TUSS</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="cod-provisorio" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod-provisorio" class="label-name">
-                                                    <span class="content-name">Código Provisório</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-item" autocomplete="off" >
-                                                <label for="nome-item" class="label-name">
-                                                    <span class="content-name">Nome do Item</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-4">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <p>Itens Solicitados</p>
-                                                </div>
-                                                <div class="col-lg-6">                                                    
-                                                    <a href="solicitacao-compras-cadastro-incluir-item.html" class="float-right item-novo">
-                                                        <i class="icon icon-nav-adicionar"></i>
-                                                        <span>Incluir Item</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive mt-3">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="ex-checkbox m-0" data-toggle="tooltip" data-original-title="Marcar todos">
-                                                                <input type="checkbox"  onclick="marcarTodos(this.checked);" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </th>
-                                                        <th></th>
-                                                        <th data-toggle="tooltip" data-original-title="Código TUSS">TUSS</th>
-                                                        <th data-toggle="tooltip" data-original-title="Código Provisório">Provisório</th>
-                                                        <th>Item</th> 
-                                                        <th>Quantidade</th>
-                                                        <th data-toggle="tooltip" data-original-title="Proposta Inicial (unitário)">Proposta Inicial</th>
-                                                        <th data-toggle="tooltip" data-original-title="Responsável pela Proposta Inicial">Responsável Inicial</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Proposta Atual (unitário)">Proposta Atual</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Responsável pela Proposta Atual">Responsável Atual</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Cotação Final (unitário)">Cotação Final</th>
-                                                        <th>Status</th>                                                
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Analista Responsável Pelo Status">Reponsável Status</th>
-                                                        <th class="por-8" data-toggle="tooltip" data-original-title="Valor Total Negociado do Item">Total Negociado</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-check">
-                                                            <div class="ex-checkbox">
-                                                                <input type="checkbox" class="marcar" id="checkbox_one"/>
-                                                                <label for="checkbox_one" class="check-estilo"></label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible top-10">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible top-5">
-                                                                <a href="solicitacao-compras-detalhes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-aceitar-proposta.html">
-                                                                    <img src="../img/aprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Aceitar Proposta">
-                                                                </a>
-                                                                <a href="solicitacao-compras-recusar-proposta.html">
-                                                                    <img src="../img/reprovado.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Recusar Proposta">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>12523</td>
-                                                        <td>213221</td>
-                                                        <td class="por-30">AGULHA DE PUNÇÃO -15mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 500,00</td>
-                                                        <td>HOSPITAL</td>
-                                                        <td>R$ 320,00</td>
-                                                        <td>BRADESCO</td>
-                                                        <td>-</td>
-                                                        <td>Em Negociação</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title">
-                                                <div class="row d-flex">
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de itens solicitados: <b>3</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de itens aprovados: <b>2</b></p>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="col-lg-3 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Valor total aprovado: <b>R$ 5.500,00 </b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title">
-                                                            <p>% Economizado: <b>7,64</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-1 my-auto">
-                                                        <a href="#" class="print-itens">
-                                                            <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-2">
-                                        <div class="col-lg-12 mt-3">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-recusar-lote" onclick="window.location.href='solicitacao-recusar-lote.html'">Recusar em Lote</button>
-                                            <button type="button" name="button" class="btn btn-aprovar-lote" onclick="window.location.href='solicitacao-aprovar-lote.html'">Aprovar em Lote</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- fim itens -->
+                                <!-- fim solicitação -->
                                 <!-- procedimentos -->
                                 <div class="tab-pane container-fluid fade" id="tab-procedimentos">
                                     <div class="sub-title mb-2">
@@ -938,8 +963,436 @@
                                     </div>
                                 </div>
                                 <!-- fim procedimentos -->
-                                <!-- finalizar compra -->
-                                <div class="tab-pane container-fluid fade" id="tab-finalizar-compra">
+                                <!-- itens -->
+                                <div class="tab-pane container-fluid active" id="tab-itens">
+                                    <div class="row sub-title mb-2 bg-green">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-2"><p>Solicitação:<br> 1234566</p></div>
+                                                <div class="col-lg-2"><p>Hospital:<br> São José</p></div>
+                                                <div class="col-lg-2"><p>Segurado:<br> José Marcos Almeida</p></div>
+                                                <div class="col-lg-2"><p>Senha:<br> AB36F33</p></div>
+                                                <div class="col-lg-2"><p>Data da Solicitação:<br> 23/09/2020</p></div>
+                                                <div class="col-lg-2"><p>Situação:<br> Em Negociação</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <nav aria-label="breadcrumb" class="">
+                                        <ol class="breadcrumb">  
+                                          <li class="breadcrumb-item"><a href="#" class="bread-1">Itens</a></li>    
+                                          <li class="breadcrumb-item">Comparativo e Orçamento</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</p>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-4">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-lg-12 pl-0">
+                                                    <p>Novos Itens</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Tipo do Responsável</th>                                                        
+                                                        <th>Responsável</th> 
+                                                        <th>Valor Unitário Tabelado</th> 
+                                                        <th>Quantidade</th>
+                                                        <th>Valor Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>549494</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                        <td>10400</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>9592921</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                        <td>10400</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>3213189</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                        <td>10400</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#" class="selecionar-item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>70333467</td>
+                                                        <td>2311891</td>
+                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
+                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
+                                                        <td>10400</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-5">
+                                            <!-- Especificação
+                                            Essa lista será carregada com todos os itens validos existentes no OPME:
+                                            
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
+                                            -->
+                                            <p class="p-select">Item</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Item 1</option>
+                                                <option value="2">Item 2</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-2">
+                                             <!-- Especificação
+                                            Essa lista será carregada com todos os itens validos existentes no OPME:
+                                            
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="quantidade" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                                <label for="quantidade" class="label-name">
+                                                    <span class="content-name">Quantidade</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                             <!-- Especificação
+                                            As opções exibidas aqui são as opções gravadas na tabela UND_MEDD_MATRL_ESPCL
+                                            
+                                            SELECT CUND_MEDD_MATRL_ESPCL
+                                            RUND_MEDD_MATRL_ESPCL
+                                            FROM UND_MEDD_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_UND_MEDD IS NULL
+
+                                            IMPEDIMENTO: PRECISA CRIAR COLUNA NA TABELA ITEM_SOLTD_COMPR PARA GRAVAR
+                                            -->
+                                            <p class="p-select">Unidade de Medida</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">und 1</option>
+                                                <option value="2">und 2</option>                                            
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">
+                                            <!-- Especificação
+                                            Essa lista será carregada com todos os itens validos existentes no OPME:
+                                           
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
+                                            -->
+                                           <div class="form">
+                                               <input type="text" name="valor-unit-prop" onkeypress="$(this).mask('0000000');" autocomplete="off" >
+                                               <label for="valor-unit-prop" class="label-name">
+                                                   <span class="content-name">Valor unitário Proposto</span>
+                                               </label>
+                                           </div>
+                                       </div>
+                                       <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            Será disponibilizado as seguintes opções:
+                                            1 = Hospital, 2 = Fornecedor, 3 = Bradesco
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="resp-prop-inicial"  autocomplete="off" >
+                                                <label for="resp-prop-inicial" class="label-name">
+                                                    <span class="content-name">Responsável Pela Proposta Inicial</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <!-- Especificação
+                                            Caso o Responsável pela Proposta inicial selecionado seja 2 então essa campo será exibido e
+                                            o usuário terá que seleciona-lo.
+
+                                            Será disponibilizado os fornecedores disponíveis no OPME:
+                                            SELECT NSEQ_PSSOA
+                                            IFANTS_FORNC_MATRL FROM
+                                            FORNC_MATRL_ESPCL
+
+                                            O usuário poderá pesquisar pelo código ou nome do  fornecedor.
+
+                                            Quando o usuário selecionar ele será armazenado no NEGOC_ITEM_SOLTD.NSEQ_PSSOA
+                                            -->
+                                            <div class="form">
+                                                <input type="text" name="resp-prop-inicial"  autocomplete="off" >
+                                                <label for="resp-prop-inicial" class="label-name">
+                                                    <span class="content-name">Fornecedor</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 mt-5">
+                                            <!-- Especificação
+                                            Quando o usuário clica para incluir um item , ele será gravado na tabela ITEM_SOLTD_COMPR associando esse
+                                            item a Solicitação de compra por meio do código CSOLTC_COMPR_MATRL_ESPCL e o item sendo associado na tabela
+                                            ITEM_SOLTD_COMPR por meio do código CITEM_MATRL_ESPCL, o OEXCL_LOGCA deverá ser incluso com N.
+                                            ITEM_SOLTD_COMPR = Valor Unitário da Proposta
+                                            CRESPT_PPSTA_INIC= código do responsável proposta selecionado
+                                            CSIT_ITEM_SOLTD = 1
+                                            CTUSS_ITEM_MATRL_ESPCL = O código TUSS do item selecionado.
+                                            E os dados da negociação serão gravados na tabela NEGOC_ITEM_SOLTD
+                                            VPPSTA_NEGOC= Valor Unitário Proposto
+                                            DINCL_PPSTA = current_date
+                                            RRESPT_PPSTA = Responsável pela proposta
+                                            -->
+                                            <button type="button" name="button" id="" class="btn bt-add float-right mt-3" data-toggle="tooltip" data-original-title="Adicionar Item">
+                                                <img src="../img/add.svg" class="i-add">
+                                            </button>
+                                        </div>
+                                        <div id="box-lista-subs" class="col-lg-12 mt-4">
+                                            <div class="container-fluid">
+                                                <div class="row my-auto">
+                                                    <div class="col-sm-6 col-lg-6 my-auto pl-0">
+                                                        <p>Itens</p>
+                                                    </div>
+                                                    <div class="col-sm-6 col-lg-6 my-auto pr-0">            
+                                                        <div class="btn-group actions-table">
+                                                            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <span class="mr-3">Mais Ações</span>
+                                                            <div class="options">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <!-- Especificação
+                                                                Caso de Uso:
+
+                                                                1) Se o usuário selecionar "Aceitar Valores Tabelados" então o sistema deverá cadastrar uma nova negociação para o item
+                                                                com status de aprovado e o Valor Unitário será exibido no Valor Unitário e o Valor total Negociado vai calcular a
+                                                                QTD * Valor Unitário Negociado.
+
+                                                                1.1 - Se o item não tiver o Valor Unitário Tabela c/ Hospital" então o sistema não grava a negociação e exibe a mensagem
+                                                                "O Item XYZ não possui valor tabelado com hospital" Informe a negociação manualmente"
+
+                                                                2) Se o usuário selecionar "Aceitar Valores Total Negociado" então o sistema deverá aceitar a negociação para o item com
+                                                                status de aprovado e Negociado.
+
+                                                                2.1 - Se o item não tiver o Valor Unitário " então o sistema não grava a negociação e exibe a mensagem "O Item XYZ não
+                                                                possui valor unitário negociado" Informe a negociação manualmente"
+
+                                                                3) - Se o usuário selecionar " Excluir Item" então sistema vai exibir a mensagem se ele deseja realmente excluir os itens da
+                                                                solicitação de compra, se sim então os itens serão excluídos, se não então retorna a tela sem realizar a exclusão.
+                                                                -->
+                                                                <span class="dropdown-item aceitar-valor-tabelado" data-toggle="modal" data-target="#modal-aceitar-valor-tabelado"><a href="#">Aceitar Valor Tabelado</a></span>
+                                                                <div class="dropdown-divider"></div>
+                                                                <span class="dropdown-item aceitar-valor-total-negociado" data-toggle="modal" data-target="#modal-aceitar-valor-total-negociado"><a href="#">Aceitar Valor Total Negociado</a></span>
+                                                                <div class="dropdown-divider"></div>
+                                                                <span class="dropdown-item excluir-itens" data-toggle="modal" data-target="#modal-excluir-itens"><a href="#">Excluir Itens</a></span>
+                                                            </div>
+                                                        </div>                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="ex-checkbox m-0">
+                                                                    <input type="checkbox" data-toggle="tooltip" data-original-title="Marcar todos" onclick="marcarTodos(this.checked);" id="checkbox_one">
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th></th>
+                                                            <th>TUSS / ITEM</th>
+                                                            <th>Und. Medida Venda</th>
+                                                            <th>Quantidade</th>
+                                                            <th>Valor Unitário Tabelado c/ Hospital</th>
+                                                            <th>Valor Unitário Negociado</th>
+                                                            <th>Valor Total Negociado</th>
+                                                            <th>Situação</th>                                                          
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td">
+                                                                <div class="ex-checkbox float-left mt-2">
+                                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="actions ac-2">
+                                                                <div class="float-right">
+                                                                <div class="menu-visible">
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                    <span class="circle"></span>
+                                                                </div>
+                                                                <div class="menu-invisible">
+                                                                    <!-- Especificação
+                                                                    Quando o usuário seleciona essa opção o item incluso na solicitação é excluído, também será excluído as
+                                                                    negociações relacionada a ele para essa solicitação.
+
+                                                                    Antes de excluir o sistema deverá emitir uma mensagem perguntando se o usuário realmente deseja excluir o
+                                                                    item selecionado. Se sim, o sistema exclui e retorna a essa tela atualizando ela. Se não ele fecha a
+                                                                    mensagem e não faz alterações.
+                                                                    -->
+                                                                    <a href="#conteudo-contato" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                        <img src="../img/excluir.svg" class="i-excluir" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                                    </a>
+                                                                    <!-- Especificação
+                                                                    Leva o usuário para verificar a comparação de valores já tabelados para aquele item.
+                                                                    -->
+                                                                    <a href="#">
+                                                                        <img src="../img/comparar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Comparar Valores">
+                                                                    </a>
+                                                                </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
+                                                            <td>UND</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>EM ANÁLISE</td>
+                                                        </tr>
+                                                        <tr class="separator">
+                                                            <td colspan="5"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="pagination mt-4 mb-1">
+                                                <li>
+                                                    <a href="#" class="prev">
+                                                    <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                <a href="#" class="prev">
+                                                    <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                                </a>
+                                                </li>
+                                                <li><a href="#" class="active">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                                </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="next">
+                                                        <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim itens -->
+                                <!-- entrega -->
+                                <div class="tab-pane container-fluid fade" id="tab-entrega">
                                     <div class="sub-title mb-2">
                                         <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
                                     </div>
@@ -1069,7 +1522,7 @@
                                                 <div class="ex-radio">
                                                     <input type="radio" id="pos-nao" name="radio_group_pos" class="b-24">
                                                     <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                  </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">                                            
@@ -1092,9 +1545,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- fim finalizar compra -->
-                                <!-- aprovação gestores -->
-                                <div class="tab-pane container-fluid fade" id="tab-aprovacao-gestores">
+                                <!-- fim entrega -->
+                                <!-- aprovação -->
+                                <div class="tab-pane container-fluid fade" id="tab-aprovacao">
                                     <div class="sub-title mb-2">
                                         <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
                                     </div>
@@ -1184,7 +1637,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- fim aprovação gestores -->
+                                <!-- fim aprovação -->
                             </div>
                             <!-- fim tab panes -->
                         </div>
@@ -1195,6 +1648,121 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
+        <!-- modal excluir item -->
+        <div class="modal fade" id="modal-excluir-item" tabindex="-1" role="dialog" aria-labelledby="modal-excluir-item-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-excluir-item-label">Excluir Item</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Confirma a exclusão deste Item da Solicitação de Compra?</p>
+                        <h6>619503300601952 - IMPLANTE MAMÁRIO ............</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal excluir itens -->
+
+         <!-- modal excluir itens -->
+         <div class="modal fade" id="modal-excluir-itens" tabindex="-1" role="dialog" aria-labelledby="modal-excluir-itens-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-excluir-itens-label">Excluir Itens</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Confirma a exclusão dos Itens abaixo da Solicitação de Compra?</p>
+                        <h6>619503300601952 - IMPLANTE MAMÁRIO ............</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal excluir itens -->
+
+         <!-- modal aceitar valor total negociado -->
+         <div class="modal fade" id="modal-aceitar-valor-total-negociado" tabindex="-1" role="dialog" aria-labelledby="modal-aceitar-valor-total-negociado-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-aceitar-valor-total-negociado-label">Aceitar Valor Total Negociado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Os ITENS abaixo não possuem valor tabelado com o hospital, insira uma negociação manual para eles.</p>
+                        <h6>619503300601952 - IMPLANTE MAMÁRIO ............</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <!-- <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button> -->
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal aceitar valor total negociado -->
+
+        <!-- modal aceitar valor tabelado -->
+        <div class="modal fade" id="modal-aceitar-valor-tabelado" tabindex="-1" role="dialog" aria-labelledby="modal-aceitar-valor-tabelado-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-aceitar-valor-tabelado-label">Aceitar Valores Tabelados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Os ITENS abaixo não possuem valor tabelado com o hospital, insira uma negociação manual para eles.</p>
+                        <h6>619503300601952 - IMPLANTE MAMÁRIO ............</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <!-- <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button> -->
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal aceitar valor tabelado -->
 
         <!-- jQuery -->
         <script src="../js/jquery-3.3.1.slim.min.js"></script>
@@ -1208,7 +1776,7 @@
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
-        <script src="../js/jquery.nice-select.js"></script>
+        <!-- <script src="../js/jquery.nice-select.js"></script> -->
         <!-- script toggle on/off -->
         <script src="../js/bootstrap4-toggle.min.js"></script>
         <!-- scripts -->

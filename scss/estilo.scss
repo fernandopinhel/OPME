@@ -253,6 +253,7 @@ a {
     border-radius: 100px;
     width: 120px;
     height: 40px;
+    letter-spacing: 2px;
 }
 
 .btn-voltar:hover {
@@ -455,6 +456,7 @@ button:hover:disabled {
     border: 1px solid #dddddd;
     transition: none;
     opacity: .65;
+    color: #989a9e;
 }
 
 // fim botoes
@@ -651,6 +653,11 @@ button:hover:disabled {
     font-weight: 600;
 }
 
+.sub-title > div > div > div > p{
+    margin: 0;    
+    font-weight: 600;
+}
+
 .w-space{width: 5%;}
 
 .border-itens{border-right: 1px solid $color-header-content;}
@@ -729,7 +736,10 @@ td > .toggle{
 }
 // fim navtabs
 
-.h-35{height: 35px; background: transparent;}
+.h-35{
+    height: 35px; background: transparent;
+    padding-left: 0;
+}
 
 .w-234{width: 234px !important;}
 
@@ -1968,7 +1978,7 @@ table {background-color: none;}
   
 .pagination li a {
     margin-left: 12px;
-    padding: 7px 13px;
+    padding: 7px 12px;
     line-height: 27px;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -1988,11 +1998,12 @@ cursor: pointer;
     border-color: $color-content !important;
     text-decoration: none;
     transition: $transition;
+    padding: 7px 13px;
 }
   
 .pagination li a.prev, li a.next {
     position: relative;
-    padding: 6px 14px;
+    padding: 7px 13px;
 }
 
 .pagination li a.prev i.icon-seta-esquerda-a{
@@ -2050,7 +2061,6 @@ td.actions .menu-visible{
     width:20px;
     margin-left: -10px;
 }
-
 
 td.ac-2{
 width: 7% !important;
