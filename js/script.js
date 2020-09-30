@@ -143,6 +143,10 @@ $(".e-recusa-direto").click(function(){
 // FIM Tela Tabelas
 // FIM Acompanhar Itens Em Negociação
 
+$(".selecionar-item").click(function(){    
+    $(".bread-solicitacao-1").addClass("d-none");  
+});
+
 // script interações itens
 $(".busca-tipo-itens").click(function(){
     $('.busca-tipo-itens-table').toggleClass('d-block')

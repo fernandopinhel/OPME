@@ -292,6 +292,12 @@
                             </div>
                             <!-- nav tabs -->
                             <ul class="nav nav-tabs">
+                                <!-- Especificação
+                                As abas de Procedimentos, Itens, Entrega , Aprovação e Consolidado/Mapa,
+                                só aparecem depois que a Solicitação é gravada.
+                                No caso de Consultar uma Solicitação já gravada, as abas aparecem todas
+                                sem restrição.
+                                -->
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tab-solicitacao">Solicitação</a>
                                 </li>
@@ -299,7 +305,10 @@
                                     <a class="nav-link" data-toggle="tab" href="#tab-procedimentos">Procedimentos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tab-itens">Itens</a>
+                                    <a class="nav-link" data-toggle="tab" href="#tab-itens">Itens</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab-orcamento-negociacao">Orçamento/Negociação</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tab-entrega">Entrega</a>
@@ -316,6 +325,20 @@
                             <div class="tab-content mt-5">
                                 <!-- solicitação -->
                                 <div class="tab-pane container-fluid fade" id="tab-solicitacao">
+                                    <div class="row sub-title mb-5 bg-green">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                                <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                                <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                                <div class="col-lg-2">
+                                                    <a href="#" class="float-right">
+                                                        <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                                    </a>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <!-- Especificação
@@ -505,16 +528,7 @@
                                                 <option value="2">espc2</option>                                            
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2 mb-4">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title mt-4">
-                                                <h6>Informações</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 mt-5">
                                             <!-- Especificação
                                             Essa informação não é obrigatória.
                                             
@@ -530,7 +544,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 mt-5">
                                             <!-- Especificação
                                             Essa informação não é obrigatória.
                                         
@@ -546,7 +560,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-4 mt-5">
                                             <!-- Especificação
                                             Essa informação não é obrigatória.
                                         
@@ -714,16 +728,7 @@
                                                 <option value="2">proce2</option>                                            
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="row mt-2 mb-4">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title mt-4">
-                                                <h6>Informações do Medicamento</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-3 mt-4">
+                                        <div class="col-lg-3 mt-5">
                                             <!-- Especificação
                                             As opções que vão popular o Medicamento são:
                                             S=SIM
@@ -745,7 +750,7 @@
                                                 <option value="2">Medicamento-2</option>                                            
                                             </select>
                                         </div>
-                                        <div class="col-lg-4 mt-4">
+                                        <div class="col-lg-4 mt-5">
                                             <!-- Especificação
                                             Preenchimento não é obrigatório.
 
@@ -759,15 +764,15 @@
 
                                             * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
                                             -->
-                                        <div class="form">
-                                            <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                            <label for="data" class="label-name">                                                   
-                                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                <span class="content-name">Mês / Ano de Utilização</span>
-                                            </label>
-                                        </div>
-                                    </div>     
-                                    <div class="col-lg-2 mt-5">
+                                            <div class="form">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data" class="label-name">                                                   
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                    <span class="content-name">Mês / Ano de Utilização</span>
+                                                </label>
+                                            </div> 
+                                        </div>                                   
+                                        <div class="col-lg-2 mt-5">
                                             <!-- Especificação
                                             Preenchimento não é obrigatório.
 
@@ -781,7 +786,7 @@
 
                                             * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
                                             -->
-                                            <div class="ex-checkbox m-0 mt-3" data-toggle="tooltip" data-original-title="" title="">
+                                            <div class="ex-checkbox m-0 mt-4" data-toggle="tooltip" data-original-title="" title="">
                                                 <input type="checkbox" id="">
                                                 <label for="" class="check-estilo">Supex Med / Diretoria</label>
                                             </div>
@@ -800,13 +805,13 @@
 
                                             * IMPEDIMENTO, A COLUNA FALTA NA TABELA SOLTC_COMPR_MATRL_ESPCL
                                             -->
-                                            <div class="ex-checkbox m-0 mt-3" data-toggle="tooltip" data-original-title="" title="">
+                                            <div class="ex-checkbox m-0 mt-4" data-toggle="tooltip" data-original-title="" title="">
                                                 <input type="checkbox" id="">
                                                 <label for="" class="check-estilo">Autorizado Estipulante</label>
                                             </div>
                                         </div>                                    
                                     </div>
-                                    <div class="row mt-2">
+                                    <div class="row mt-4">
                                         <div class="col-lg-12 mt-5">
                                             <!-- Especificação
                                             Preenchimento não é obrigatório.
@@ -858,74 +863,95 @@
                                 <!-- fim solicitação -->
                                 <!-- procedimentos -->
                                 <div class="tab-pane container-fluid fade" id="tab-procedimentos">
-                                    <div class="sub-title mb-2">
-                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
+                                    <div class="row sub-title mb-2 bg-green">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                        <div class="col-lg-2">
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
                                     </div>
+                                    <div class="row sub-title mb-2">
+                                        <div class="col-lg-12">
+                                            <p>Solicitação de Compra: 01233</p>                                        
+                                        </div>
+                                    </div>
+                                    <nav aria-label="breadcrumb" class="mb-4 mt-4">
+                                        <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="">Solicitação</a></li>    
+                                        <li class="breadcrumb-item">Procedimentos</li>                                                                                 
+                                        </ol>
+                                    </nav>
                                     <div class="row">
-                                        <div class="col-lg-2 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="cod" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="cod" class="label-name">
-                                                    <span class="content-name">Código</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5 mt-4">
-                                            <div class="form">
-                                                <input type="text" name="nome-procedimento" autocomplete="off" >
-                                                <label for="nome-procedimento" class="label-name">
-                                                    <span class="content-name">Nome do Procedimento</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 mt-4">
-                                            <p class="p-select">Tipo de Procedimento</p>
-                                            <select class="wide">
+                                        <div class="col-lg-4">          
+                                            <!-- Especificação
+                                            O preenchimento é obrigatório.
+
+                                            Cadastro: Os procedimentos são preenchidos com os dados da tabela PROCE_MDICO
+                                            O usuário poderá informar o código do procedimento ou o nome e o sistema vai filtrando a
+                                            informação com o select abaixo.
+
+                                            SELECT CPROCE_MDICO CODIGO
+                                            RPROCE_MDICO PROCEDIMENTO FROM PROCE_MDICO
+                                            WHERE DFNAL_VGCIA_PROCE_MDICO IS NULL
+
+                                            Essa informação terá que ser gravada na coluna CPROCE_PUBL_FNAL tabela PROCE_SOLTC_COMPR ,
+                                            e na coluna OPROCE_PRINC será gravado N de Não, mostrando que é secundário,
+                                            essa tabela está associada com a tabela SOLTC_COMPR_MATRL_ESPCL pela coluna CSOLTC_COMPR_MATRL_ESPCL
+                                            que existe nas duas tabelas.
+
+                                            Alteração: O usuário poderá alterar o procedimento principal a qualquer momento, desde que ele não seja um procedimento que
+                                            esteja gravado como procedimento primário, caso isso ocorra o sistema não inclui e informa que o procedimento já
+                                            está cadastrado como primário.
+                                            -->                          
+                                            <p class="p-select">Procedimento</p>
+                                            <select class="form-control h-35">
                                                 <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Principal</option>
-                                                <option value="2">Secundário</option>                                        
-                                            </select>     
-                                        </div> 
-                                        <div class="col-lg-3 mt-4">
-                                            <button type="submit" name="button" class="btn btn-buscar mt-3 mr-3">Buscar</button>
-                                            <button type="button" name="button" class="btn btn-incluir mt-3 b-cadastro">Incluir</button>
+                                                <option value="1">Procedimento 1</option>
+                                                <option value="2">Procedimento 2</option>
+                                            </select>                                                             
                                         </div>
+                                        <div class="col-lg-2 mt-3">    
+                                            <button type="button" name="button" id="" class="btn" data-toggle="tooltip" data-original-title="Adicionar">
+                                                <img src="../img/add.svg" class="i-add">
+                                            </button>
+                                        </div>                                        
                                     </div>
                                     <div id="box-lista-subs" class="mt-3">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-12 my-auto pl-0">
+                                                    <p>Procedimentos</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="table-responsive mt-3">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
-                                                    <th>Status</th>
-                                                    <th>Código</th>
-                                                    <th>Nome do Procedimento</th>
-                                                    <th>Tipo de Procedimento</th>
+                                                        <th></th>
+                                                        <th>Procedimento</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm" checked></td>
-                                                        <td class="por-8">00.02.003-6</td>
-                                                        <td class="por-20">INTERNACAO CLINICA HOSP</td>
-                                                        <td>Principal</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">10.10.201-9</td>
-                                                        <td class="por-20">VISITA HOSPITALAR (PACIENTE INTERNADO) - ACOMPANHAMENTO MEDICO</td>
-                                                        <td>Principal</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="por-8"><input type="checkbox" data-toggle="toggle" data-size="sm"></td>
-                                                        <td class="por-8">30.71.501-6</td>
-                                                        <td class="por-20">ARTRODESE DA COLUNA C/ INSTRUMENTACAO POR SEGMENTO</td>
-                                                        <td>Secundário</td>
+                                                        <td class="actions">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#">
+                                                                    <img src="../img/excluir.svg" class="i-excluir">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>30.91.102-8 - AVALIAÇÃO FISIOLOGICA DA GRAVIDADE DE OBSTRUÇÕES CATETER OU GUIA</td>
                                                     </tr>
                                                     <tr class="separator">
                                                         <td colspan="5"></td>
@@ -964,37 +990,166 @@
                                 </div>
                                 <!-- fim procedimentos -->
                                 <!-- itens -->
-                                <div class="tab-pane container-fluid active" id="tab-itens">
-                                    <div class="row sub-title mb-2 bg-green">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-lg-2"><p>Solicitação:<br> 1234566</p></div>
-                                                <div class="col-lg-2"><p>Hospital:<br> São José</p></div>
-                                                <div class="col-lg-2"><p>Segurado:<br> José Marcos Almeida</p></div>
-                                                <div class="col-lg-2"><p>Senha:<br> AB36F33</p></div>
-                                                <div class="col-lg-2"><p>Data da Solicitação:<br> 23/09/2020</p></div>
-                                                <div class="col-lg-2"><p>Situação:<br> Em Negociação</p></div>
-                                            </div>
+                                <div class="tab-pane container-fluid fade" id="tab-itens">
+                                    <div class="row sub-title bg-green mb-2">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                        <div class="col-lg-2">
+                                            <!-- Especificação
+                                            Esse ícone só aparece quando o Item não encontra-se associado na Solicitação de Compra.
+                                            -->       
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
+                                    </div>
+                                    <div class="row sub-title mb-2">
+                                        <div class="col-lg-12">
+                                            <p>Solicitação de Compra: 01233</p>                                        
                                         </div>
                                     </div>
-                                    <nav aria-label="breadcrumb" class="">
-                                        <ol class="breadcrumb">  
-                                          <li class="breadcrumb-item"><a href="#" class="bread-1">Itens</a></li>    
-                                          <li class="breadcrumb-item">Comparativo e Orçamento</li>                                  
+                                    <nav aria-label="breadcrumb" class="mb-4 mt-4 bread-solicitacao-1">
+                                        <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="">Solicitação</a></li>    
+                                        <li class="breadcrumb-item">Itens</li>                                                                                 
                                         </ol>
                                     </nav>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-12 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</p>
-                                            </div>                                            
+                                    <div class="row consultar-novos-itens mt-5">
+                                        <div class="col-lg-4">               
+                                             <!-- Especificação
+                                            Essa lista será carregada com todos os itens validos existentes no OPME:
+
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o
+                                            código provisório
+                                            -->                                               
+                                            <p class="p-select">Item</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Item 1</option>
+                                                <option value="2">Item 2</option>
+                                            </select>                                                             
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <!-- Especificação
+                                            O usuário preenche o código TUSS e esse será pesquisado nas tabelas relacionadas
+                                            ao cadastro do Item realizado anteriormente no sistema.
+
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+                                            
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item,
+                                            o código provisório
+                                            -->             
+                                            <div class="form">
+                                                <input type="text" name="cod-tuss" autocomplete="off" >
+                                                <label for="cod-tuss" class="label-name">
+                                                    <span class="content-name">TUSS</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <!-- Especificação
+                                            Essa lista será carregada com todos os itens válidos existentes no OPME:
+
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+                                            
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o
+                                            código provisório
+                                            -->             
+                                            <div class="form">
+                                                <input type="text" name="cod-provisorio" autocomplete="off" >
+                                                <label for="cod-provisorio" class="label-name">
+                                                    <span class="content-name">Cód. Provisório</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <!-- Especificação
+                                            Essa lista será carregada com todos os itens válidos existentes no OPME:
+
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+                                            
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o
+                                            código provisório
+                                            -->             
+                                            <div class="form">
+                                                <input type="text" name="ref-fabricante" autocomplete="off" >
+                                                <label for="ref-fabricante" class="label-name">
+                                                    <span class="content-name">Ref. Fabricante</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">      
+                                            <!-- Especificação
+                                            Essa lista será carregada com todos os itens validos existentes no OPME:
+
+                                            SELECT
+                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
+                                            CITEM_PROVI CODIGO_PROVISORIO,
+                                            IITEM_MATRL_ESPCL NOME_ITEM,
+                                            CTUSS_ITEM_MATRL_ESPCL TUSS
+                                            FROM ITEM_MATRL_ESPCL
+                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
+
+                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o
+                                            código provisório
+                                            -->                                        
+                                            <p class="p-select">Fabricante</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Fabricante 1</option>
+                                                <option value="2">Fabricante 2</option>
+                                            </select>                                                             
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <div class="ex-checkbox mt-4" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="checkbox_one" class="check-estilo">Itens inclusos na Solicitação de Compra</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">
+                                            <div class="ex-checkbox mt-4" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="checkbox_one" class="check-estilo">Itens não inclusos na Solicitação de Compra</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-4">
+                                            <button type="reset" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                            <button type="reset" name="button" class="btn btn-cancelar float-left">Limpar</button>
+                                            <button type="button" name="button" class="btn btn-buscar float-right buscar-item">Buscar</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4">
+                                    <div id="box-lista-subs" class="mt-4 d-none tabela-busca-item">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
                                                 <div class="col-lg-12 pl-0">
-                                                    <p>Novos Itens</p>
+                                                    <p>Itens</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1003,16 +1158,35 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th>Tipo do Responsável</th>                                                        
-                                                        <th>Responsável</th> 
-                                                        <th>Valor Unitário Tabelado</th> 
-                                                        <th>Quantidade</th>
-                                                        <th>Valor Total</th>
+                                                        <th></th>
+                                                        <th>TUSS/ITEM</th>                                                        
+                                                        <th>Cód. Provisório</th> 
+                                                        <th>Ref. Fabricante</th>
+                                                        <th>Fabricante</th>
+                                                        <th>
+                                                            <!-- Especificação
+                                                            Valor tabela com o Hospital que solicitou a compra.
+                                                            -->
+                                                            Valor Tabelado Hospital/Clínica
+                                                        </th>
+                                                        <th>
+                                                            <!-- Especificação
+                                                            Valor tabela com o Hospital que solicitou a compra.
+                                                            -->
+                                                            Quantidade
+                                                        </th>
+                                                        <th>
+                                                            <!-- Especificação
+                                                            Valor tabela com o Hospital que solicitou a compra.
+                                                            -->
+                                                            Situação do Cadastro do Item
+                                                        </th>
+                                                        <th>Situação</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="actions">
+                                                        <td class="actions ac-2">
                                                             <div class="float-right">
                                                             <div class="menu-visible">
                                                                 <span class="circle"></span>
@@ -1020,89 +1194,86 @@
                                                                 <span class="circle"></span>
                                                             </div>
                                                             <div class="menu-invisible">
+                                                                <!-- Especificação
+                                                                Aparece quando o Item ainda não está associado a Solicitação de Compra,
+                                                                ou ele foi cancelado na solicitação de compra.
+
+                                                                Caso o usuário tente incluir Solicitação para um Item vencido o sistema deverá exibir a informação.
+
+                                                                Ao selecionar deverá abrir um formulário para inclusão de quantidade do itens.
+                                                                -->             
                                                                 <a href="#" class="selecionar-item">
-                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
+                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse Item">
+                                                                </a>
+                                                                <!-- Especificação
+                                                                Exclui o Item da Solicitação de Compra, ele não fará parte do cálculo final, mas mantém os históricos
+                                                                de orçamento.
+                                                                -->        
+                                                                <a href="#" class="">
+                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse Item">
                                                                 </a>
                                                             </div>
                                                             </div>
                                                         </td>
-                                                        <td>70333467</td>
-                                                        <td>549494</td>
-                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
-                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
-                                                        <td>10400</td>
+                                                        <td></td>                                                                                                          
+                                                        <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
+                                                        <td>15232222222</td>
+                                                        <td>5213AB52</td>
+                                                        <td>MEDICATIVE S.A</td>
+                                                        <td>R$ 700,00</td>
+                                                        <td>-</td>
+                                                        <td>Vencido</td>
+                                                        <td>
+                                                            <!-- Especificação
+                                                            Automaticamente o sistema vai exibir a lista de todos os
+                                                            itens já associados a Solicitação de Compra.
+                                                            -->
+                                                            -
+                                                        </td>
                                                     </tr>
                                                     <tr class="separator">
                                                         <td colspan="5"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="actions">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="#" class="selecionar-item">
-                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
-                                                                </a>
-                                                            </div>
-                                                            </div>
+                                                        <td class="por-8">
+                                                            <a href="#" class="">
+                                                            <!-- Especificação
+                                                            Esse ícone aparece quando o item já está associado a Solicitação de Compra.
+                                                            Ao clicar nele o sistema exibe o que foi cadastrado para ele, como quantidade,
+                                                            permitindo alterar a quantidade dele ou o valor inicial.
+                                                            -->
+                                                                <img src="../img/check-table.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Item ok">
+                                                            </a>
+                                                            <a href="#">
+                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse Item">
+                                                            </a>
                                                         </td>
-                                                        <td>70333467</td>
-                                                        <td>9592921</td>
-                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
-                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
-                                                        <td>10400</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="actions">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="#" class="selecionar-item">
-                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
-                                                                </a>
-                                                            </div>
-                                                            </div>
+                                                        <td></td>
+                                                        <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
+                                                        <td>15232222222</td>
+                                                        <td>5213AB52</td>
+                                                        <td>MEDICATIVE S.A</td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            <!-- Especificação
+                                                            É a quantidade do item solicitado pelo Hospital/Clínica.
+                                                            -->
+                                                            -
                                                         </td>
-                                                        <td>70333467</td>
-                                                        <td>3213189</td>
-                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
-                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
-                                                        <td>10400</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="actions">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="#" class="selecionar-item">
-                                                                    <img src="../img/selecionar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Selecionar esse item">
-                                                                </a>
-                                                            </div>
-                                                            </div>
+                                                        <td>Ativo</td>
+                                                        <td>
+                                                            <!-- Especificação
+                                                            Automaticamente o sistema vai exibir a lista de todos os itens já
+                                                            associados a Solicitação de Compra.
+
+                                                            As situações:
+                                                            "-" Quando o item ainda não está associado a Solicitação de Compra
+                                                            "Em negociação" quando o item já conta em uma solicitação de orçamento
+                                                            "Cancelado" quando o item foi excluído da solicitação
+                                                            "COMPRADO" - Quando houve aceite do item em um orçamento.
+                                                            -->
+                                                            Em Negociação
                                                         </td>
-                                                        <td>70333467</td>
-                                                        <td>2311891</td>
-                                                        <td>IMPLANTE DE PANTURRILHA SUPERFÍCIE LISA 10400:12</td>
-                                                        <td>SILIMED - INDÚSTRIA DE IMPLANTES LTDA</td>
-                                                        <td>10400</td>
                                                     </tr>
                                                     <tr class="separator">
                                                         <td colspan="5"></td>
@@ -1111,286 +1282,248 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-5">
-                                            <!-- Especificação
-                                            Essa lista será carregada com todos os itens validos existentes no OPME:
-                                            
-                                            SELECT
-                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
-                                            CITEM_PROVI CODIGO_PROVISORIO,
-                                            IITEM_MATRL_ESPCL NOME_ITEM,
-                                            CTUSS_ITEM_MATRL_ESPCL TUSS
-                                            FROM ITEM_MATRL_ESPCL
-                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
-
-                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
-                                            -->
-                                            <p class="p-select">Item</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Item 1</option>
-                                                <option value="2">Item 2</option>                                            
-                                            </select>
+                                    <div class="row consulta-itens-selecionados d-none">
+                                        <div class="col-lg-12">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#" class="bread-1">Solicitações</a></li>  
+                                                <li class="breadcrumb-item"><a href="#" class="bread-2">Itens</a></li>    
+                                                <li class="breadcrumb-item">Incluir Item</li>
+                                                </ol>
+                                            </nav>
                                         </div>
-                                        <div class="col-lg-2">
-                                             <!-- Especificação
-                                            Essa lista será carregada com todos os itens validos existentes no OPME:
-                                            
-                                            SELECT
-                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
-                                            CITEM_PROVI CODIGO_PROVISORIO,
-                                            IITEM_MATRL_ESPCL NOME_ITEM,
-                                            CTUSS_ITEM_MATRL_ESPCL TUSS
-                                            FROM ITEM_MATRL_ESPCL
-                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
-
-                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
-                                            -->
-                                            <div class="form">
-                                                <input type="text" name="quantidade" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                                <label for="quantidade" class="label-name">
-                                                    <span class="content-name">Quantidade</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                             <!-- Especificação
-                                            As opções exibidas aqui são as opções gravadas na tabela UND_MEDD_MATRL_ESPCL
-                                            
-                                            SELECT CUND_MEDD_MATRL_ESPCL
-                                            RUND_MEDD_MATRL_ESPCL
-                                            FROM UND_MEDD_MATRL_ESPCL
-                                            WHERE DFIM_VGCIA_UND_MEDD IS NULL
-
-                                            IMPEDIMENTO: PRECISA CRIAR COLUNA NA TABELA ITEM_SOLTD_COMPR PARA GRAVAR
-                                            -->
-                                            <p class="p-select">Unidade de Medida</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">und 1</option>
-                                                <option value="2">und 2</option>                                            
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-3 mt-5">
-                                            <!-- Especificação
-                                            Essa lista será carregada com todos os itens validos existentes no OPME:
-                                           
-                                            SELECT
-                                            CITEM_MATRL_ESPCL CHAVE_PRIMARIA,
-                                            CITEM_PROVI CODIGO_PROVISORIO,
-                                            IITEM_MATRL_ESPCL NOME_ITEM,
-                                            CTUSS_ITEM_MATRL_ESPCL TUSS
-                                            FROM ITEM_MATRL_ESPCL
-                                            WHERE DFIM_VGCIA_ITEM_MATRL_ESPCL IS NULL
-
-                                            O usuário poderá consultar informando o código TUSS ou o nome do item ou o código provisório
-                                            -->
-                                           <div class="form">
-                                               <input type="text" name="valor-unit-prop" onkeypress="$(this).mask('0000000');" autocomplete="off" >
-                                               <label for="valor-unit-prop" class="label-name">
-                                                   <span class="content-name">Valor unitário Proposto</span>
-                                               </label>
-                                           </div>
-                                       </div>
-                                       <div class="col-lg-4 mt-5">
-                                            <!-- Especificação
-                                            Será disponibilizado as seguintes opções:
-                                            1 = Hospital, 2 = Fornecedor, 3 = Bradesco
-                                            -->
-                                            <div class="form">
-                                                <input type="text" name="resp-prop-inicial"  autocomplete="off" >
-                                                <label for="resp-prop-inicial" class="label-name">
-                                                    <span class="content-name">Responsável Pela Proposta Inicial</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-5">
-                                            <!-- Especificação
-                                            Caso o Responsável pela Proposta inicial selecionado seja 2 então essa campo será exibido e
-                                            o usuário terá que seleciona-lo.
-
-                                            Será disponibilizado os fornecedores disponíveis no OPME:
-                                            SELECT NSEQ_PSSOA
-                                            IFANTS_FORNC_MATRL FROM
-                                            FORNC_MATRL_ESPCL
-
-                                            O usuário poderá pesquisar pelo código ou nome do  fornecedor.
-
-                                            Quando o usuário selecionar ele será armazenado no NEGOC_ITEM_SOLTD.NSEQ_PSSOA
-                                            -->
-                                            <div class="form">
-                                                <input type="text" name="resp-prop-inicial"  autocomplete="off" >
-                                                <label for="resp-prop-inicial" class="label-name">
-                                                    <span class="content-name">Fornecedor</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-1 mt-5">
-                                            <!-- Especificação
-                                            Quando o usuário clica para incluir um item , ele será gravado na tabela ITEM_SOLTD_COMPR associando esse
-                                            item a Solicitação de compra por meio do código CSOLTC_COMPR_MATRL_ESPCL e o item sendo associado na tabela
-                                            ITEM_SOLTD_COMPR por meio do código CITEM_MATRL_ESPCL, o OEXCL_LOGCA deverá ser incluso com N.
-                                            ITEM_SOLTD_COMPR = Valor Unitário da Proposta
-                                            CRESPT_PPSTA_INIC= código do responsável proposta selecionado
-                                            CSIT_ITEM_SOLTD = 1
-                                            CTUSS_ITEM_MATRL_ESPCL = O código TUSS do item selecionado.
-                                            E os dados da negociação serão gravados na tabela NEGOC_ITEM_SOLTD
-                                            VPPSTA_NEGOC= Valor Unitário Proposto
-                                            DINCL_PPSTA = current_date
-                                            RRESPT_PPSTA = Responsável pela proposta
-                                            -->
-                                            <button type="button" name="button" id="" class="btn bt-add float-right mt-3" data-toggle="tooltip" data-original-title="Adicionar Item">
-                                                <img src="../img/add.svg" class="i-add">
-                                            </button>
-                                        </div>
-                                        <div id="box-lista-subs" class="col-lg-12 mt-4">
-                                            <div class="container-fluid">
-                                                <div class="row my-auto">
-                                                    <div class="col-sm-6 col-lg-6 my-auto pl-0">
-                                                        <p>Itens</p>
-                                                    </div>
-                                                    <div class="col-sm-6 col-lg-6 my-auto pr-0">            
-                                                        <div class="btn-group actions-table">
-                                                            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="mr-3">Mais Ações</span>
-                                                            <div class="options">
-                                                                <span></span>
-                                                                <span></span>
-                                                                <span></span>
-                                                            </div>
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-success d-none mb-5" id="msg-cadastro" role="alert">
+                                                <div class="container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <img src="../img/check-cadatro.svg" width="23" class="float-left">
+                                                            <p><span class="mr-2 ml-2">Cadastro realizado com sucesso!</span></p>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button type="button" class="btn btn-close close-cadastro">
+                                                                <img src="../img/close.svg">
                                                             </button>
-                                                            <div class="dropdown-menu">
-                                                                <!-- Especificação
-                                                                Caso de Uso:
-
-                                                                1) Se o usuário selecionar "Aceitar Valores Tabelados" então o sistema deverá cadastrar uma nova negociação para o item
-                                                                com status de aprovado e o Valor Unitário será exibido no Valor Unitário e o Valor total Negociado vai calcular a
-                                                                QTD * Valor Unitário Negociado.
-
-                                                                1.1 - Se o item não tiver o Valor Unitário Tabela c/ Hospital" então o sistema não grava a negociação e exibe a mensagem
-                                                                "O Item XYZ não possui valor tabelado com hospital" Informe a negociação manualmente"
-
-                                                                2) Se o usuário selecionar "Aceitar Valores Total Negociado" então o sistema deverá aceitar a negociação para o item com
-                                                                status de aprovado e Negociado.
-
-                                                                2.1 - Se o item não tiver o Valor Unitário " então o sistema não grava a negociação e exibe a mensagem "O Item XYZ não
-                                                                possui valor unitário negociado" Informe a negociação manualmente"
-
-                                                                3) - Se o usuário selecionar " Excluir Item" então sistema vai exibir a mensagem se ele deseja realmente excluir os itens da
-                                                                solicitação de compra, se sim então os itens serão excluídos, se não então retorna a tela sem realizar a exclusão.
-                                                                -->
-                                                                <span class="dropdown-item aceitar-valor-tabelado" data-toggle="modal" data-target="#modal-aceitar-valor-tabelado"><a href="#">Aceitar Valor Tabelado</a></span>
-                                                                <div class="dropdown-divider"></div>
-                                                                <span class="dropdown-item aceitar-valor-total-negociado" data-toggle="modal" data-target="#modal-aceitar-valor-total-negociado"><a href="#">Aceitar Valor Total Negociado</a></span>
-                                                                <div class="dropdown-divider"></div>
-                                                                <span class="dropdown-item excluir-itens" data-toggle="modal" data-target="#modal-excluir-itens"><a href="#">Excluir Itens</a></span>
-                                                            </div>
-                                                        </div>                                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>       
+                                        </div>                                 
+                                        <div class="col-lg-12"><h6 class="txt-up">Incluir Item na Solicitação de Compra</h6></div>
+                                        <div class="col-lg-12 alert alert-danger mb-3" id="msg-input-error" role="alert">
+                                            <div class="container-fluid p-0">
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <img src="../img/alert-error.svg" width="23" class="float-left">
+                                                        <p><span class="mr-2">O Item encontra-se fora da validade.</span></p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-close close-error">
+                                                            <img src="../img/close.svg">
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="table-responsive mt-3">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <div class="ex-checkbox m-0">
-                                                                    <input type="checkbox" data-toggle="tooltip" data-original-title="Marcar todos" onclick="marcarTodos(this.checked);" id="checkbox_one">
-                                                                    <label for="checkbox_one" class="check-estilo"></label>
-                                                                </div>
-                                                            </th>
-                                                            <th></th>
-                                                            <th>TUSS / ITEM</th>
-                                                            <th>Und. Medida Venda</th>
-                                                            <th>Quantidade</th>
-                                                            <th>Valor Unitário Tabelado c/ Hospital</th>
-                                                            <th>Valor Unitário Negociado</th>
-                                                            <th>Valor Total Negociado</th>
-                                                            <th>Situação</th>                                                          
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="td">
-                                                                <div class="ex-checkbox float-left mt-2">
-                                                                    <input type="checkbox" class="marcar" id="checkbox_one">
-                                                                    <label for="checkbox_one" class="check-estilo"></label>
-                                                                </div>
-                                                            </td>
-                                                            <td class="actions ac-2">
-                                                                <div class="float-right">
-                                                                <div class="menu-visible">
-                                                                    <span class="circle"></span>
-                                                                    <span class="circle"></span>
-                                                                    <span class="circle"></span>
-                                                                </div>
-                                                                <div class="menu-invisible">
-                                                                    <!-- Especificação
-                                                                    Quando o usuário seleciona essa opção o item incluso na solicitação é excluído, também será excluído as
-                                                                    negociações relacionada a ele para essa solicitação.
-
-                                                                    Antes de excluir o sistema deverá emitir uma mensagem perguntando se o usuário realmente deseja excluir o
-                                                                    item selecionado. Se sim, o sistema exclui e retorna a essa tela atualizando ela. Se não ele fecha a
-                                                                    mensagem e não faz alterações.
-                                                                    -->
-                                                                    <a href="#conteudo-contato" data-toggle="modal" data-target="#modal-excluir-item">
-                                                                        <img src="../img/excluir.svg" class="i-excluir" title="" data-toggle="tooltip" data-original-title="Excluir">
-                                                                    </a>
-                                                                    <!-- Especificação
-                                                                    Leva o usuário para verificar a comparação de valores já tabelados para aquele item.
-                                                                    -->
-                                                                    <a href="#">
-                                                                        <img src="../img/comparar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Comparar Valores">
-                                                                    </a>
-                                                                </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
-                                                            <td>UND</td>
-                                                            <td>1</td>
-                                                            <td>-</td>
-                                                            <td>-</td>
-                                                            <td>-</td>
-                                                            <td>EM ANÁLISE</td>
-                                                        </tr>
-                                                        <tr class="separator">
-                                                            <td colspan="5"></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        </div>
+                                        <div class="col-lg-12"><hr></div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>3242666177728</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-9 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>12542112222</b></p>
+                                            </div>                                   
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data Término de Validade do Item: <b>01/01/2020</b></p>
+                                            </div>                               
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Ref. Fabricante: <b>1255233336</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Nome do Fabricante: <b>MEDICE SA</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Tabela com Hospital: <b>R$ 700,00</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-12"><hr></div>
+                                    </div>
+                                    <div class="row itens-editar-selecionados d-none">                                        
+                                        <div class="col-lg-5 mt-3">
+                                            <div class="form">
+                                                <input type="text" name="quat-itens-solic" autocomplete="off" >
+                                                <label for="quat-itens-solic" class="label-name">
+                                                    <span class="content-name"><span class="obrigatorio">*</span>Informe a Quantidade de Itens Solicitados</span>
+                                                </label>
                                             </div>
-                                            <ul class="pagination mt-4 mb-1">
-                                                <li>
-                                                    <a href="#" class="prev">
-                                                    <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                <a href="#" class="prev">
-                                                    <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
-                                                </a>
-                                                </li>
-                                                <li><a href="#" class="active">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
-                                                <li>
-                                                <a href="#" class="next">
-                                                    <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
-                                                </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="next">
-                                                        <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5 mt-3">
+                                            <div class="form">
+                                                <input type="text" name="valor-inicial-prop" autocomplete="off" >
+                                                <label for="valor-inicial-prop" class="label-name">
+                                                    <span class="content-name">Informe o Valor Inicial Proposto pelo Hospital</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 itens-editar-selecionados d-none">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir b-cadastro">Salvar</button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- fim itens -->
+                                <!-- orçamento/negociação -->
+                                <div class="tab-pane container-fluid active" id="tab-orcamento-negociacao">
+                                    <div class="row sub-title bg-green mb-2">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                        <div class="col-lg-2">
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
+                                    </div>
+                                    <div class="row sub-title mb-2">
+                                        <div class="col-lg-12">
+                                            <p>Solicitação de Compra: 01233</p>                                        
+                                        </div>
+                                    </div>
+                                    <nav aria-label="breadcrumb" class="mt-5">
+                                        <ol class="breadcrumb">  
+                                            <li class="breadcrumb-item"><a href="#" class="bread-1">Solicitação</a></li>    
+                                            <li class="breadcrumb-item">Orçamento e Negociação</li>                                  
+                                        </ol>
+                                    </nav>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-2">
+                                            <div class="form">
+                                                <input type="text" name="num-orcamento" autocomplete="off">
+                                                <label for="num-orcamento" class="label-name">
+                                                    <span class="content-name">Nº do Orçamento</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="solic-para" autocomplete="off">
+                                                <label for="solic-para" class="label-name">
+                                                    <span class="content-name">Solicitado para</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="tipo-orca" autocomplete="off">
+                                                <label for="tipo-orca" class="label-name">
+                                                    <span class="content-name">Tipo de Orçamento</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form">
+                                                <input type="text" name="situacao-orca" autocomplete="off">
+                                                <label for="situacao-orca" class="label-name">
+                                                    <span class="content-name">Situação de Orçamento</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-4">
+                                            <button type="reset" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                            <button type="reset" name="button" class="btn btn-cancelar float-left">Limpar</button>
+                                            <button type="button" name="button" class="btn btn-buscar float-right buscar-item">Buscar</button>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-4">
+                                        <div class="container-fluid">
+                                            <div class="row my-auto">
+                                                <div class="col-sm-6 col-lg-6 my-auto pl-0">
+                                                    <p>Orçamentos</p>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">         
+                                                    <div class="btn-group actions-table">
+                                                        <button class="btn btn-sm" type="button">
+                                                        <span class="mr-3">Cadastrar Orçamento</span>
+                                                        <div class="options">
+                                                            <i class="icon icon-nav-adicionar icon-incluir"></i>
+                                                        </div>
+                                                        </button>
+                                                    </div>                                              
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>                                                        
+                                                        <th>Número do Orçamento</th>                                                        
+                                                        <th>Solicitado para</th> 
+                                                        <th>Tipo de Orçamento</th> 
+                                                        <th>Quantidade Total de Itens</th>
+                                                        <th>Valor Total Orçado (Inicial)</th>
+                                                        <th>Valor Total Orçado (Atual)</th>
+                                                        <th>% Desconto</th>
+                                                        <th>Validade do Orçamento</th>
+                                                        <th>Situação do Orçamento</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="actions ac-2">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                </a>
+                                                                <a href="#">
+                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>010200</td>
+                                                        <td>HOSPITAL SÃO JOSÉ</td>
+                                                        <td>TABELADO COM HOSPITAL</td>
+                                                        <td>5</td>
+                                                        <td>R$ 3.000,00</td>
+                                                        <td>R$ 2.500,00</td>
+                                                        <td>16,6 %</td>
+                                                        <td>01/01/2020</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim orçamento/negociação -->
                                 <!-- entrega -->
                                 <div class="tab-pane container-fluid fade" id="tab-entrega">
                                     <div class="sub-title mb-2">
@@ -1638,6 +1771,98 @@
                                     </div>
                                 </div>
                                 <!-- fim aprovação -->
+                                <!-- consolidado/mapa -->
+                                <div class="tab-pane container-fluid fade" id="tab-consolidado-mapa">
+                                    <div class="sub-title mb-2">
+                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
+                                    </div>
+                                    <div id="box-lista-subs" class="mt-4">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p>Aprovações</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mt-3">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Aprovador</th>
+                                                        <th data-toggle="tooltip" data-original-title="Situação da Aprovação">Situação</th>
+                                                        <th>Resposta</th> 
+                                                        <th data-toggle="tooltip" data-original-title="Data da Resposta">Data</th>
+                                                        <th data-toggle="tooltip" data-original-title="Responsável por cadastrar a resposta">Responsável</th>
+                                                        <th data-toggle="tooltip" data-original-title="Data do cadastro da reposta">Data do cadastro</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="actions ac-3">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                </a>
+                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
+                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
+                                                                </a>
+                                                                <a href="solicitacao-compras-reabrir-aprovacoes.html">
+                                                                    <img src="../img/reabrir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Reabrir">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Thais Jorge de Oliveira e Silva</td>
+                                                        <td>Respondido</td>
+                                                        <td>Aprovado</td>
+                                                        <td>01/06/2020</td>
+                                                        <td>Renata Scott</td>
+                                                        <td>02/06/2020</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="actions ac-3">
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                                </a>
+                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
+                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
+                                                                </a>
+                                                            </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Maria Beatriz Padilha Soares</td>
+                                                        <td>Pendente</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                    <tr class="separator">
+                                                        <td colspan="5"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim consolidado/mapa -->
                             </div>
                             <!-- fim tab panes -->
                         </div>
