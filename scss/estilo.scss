@@ -69,6 +69,8 @@ a {
     outline: none;
 }
 
+strong, b{font-weight: bold;}
+
 .form-control:focus{
     background-color: transparent;
     border-color: #D6D6D6;
@@ -147,6 +149,7 @@ a {
     top:10px !important;
     left: -16px !important;     
 }
+.actions-table-2 .dropdown-menu{left: 0 !important;}
 
 .actions-table .dropdown-menu > span > a{color: $bg-dark;}
 

@@ -299,7 +299,7 @@
                                 sem restrição.
                                 -->
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab-solicitacao">Solicitação</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#tab-solicitacao">Solicitação</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tab-procedimentos">Procedimentos</a>
@@ -308,7 +308,7 @@
                                     <a class="nav-link" data-toggle="tab" href="#tab-itens">Itens</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tab-orcamento-negociacao">Orçamento/Negociação</a>
+                                    <a class="nav-link" data-toggle="tab" href="#tab-orcamento-negociacao">Orçamento/Negociação</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tab-entrega">Entrega</a>
@@ -324,7 +324,7 @@
                             <!-- tab panes -->
                             <div class="tab-content mt-5">
                                 <!-- solicitação -->
-                                <div class="tab-pane container-fluid fade" id="tab-solicitacao">
+                                <div class="tab-pane container-fluid active" id="tab-solicitacao">
                                     <div class="row sub-title mb-5 bg-green">
                                         <div class="container-fluid">
                                             <div class="row">
@@ -1399,7 +1399,7 @@
                                 </div>
                                 <!-- fim itens -->
                                 <!-- orçamento/negociação -->
-                                <div class="tab-pane container-fluid active" id="tab-orcamento-negociacao">
+                                <div class="tab-pane container-fluid fade" id="tab-orcamento-negociacao">
                                     <div class="row sub-title bg-green mb-2">
                                         <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
                                         <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
@@ -1415,7 +1415,8 @@
                                             <p>Solicitação de Compra: 01233</p>                                        
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!-- breadcrumbs -->
+                                    <div class="row breadcrumbs">
                                         <div class="col-lg-12 pl-0 pr-0">
                                             <nav aria-label="breadcrumb" class="mt-3 bread-orcamento-1">
                                                 <ol class="breadcrumb">  
@@ -1489,83 +1490,25 @@
                                                     <li class="breadcrumb-item">Reprovar Proposta</li>                          
                                                 </ol>
                                             </nav>
+                                            <nav aria-label="breadcrumb" class="mt-3 bread-orcamento-10">
+                                                <ol class="breadcrumb">  
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-1">Solicitação</a></li>    
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-2">Orçamento e Negociação</a></li>   
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-3">Detalhe Orçamento</a></li> 
+                                                    <li class="breadcrumb-item">Aprovar Item</li>                          
+                                                </ol>
+                                            </nav>
+                                            <nav aria-label="breadcrumb" class="mt-3 bread-orcamento-11">
+                                                <ol class="breadcrumb">  
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-1">Solicitação</a></li>    
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-2">Orçamento e Negociação</a></li>   
+                                                    <li class="breadcrumb-item"><a href="#" class="solicitacao-3">Detalhe Orçamento</a></li> 
+                                                    <li class="breadcrumb-item">Reprovar Proposta</li>                          
+                                                </ol>
+                                            </nav>
                                         </div>
                                     </div>
-                                    <div class="row mt-2 box-orcamento-5">                                        
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Orçamento: <b>010200</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Solicitado para: <b>Fornecedor Medice SA</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Tipo de Orçamento: <b>Normal</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-12"><hr></div>
-                                    </div>
-                                    <div class="row mt-2 box-orcamento-6">
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
-                                            </div>                                            
-                                        </div>                                        
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mb-4">
-                                            <div class="h-100 border d-flex p-2">
-                                                <p class="color-blue m-0 my-auto">Observação sobre o Fornecedor: <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- fim breadcrumbs -->
                                     <div class="row mt-2 box-orcamento-1">
                                         <div class="col-lg-2">
                                             <div class="form">
@@ -1604,7 +1547,7 @@
                                             <button type="reset" name="button" class="btn btn-cancelar float-right mr-3">Limpar</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4 box-orcamento-1">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-4 box-orcamento-1">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
                                                 <div class="col-sm-6 col-lg-6 my-auto pl-0">
@@ -1674,6 +1617,11 @@
                                             </table>
                                         </div>
                                     </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-1">
+                                        <div class="col-lg-12">
+                                            <button type="reset" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                        </div>
+                                    </div>
                                     <div class="row mt-2 box-orcamento-2">
                                         <div class="col-lg-4">                                                     
                                            <p class="p-select">Solicitado para</p>
@@ -1700,7 +1648,7 @@
                                             </div>
                                         </div>                                      
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4 box-orcamento-2">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-4 box-orcamento-2">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
                                                 <div class="col-sm-6 col-lg-6 my-auto pl-0">
@@ -1740,7 +1688,7 @@
                                                                 <span class="circle"></span>
                                                             </div>
                                                             <div class="menu-invisible">
-                                                                <a href="#">
+                                                                <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
                                                                     <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                                 </a>
                                                             </div>
@@ -1764,7 +1712,7 @@
                                                                 <span class="circle"></span>
                                                             </div>
                                                             <div class="menu-invisible">
-                                                                <a href="#">
+                                                                <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
                                                                     <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                                 </a>
                                                             </div>
@@ -1798,12 +1746,12 @@
                                     </div>
                                     <div class="row btns-opcoes mt-5 box-orcamento-2">
                                         <div class="col-lg-12">
-                                            <button type="reset" name="button" class="btn btn-voltar float-left">Voltar</button>
+                                            <button type="reset" name="button" class="btn btn-voltar btn-salvar-orcamento mr-3 float-left">Voltar</button>
                                             <button type="button" name="button" class="btn btn-incluir btn-salvar-orcamento">Salvar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-right mr-3">Cancelar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar btn-salvar-orcamento float-left">Cancelar</button>
                                         </div>
                                     </div>
-                                    <div class="row box-orcamento-3">
+                                    <div class="row mt-2 box-orcamento-3">
                                         <div class="col-lg-4">                                                  
                                             <p class="p-select">Item</p>
                                             <select class="form-control h-35">
@@ -1861,7 +1809,7 @@
                                             <button type="reset" name="button" class="btn btn-cancelar float-right mr-3">Limpar</button>
                                         </div>
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4 box-orcamento-3">
+                                    <div id="box-lista-subs" class="col-lg-12 mt-4 box-orcamento-3">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
                                                 <div class="col-lg-12 pl-0">
@@ -1906,8 +1854,8 @@
                                                                 Exclui o Item da Solicitação de Compra, ele não fará parte do cálculo final, mas mantém os históricos
                                                                 de orçamento.
                                                                 -->        
-                                                                <a href="#" class="">
-                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse Item">
+                                                                <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                                 </a>
                                                             </div>
                                                             </div>
@@ -1935,8 +1883,8 @@
                                                             -->
                                                                 <img src="../img/check-table.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Item ok">
                                                             </a>
-                                                            <a href="#">
-                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse Item">
+                                                            <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                             </a>
                                                         </td>
                                                         <td></td>
@@ -1958,12 +1906,12 @@
                                     </div>
                                     <div class="row btns-opcoes mt-5 box-orcamento-3">
                                         <div class="col-lg-12">
-                                            <button type="reset" name="button" class="btn btn-voltar float-left">Voltar</button>
+                                            <button type="reset" name="button" class="btn btn-voltar float-left btn-salvar-item-orcamento mr-3">Voltar</button>
                                             <button type="button" name="button" class="btn btn-incluir btn-salvar-item-orcamento">Salvar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-right mr-3">Cancelar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar btn-salvar-item-orcamento float-left">Cancelar</button>
                                         </div>
                                     </div>
-                                    <div class="row box-orcamento-4">    
+                                    <div class="row mt-2 box-orcamento-4">    
                                         <div class="col-lg-12"><h6 class="txt-up">Item Selecionado</h6></div>
                                         <div class="col-lg-12 alert alert-danger mb-3" id="msg-input-error" role="alert">
                                             <div class="container-fluid p-0">
@@ -2014,6 +1962,31 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-4">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left btn-salvar-item-sel-orcamento mr-3">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar btn-salvar-item-sel-orcamento float-left">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-item-sel-orcamento">Salvar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 box-orcamento-5">                                        
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Orçamento: <b>010200</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Solicitado para: <b>Fornecedor Medice SA</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Tipo de Orçamento: <b>Normal</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-12"><hr></div>
+                                    </div>
                                     <div class="row box-orcamento-5">
                                         <div class="col-lg-3 mt-5">
                                             <div class="form">
@@ -2042,229 +2015,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row box-orcamento-7">
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
-                                            </div>                                            
-                                        </div>                                        
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mb-3"><hr></div>
-                                        <div class="col-lg-3 mt-5">
-                                            <p class="p-select">Responsável Pela Contra-Proposta:</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Bradesco</option>
-                                                <option value="2">Hospital</option>     
-                                                <option value="3">Fornecedor</option>                                        
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-6 mt-5">                                    
-                                            <div class="form">
-                                                <input type="text" name="valor-proposto" autocomplete="off">
-                                                <label for="resp-incluir-solic-orcamento" class="label-name">
-                                                    <span class="content-name">Valor Proposto</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2 box-orcamento-8">
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
-                                            </div>                                            
-                                        </div>                                        
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-5 mb-3">
-                                            <label for="observacoes" class="observacoes">Observação</label>
-                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2 box-orcamento-9">
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-2 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-5 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-3 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
-                                            </div>                                            
-                                        </div>                                        
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
-                                            </div>                                            
-                                        </div>
-                                        <div class="col-lg-4 mb-4">
-                                            <div class="h-100 border d-flex justify-content-center p-2">
-                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mb-4"><hr></div>
-                                        <div class="col-lg-3 mt-3">
-                                            <div class="ex-checkbox" data-toggle="tooltip" data-original-title="" title="">
-                                                <input type="checkbox" id="checkbox_one">
-                                                <label for="checkbox_one" class="check-estilo">Realizar Contra-Proposta</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <p class="p-select">Responsável pela Contra-Proposta:</p>
-                                            <select class="form-control h-35">
-                                                <option data-display="Selecione">Selecione</option>
-                                                <option value="1">Bradesco</option>
-                                                <option value="2">Hospital</option>    
-                                                <option value="2">Fornecedor</option>                                        
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input type="text" name="valor-contra-proposta" autocomplete="off">
-                                                <label for="valor-contra-proposta" class="label-name">
-                                                    <span class="content-name">Valor da Contra-Proposta</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form">
-                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-contra-proposta" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                                <label for="data-contra-proposta" class="label-name">
-                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                                    <span>Data da Contra-Proposta</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 mt-5 mb-3">
-                                            <label for="observacoes" class="observacoes">Justificativa</label>
-                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
-                                        </div>
-                                    </div>
                                     <div id="box-lista-subs" class="col-lg-12 box-orcamento-5 mt-5">
                                         <div class="container-fluid">
                                             <div class="row my-auto">
                                                 <div class="col-sm-6 col-lg-6 my-auto pl-0">
                                                     <p>Itens</p>
                                                 </div>
-                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">                                                      
-                                                    <div class="btn-group actions-table" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <div class="col-sm-6 col-lg-6 my-auto pr-0">            
+                                                    <div class="btn-group actions-table actions-table-2">
                                                         <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <span class="mr-3">Mais Ações</span>
                                                         <div class="options">
@@ -2274,13 +2032,14 @@
                                                         </div>
                                                         </button>
                                                         <div class="dropdown-menu">
-                                                            <span class="dropdown-item aprovar-itens-selecionados"><a href="">Aprovar Itens Selecionados</a></span>
+                                                            <span class="dropdown-item aceite-gestores-lote" data-toggle="modal" data-target="#modal-aprovar-itens-selecionados"><a href="#">Aprovar Itens Selecionados</a></span>
                                                             <div class="dropdown-divider"></div>
-                                                            <span class="dropdown-item reprovar-itens-selecionados"><a href="">Reprovar Itens Selecionados</a></span>
+                                                            <span class="dropdown-item recusa-gestores-lote"  data-toggle="modal" data-target="#modal-reprovar-itens-selecionados"><a href="#">Reprovar Itens Selecionados</a></span>
                                                             <div class="dropdown-divider"></div>
-                                                            <span class="dropdown-item incluir-itens-box-5"><a href="">Incluir Itens</a></span>
+                                                            <span class="dropdown-item suspender-tabela-completa"  data-toggle="modal" data-target="#modal-incluir-itens-selecionados"><a href="#">Incluir Itens Selecionados</a></span>
+                                                            
                                                         </div>
-                                                    </div>  
+                                                    </div>                                       
                                                 </div>
                                             </div>
                                         </div>
@@ -2314,7 +2073,7 @@
                                                             <label for="checkbox_one" class="check-estilo"></label>
                                                         </div>
                                                     </td>
-                                                    <td class="actions ac-3">
+                                                    <td class="actions ac-4">
                                                         <div class="float-right">
                                                         <div class="menu-visible">
                                                             <span class="circle"></span>
@@ -2326,10 +2085,13 @@
                                                                 <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
                                                             </a>
                                                             <a href="#">
-                                                                <img src="../img/aprovado.svg" class="i-detalhes a-itens" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
                                                             </a>
                                                             <a href="#">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes r-reprovar-proposta" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                            </a>
+                                                            <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -2366,10 +2128,13 @@
                                                                 <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
                                                             </a>
                                                             <a href="#">
-                                                                <img src="../img/aprovado.svg" class="i-detalhes a-itens" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
+                                                                <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
                                                             </a>
                                                             <a href="#">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes r-reprovar-proposta" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                                <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                            </a>
+                                                            <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -2417,6 +2182,155 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 box-orcamento-5 mt-5">
+                                        <p>Resposta Negociação</p>
+                                        <div class="row consulta-negociacao mt-3">
+                                            <div class="col-lg-3 mt-2 mb-4">
+                                                <p>Valor Inicial Proposto: <span>R$ 2.800,00</span></p>
+                                            </div>
+                                            <div class="col-lg-3 mt-2 mb-4">
+                                                <p>Valor total negociado: <span>R$ 2.400,00</span></p>
+                                            </div>
+                                            <div class="col-lg-6 mb-4">
+                                                <div class="ex-checkbox mt-3" data-toggle="tooltip" data-original-title="" title="">
+                                                    <input type="checkbox" id="">
+                                                    <label for="checkbox_one" class="check-estilo">Informar maior desconto sobre Valor Total Negociado</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form">
+                                                    <input type="text" name="valor-total-negociado-desconto" autocomplete="off">
+                                                    <label for="valor-total-negociado-desconto" class="label-name">
+                                                        <span class="content-name">Valor Total Negociado com desconto</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-4">
+                                                <p>Desconto obtido na negociação: <span>14,28 %</span></p>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <p class="p-select">Resposta</p>
+                                                <select class="form-control h-35">
+                                                    <option data-display="Selecione">Selecione</option>
+                                                    <option value="1">Aprovado Completo</option>
+                                                    <option value="2">Reprovado Completo</option>    
+                                                    <option value="3">Aprovado Parcial</option>                                        
+                                                </select>
+                                            </div>
+                                             <div class="col-lg-12 mt-5 mb-3">
+                                                <label for="observacoes" class="observacoes">Justificativa</label>
+                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-lg-4 mt-4">
+                                                <p>Usuário Responsável Pela Negociação: <span>Renata Scoot</span></p>
+                                            </div>
+                                            <div class="col-lg-4 mt-4">
+                                                <p>Data da Resposta: <span>11/07/2020</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 box-orcamento-5">
+                                        <div class="col-lg-12">
+                                            <div class="sub-title">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total de Itens: <b>2</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Quantidade de Itens: <b>4</b></p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Itens Negociados: <b>1</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Total Inicial: <b>-</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Total Negociado: <b>-</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title">
+                                                            <p class="color-blue">% TOTAL DE DESCONTO: <b>-</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-5">
+                                        <div class="col-lg-12">
+                                            <button type="reset" name="button" class="btn btn-voltar btn-salvar-resposta-negociacao  mr-3 float-left">Voltar</button>
+                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-resposta-negociacao w-320">Salvar Resposta Negociação</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-salvar-resposta-negociacao ">Cancelar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 box-orcamento-6">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="h-100 border d-flex p-2">
+                                                <p class="color-blue m-0 my-auto">Observação sobre o Fornecedor: <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b></p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="box-lista-subs" class="col-lg-12 box-orcamento-6 mt-5">
                                         <div class="container-fluid">
@@ -2559,473 +2473,867 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="row mt-3 box-orcamento-5">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title">
-                                                <div class="row d-flex">
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p class="color-blue">Total de Itens: <b>2</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p class="color-blue">Quantidade de Itens: <b>4</b></p>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p class="color-blue">Itens Negociados: <b>1</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p class="color-blue">Valor Total Inicial: <b>-</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p class="color-blue">Valor Total Negociado: <b>-</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title">
-                                                            <p class="color-blue">% TOTAL DE DESCONTO: <b>-</b></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="box-lista-subs" class="col-lg-12 box-orcamento-5 mt-5">
-                                        <p>Resposta Negociação</p>
-                                        <div class="row consulta-negociacao mt-3">
-                                            <div class="col-lg-3 mt-2 mb-4">
-                                                <p>Valor Inicial Proposto: <span>R$ 2.800,00</span></p>
-                                            </div>
-                                            <div class="col-lg-3 mt-2 mb-4">
-                                                <p>Valor total negociado: <span>R$ 2.400,00</span></p>
-                                            </div>
-                                            <div class="col-lg-6 mb-4">
-                                                <div class="ex-checkbox mt-3" data-toggle="tooltip" data-original-title="" title="">
-                                                    <input type="checkbox" id="">
-                                                    <label for="checkbox_one" class="check-estilo">Informar maior desconto sobre Valor Total Negociado</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form">
-                                                    <input type="text" name="valor-total-negociado-desconto" autocomplete="off">
-                                                    <label for="valor-total-negociado-desconto" class="label-name">
-                                                        <span class="content-name">Valor Total Negociado com desconto</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 mt-4">
-                                                <p>Desconto obtido na negociação: <span>14,28 %</span></p>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <p class="p-select">Resposta</p>
-                                                <select class="form-control h-35">
-                                                    <option data-display="Selecione">Selecione</option>
-                                                    <option value="1">Aprovado Completo</option>
-                                                    <option value="2">Reprovado Completo</option>    
-                                                    <option value="3">Aprovado Parcial</option>                                        
-                                                </select>
-                                            </div>
-                                             <div class="col-lg-12 mt-5 mb-3">
-                                                <label for="observacoes" class="observacoes">Justificativa</label>
-                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
-                                            </div>
-                                            <div class="col-lg-4 mt-4">
-                                                <p>Usuário Responsável Pela Negociação: <span>Renata Scoot</span></p>
-                                            </div>
-                                            <div class="col-lg-4 mt-4">
-                                                <p>Data da Resposta: <span>11/07/2020</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5 box-orcamento-9">
-                                        <div class="col-lg-12">                                            
-                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-excluir btn-reprovar-item-sel-orcamento">Reprovar</button>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5 box-orcamento-8">
-                                        <div class="col-lg-12">                                            
-                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-incluir btn-aprovar-item-sel-orcamento">Aprovar</button>
-                                        </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5 box-orcamento-7">
-                                        <div class="col-lg-12">                                            
-                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-contra-proposta-orcamento">Salvar</button>
-                                        </div>
-                                    </div>
                                     <div class="row btns-opcoes mt-5 box-orcamento-6">
                                         <div class="col-lg-12">                                            
                                             <button type="button" name="button" class="btn btn-voltar">voltar</button>
                                         </div>
                                     </div>
-                                    <div class="row btns-opcoes mt-5 box-orcamento-5">
-                                        <div class="col-lg-12">
-                                            <button type="reset" name="button" class="btn btn-voltar float-left">Voltar</button>
-                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-resposta-negociacao w-320">Salvar Resposta Negociação</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-right mr-3">Cancelar</button>
+                                    <div class="row mt-2 box-orcamento-7">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-3"><hr></div>
+                                        <div class="col-lg-3 mt-5">
+                                            <p class="p-select">Responsável Pela Contra-Proposta:</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Hospital</option>     
+                                                <option value="3">Fornecedor</option>                                        
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 mt-5">                                    
+                                            <div class="form">
+                                                <input type="text" name="valor-proposto" autocomplete="off">
+                                                <label for="resp-incluir-solic-orcamento" class="label-name">
+                                                    <span class="content-name">Valor Proposto</span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row btns-opcoes mt-5 box-orcamento-4">
+                                    <div class="row btns-opcoes mt-5 box-orcamento-7">
                                         <div class="col-lg-12">                                            
-                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-item-sel-orcamento">Salvar</button>
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3 btn-salvar-contra-proposta-orcamento">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-salvar-contra-proposta-orcamento">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir btn-salvar-contra-proposta-orcamento">Salvar</button>
                                         </div>
                                     </div>
-                                    <div class="row  btns-opcoes mt-5 box-orcamento-1">
-                                        <div class="col-lg-12">
-                                            <button type="reset" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                    <div class="row mt-2 box-orcamento-8">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-5 mb-3">
+                                            <label for="observacoes" class="observacoes">Observação</label>
+                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-8">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3 btn-aprovar-item-sel-orcamento">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-aprovar-item-sel-orcamento">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir btn-aprovar-item-sel-orcamento">Aprovar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 box-orcamento-9">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4"><hr></div>
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="checkbox_one">
+                                                <label for="checkbox_one" class="check-estilo">Realizar Contra-Proposta</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p class="p-select">Responsável pela Contra-Proposta:</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Hospital</option>    
+                                                <option value="2">Fornecedor</option>                                        
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="valor-contra-proposta" autocomplete="off">
+                                                <label for="valor-contra-proposta" class="label-name">
+                                                    <span class="content-name">Valor da Contra-Proposta</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-contra-proposta" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data-contra-proposta" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                    <span>Data da Contra-Proposta</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-5 mb-3">
+                                            <label for="observacoes" class="observacoes">Justificativa</label>
+                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-9">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3 btn-reprovar-item-sel-orcamento">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-reprovar-item-sel-orcamento">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-excluir btn-reprovar-item-sel-orcamento">Reprovar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 box-orcamento-10">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-5 mb-3">
+                                            <label for="observacoes" class="observacoes">Observação</label>
+                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-10">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3 btn-aprovar-item-sel-orcamento-2">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-aprovar-item-sel-orcamento-2">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir btn-aprovar-item-sel-orcamento-2">Aprovar</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 box-orcamento-11">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">TUSS: <b>42536477</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Código Provisório: <b>152426</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Item: <b>Implante Mamário Solicone Preenchido com Gel</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Inicial Proposto: <b>R$ 700,00</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-5 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Inicial: <b>Fornecedor Import Medical Ltda</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Valor Atual Proposto: <b>R$ 650,00</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Proposta Atual: <b>Bradesco Seguros</b></p>
+                                            </div>                                            
+                                        </div>                                        
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Percentual de Desconto Obtido: <b>17,14%</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Responsável pela Negociação: <b>Renata Scott</b></p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Aprovação: <b>29/09/2020</b></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4"><hr></div>
+                                        <div class="col-lg-3 mt-3">
+                                            <div class="ex-checkbox" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="checkbox_one">
+                                                <label for="checkbox_one" class="check-estilo">Realizar Contra-Proposta</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p class="p-select">Responsável pela Contra-Proposta:</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">Bradesco</option>
+                                                <option value="2">Hospital</option>    
+                                                <option value="2">Fornecedor</option>                                        
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input type="text" name="valor-contra-proposta" autocomplete="off">
+                                                <label for="valor-contra-proposta" class="label-name">
+                                                    <span class="content-name">Valor da Contra-Proposta</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form">
+                                                <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-contra-proposta" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                <label for="data-contra-proposta" class="label-name">
+                                                    <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                    <span>Data da Contra-Proposta</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-5 mb-3">
+                                            <label for="observacoes" class="observacoes">Justificativa</label>
+                                            <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5 box-orcamento-11">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3 btn-reprovar-item-sel-orcamento-2">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left btn-reprovar-item-sel-orcamento-2">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-excluir btn-reprovar-item-sel-orcamento-2">Reprovar</button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- fim orçamento/negociação -->
                                 <!-- entrega -->
                                 <div class="tab-pane container-fluid fade" id="tab-entrega">
-                                    <div class="sub-title mb-2">
-                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
-                                    </div>
-                                    <div id="box-lista-subs" class="mt-3">
-                                        <p class="mb-3">Itens</p>
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Código TUSS">TUSS</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Código Provisório">Provisório</th>
-                                                    <th>Item</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Quantidade Solicitada">Solicitada</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Proposta Inicial (unitário)">Proposta Inicial</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável Proposta Inicial">Resp. Proposta Inicial</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Proposta Atual (unitário)">Proposta Atual</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Responsável Proposta Final">Resp. Proposta Final</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Valor Final Negociado (unidade)">Valor Final</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Quantidade Negociada">Negociada</th>
-                                                    <th>Status</th>
-                                                    <th data-toggle="tooltip" data-placement="top" data-original-title="Valor Total Negociado do Item">Total</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>55212</td>
-                                                        <td>235211</td>
-                                                        <td>Parafuso Canulado 7.0 Titânio</td>
-                                                        <td>2</td>
-                                                        <td>R$ 823,00</td>
-                                                        <td>Hospital</td>
-                                                        <td>R$ 750,00</td>
-                                                        <td>Bradesco</td>
-                                                        <td>R$ 750,00</td>
-                                                        <td>2</td>
-                                                        <td>Aprovação em lote</td>
-                                                        <td>R$ 1.500,00</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>434343</td>
-                                                        <td>4343455</td>
-                                                        <td>Ortholoc 3di - Sistema Hallux - Parafuso de Travamento 3.5x24mm</td>
-                                                        <td>1</td>
-                                                        <td>R$ 4.320,00</td>
-                                                        <td>Hospital</td>
-                                                        <td>R$ 4.000,00</td>
-                                                        <td>Hospital</td>
-                                                        <td>R$ 4.000,00</td>
-                                                        <td>1</td>
-                                                        <td>Aprovação em lote</td>
-                                                        <td>R$ 4.000,00</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-12">
-                                            <div class="sub-title">
-                                                <div class="row d-flex">
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Total de itens solicitados: <b>2</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Quantidade total de itens solicitados: <b>3</b></p>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Quantidade de itens aprovado: <b>3</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Valor total solicitado: <br><b>R$ 5.966,00</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens">
-                                                            <p>Valor total aprovado: <br><b>R$ 5.500,00</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title">
-                                                            <p>% Economizado: <b>7,8</b></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-12">
-                                            <p><b>Observação em lote aprovado devido a necessidade de urgência.</b></p>
-                                            <hr>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <p>Aprovado pela diretoria: <b>Sim.</b></p>
-                                        </div>
+                                    <div class="row sub-title bg-green mb-2">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
                                         <div class="col-lg-2">
-                                            <p>Possui liminar: <b>Não.</b></p>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <p>Situação: <b>Aguardando confirmação de procedimento realizado.</b></p>
-                                        </div>
-                                        <div class="col-lg-12"><hr></div>
+                                            <!-- Especificação
+                                            Esse ícone só aparece quando o Item não encontra-se associado na Solicitação de Compra.
+                                            -->       
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-lg-3">
-                                            <div class="radio-title">
-                                                <h6 class="mt-2">Hospital enviou o pós operatório?</h6>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="ex-radio mr-4">
-                                                    <input type="radio" id="pos-sim" name="radio_group_pos" class="b-24">
-                                                    <label for="radio-estilo" class="radio-estilo">Sim</label>
-                                                </div>
-                                                <div class="ex-radio">
-                                                    <input type="radio" id="pos-nao" name="radio_group_pos" class="b-24">
-                                                    <label for="radio-estilo" class="radio-estilo">Não</label>
-                                                </div>
-                                            </div>
+                                    <div class="row sub-title">
+                                        <div class="col-lg-12">
+                                            <p>Solicitação de Compra: 01233</p>                                        
                                         </div>
-                                        <div class="col-lg-4">                                            
-                                            <p>Documentos pós operatório</p>
-                                            <input type="file" name="arquivo" id="arquivo" multiple />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 pl-0 pr-0">
+                                            <nav aria-label="breadcrumb" class="bread-solicitacao-1 mt-2">
+                                                <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#" class="">Solicitação</a></li>    
+                                                <li class="breadcrumb-item">Itens</li>                                                                                 
+                                                </ol>
+                                            </nav>
                                         </div>
-                                        <div class="col-lg-5 mt-4">
+                                        <div class="col-lg-12 pl-0 pr-0 consulta-itens-selecionados d-none pt-2">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#" class="bread-1">Solicitações</a></li>  
+                                                <li class="breadcrumb-item"><a href="#" class="bread-2">Itens</a></li>    
+                                                <li class="breadcrumb-item">Incluir Item</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">                                           
                                             <div class="form">
-                                                <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="data-proc" onkeypress="mascaraData(this, event)" autocomplete="off">                                                
-                                                <label for="data-proc" class="label-name">
-                                                    <span class="content-name">Data do Procedimento</span>
+                                                <input type="text" name="cep" autocomplete="off">
+                                                <label for="cep" class="label-name">
+                                                    <span class="content-name">CEP</span>
                                                 </label>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row btns-opcoes mt-5">
-                                        <div class="col-lg-12">
-                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                            <button type="button" name="button" class="btn btn-confirmar b-cadastro">Confirmar Procedimento</button>
+                                        <div class="col-lg-6">                                           
+                                            <div class="form">
+                                                <input type="text" name="logradouro" autocomplete="off">
+                                                <label for="logradouro" class="label-name">
+                                                    <span class="content-name">Logradouro</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">                                           
+                                            <div class="form">
+                                                <input type="text" name="numero" autocomplete="off">
+                                                <label for="numero" class="label-name">
+                                                    <span class="content-name">Nº</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">                                           
+                                            <div class="form">
+                                                <input type="text" name="complemento" autocomplete="off">
+                                                <label for="complemento" class="label-name">
+                                                    <span class="content-name">Complemento</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-5">                                           
+                                            <div class="form">
+                                                <input type="text" name="bairro" autocomplete="off">
+                                                <label for="bairro" class="label-name">
+                                                    <span class="content-name">Bairro</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 mt-5">                                           
+                                            <p class="p-select">UF</p>
+                                            <select class="form-control h-35">
+                                                <option data-display="Selecione">Selecione</option>
+                                                <option value="1">RJ</option>
+                                                <option value="2">SP</option>
+                                            </select>                                                             
+                                        </div>
+                                        <div class="col-lg-6 mt-5">                                           
+                                            <div class="form">
+                                                <input type="text" name="cidade" autocomplete="off">
+                                                <label for="cidade" class="label-name">
+                                                    <span class="content-name">Cidade</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-5">
+                                            <button type="reset" name="button" class="btn btn-voltar float-left mr-3">Voltar</button>
+                                            <button type="reset" name="button" class="btn btn-cancelar float-left">Limpar</button>
+                                            <button type="button" name="button" class="btn btn-incluir float-right">Salvar</button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- fim entrega -->
                                 <!-- aprovação -->
                                 <div class="tab-pane container-fluid fade" id="tab-aprovacao">
-                                    <div class="sub-title mb-2">
-                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
+                                    <div class="row sub-title bg-green mb-2">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                        <div class="col-lg-2">
+                                            <!-- Especificação
+                                            Esse ícone só aparece quando o Item não encontra-se associado na Solicitação de Compra.
+                                            -->       
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <p>Aprovações</p>
-                                                </div>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 pl-0 pr-0">
+                                            <nav aria-label="breadcrumb" class="bread-solicitacao-1 mt-2">
+                                                <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#" class="">Solicitação de Compra</a></li>    
+                                                <li class="breadcrumb-item">Aprovação</li>                                                                                 
+                                                </ol>
+                                            </nav>
                                         </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Solicitação: <b>123331</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Hospital/Clinica: <b>São José</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Cartão do Segurado: <b>752 2521212 2121</b></p>
+                                            </div>                                   
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Nome do Segurado: <b>Jorge Antunes Matheus</b></p>
+                                            </div>                               
+                                        </div>
+                                        <div class="col-lg-2 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Senha: <b>FABLGV5</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Solicitação: <b>01/01/2020</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-3 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Data da Resposta: <b>01/01/2020</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="h-100 border d-flex justify-content-center p-2">
+                                                <p class="color-blue m-0 my-auto">Forma de Pagamento: <b>PAGAMENTO EM CONTA</b></p>
+                                            </div>    
+                                        </div>
+                                        <div class="col-lg-12"><hr></div>
+                                        <div class="col-lg-8 border-itens">
+                                            <p>Procedimento: <strong>40812073 - ANGIOGRAFIA POSOPERATORIA DE CONTROLE</strong></p>
+                                            <p>Procedimento: <strong>40812049 - ANGIOGRAFIA POR CATETERISMO SELETIVO DE RAMO PRIMARIO POR VASO</strong></p>
+                                            <p>Procedimento: <strong>40812065 - ANGIOGRAFIA TRANSOPERATORIA DE POSICIONAMENTO</strong></p>
+                                            <p>Procedimento: <strong>40813185 - ANGIOPLASTIA TRANSLUMINAL PERCUTANEA PARA TRATAMENTO DE OBSTRUCAO ARTERIAL</strong></p>
+                                            <p>Procedimento: <strong>40813266 - COLOCACAO DE STENT PARA TRATAMENTO DE OBSTRUCAO ARTERIAL OU VENOSA POR VASO</strong></p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p>Aprovação:</p>
+                                            <div class="ex-checkbox mt-4 d-inline-flex mr-3" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="checkbox_one" class="check-estilo">Diretoria</label>
+                                            </div>   
+                                            <div class="ex-checkbox mt-4  d-inline-flex" data-toggle="tooltip" data-original-title="" title="">
+                                                <input type="checkbox" id="">
+                                                <label for="checkbox_one" class="check-estilo">Suprex</label>
+                                            </div>    
+                                            <p>Analista Responsável Pela Aprovação da Negociação: <br><strong>Renata Scoot</strong></p>
+                                        </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
                                         <div class="table-responsive mt-3">
                                             <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>Aprovador</th>
-                                                        <th data-toggle="tooltip" data-original-title="Situação da Aprovação">Situação</th>
-                                                        <th>Resposta</th> 
-                                                        <th data-toggle="tooltip" data-original-title="Data da Resposta">Data</th>
-                                                        <th data-toggle="tooltip" data-original-title="Responsável por cadastrar a resposta">Responsável</th>
-                                                        <th data-toggle="tooltip" data-original-title="Data do cadastro da reposta">Data do cadastro</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
-                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
-                                                                </a>
-                                                                <a href="solicitacao-compras-reabrir-aprovacoes.html">
-                                                                    <img src="../img/reabrir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Reabrir">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>Thais Jorge de Oliveira e Silva</td>
-                                                        <td>Respondido</td>
-                                                        <td>Aprovado</td>
-                                                        <td>01/06/2020</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>02/06/2020</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
-                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>Maria Beatriz Padilha Soares</td>
-                                                        <td>Pendente</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
+                                            <thead>
+                                                <tr> 
+                                                    <th>Registro ANVISA</th>
+                                                    <th>Descrição do Material</th>                                                                     
+                                                    <th>Quantidade Solicitada</th>
+                                                    <th>Quantidade Atendida</th>
+                                                    <th>Vlr. Unitário Hospitalar</th>
+                                                    <th>Vlr. Total Hospitalar</th>
+                                                    <th>Vlr. Unitário Bradesco</th>
+                                                    <th>Vlr. Total Bradesco</th>
+                                                    <th>Vlr. Unitário Acordado</th>
+                                                    <th>Vlr. Desconto Sob Vlr. Total Acordado</th>
+                                                    <th>Vlr. Total Acordado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>5262333323232</td>
+                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>R$ 700,00</td>
+                                                    <td>R$ 1.400,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>R$ 1.300,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>-</td>
+                                                    <td>R$ 1.300,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5262333323232</td>
+                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>R$ 700,00</td>
+                                                    <td>R$ 1.400,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>R$ 1.300,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>-</td>
+                                                    <td>R$ 1.300,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
                                             </table>
                                         </div>
                                     </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12">
+                                            <div class="sub-title">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Total Geral</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Quantidade Solicitada:<br><b>4</b></p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Quantidade Atendida:<br><b>4</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Valor Total Hospitalar:<br><b>R$ 2.800,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Valor Total Bradesco:<br><b>R$ 2.600,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title text-center">
+                                                            <p class="color-blue">Valor Total Acordado:<br><b>R$ 2.600,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row btns-opcoes mt-5">
+                                        <div class="col-lg-12">                                            
+                                            <button type="button" name="button" class="btn btn-voltar float-left mr-3">voltar</button>
+                                            <button type="reset" value="Reset" name="button" class="btn btn-cancelar float-left">Cancelar</button>
+                                            <button type="button" name="button" class="btn btn-incluir w-234">Gravar Aprovações</button>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <!-- fim aprovação -->
                                 <!-- consolidado/mapa -->
                                 <div class="tab-pane container-fluid fade" id="tab-consolidado-mapa">
-                                    <div class="sub-title mb-2">
-                                        <p>Solicitação : 0001 - Hospital: São Luiz Hospital - Segurado: Rodrigo dos Santos Pereira</p>                                        
+                                    <div class="row sub-title bg-green mb-2">
+                                        <div class="col-lg-4"><p>CNPJ: 00.000.000/0001-00</p></div>
+                                        <div class="col-lg-4"><p>Hospital/Clínica: São José</p></div>
+                                        <div class="col-lg-2"><p>Status: Ativo</p></div>       
+                                        <div class="col-lg-2">
+                                            <!-- Especificação
+                                            Esse ícone só aparece quando o Item não encontra-se associado na Solicitação de Compra.
+                                            -->       
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir" width="30">
+                                            </a>
+                                        </div>                                                
                                     </div>
-                                    <div id="box-lista-subs" class="mt-4">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <p>Aprovações</p>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-3 border-itens">
+                                            <img src="/img/logo-bradesco-saude.png" width="100%">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-lg-2 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Solicitação: <b>123331</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-3 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Hospital/Clinica: <br><b>São José</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-3 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Cartão do Segurado: <br><b>752 2521212 2121</b></p>
+                                                        </div>                                   
+                                                    </div>
+                                                    <div class="col-lg-4 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Nome do Segurado: <br><b>Jorge Antunes Matheus</b></p>
+                                                        </div>                               
+                                                    </div>
+                                                    <div class="col-lg-2 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Senha: <br><b>FABLGV5</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-3 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2  text-center">
+                                                            <p class="color-blue m-0 my-auto">Data da Solicitação: <br><b>01/01/2020</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-3 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Data da Resposta: <br><b>01/01/2020</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-4 mb-4">
+                                                        <div class="h-100 border d-flex justify-content-center p-2 text-center">
+                                                            <p class="color-blue m-0 my-auto">Forma de Pagamento: <br><b>PAGAMENTO EM CONTA</b></p>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-lg-12"><hr></div>
+                                                    <div class="col-lg-12">
+                                                        <p>Procedimento: <strong>40812073 - ANGIOGRAFIA POSOPERATORIA DE CONTROLE</strong></p>
+                                                        <p>Procedimento: <strong>40812049 - ANGIOGRAFIA POR CATETERISMO SELETIVO DE RAMO PRIMARIO POR VASO</strong></p>
+                                                        <p>Procedimento: <strong>40812065 - ANGIOGRAFIA TRANSOPERATORIA DE POSICIONAMENTO</strong></p>
+                                                        <p>Procedimento: <strong>40813185 - ANGIOPLASTIA TRANSLUMINAL PERCUTANEA PARA TRATAMENTO DE OBSTRUCAO ARTERIAL</strong></p>
+                                                        <p>Procedimento: <strong>40813266 - COLOCACAO DE STENT PARA TRATAMENTO DE OBSTRUCAO ARTERIAL OU VENOSA POR VASO</strong></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div id="box-lista-subs" class="col-lg-12 mt-5">
                                         <div class="table-responsive mt-3">
                                             <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>Aprovador</th>
-                                                        <th data-toggle="tooltip" data-original-title="Situação da Aprovação">Situação</th>
-                                                        <th>Resposta</th> 
-                                                        <th data-toggle="tooltip" data-original-title="Data da Resposta">Data</th>
-                                                        <th data-toggle="tooltip" data-original-title="Responsável por cadastrar a resposta">Responsável</th>
-                                                        <th data-toggle="tooltip" data-original-title="Data do cadastro da reposta">Data do cadastro</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
-                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
-                                                                </a>
-                                                                <a href="solicitacao-compras-reabrir-aprovacoes.html">
-                                                                    <img src="../img/reabrir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Reabrir">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>Thais Jorge de Oliveira e Silva</td>
-                                                        <td>Respondido</td>
-                                                        <td>Aprovado</td>
-                                                        <td>01/06/2020</td>
-                                                        <td>Renata Scott</td>
-                                                        <td>02/06/2020</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="actions ac-3">
-                                                            <div class="float-right">
-                                                            <div class="menu-visible">
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                                <span class="circle"></span>
-                                                            </div>
-                                                            <div class="menu-invisible">
-                                                                <a href="solicitacao-compras-detalhes-aprovacoes.html">
-                                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
-                                                                </a>
-                                                                <a href="solicitacao-compras-responder-aprovacoes.html">
-                                                                    <img src="../img/aprovar-reprovar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Responder">
-                                                                </a>
-                                                            </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>Maria Beatriz Padilha Soares</td>
-                                                        <td>Pendente</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr class="separator">
-                                                        <td colspan="5"></td>
-                                                    </tr>
-                                                </tbody>
+                                            <thead>
+                                                <tr> 
+                                                    <th>Registro ANVISA</th>
+                                                    <th>Descrição do Material</th>                                                                     
+                                                    <th>Quantidade Solicitada</th>
+                                                    <th>Quantidade Atendida</th>
+                                                    <th>Vlr. Unitário Hospitalar</th>
+                                                    <th>Vlr. Total Hospitalar</th>
+                                                    <th>Vlr. Unitário Bradesco</th>
+                                                    <th>Vlr. Total Bradesco</th>
+                                                    <th>Vlr. Unitário Acordado</th>
+                                                    <th>Vlr. Desconto Sob Vlr. Total Acordado</th>
+                                                    <th>Vlr. Total Acordado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>5262333323232</td>
+                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>R$ 700,00</td>
+                                                    <td>R$ 1.400,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>R$ 1.300,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>-</td>
+                                                    <td>R$ 1.300,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5262333323232</td>
+                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>R$ 700,00</td>
+                                                    <td>R$ 1.400,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>R$ 1.300,00</td>
+                                                    <td>R$ 650,00</td>
+                                                    <td>-</td>
+                                                    <td>R$ 1.300,00</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                            </tbody>
                                             </table>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12">
+                                            <div class="sub-title">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Total Geral</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Quantidade Solicitada:<br><b>4</b></p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Quantidade Atendida:<br><b>4</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Valor Total Hospitalar:<br><b>R$ 2.800,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens text-center">
+                                                            <p class="color-blue">Valor Total Bradesco:<br><b>R$ 2.600,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title text-center">
+                                                            <p class="color-blue">Valor Total Acordado:<br><b>R$ 2.600,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -3155,6 +3463,102 @@
             </div>
         </div>
         <!-- fim modal aceitar valor tabelado -->
+
+        <!-- modal aprovar itens selecionados -->
+        <div class="modal fade" id="modal-aprovar-itens-selecionados" tabindex="-1" role="dialog" aria-labelledby="modal-aprovar-itens-selecionados-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-aprovar-itens-selecionados-label">Aprovar Itens Selecionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Tem certeza que deseja Aprovar estes Itens?</p>
+                        <h6>- 1</h6>
+                        <h6>- 2</h6>
+                        <h6>- 3</h6>
+                        <h6 class="mt-4">Total de Itens Selecionados: <span class="color-green">3</span></h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal aprovar itens selecionados -->
+
+        <!-- modal reprovar itens selecionados -->
+        <div class="modal fade" id="modal-reprovar-itens-selecionados" tabindex="-1" role="dialog" aria-labelledby="modal-reprovar-itens-selecionados-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-reprovar-itens-selecionados-label">Reprovar Itens Selecionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Tem certeza que deseja Reprovar estes Itens?</p>
+                        <h6>- 1</h6>
+                        <h6>- 2</h6>
+                        <h6>- 3</h6>
+                        <h6 class="mt-4">Total de Itens Selecionados: <span class="color-green">3</span></h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal reprovar itens selecionados -->
+
+        <!-- modal incluir itens selecionados -->
+        <div class="modal fade" id="modal-incluir-itens-selecionados" tabindex="-1" role="dialog" aria-labelledby="modal-incluir-itens-selecionados-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title txt-up" id="modal-incluir-itens-selecionados-label">Incluir Itens Selecionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-4">Tem certeza que deseja Incluir estes Itens?</p>
+                        <h6>- 1</h6>
+                        <h6>- 2</h6>
+                        <h6>- 3</h6>
+                        <h6 class="mt-4">Total de Itens Selecionados: <span class="color-green">3</span></h6>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <button type="button" class="btn btn-cancelar float-left" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-incluir float-right" data-dismiss="modal">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim modal incluir itens selecionados -->
 
         <!-- jQuery -->
         <script src="../js/jquery-3.3.1.slim.min.js"></script>

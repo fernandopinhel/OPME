@@ -6,17 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Ebix" />
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-        <title>Protótipo OPME - Solicitação de Compra</title>
+        <title>Protótipo OPME - Solicitação de Compras</title>
         <!-- Bootstrap -->    
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="../css/ie.css">
         <!-- Icons -->
         <link rel="stylesheet" href="../css/icones-bradesco.css">
-        <!-- estilo select(combo-box -->
-        <link rel="stylesheet" href="../css/nice-select.css">
+        <!-- estilo select(combo-box) -->
+        <!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
+        <!-- estilo toggle on/off -->
+        <link rel="stylesheet" href="../css/bootstrap4-toggle.min.css">
+        <!-- datepicker -->
+        <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+        <!-- font awesome componentes -->
+        <link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
-
     <body>
         <!-- conteudo geral wrapper -->
         <div class="wrapper">
@@ -33,34 +40,38 @@
                             <span class="seta-accordion"></span>
                         </a>
                         <ul class="collapse show list-unstyled subs" id="painelSubmenu">
-                            <li>
-                                <a href="#dashboardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="fases">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-fin-rendimento mr-4"></i>
                                     <span class="item-menu">Dashboard</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <li class="fases">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-doc-papel mr-4"></i>
                                     <span class="item-menu">Processos</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li class="msg">
-                                <a href="#mensagensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-mensagem mr-4"></i>
-                                    <span class="ml-1 item-menu">Mensagens</span>
-                                    <span class="mensagem"><span class="quant-msg">8</span></span>
+                                    <span class=" item-menu">Mensagens</span>
+                                    <!-- <span class="mensagem"><span class="quant-msg">8</span></span> -->
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-noticias mr-4"></i>
                                     <span class="item-menu">Relatórios</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
                                     <li>
-                                        <a href="#">Geral de Precificação</a>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
                                     </li>
                                     <li>
                                         <a href="#">Ranking</a>
@@ -79,20 +90,35 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon referenciados mr-4"></i>
                                     <span class="item-menu">Hospitais/Clínicas</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
                                     <li>
-                                        <a href="hospital/hospital-consulta.html">Consulta</a>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="hospital/hospital-cadastro.html">Cadastro</a>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>   
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>                                 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
                             </li>
                             <li>
                                 <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -102,25 +128,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="active">
+                            <li class="active dsv">
                                 <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                                     <i class="icon icon-fin-resgate mr-4"></i>
                                     <span class="item-menu">Solicitação/Compra</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse show list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
                                     <li class="sub-active">
-                                        <a href="solicitacao-compras-consulta.html">Consulta</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="solicitacao-compras-cadastro.html">Cadastro</a>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -132,25 +159,26 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
                                     <li>
-                                        <a href="fornecedor/fornecedor-consulta.html">Consulta</a>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-info-diversidade mr-4"></i>
                                     <span class="item-menu">Itens</span>
-                                    <span class="seta-accordion"></span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
                                     <li>
-                                        <a href="itens-consulta.html">Consulta</a>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="itens-cadastro.html">Cadastro</a>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -170,10 +198,10 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -185,31 +213,33 @@
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon usuarios mr-4"></i>
                                     <span class="item-menu">Usuários</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="dsv">
                                 <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon telas mr-4"></i>
                                     <span class="item-menu">Telas</span>
-                                    <span class="seta-accordion"></span>                               
+                                    <!-- <span class="seta-accordion"></span>-->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
                                 </a>
                                 <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
                                     <li>
-                                        <a href="telas/telas-consulta.html">Consulta</a>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
                                     </li>
                                     <li>
-                                        <a href="telas/telas-cadastro.html">Cadastro</a>
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
                                     </li>
                                 </ul>
                             </li>
@@ -259,53 +289,60 @@
                                 </div>
                             </div>
                             <div class="row mt-5">                            
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" value="1234" name="codigoTuss" autocomplete="off" class="used">
-                                        <label for="codigoTuss" class="label-name">
-                                            <span class="content-name">Código TUSS</span>
+                                        <input type="text" value="" name="numero-solicitacao" autocomplete="off">
+                                        <label for="numero-solicitacao" class="label-name">
+                                            <span class="content-name">Nº da Solicitação</span>
                                         </label>
                                     </div>                                 
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <div class="form">
-                                        <input type="text" value="10413960144" name="codigoAnvisa" autocomplete="off" class="used">
-                                        <label for="codigoAnvisa" class="label-name">
-                                            <span class="content-name">Código Anvisa</span>
+                                        <input type="password" value="" name="senha" autocomplete="off">
+                                        <label for="senha" class="label-name">
+                                            <span class="content-name">Senha</span>
                                         </label>
                                     </div>                                  
                                 </div>
-                                <div class="col-lg-3">                                    
+                                <div class="col-lg-4">               
+                                    <p class="p-select">Hospital</p>
+                                    <select class="form-control h-35">
+                                        <option>Selecione</option>
+                                        <option selected value="1">Hospital 1</option>
+                                        <option value="2">Hospital 2</option>
+                                    </select>                                                             
+                                </div>
+                                <div class="col-lg-4">               
+                                    <p class="p-select">Fornecedor</p>
+                                    <select class="form-control h-35">
+                                        <option>Selecione</option>
+                                        <option selected value="1">Fornecedor 1</option>
+                                        <option value="2">Fornecedor 2</option>
+                                    </select>                                                             
+                                </div>
+                                <div class="col-lg-4 mt-5">
                                     <div class="form">
-                                        <input type="text" value="AGULHA DE PUNÇAO" name="item" autocomplete="off" class="used">
-                                        <label for="item" class="label-name">
-                                            <span class="content-name">Item</span>
+                                        <input type="text" value="" name="tuss" autocomplete="off">
+                                        <label for="tuss" class="label-name">
+                                            <span class="content-name">TUSS</span>
                                         </label>
                                     </div>                               
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 mt-5">
                                     <div class="form">
-                                        <input type="text" value="9875687" name="codigoProvisorio" autocomplete="off" class="used">
-                                        <label for="codigoProvisorio" class="label-name">
-                                            <span class="content-name">Código Provisório</span>
+                                        <input class="form-control form_date input-date" size="16" type="text" value=" " maxlength="10" name="data-solicitacao" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="data-solicitacao" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data da Solicitação</span>
                                         </label>
-                                    </div>                               
-                                </div>
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-lg-3">
-                                    <p class="p-select">Status</p>
-                                    <select class="wide">
-                                        <option data-display="Selecione">Selecione</option>
-                                        <option value="1">Ativo</option>
-                                        <option value="2">Inativo</option>                                        
-                                    </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row btns-opcoes mt-5">
                                 <div class="col-lg-12">
                                     <button type="reset" value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
-                                    <button type="submit" name="button" onclick="window.location.href='itens-busca.html'" class="btn btn-buscar">Buscar</button>                                    
+                                    <button type="button" name="button" class="btn btn-buscar">Buscar</button>                                    
                                 </div>
                             </div>
                         </div>
@@ -313,8 +350,8 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="resultado-filtro">
-                                            <h4 class="float-left">Itens encontrados:<span>1</span></h4>
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens encontrados:<span>10</span></h4>
                                             <a href="#" class="float-right">
                                                 <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
                                             </a>
@@ -327,11 +364,14 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                        <th></th>
-                                        <th>Código Anvisa</th>
-                                        <th>Código TUSS</th>
-                                        <th>Item</th>                                                                        
-                                        <th>Status</th>
+                                            <th></th>
+                                            <th>Nº Solicitação</th>
+                                            <th>Hospital</th>
+                                            <th>Senha</th>                                                                        
+                                            <th>Segurado</th>
+                                            <th>Quantidade Itens</th>
+                                            <th>Data Solicitação</th>
+                                            <th>Situação</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -344,15 +384,122 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="itens-detalhes.html">
+                                                    <a href="#">
                                                         <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
                                             </td>
                                             <td>10413960144</td>
-                                            <td>1234</td>
-                                            <td>AGULHA DE PUNÇAO</td>
+                                            <td>São José</td>
+                                            <td>8979789</td>
+                                            <td>Segurado</td>
+                                            <td>3</td>
+                                            <td>12/08/2019</td>
+                                            <td>Ativo</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#">
+                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>10413960144</td>
+                                            <td>São José</td>
+                                            <td>8979789</td>
+                                            <td>Segurado</td>
+                                            <td>3</td>
+                                            <td>12/08/2019</td>
+                                            <td>Ativo</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#">
+                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>10413960144</td>
+                                            <td>São José</td>
+                                            <td>8979789</td>
+                                            <td>Segurado</td>
+                                            <td>3</td>
+                                            <td>12/08/2019</td>
+                                            <td>Ativo</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#">
+                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>10413960144</td>
+                                            <td>São José</td>
+                                            <td>8979789</td>
+                                            <td>Segurado</td>
+                                            <td>3</td>
+                                            <td>12/08/2019</td>
+                                            <td>Ativo</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="#">
+                                                        <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>10413960144</td>
+                                            <td>São José</td>
+                                            <td>8979789</td>
+                                            <td>Segurado</td>
+                                            <td>3</td>
+                                            <td>12/08/2019</td>
                                             <td>Ativo</td>
                                         </tr>
                                         <tr class="separator">
@@ -409,7 +556,9 @@
         <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
         <script src="../js/jquery.mask.min.js"></script>
         <!-- script select(combo-box) -->
-        <script src="../js/jquery.nice-select.js"></script>
+        <!-- <script src="../js/jquery.nice-select.js"></script> -->
+        <!-- script toggle on/off -->
+        <script src="../js/bootstrap4-toggle.min.js"></script>
         <!-- scripts -->
         <script src="../js/script.js"></script>
     </body>

@@ -203,6 +203,8 @@ $(".bread-orcamento-6").addClass("d-none");
 $(".bread-orcamento-7").addClass("d-none");
 $(".bread-orcamento-8").addClass("d-none");
 $(".bread-orcamento-9").addClass("d-none");
+$(".bread-orcamento-10").addClass("d-none");
+$(".bread-orcamento-11").addClass("d-none");
 $(".box-orcamento-2").addClass("d-none");
 $(".box-orcamento-3").addClass("d-none");
 $(".box-orcamento-4").addClass("d-none");
@@ -211,195 +213,8 @@ $(".box-orcamento-6").addClass("d-none");
 $(".box-orcamento-7").addClass("d-none");
 $(".box-orcamento-8").addClass("d-none");
 $(".box-orcamento-9").addClass("d-none");
-
-$(".solicitacao-1").click(function(){    
-    $(".box-orcamento-1").removeClass("d-none");
-    $(".bread-orcamento-1").removeClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-2").click(function(){    
-    $(".box-orcamento-2").removeClass("d-none");
-    $(".bread-orcamento-2").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-3").click(function(){    
-    $(".box-orcamento-3").removeClass("d-none");
-    $(".bread-orcamento-3").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-4").click(function(){    
-    $(".box-orcamento-4").removeClass("d-none");
-    $(".bread-orcamento-4").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-5").click(function(){    
-    $(".box-orcamento-5").removeClass("d-none");
-    $(".bread-orcamento-5").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-6").click(function(){    
-    $(".box-orcamento-6").removeClass("d-none");
-    $(".bread-orcamento-6").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-7").click(function(){    
-    $(".box-orcamento-7").removeClass("d-none");
-    $(".bread-orcamento-7").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-8").click(function(){    
-    $(".box-orcamento-8").removeClass("d-none");
-    $(".bread-orcamento-8").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-9").addClass("d-none");
-    $(".bread-orcamento-9").addClass("d-none");
-});
-
-$(".solicitacao-9").click(function(){    
-    $(".box-orcamento-9").removeClass("d-none");
-    $(".bread-orcamento-9").removeClass("d-none");
-    $(".box-orcamento-1").addClass("d-none");
-    $(".bread-orcamento-1").addClass("d-none");
-    $(".box-orcamento-2").addClass("d-none");
-    $(".bread-orcamento-2").addClass("d-none");
-    $(".box-orcamento-3").addClass("d-none");
-    $(".bread-orcamento-3").addClass("d-none");
-    $(".box-orcamento-4").addClass("d-none");
-    $(".bread-orcamento-4").addClass("d-none");
-    $(".box-orcamento-5").addClass("d-none");
-    $(".bread-orcamento-5").addClass("d-none");
-    $(".box-orcamento-6").addClass("d-none");
-    $(".bread-orcamento-6").addClass("d-none");
-    $(".box-orcamento-7").addClass("d-none");
-    $(".bread-orcamento-7").addClass("d-none");
-    $(".box-orcamento-8").addClass("d-none");
-    $(".bread-orcamento-8").addClass("d-none");
-});
+$(".box-orcamento-10").addClass("d-none");
+$(".box-orcamento-11").addClass("d-none");
 
 $(".btn-cadastrar-orcamento").click(function(){    
     $(".box-orcamento-1").addClass("d-none");
@@ -445,6 +260,13 @@ $(".btn-aprovar-item-sel-orcamento").click(function(){
     $(".bread-orcamento-8").addClass("d-none");
 });
 
+$(".btn-aprovar-item-sel-orcamento-2").click(function(){    
+    $(".box-orcamento-5").removeClass("d-none");
+    $(".bread-orcamento-5").removeClass("d-none");
+    $(".box-orcamento-10").addClass("d-none");
+    $(".bread-orcamento-10").addClass("d-none");
+});
+
 $(".btn-reprovar-item-sel-orcamento").click(function(){    
     $(".box-orcamento-6").removeClass("d-none");
     $(".bread-orcamento-6").removeClass("d-none");
@@ -452,6 +274,13 @@ $(".btn-reprovar-item-sel-orcamento").click(function(){
     $(".bread-orcamento-8").addClass("d-none");
     $(".box-orcamento-9").addClass("d-none");
     $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".btn-reprovar-item-sel-orcamento-2").click(function(){    
+    $(".box-orcamento-5").removeClass("d-none");
+    $(".bread-orcamento-5").removeClass("d-none");
+    $(".box-orcamento-11").addClass("d-none");
+    $(".bread-orcamento-11").addClass("d-none");
 });
 
 $(".btn-salvar-contra-proposta-orcamento").click(function(){    
@@ -505,6 +334,13 @@ $(".aprovar-itens-orcamento").click(function(){
     $(".box-orcamento-8").removeClass("d-none");
 });
 
+$(".aprovar-itens-orcamento-2").click(function(){    
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-10").removeClass("d-none");
+    $(".bread-orcamento-10").removeClass("d-none");
+});
+
 $(".reprovar-proposta-orcamento").click(function(){    
     $(".box-orcamento-6").addClass("d-none");
     $(".bread-orcamento-6").addClass("d-none");
@@ -516,11 +352,25 @@ $(".reprovar-proposta-orcamento").click(function(){
     $(".box-orcamento-9").removeClass("d-none");
 });
 
+$(".reprovar-proposta-orcamento-2").click(function(){    
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-11").removeClass("d-none");
+    $(".bread-orcamento-11").removeClass("d-none");
+});
+
 $(".btn-salvar-resposta-negociacao").click(function(){    
     $(".box-orcamento-1").removeClass("d-none");
     $(".bread-orcamento-1").removeClass("d-none");
     $(".bread-orcamento-5").addClass("d-none");
     $(".box-orcamento-5").addClass("d-none");
+});
+
+$(".box-orcamento-6 > div > button.btn-voltar").click(function(){    
+    $(".box-orcamento-5").removeClass("d-none");
+    $(".bread-orcamento-5").removeClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
 });
 // Fim Tela Soclicitação de Compras
 
