@@ -742,6 +742,7 @@ td > .toggle{
 }
 
 .w-234{width: 234px !important;}
+.w-320{width: 320px !important;}
 
 .txt-up{text-transform: uppercase;}
 
@@ -1233,6 +1234,82 @@ li.sub-active > a{
 // fim sidebar
 
 // input animado
+
+// input number
+input[type="number"] {
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+}
+  
+.pt_Quantity {
+    display: inline-block;
+    margin: 0 0 10px;
+    position: relative;
+    & input {
+    color: #443017;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #b7b7b7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    min-width: 45px;
+    height: 30px;
+    float: left;
+    display: block;
+    padding: 0 15px 0 2px;
+    margin: 0;
+    text-align: center;
+    width: 70px;
+    &:focus {
+        outline: 0;
+    }
+    }
+
+    & .pt_QuantityNav {
+    float: left;
+    position: relative;
+    height: 30px;
+    & .pt_QuantityButton {
+        position: relative;
+        cursor: pointer;
+        border-left: 1px solid #b7b7b7;
+        width: 15px;
+        text-align: center;
+        color: #333;
+        font-size: 14px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+        line-height: 1.1;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &:active {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        &.pt_QuantityUp {
+        position: absolute;
+        height: 50%;
+        top: 0;
+        border-bottom: 1px solid #b7b7b7;
+        }
+        &.pt_QuantityDown {
+        position: absolute;
+        bottom: 0px;
+        height: 50%;
+        }
+    }
+    }
+}
+// fim input number
+
 textarea.form-control{
     border: 1px solid #D6D6D6;
     color: $color-content;
@@ -1458,6 +1535,7 @@ input:focus ~ label.check-estilo, label.check-estilo{
     font-weight: normal !important;
     display: inline-block !important;
     position: relative !important;    
+    font-size: 18px !important;    
 }
 
 .ex-checkbox{
@@ -2164,7 +2242,7 @@ tr:hover td.a-2 .menu-invisible{
     td.ac-2 {width: 10% !important;}
 
     label{font-size: 14px !important;}
-
+    input:focus ~ label.check-estilo, label.check-estilo{font-size: 14px !important;}
     .box-detalhes{
         position: absolute;
         left: 77px;

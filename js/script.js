@@ -1,3 +1,49 @@
+// input number
+(function($) {
+    "use strict";
+  
+    function customQuantity() {
+      /** Custom Input number increment js **/
+      jQuery(
+        '<div class="pt_QuantityNav"><div class="pt_QuantityButton pt_QuantityUp">+</div><div class="pt_QuantityButton pt_QuantityDown">-</div></div>'
+      ).insertAfter(".pt_Quantity input");
+      jQuery(".pt_Quantity").each(function() {
+        var spinner = jQuery(this),
+          input = spinner.find('input[type="number"]'),
+          btnUp = spinner.find(".pt_QuantityUp"),
+          btnDown = spinner.find(".pt_QuantityDown"),
+          min = input.attr("min"),
+          max = input.attr("max"),
+          valOfAmout = input.val(),
+          newVal = 0;
+  
+        btnUp.on("click", function() {
+          var oldValue = parseFloat(input.val());
+  
+          if (oldValue >= max) {
+            var newVal = oldValue;
+          } else {
+            var newVal = oldValue + 1;
+          }
+          spinner.find("input").val(newVal);
+          spinner.find("input").trigger("change");
+        });
+        btnDown.on("click", function() {
+          var oldValue = parseFloat(input.val());
+          if (oldValue <= min) {
+            var newVal = oldValue;
+          } else {
+            var newVal = oldValue - 1;
+          }
+          spinner.find("input").val(newVal);
+          spinner.find("input").trigger("change");
+        });
+      });
+    }
+    customQuantity();
+})(jQuery);  
+// fim input number
+
 // Tela Tabelas
 // Acompanhar Itens Em Negociação
 $(".bread-negociacoes").addClass("d-none");
@@ -143,9 +189,340 @@ $(".e-recusa-direto").click(function(){
 // FIM Tela Tabelas
 // FIM Acompanhar Itens Em Negociação
 
+// Tela Soclicitação de Compras
 $(".selecionar-item").click(function(){    
     $(".bread-solicitacao-1").addClass("d-none");  
 });
+
+
+$(".bread-orcamento-2").addClass("d-none");
+$(".bread-orcamento-3").addClass("d-none");
+$(".bread-orcamento-4").addClass("d-none");
+$(".bread-orcamento-5").addClass("d-none");
+$(".bread-orcamento-6").addClass("d-none");
+$(".bread-orcamento-7").addClass("d-none");
+$(".bread-orcamento-8").addClass("d-none");
+$(".bread-orcamento-9").addClass("d-none");
+$(".box-orcamento-2").addClass("d-none");
+$(".box-orcamento-3").addClass("d-none");
+$(".box-orcamento-4").addClass("d-none");
+$(".box-orcamento-5").addClass("d-none");
+$(".box-orcamento-6").addClass("d-none");
+$(".box-orcamento-7").addClass("d-none");
+$(".box-orcamento-8").addClass("d-none");
+$(".box-orcamento-9").addClass("d-none");
+
+$(".solicitacao-1").click(function(){    
+    $(".box-orcamento-1").removeClass("d-none");
+    $(".bread-orcamento-1").removeClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-2").click(function(){    
+    $(".box-orcamento-2").removeClass("d-none");
+    $(".bread-orcamento-2").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-3").click(function(){    
+    $(".box-orcamento-3").removeClass("d-none");
+    $(".bread-orcamento-3").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-4").click(function(){    
+    $(".box-orcamento-4").removeClass("d-none");
+    $(".bread-orcamento-4").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-5").click(function(){    
+    $(".box-orcamento-5").removeClass("d-none");
+    $(".bread-orcamento-5").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-6").click(function(){    
+    $(".box-orcamento-6").removeClass("d-none");
+    $(".bread-orcamento-6").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-7").click(function(){    
+    $(".box-orcamento-7").removeClass("d-none");
+    $(".bread-orcamento-7").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-8").click(function(){    
+    $(".box-orcamento-8").removeClass("d-none");
+    $(".bread-orcamento-8").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".solicitacao-9").click(function(){    
+    $(".box-orcamento-9").removeClass("d-none");
+    $(".bread-orcamento-9").removeClass("d-none");
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+});
+
+$(".btn-cadastrar-orcamento").click(function(){    
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").removeClass("d-none");
+    $(".bread-orcamento-2").removeClass("d-none");
+});
+
+$(".btn-salvar-orcamento").click(function(){    
+    $(".box-orcamento-1").removeClass("d-none");
+    $(".bread-orcamento-1").removeClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+});
+
+$(".btn-incluir-item-orcamento").click(function(){    
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".box-orcamento-2").addClass("d-none");
+    $(".bread-orcamento-2").addClass("d-none");
+    $(".box-orcamento-3").removeClass("d-none");
+    $(".bread-orcamento-3").removeClass("d-none");
+});
+
+$(".btn-salvar-item-orcamento").click(function(){    
+    $(".box-orcamento-2").removeClass("d-none");
+    $(".bread-orcamento-2").removeClass("d-none");
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+});
+
+$(".btn-salvar-item-sel-orcamento").click(function(){    
+    $(".box-orcamento-3").removeClass("d-none");
+    $(".bread-orcamento-3").removeClass("d-none");
+    $(".box-orcamento-4").addClass("d-none");
+    $(".bread-orcamento-4").addClass("d-none");
+});
+
+$(".btn-aprovar-item-sel-orcamento").click(function(){    
+    $(".box-orcamento-6").removeClass("d-none");
+    $(".bread-orcamento-6").removeClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+});
+
+$(".btn-reprovar-item-sel-orcamento").click(function(){    
+    $(".box-orcamento-6").removeClass("d-none");
+    $(".bread-orcamento-6").removeClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".btn-salvar-contra-proposta-orcamento").click(function(){    
+    $(".box-orcamento-6").removeClass("d-none");
+    $(".bread-orcamento-6").removeClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-9").addClass("d-none");
+    $(".bread-orcamento-9").addClass("d-none");
+});
+
+$(".selecionar-item-orcamento").click(function(){    
+    $(".box-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-3").addClass("d-none");
+    $(".bread-orcamento-4").removeClass("d-none");
+    $(".box-orcamento-4").removeClass("d-none");
+    $(".bread-orcamento-4").removeClass("d-none");
+});
+
+$(".detalhes-orcamento").click(function(){    
+    $(".box-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-1").addClass("d-none");
+    $(".bread-orcamento-5").removeClass("d-none");
+    $(".box-orcamento-5").removeClass("d-none");
+});
+
+$(".d-orcamento-item").click(function(){    
+    $(".box-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".bread-orcamento-6").removeClass("d-none");
+    $(".box-orcamento-6").removeClass("d-none");
+});
+
+$(".contra-proposta-orcamento").click(function(){    
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").removeClass("d-none");
+    $(".box-orcamento-7").removeClass("d-none");
+});
+
+$(".aprovar-itens-orcamento").click(function(){    
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-8").removeClass("d-none");
+    $(".box-orcamento-8").removeClass("d-none");
+});
+
+$(".reprovar-proposta-orcamento").click(function(){    
+    $(".box-orcamento-6").addClass("d-none");
+    $(".bread-orcamento-6").addClass("d-none");
+    $(".box-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-7").addClass("d-none");
+    $(".bread-orcamento-8").addClass("d-none");
+    $(".box-orcamento-8").addClass("d-none");
+    $(".bread-orcamento-9").removeClass("d-none");
+    $(".box-orcamento-9").removeClass("d-none");
+});
+
+$(".btn-salvar-resposta-negociacao").click(function(){    
+    $(".box-orcamento-1").removeClass("d-none");
+    $(".bread-orcamento-1").removeClass("d-none");
+    $(".bread-orcamento-5").addClass("d-none");
+    $(".box-orcamento-5").addClass("d-none");
+});
+// Fim Tela Soclicitação de Compras
 
 // script interações itens
 $(".busca-tipo-itens").click(function(){
@@ -592,7 +969,7 @@ $(".mostrar-itens-section").click(function(){
 // });
 
 var inputDate = $('.input-date')
-if($(".input-date").val(length.css("display", "none"))){
+if($(".input-date").val(length.css("display","none"))){
         $(".datetimepicker").click(function(inputDate){
         $(this).addClass("used");
     });   
