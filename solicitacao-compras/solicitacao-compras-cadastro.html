@@ -2047,6 +2047,21 @@
                                             <table class="table">
                                             <thead>
                                                 <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th class="por-10 color-1">Proposta Inicial</th>
+                                                    <th></th>
+                                                    <th class="por-10 color-2">Valor Bradesco</th>
+                                                    <th></th>
+                                                    <th class="por-10 color-3">Valor Acordo</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
                                                     <th>
                                                         <div class="ex-checkbox m-0">
                                                             <input type="checkbox" data-toggle="tooltip" data-original-title="Marcar todos" onclick="marcarTodos(this.checked);" id="checkbox_one">
@@ -2054,15 +2069,17 @@
                                                         </div>
                                                     </th>
                                                     <th></th>
-                                                    <th>TUSS/ITEM</th>
-                                                    <th>Código Provisório</th>                                                                     
-                                                    <th>Fabricante</th>
-                                                    <th>Valor Inicial Proposto</th>
-                                                    <th>Valor Atual Proposto</th>
-                                                    <th>Valor Final Negociado</th>
-                                                    <th>Quantidade</th>
-                                                    <th>Valor Total Negociado</th>
-                                                    <th>Situação</th>
+                                                    <th class="color-4">Cód. TUSS</th>
+                                                    <th class="por-15">Descrição do Material</th>                                                                     
+                                                    <th class="por-10">Registro Anvisa</th>
+                                                    <th>Qtde</th>
+                                                    <th class="por-8 color-1">Vlr Unit</th>
+                                                    <th class="por-8 color-1">Vlr Total</th>
+                                                    <th class="por-8 color-2">Vlr Unit</th>
+                                                    <th class="por-8 color-2">Vlr Total</th>
+                                                    <th class="por-8 color-3">Vlr Unit</th>
+                                                    <th class="por-8 color-3">Vlr Total</th>
+                                                    <th>%</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -2074,37 +2091,39 @@
                                                         </div>
                                                     </td>
                                                     <td class="actions ac-4">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
+                                                                </a>
+                                                                <a href="#">
+                                                                    <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
+                                                                </a>
+                                                                <a href="#">
+                                                                    <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                                </a>
+                                                                <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
-                                                            </a>
-                                                            <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
-                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
-                                                            </a>
-                                                        </div>
-                                                    </div>
                                                     </td>
-                                                    <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
-                                                    <td>15232222222</td>
-                                                    <td>MEDICATIVE S.A</td>
-                                                    <td>R$ 700,00</td>
-                                                    <td>R$ 600,00</td>
-                                                    <td>R$ 600,00</td>
-                                                    <td>2</td>
-                                                    <td>R$ 1.200,00</td>
-                                                    <td>Negociado</td>
+                                                    <td class="color-4">1000001841</td>
+                                                    <td>Carga Grampeador Linear<br>Ref. AXCDW/Marca: Johnson</td>
+                                                    <td>80145901528</td>
+                                                    <td>1</td>
+                                                    <td class="color-1">R$ 10.000,00</td>
+                                                    <td class="color-1">R$ 10.000,00</td>
+                                                    <td class="color-2">R$ 10.000,00</td>
+                                                    <td class="color-2">R$ 10.000,00</td>
+                                                    <td class="color-3">R$ 11.000,00</td>
+                                                    <td class="color-3">R$ 11.000,00</td>
+                                                    <td>10%</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
@@ -2117,37 +2136,39 @@
                                                         </div>
                                                     </td>
                                                     <td class="actions ac-4">
-                                                        <div class="float-right">
-                                                        <div class="menu-visible">
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
-                                                            <span class="circle"></span>
+                                                            <div class="float-right">
+                                                            <div class="menu-visible">
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                                <span class="circle"></span>
+                                                            </div>
+                                                            <div class="menu-invisible">
+                                                                <a href="#">
+                                                                    <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
+                                                                </a>
+                                                                <a href="#">
+                                                                    <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
+                                                                </a>
+                                                                <a href="#">
+                                                                    <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
+                                                                </a>
+                                                                <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
+                                                                    <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                        <div class="menu-invisible">
-                                                            <a href="#">
-                                                                <img src="../img/detalhes.svg" class="i-detalhes d-orcamento-item" title="" data-toggle="tooltip" data-original-title="Detalhe Orçamento Item">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/aprovado.svg" class="i-detalhes aprovar-itens-orcamento-2" title="" data-toggle="tooltip" data-original-title="Aprovar Item">
-                                                            </a>
-                                                            <a href="#">
-                                                                <img src="../img/reprovado.svg" class="i-detalhes reprovar-proposta-orcamento-2" title="" data-toggle="tooltip" data-original-title="Reprovar Proposta">
-                                                            </a>
-                                                            <a href="#" data-toggle="modal" data-target="#modal-excluir-item">
-                                                                <img src="../img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir esse item">
-                                                            </a>
-                                                        </div>
-                                                    </div>
                                                     </td>
-                                                    <td>619503300601952 - IMPLANTE MAMARIO SOLICONE PREENCHIDO COM GEL COESIVO E SUPERFICIE MICROTHANE (COB)</td>
-                                                    <td>15232222222</td>
-                                                    <td>MEDICATIVE S.A</td>
-                                                    <td>R$ 700,00</td>
-                                                    <td>R$ 600,00</td>
-                                                    <td>-</td>
-                                                    <td>2</td>
-                                                    <td>-</td>
-                                                    <td>Em Negociação</td>
+                                                    <td class="color-4">1000001842</td>
+                                                    <td>Fast Fix 360 Curvo Agulhado<br>Ref. 12345/Marca: Arthrex</td>
+                                                    <td>80804050144</td>
+                                                    <td>1</td>
+                                                    <td class="color-1">R$ 2.600,00</td>
+                                                    <td class="color-1">R$ 2.600,00</td>
+                                                    <td class="color-2">R$ 1.800,00</td>
+                                                    <td class="color-2">R$ 1.800,00</td>
+                                                    <td class="color-3">R$ 2.000,00</td>
+                                                    <td class="color-3">R$ 2.000,00</td>
+                                                    <td>10%</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
@@ -2182,6 +2203,39 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div class="row mt-3 box-orcamento-5">
+                                        <div class="col-lg-12">
+                                            <div class="sub-title">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-2 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Total Geral</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Proposta Inicial: <b>R$ 20.000,00</b></p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Bradesco: <b>R$ 20.000,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Acordo: <b>R$ 20.000,00</b></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-1 my-auto">
+                                                        <div class="sub-title">
+                                                            <p class="color-blue">%: <b>10%</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="box-lista-subs" class="col-lg-12 box-orcamento-5 mt-5">
                                         <p>Resposta Negociação</p>
@@ -3070,49 +3124,62 @@
                                         <div class="table-responsive mt-3">
                                             <table class="table">
                                             <thead>
-                                                <tr> 
-                                                    <th>Registro ANVISA</th>
-                                                    <th>Descrição do Material</th>                                                                     
-                                                    <th>Quantidade Solicitada</th>
-                                                    <th>Quantidade Atendida</th>
-                                                    <th>Vlr. Unitário Hospitalar</th>
-                                                    <th>Vlr. Total Hospitalar</th>
-                                                    <th>Vlr. Unitário Bradesco</th>
-                                                    <th>Vlr. Total Bradesco</th>
-                                                    <th>Vlr. Unitário Acordado</th>
-                                                    <th>Vlr. Desconto Sob Vlr. Total Acordado</th>
-                                                    <th>Vlr. Total Acordado</th>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th class="por-10 color-1">Proposta Inicial</th>
+                                                    <th></th>
+                                                    <th class="por-10 color-2">Valor Bradesco</th>
+                                                    <th></th>
+                                                    <th class="por-10 color-3">Valor Acordo</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="color-4">Cód. TUSS</th>
+                                                    <th class="por-15">Descrição do Material</th>                                                                     
+                                                    <th class="por-10">Registro Anvisa</th>
+                                                    <th>Qtde</th>
+                                                    <th class="por-8 color-1">Vlr Unit</th>
+                                                    <th class="por-8 color-1">Vlr Total</th>
+                                                    <th class="por-8 color-2">Vlr Unit</th>
+                                                    <th class="por-8 color-2">Vlr Total</th>
+                                                    <th class="por-8 color-3">Vlr Unit</th>
+                                                    <th class="por-8 color-3">Vlr Total</th>
+                                                    <th>%</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>5262333323232</td>
-                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
-                                                    <td>R$ 700,00</td>
-                                                    <td>R$ 1.400,00</td>
-                                                    <td>R$ 650,00</td>
-                                                    <td>R$ 1.300,00</td>
-                                                    <td>R$ 650,00</td>
-                                                    <td>-</td>
-                                                    <td>R$ 1.300,00</td>
+                                                    <td class="color-4">1000001841</td>
+                                                    <td>Carga Grampeador Linear<br>Ref. AXCDW/Marca: Johnson</td>
+                                                    <td>80145901528</td>
+                                                    <td>1</td>
+                                                    <td class="color-1">R$ 10.000,00</td>
+                                                    <td class="color-1">R$ 10.000,00</td>
+                                                    <td class="color-2">R$ 10.000,00</td>
+                                                    <td class="color-2">R$ 10.000,00</td>
+                                                    <td class="color-3">R$ 11.000,00</td>
+                                                    <td class="color-3">R$ 11.000,00</td>
+                                                    <td>10%</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>5262333323232</td>
-                                                    <td>CATETER BALAO DE PRE-DILATAÇAO PERIFERICO, PARA FIO-GUIA DE O, O18”, COM REVESTIMENTO HIDROFILICO – OCEANUS 18 REF.: BP PC 18 100 800 080 - LIFE VASCULAR</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
-                                                    <td>R$ 700,00</td>
-                                                    <td>R$ 1.400,00</td>
-                                                    <td>R$ 650,00</td>
-                                                    <td>R$ 1.300,00</td>
-                                                    <td>R$ 650,00</td>
-                                                    <td>-</td>
-                                                    <td>R$ 1.300,00</td>
+                                                    <td class="color-4">1000001842</td>
+                                                    <td>Fast Fix 360 Curvo Agulhado<br>Ref. 12345/Marca: Arthrex</td>
+                                                    <td>80804050144</td>
+                                                    <td>1</td>
+                                                    <td class="color-1">R$ 2.600,00</td>
+                                                    <td class="color-1">R$ 2.600,00</td>
+                                                    <td class="color-2">R$ 1.800,00</td>
+                                                    <td class="color-2">R$ 1.800,00</td>
+                                                    <td class="color-3">R$ 2.000,00</td>
+                                                    <td class="color-3">R$ 2.000,00</td>
+                                                    <td>10%</td>
                                                 </tr>
                                                 <tr class="separator">
                                                     <td colspan="5"></td>
@@ -3120,39 +3187,61 @@
                                             </tbody>
                                             </table>
                                         </div>
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="#" class="prev">
+                                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="prev">
+                                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="next">
+                                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-lg-12">
                                             <div class="sub-title">
                                                 <div class="row d-flex">
                                                     <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens text-center">
+                                                        <div class="sub-title border-itens">
                                                             <p class="color-blue">Total Geral</p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens text-center">
-                                                            <p class="color-blue">Quantidade Solicitada:<br><b>4</b></p>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Proposta Inicial: <b>R$ 20.000,00</b></p>
                                                         </div>                                                        
                                                     </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens text-center">
-                                                            <p class="color-blue">Quantidade Atendida:<br><b>4</b></p>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Bradesco: <b>R$ 20.000,00</b></p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens text-center">
-                                                            <p class="color-blue">Valor Total Hospitalar:<br><b>R$ 2.800,00</b></p>
+                                                    <div class="col-lg-3 my-auto">
+                                                        <div class="sub-title border-itens">
+                                                            <p class="color-blue">Valor Acordo: <b>R$ 20.000,00</b></p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title border-itens text-center">
-                                                            <p class="color-blue">Valor Total Bradesco:<br><b>R$ 2.600,00</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 my-auto">
-                                                        <div class="sub-title text-center">
-                                                            <p class="color-blue">Valor Total Acordado:<br><b>R$ 2.600,00</b></p>
+                                                    <div class="col-lg-1 my-auto">
+                                                        <div class="sub-title">
+                                                            <p class="color-blue">%: <b>10%</b></p>
                                                         </div>
                                                     </div>
                                                 </div>

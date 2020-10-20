@@ -2025,6 +2025,7 @@ table {background-color: none;}
 
 .por-2{width: 2% !important;}
 .por-5{width: 5% !important;}
+.por-7{width: 7% !important;}
 .por-8{width: 8% !important;}
 .por-10{width: 10% !important;}
 .por-15{width: 15% !important;}
@@ -2032,6 +2033,12 @@ table {background-color: none;}
 .por-25{width: 25% !important;}
 .por-30{width: 30% !important;}
 .por-40{width: 40% !important;}
+
+.color-1{color:#499ED0 !important;}
+.color-2{color:#90263f !important;}
+.color-3{color:#11C25D !important;}
+.color-4{color:#cc092f !important;}
+
 
 // fim tabela com header
 
@@ -2046,7 +2053,7 @@ table {background-color: none;}
 .pagination{
     list-style: none;
     display: block;
-    margin: 40px auto;
+    margin: 20px auto;
     text-align: center;
     position: relative;
 }

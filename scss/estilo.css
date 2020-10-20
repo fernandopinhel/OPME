@@ -2401,6 +2401,10 @@ table {
   width: 5% !important;
 }
 
+.por-7 {
+  width: 7% !important;
+}
+
 .por-8 {
   width: 8% !important;
 }
@@ -2429,6 +2433,22 @@ table {
   width: 40% !important;
 }
 
+.color-1 {
+  color: #499ED0 !important;
+}
+
+.color-2 {
+  color: #90263f !important;
+}
+
+.color-3 {
+  color: #11C25D !important;
+}
+
+.color-4 {
+  color: #cc092f !important;
+}
+
 .pagination .icon {
   font-size: 11px;
   margin: -4px;
@@ -2438,7 +2458,7 @@ table {
 .pagination {
   list-style: none;
   display: block;
-  margin: 40px auto;
+  margin: 20px auto;
   text-align: center;
   position: relative;
 }
