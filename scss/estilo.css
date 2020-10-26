@@ -2664,6 +2664,15 @@ tr:hover td.a-2 .menu-invisible {
   border: none;
 }
 
+.ex-checkbox input.chk-func[type=checkbox] {
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+  z-index: 1;
+}
+
 @media (min-width: 1366px) and (max-width: 1680px) {
   .por-8 {
     width: 10% !important;
