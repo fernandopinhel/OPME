@@ -720,6 +720,10 @@ $(function() { //onload aqui
 
   // inputs animado
   $(window, document, undefined).ready(function() {
+    $('.input-date').change(function() {
+        $(this).focus();
+    })
+    
     $('input').blur(function() {
       var $this = $(this);
       if ($this.val())
@@ -788,50 +792,6 @@ $(".mostrar-itens-section").click(function(){
     $(".tabela-busca-item").toggleClass("d-none");
     $(".show-itens-sections").toggleClass("d-none");
 });
-
-// input file
-// $("#arquivo").change(function() {
-//     $(this).prev().html($(this).val());
-// });
-// var $input    = document.getElementById('input-file'),
-//     $fileName = document.getElementById('file-name');
-
-// $input.addEventListener('change', function(){
-//     $fileName.innerHTML = this.value;
-// });
-
-// var inputDate = $('.input-date')
-// $(".datetimepicker").click(function(inputDate){
-//     $(this).addClass("used");
-// });
-
-// $(document).ready(function () {
-//     // armazena valor
-//     $('.input-date').get(0).defaultValue = $('.input-date').val();
-//     // limpa valor
-//     $('.input-date').click(function(){
-//         if($(this).val() == this.defaultValue) $(this).val('');
-//     });
-//     // recupera valor
-//     $('.input-date').blur(function(){
-//         if($(this).val() == '') $(this).val(this.defaultValue);
-//     });
-// });
-
-var inputDate = $('.input-date')
-if($(".input-date").val(length.css("display","none"))){
-        $(".datetimepicker").click(function(inputDate){
-        $(this).addClass("used");
-    });   
-}
-
-// var inputDate = $('.input-date')
-// $(".input-date").click(function(inputDate){
-//     $(this).css("top", "-20px");
-//     $(this).css("color", "$color-content");
-//     $(this).css("transition", "$transition");
-//     $(this).css("font-size", "16px");
-// });
 
 // marcar todos checkbox
 function marcarTodos(marcardesmarcar){
