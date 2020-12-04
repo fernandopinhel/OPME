@@ -1,3 +1,11 @@
+$('#datepickerHorasMinutos').datetimepicker({
+    language:  'pt-BR',    
+    format: 'HH:ii',    
+    startView: 1,
+    minView: 0,
+    forceParse: 0
+});
+
 // input number
 (function($) {
     "use strict";
@@ -719,6 +727,10 @@ $(function() { //onload aqui
   
 
   // inputs animado
+
+//   var $inputDateTimeMinutes = $('input[type="time"]::-webkit-datetime-edit-minute-field');
+//   $inputDateTimeMinutes.css("display", "none");
+
   $(window, document, undefined).ready(function() {
     $('.input-date').change(function() {
         $(this).focus();
