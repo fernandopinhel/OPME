@@ -2697,6 +2697,12 @@ tr:hover td.a-2 .menu-invisible {
   z-index: 1;
 }
 
+@media print {
+  .ex-checkbox input[type=checkbox]:checked + label::before {
+    border: 10px solid #999999;
+  }
+}
+
 @media (min-width: 1366px) and (max-width: 1680px) {
   .por-8 {
     width: 10% !important;
