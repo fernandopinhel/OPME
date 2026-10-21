@@ -6,7 +6,6 @@
 
 **Case de UX/UI e front-end: negociação e compra de órteses, próteses e materiais especiais (OPME) para uma operadora de saúde.**
 
-[![CI](https://github.com/fernandopinhel/OPME/actions/workflows/ci.yml/badge.svg)](https://github.com/fernandopinhel/OPME/actions/workflows/ci.yml)
 ![HTML, CSS e JS puros](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS%20puros-0b6d77)
 ![WCAG 2.2 AA](https://img.shields.io/badge/acessibilidade-WCAG%202.2%20AA-1b7a43)
 ![Sem dependências](https://img.shields.io/badge/dependências%20de%20runtime-0-56656d)
@@ -253,7 +252,7 @@ npx serve .
 
 Depois, acesse <http://localhost:8080> e clique em **Usar o acesso de demonstração**.
 
-Para validar o HTML (o mesmo check do CI):
+Para validar o HTML:
 
 ```bash
 npx htmlhint@1 "*.html"
@@ -263,13 +262,11 @@ npx htmlhint@1 "*.html"
 
 ## Publicação no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` publica o site a cada push na `master`. Para ativar:
+O site é publicado direto da branch `master` (**Settings → Pages → Deploy from a branch**,
+pasta `/`). A cada merge na `master`, o GitHub atualiza o site em cerca de um minuto. O
+arquivo `.nojekyll` faz o GitHub servir os arquivos como estão, sem processar com Jekyll.
 
-1. No GitHub, abra **Settings → Pages**.
-2. Em **Build and deployment → Source**, escolha **GitHub Actions**.
-3. Faça um push na `master` ou rode o workflow em **Actions → Deploy GitHub Pages**.
-
-O endereço será <https://fernandopinhel.github.io/OPME/>.
+Endereço: <https://fernandopinhel.github.io/OPME/>
 
 ---
 
@@ -277,11 +274,11 @@ O endereço será <https://fernandopinhel.github.io/OPME/>.
 
 - **Nenhum dado sai do navegador.** Não há back-end. Sessão e cadastros ficam no `sessionStorage` e somem ao fechar a aba.
 - **Content Security Policy** em todas as páginas: `script-src 'self'`, `style-src` sem `'unsafe-inline'`, `object-src 'none'`, `base-uri 'self'` e `form-action 'self'`. Só o Google Fonts é liberado como origem externa.
-- **Sem JavaScript nem CSS inline.** O CI barra `<script>` inline, handlers `on*=` e atributos `style=`.
+- **Sem JavaScript nem CSS inline.** Nenhum `<script>` inline, handler `on*=` ou atributo `style=` no HTML; a CSP bloquearia se houvesse.
 - **Sem injeção de HTML.** Os elementos são montados com `createElement` e `textContent`, nunca com `innerHTML`.
 - **CSV seguro**: valores que começam com `=`, `+`, `-` ou `@` são neutralizados para não virarem fórmula no Excel.
 - **Referrer Policy** `strict-origin-when-cross-origin` e `noindex` para buscadores.
-- **CI com permissões mínimas** (`contents: read`) e Dependabot para as Actions.
+- **Dependabot** monitora as GitHub Actions.
 
 O GitHub Pages não permite definir cabeçalhos HTTP, por isso a CSP vai em `<meta>` e
 `frame-ancestors` não se aplica. Veja também o [SECURITY.md](SECURITY.md).
@@ -300,7 +297,7 @@ O GitHub Pages não permite definir cabeçalhos HTTP, por isso a CSP vai em `<me
 
 ## Próximos passos
 
-- [ ] Rodar os testes de fluxo (Playwright) e a auditoria de acessibilidade (axe) no CI.
+- [ ] CI com HTMLHint, bloqueio de código inline, testes de fluxo (Playwright) e auditoria de acessibilidade (axe).
 - [ ] Aplicar as permissões do grupo ao menu e às ações de cada tela.
 - [ ] Anexar documentos à solicitação (laudo, nota fiscal, etiquetas de rastreabilidade).
 - [ ] Etapa de entrega e faturamento, com conferência do material usado na cirurgia.
@@ -317,7 +314,7 @@ O GitHub Pages não permite definir cabeçalhos HTTP, por isso a CSP vai em `<me
 - Fluxos funcionais de ponta a ponta: solicitação em 5 etapas, negociação, aprovação por alçada, tabelas de valores, relatório e 9 cadastros.
 - Acessibilidade revisada para a WCAG 2.2 AA, verificada com axe.
 - Saíram Bootstrap, jQuery, Popper, plugins, Font Awesome, as fontes e os ícones da marca original e cerca de 15 MB de arquivos.
-- CI com HTMLHint e bloqueio de código inline, deploy no GitHub Pages, Dependabot e `SECURITY.md`.
+- Publicação no GitHub Pages, Dependabot e `SECURITY.md`.
 
 ### 2020-04 a 2023-08: Versão original
 

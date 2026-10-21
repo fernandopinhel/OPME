@@ -13,7 +13,7 @@ em vez de uma issue pública.
 ## Medidas adotadas
 
 - Content Security Policy via `<meta>` (`script-src 'self'` e `style-src` sem
-  `'unsafe-inline'`, ou seja, sem scripts nem estilos inline). O CI bloqueia qualquer
+  `'unsafe-inline'`, ou seja, sem scripts nem estilos inline). Não há nenhum
   `<script>`, `<style>`, `style=` ou `onclick=` escrito direto no HTML.
 - Nenhuma biblioteca de terceiros no runtime: só HTML, CSS e JavaScript próprios.
 - Todo texto digitado entra na página como `textContent`, nunca como HTML.
