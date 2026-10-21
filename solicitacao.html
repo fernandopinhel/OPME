@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b6d77">
+    <meta name="description" content="Registro, negociação e aprovação de uma solicitação de compra de OPME.">
+    <title>Solicitação de compra | Gestão OPME</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="sidebar"></div>
+
+      <div class="main-col">
+        <header class="topbar"></header>
+
+        <main class="content" id="conteudo" tabindex="-1">
+          <div class="page-head">
+            <div class="page-head__text">
+              <span class="eyebrow">Solicitação de compra</span>
+              <h1 id="pagina-titulo">Nova solicitação</h1>
+              <div class="muted" id="pagina-descricao"></div>
+            </div>
+            <div class="page-head__actions">
+              <a class="btn" href="solicitacoes.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-left"/></svg> Voltar para a lista</a>
+            </div>
+          </div>
+
+          <dl class="summary-bar" id="resumo" hidden></dl>
+
+          <nav aria-label="Etapas da solicitação">
+            <ol class="steps" id="etapas"></ol>
+          </nav>
+
+          <div id="etapa"></div>
+        </main>
+
+        <footer class="app-footer"></footer>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/solicitacao.js"></script>
+  </body>
+</html>

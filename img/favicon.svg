@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Valora Saúde</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14a3ad"/>
+      <stop offset="1" stop-color="#0a5a63"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+  <!-- Cruz de saúde: braço vertical e braço esquerdo -->
+  <rect x="25" y="11" width="14" height="42" rx="4" fill="#fff"/>
+  <rect x="11" y="25" width="20" height="14" rx="4" fill="#fff"/>
+  <!-- Braço direito em forma de etiqueta de preço: cuidado + valor justo -->
+  <path d="M33 25h12.2a3 3 0 0 1 2.2 1l5 5a1.5 1.5 0 0 1 0 2l-5 5a3 3 0 0 1-2.2 1H33z" fill="#ffc7ad"/>
+  <circle cx="45" cy="32" r="2.4" fill="#0a5a63"/>
+</svg>
