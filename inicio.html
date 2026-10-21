@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b6d77">
+    <meta name="description" content="Painel inicial do sistema Gestão OPME.">
+    <title>Início | Gestão OPME</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="sidebar"></div>
+
+      <div class="main-col">
+        <header class="topbar"></header>
+
+        <main class="content" id="conteudo" tabindex="-1">
+          <section class="hero" aria-labelledby="pagina-titulo">
+            <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-sparkle"/></svg> Painel</span>
+            <h1 id="pagina-titulo">Olá!</h1>
+            <p id="hero-texto">Veja o que está acontecendo nas negociações de OPME.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="solicitacao.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-plus"/></svg> Nova solicitação</a>
+              <a class="btn" href="solicitacoes.html">Ver todas as solicitações</a>
+            </div>
+            <img class="hero__art" src="img/ilustracao-painel.svg" alt="" width="220" height="180">
+          </section>
+
+          <h2 class="visually-hidden" id="kpis-titulo">Indicadores</h2>
+          <ul class="kpis" id="kpis" aria-labelledby="kpis-titulo"></ul>
+
+          <div class="grid-2">
+            <section class="card" aria-labelledby="atencao-titulo">
+              <div class="card__head">
+                <div>
+                  <h2 id="atencao-titulo">Precisam da sua atenção</h2>
+                  <p>Solicitações urgentes primeiro, depois as mais antigas.</p>
+                </div>
+                <a href="solicitacoes.html">Ver todas</a>
+              </div>
+              <div id="atencao"></div>
+            </section>
+
+            <section class="card" aria-labelledby="vencendo-titulo">
+              <div class="card__head">
+                <div>
+                  <h2 id="vencendo-titulo">Valores perto de vencer</h2>
+                  <p>Itens de tabela com vigência terminando nos próximos 30 dias.</p>
+                </div>
+              </div>
+              <div id="vencendo"></div>
+            </section>
+          </div>
+
+          <section class="card" aria-labelledby="atalhos-titulo">
+            <div class="card__head"><h2 id="atalhos-titulo">Atalhos</h2></div>
+            <ul class="shortcuts" id="atalhos"></ul>
+          </section>
+
+          <section class="card" aria-labelledby="fluxo-titulo">
+            <div class="card__head">
+              <div>
+                <h2 id="fluxo-titulo">Como uma compra de OPME anda por aqui</h2>
+                <p>Cada etapa fica registrada, com quem fez e quando.</p>
+              </div>
+            </div>
+            <ol class="flow">
+              <li><strong>Pedido do hospital</strong><p>O hospital informa paciente, médico, procedimento e os materiais.</p></li>
+              <li><strong>Conferência dos itens</strong><p>O sistema mostra o valor tabelado e avisa se o registro na Anvisa venceu.</p></li>
+              <li><strong>Negociação</strong><p>Propostas e contrapropostas até chegar ao valor acordado.</p></li>
+              <li><strong>Aprovação</strong><p>Itens aprovados ou reprovados, com alçada da diretoria para valores altos.</p></li>
+              <li><strong>Mapa consolidado</strong><p>O resumo final com valores e economia, pronto para imprimir.</p></li>
+            </ol>
+          </section>
+        </main>
+
+        <footer class="app-footer"></footer>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/inicio.js"></script>
+  </body>
+</html>
